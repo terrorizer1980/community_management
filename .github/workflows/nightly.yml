@@ -2,7 +2,7 @@ name: "Nightly"
 
 on:
   schedule:
-    - cron: '0 40 * * *'
+    - cron: '*/40 * * * *'
 
 jobs:
   generate:
