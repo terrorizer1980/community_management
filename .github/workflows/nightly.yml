@@ -2,7 +2,7 @@ name: "Nightly"
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 40 * * *'
 
 jobs:
   generate:
@@ -36,6 +36,9 @@ jobs:
           cp -r *.png docs/
           cp -r *.csv docs/
           ls -la docs/
+      - name: Add timestamp
+          data=$("date")
+          sed -i -e "s|<p>.*<\/p>|<p>$data</p>|g" index.html
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
