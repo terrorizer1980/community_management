@@ -37,6 +37,7 @@ jobs:
           cp -r *.csv docs/
           ls -la docs/
       - name: Add timestamp
+        run: |
           data=$("date")
           sed -i -e "s|<p>.*<\/p>|<p>$data</p>|g" index.html
       - name: Commit files
