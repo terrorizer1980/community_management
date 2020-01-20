@@ -39,6 +39,7 @@ jobs:
       - name: Add timestamp
         run: |
           data=$("date")
+          echo "Adding timestamp $data"
           sed -i -e "s|<p>.*<\/p>|<p>$data</p>|g" index.html
       - name: Commit files
         run: |
