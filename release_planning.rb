@@ -16,6 +16,26 @@ class PuppetModule
   end
 end
 
+def get_number_of_commits_on_maintenance(util, commits, prs, label, m)
+  pr_commits = []
+  nr = 0
+  prs.each do |pr_since_tag|
+    label_on_maintenance = util.does_pr_have_label("#{m['github_namespace']}/#{m['repo_name']}", pr_since_tag[:pull][:number], label)
+
+    next unless label_on_maintenance == true
+
+    pr_commits = util.client.pull_request_commits("#{m['github_namespace']}/#{m['repo_name']}", pr_since_tag[:pull][:number])
+
+    pr_commits.each do |c|
+      commits.each do |c1|
+        nr += 1 if c[:sha] == c1[:sha]
+      end
+    end
+  end
+
+  nr
+end
+
 puppet_modules = []
 def number_of_downloads(module_name)
   uri = URI.parse("https://forgeapi.puppetlabs.com/v3/modules/#{module_name}")
@@ -25,7 +45,7 @@ def number_of_downloads(module_name)
   end
   output = response.body
   parsed = JSON.parse(output)
-  puts parsed
+  # puts parsed
 
   begin
     parsed['current_release']['downloads']
@@ -45,7 +65,6 @@ parser = OptionParser.new do |opts|
   opts.on('-f', '--file NAME', String, 'Module file list') { |v| options[:file] = v }
   opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
   opts.on('-v', '--verbose', 'More output') { options[:verbose] = true }
-  opts.on('-o', '--output', 'Creates html+json output') { options[:output] = true }
 end
 
 parser.parse!
@@ -73,9 +92,13 @@ parsed.each do |m|
     latest_tag = util.fetch_tags("#{m['github_namespace']}/#{m['repo_name']}", options).first
     tag_ref = util.ref_from_tag(latest_tag)
     date_of_tag = util.date_of_ref("#{m['github_namespace']}/#{m['repo_name']}", tag_ref)
-    commits_since_tag = util.commits_since_date("#{m['github_namespace']}/#{m['repo_name']}", date_of_tag)
-    repo_data << { 'repo' => "#{m['github_namespace']}/#{m['repo_name']}", 'date' => date_of_tag, 'commits' => commits_since_tag, 'downloads' => number_of_downloads(m['forge_name']) }
-    puppet_modules << PuppetModule.new(repo, "#{m['github_namespace']}/#{m['repo_name']}", date_of_tag, commits_since_tag)
+    commits_since_tag = util.commits_since_date_c("#{m['github_namespace']}/#{m['repo_name']}", date_of_tag)
+    prs_since_tag = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", options = { state: 'closed', sort: 'updated' }, %i[statuses pull_request_commits issue_comments], attribute: 'closed_at', date: date_of_tag)
+
+    no_maintenance_commits = get_number_of_commits_on_maintenance(util, commits_since_tag, prs_since_tag, 'maintenance', m)
+    puts no_maintenance_commits
+    repo_data << { 'repo' => "#{m['github_namespace']}/#{m['repo_name']}", 'date' => date_of_tag, 'commits' => commits_since_tag.size, 'downloads' => number_of_downloads(m['forge_name']), 'maintenance_commits' => no_maintenance_commits }
+    puppet_modules << PuppetModule.new(repo, "#{m['github_namespace']}/#{m['repo_name']}", date_of_tag, commits_since_tag, no_maintenance_commits)
   rescue StandardError
     puts "Unable to fetch tags for #{options[:namespace]}/#{repo}" if options[:verbose]
   end
@@ -98,18 +121,12 @@ due_for_release = if due_by_commit && due_by_time
                     due_by_time
                   end
 
-due_for_release.each do |entry|
-  puts "#{entry['repo']} is due for release. Last release was tagged on #{entry['date']} and there have been #{entry['commits']} commits since then."
-end
-
 html = ERB.new(File.read('release_planning.html.erb')).result(binding)
 
-if options[:output]
-  File.open('ModulesRelease.html', 'wb') do |f|
-    f.puts(html)
-  end
+File.open('ModulesRelease.html', 'wb') do |f|
+  f.puts(html)
+end
 
-  File.open('ModulesRelease.json', 'wb') do |f|
-    JSON.dump(due_for_release, f)
-  end
+File.open('ModulesRelease.json', 'wb') do |f|
+  JSON.dump(due_for_release, f)
 end
