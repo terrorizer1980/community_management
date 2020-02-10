@@ -2,6 +2,7 @@
 
 source 'https://rubygems.org'
 gem 'octokit'
+gem 'rest-client'
 # gruff appears to have gone dormant. This allows it to install with current
 # rmagick, which fixes an imagemagick@6 pkg-config bug.
 # https://github.com/topfunky/gruff/pull/186

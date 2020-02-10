@@ -1,0 +1,52 @@
+<html><title>Github Action Report</title>
+<head>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+</head>
+<body>
+	
+
+<table id='ga_table' border='1' style='width:100%'> <tr>
+ <tr><th>Module Name</th><th>Report</th></tr>
+  <% resultHash.each do |m| %>
+	  <tr>
+	  <td> <a href='<%= m[:url] %>'><%= m[:name] %></a></td> 
+	  <td>
+             <% if m[:workflows].respond_to?('each') 
+			 m[:workflows].each do |wf| %>
+	        <table border='1' style='width:100%'>
+                  <tr><th>Workflow</th><th>Runs</th></tr>
+                     <tr>
+                       <td><a href='<%= wf['html_url']%>' target="_blank"><%= wf['name'] %> </a></td>
+                       <td>
+         	            <table border='1' style='width:100%'>
+                              <tr><th>Run Number</th><th>Status</th><th>Branch</th><th>HEAD SHA</th><th>Conclusion</th></tr>
+			      <% m[:runs][wf['name']]['workflow_runs'].each do |run| %>
+			     <tr>
+                                <td><a href='<%= run['html_url'] %>' target='_blank'> <%= run['run_number'] %> </a> </td>
+	         	        <td><%= run['status'] %></td>
+	         	        <td><%= run['head_branch'] %></td>
+				<td><%= run['head_sha'] %></td>
+				<% if run['conclusion'] == "failure" %>
+					<td style="background-color:red; color: black"><%= run['conclusion'] %></td>
+				<% else 
+				     if run['conclusion'] == "timed_out" %>
+	                           	<td style="background-color:yellow; color: black"><%= run['conclusion'] %></td>
+			             <% else %>
+				        <td style="background-color:green; color: black"><%= run['conclusion'] %></td>
+				     <% end %>
+				<% end %>
+			     </tr> 
+		               <% end %>
+		          </table>
+		       </td>
+		     </tr>
+                 </table>
+	     <% end 
+             end %>
+       	  </td>
+	  </tr>
+  <% end %>
+</table>
+</body>
+</html>
+
