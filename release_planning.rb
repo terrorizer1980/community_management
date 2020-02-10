@@ -16,15 +16,15 @@ class PuppetModule
   end
 end
 
-def get_number_of_commits_on_maintenance(util, commits, prs, label, m)
+def get_number_of_commits_on_maintenance(util, commits, prs, label, mod)
   pr_commits = []
   nr = 0
   prs.each do |pr_since_tag|
-    label_on_maintenance = util.does_pr_have_label("#{m['github_namespace']}/#{m['repo_name']}", pr_since_tag[:pull][:number], label)
+    label_on_maintenance = util.does_pr_have_label("#{mod['github_namespace']}/#{mod['repo_name']}", pr_since_tag[:pull][:number], label)
 
     next unless label_on_maintenance == true
 
-    pr_commits = util.client.pull_request_commits("#{m['github_namespace']}/#{m['repo_name']}", pr_since_tag[:pull][:number])
+    pr_commits = util.client.pull_request_commits("#{mod['github_namespace']}/#{mod['repo_name']}", pr_since_tag[:pull][:number])
 
     pr_commits.each do |c|
       commits.each do |c1|
@@ -45,7 +45,6 @@ def number_of_downloads(module_name)
   end
   output = response.body
   parsed = JSON.parse(output)
-  # puts parsed
 
   begin
     parsed['current_release']['downloads']

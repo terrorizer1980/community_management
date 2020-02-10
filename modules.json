@@ -22,7 +22,7 @@
     "github_namespace": "puppetlabs",
     "module_name": "apache",
     "forge_name": "puppetlabs-apache"
-   },
+  },
   {
     "repo_name": "puppetlabs-apt",
     "github_namespace": "puppetlabs",

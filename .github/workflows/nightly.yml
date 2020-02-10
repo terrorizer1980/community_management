@@ -27,7 +27,7 @@ jobs:
           ### generate prs for triage report
           bundle exec ruby pr_review_list.rb -t $token
           ### generate release planning
-          bundle exec ruby release_planning.rb -c 0 -g '^v*\d*\.\d*\.\d*' -m 0 -t $token -o
+          bundle exec ruby release_planning.rb -c 0 -g '^v*\d*\.\d*\.\d*' -m 0 -t $token 
           ### generate github actions report
           bundle exec ruby github_actions_report.rb -t $token
       - name: List files
