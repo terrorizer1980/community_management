@@ -286,6 +286,11 @@ class OctokitUtils
     commits.size
   end
 
+  def commits_since_date_c(repo, date)
+    commits ||= client.commits_since(repo, date)
+    commits
+  end
+
   def test_for_release(repo, options)
     raise ArgumentError, 'One of :commits or :time must be specified in the options hash' if !(options[:commits]) && !(options[:time])
 

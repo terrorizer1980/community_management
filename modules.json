@@ -138,12 +138,6 @@
     "forge_name": "puppetlabs-mysql"
   },
   {
-    "repo_name": "puppetlabs-kubernetes",
-    "github_namespace": "puppetlabs",
-    "module_name": "kubernetes",
-    "forge_name": "puppetlabs-kubernetes"
-  },
-  {
     "repo_name": "puppetlabs-ntp",
     "github_namespace": "puppetlabs",
     "module_name": "ntp",
