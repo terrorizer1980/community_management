@@ -95,14 +95,13 @@ parsed.each do |m|
     prs_since_tag = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", options = { state: 'closed', sort: 'updated' }, %i[statuses pull_request_commits issue_comments], attribute: 'closed_at', date: date_of_tag)
 
     no_maintenance_commits = get_number_of_commits_on_maintenance(util, commits_since_tag, prs_since_tag, 'maintenance', m)
-    puts no_maintenance_commits
     repo_data << { 'repo' => "#{m['github_namespace']}/#{m['repo_name']}", 'date' => date_of_tag, 'commits' => commits_since_tag.size, 'downloads' => number_of_downloads(m['forge_name']), 'maintenance_commits' => no_maintenance_commits }
     puppet_modules << PuppetModule.new(repo, "#{m['github_namespace']}/#{m['repo_name']}", date_of_tag, commits_since_tag, no_maintenance_commits)
   rescue StandardError
     puts "Unable to fetch tags for #{options[:namespace]}/#{repo}" if options[:verbose]
   end
 end
-
+sleep(2)
 puppet_modules.each { |puppet_module1| puts puppet_module1 }
 
 due_by_commit = repo_data.select { |x| x['commits'] > options[:commits] } if options[:commits]
