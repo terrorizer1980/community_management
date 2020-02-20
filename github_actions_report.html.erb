@@ -1,6 +1,13 @@
 <html><title>Github Action Report</title>
 <head>
-	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
 </head>
 <body>
 	
@@ -12,26 +19,31 @@
 	  <td> <a href='<%= m[:url] %>'><%= m[:name] %></a></td> 
 	  <td>
              <% if m[:workflows].respond_to?('each') 
-			 m[:workflows].each do |wf| %>
+                  m[:workflows].each do |wf| %>
+                <% if wf['name']=="release" || wf['name']=="weekly" %>
 	        <table border='1' style='width:100%'>
                   <tr><th>Workflow</th><th>Runs</th></tr>
                      <tr>
                        <td><a href='<%= wf['html_url']%>' target="_blank"><%= wf['name'] %> </a></td>
                        <td>
          	            <table border='1' style='width:100%'>
-                              <tr><th>Run Number</th><th>Status</th><th>Branch</th><th>HEAD SHA</th><th>Conclusion</th></tr>
-			      <% m[:runs][wf['name']]['workflow_runs'].each do |run| %>
+                              <tr><th>Run Number</th><th>Branch</th><th>Conclusion</th></tr>
+			      <% m[:runs][wf['name']]['workflow_runs'][0..5].each do |run| %>
 			     <tr>
                                 <td><a href='<%= run['html_url'] %>' target='_blank'> <%= run['run_number'] %> </a> </td>
-	         	        <td><%= run['status'] %></td>
-	         	        <td><%= run['head_branch'] %></td>
-				<td><%= run['head_sha'] %></td>
+                                <td>
+                                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title='<%= run['head_sha'] %>'>
+ 				    <%= run['head_branch'] %>
+                                  </button>
+                                </td>
 				<% if run['conclusion'] == "failure" %>
 					<td style="background-color:red; color: black"><%= run['conclusion'] %></td>
 				<% else 
 				     if run['conclusion'] == "timed_out" %>
 	                           	<td style="background-color:yellow; color: black"><%= run['conclusion'] %></td>
-			             <% else %>
+                                     <% elsif run['conclusion'] == "cancelled" %>
+        		      	        <td style="background-color:cyan; color: black"><%= run['conclusion'] %></td>
+                                     <% else %>
 				        <td style="background-color:green; color: black"><%= run['conclusion'] %></td>
 				     <% end %>
 				<% end %>
@@ -40,7 +52,8 @@
 		          </table>
 		       </td>
 		     </tr>
-                 </table>
+                </table>
+              <% end %>
 	     <% end 
              end %>
        	  </td>
