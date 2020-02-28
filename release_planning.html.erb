@@ -3,13 +3,47 @@
 <script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
 <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
 <script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
-<script type= 'text/javascript'> $(document).ready( function () {$('#id_table').DataTable();} ); </script>
+<script type= 'text/javascript'> $(document).ready( function () {$('#releases').DataTable();} ); </script>
+<style>
+#releases {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   font-size: 18px;
+  border-collapse: collapse;
+  width: 50%;
+
+
+}
+.word_break {
+  word-break: break-all;
+  width: auto;
+}
+#releases td, #releases th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#releases tr:nth-child(even){background-color: #f2f2f2;
+
+ }
+
+#releases tr:hover {background-color: #ddd;
+ }
+
+#releases th {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-align: left;
+  background-color: #cfcfcf;
+  color: black;
+ 
+}
+</style>
 </head>
 
 
 <body>
 <h2>Modules Requiring Release</h2>
-<table border='1' id = 'id_table' style='width:100%' class='sortable table table-hover'> <tr>
+<table border='1' id = 'releases' style='width:100%' class='sortable table table-hover'> <tr>
 <th>Module Name</th>
 <th>Last Release Tag Date</th>
 <th>Commits Since Then</th>
