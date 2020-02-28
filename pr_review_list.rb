@@ -39,6 +39,7 @@ def does_array_have_pr(array, pr_number)
 end
 
 parsed.each do |m|
+  sleep(2)
   pr_information_cache = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}")
   # no comment from a puppet employee
   puppet_uncommented_pulls = util.fetch_pull_requests_with_no_puppet_personnel_comments(pr_information_cache)
@@ -47,6 +48,7 @@ parsed.each do |m|
 
   # loop through open pr's and create a row that has all the pertinant info
   pr_information_cache.each do |pr|
+    sleep(2)
     row = {}
     row[:repo] = m['repo_name']
     row[:address] = "https://github.com/#{m['github_namespace']}/#{m['repo_name']}"
