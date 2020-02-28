@@ -1,4 +1,6 @@
 *.gem
+*.png
+*.csv
 *.rbc
 /.config
 /coverage/
@@ -8,6 +10,8 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+report.*
+ModulesRelease.*
 
 ## Specific to RubyMotion:
 .dat*
