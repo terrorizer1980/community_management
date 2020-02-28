@@ -59,17 +59,17 @@ parsed.each do |m|
 
     if !pr[:issue_comments].empty?
 
-      if pr[:issue_comments].last.user.login != 'codecov-io'
-        row[:last_comment] = pr[:issue_comments].last.body.gsub(%r{<\/?[^>]*>}, '')
-        row[:by] = pr[:issue_comments].last.user.login
-
-      else
+      if pr[:issue_comments].last.user.login =~ /\Acodecov/
         begin
-         row[:last_comment] = pr[:issue_comments].body(-2).gsub(%r{<\/?[^>]*>}, '')
+          row[:last_comment] = pr[:issue_comments].body(-2).gsub(%r{<\/?[^>]*>}, '')
         rescue StandardError
           row[:last_comment] = 'No previous comment other than codecov-io'
           row[:by] = ''
-       end
+        end
+
+      else
+        row[:last_comment] = pr[:issue_comments].last.body.gsub(%r{<\/?[^>]*>}, '')
+        row[:by] = pr[:issue_comments].last.user.login
 
       end
       row[:age_comment] = ((Time.now - pr[:issue_comments].last.updated_at) / 60 / 60 / 24).round
