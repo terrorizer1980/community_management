@@ -54,7 +54,7 @@ parsed.each do |m|
     row[:age] = ((Time.now - pr[:pull].created_at) / 60 / 60 / 24).round
     row[:owner] = pr[:pull].user.login
     row[:owner] += " <span class='label label-warning'>puppet</span>" if util.client.organization_member?('puppetlabs', pr[:pull].user.login)
-    row[:owner] += " <span class='badge badge-secondary'>iac</span>" if util.client.iac_member?('puppetlabs', pr[:pull].user.login)
+    row[:owner] += " <span class='badge badge-secondary'>iac</span>" if util.client.organization_member?('puppetlabs/teams/modules', pr[:pull].user.login)
     row[:owner] += " <span class='label label-primary'>vox</span>" if util.client.organization_member?('voxpupuli', pr[:pull].user.login)
     row[:title] = pr[:pull].title
 
