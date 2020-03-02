@@ -3,61 +3,98 @@
 <head>
 <script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
 <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
-<script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
-<script type= 'text/javascript'> $(document).ready( function () {$('#reviews').DataTable();} ); </script>
+<script src="./web_libraries/tablefilter/tablefilter.js"></script><link rel='stylesheet' href='./web_libraries/tablefilter/tablefilter.js'>
+<style>
+#reviews {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-collapse: collapse;
+  width: 50%;
+
+
+}
+.word_break {
+  word-break: break-all;
+  width: auto;
+}
+#reviews td, #reviews th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#reviews tr:nth-child(even){background-color: #f2f2f2;
+
+ }
+
+#reviews tr:hover {background-color: #ddd;
+ }
+
+#reviews th {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-align: left;
+  background-color: #cfcfcf;
+  color: black;
+ 
+}
+
+
+</style>
 </head>
 <body>
 <h1>PRs that require review</h1>
-<table border='1' id='reviews' style='width:100%' class='sortable table table-hover'> 
+<table border='1' id='reviews' style='width:100%' class='test'> 
+<thead>
 <tr>
 
   
-    <td> repo</td> 
+    <th> repo</th> 
    
 
    
 
   
-    <td> pr</td> 
+    <th> pr</th> 
    
 
   
-    <td> age</td> 
+    <th> age</th> 
    
 
   
-    <td> owner</td> 
+    <th> owner</th> 
    
 
   
-    <td> title</td> 
+    <th> title</th> 
    
 
   
-    <td> last_comment</td> 
+    <th> last_comment</th> 
    
 
   
-    <td> by</td> 
+    <th> by</th> 
    
 
   
-    <td> age_comment</td> 
+    <th> age_comment</th> 
    
 
   
-    <td> num_comments</td> 
+    <th> num_comments</th> 
    
 
   
-    <td> no_comment_from_puppet</td> 
+    <th> no_comment_from_puppet</th> 
    
 
   
-    <td> last_comment_mentions_puppet</td> 
+    <th> last_comment_mentions_puppet</th> 
    
 
 </tr>
+</thead>
 
 
   <tr>
@@ -76,63 +113,61 @@
   
   
       
-        <td>14</td>
+       <td><p class="word_break">17</p></td>
       
   
   
   
       
-        <td>janit42</td>
+       <td><p class="word_break">janit42</p></td>
       
   
   
   
       
-        <td>MODULES-10550 fix keyspec parsing to allow whitespaces in options and…</td>
+       <td><p class="word_break">MODULES-10550 fix keyspec parsing to allow whitespaces in options and…</p></td>
       
   
   
   
       
-        <td>@janit42 Hey just took a quick look, sorry for the wait. In regards to the rubocop issues that you are seeing, %r{} has just been declared a rule for our modules, rather than swapping it in when needed we keep it as the default option as we've found it to be neater overall.
-As for the remaining errors, it look's like a disable for the rules in question would be your best choice if you cannot get them to match the rules in a neat fashion, just add the below snippet to your code and it will take care of it:
-```
-# rubocop:disable Layout/SpaceAfterComma, Metrics/LineLength
-[...]
-# rubocop:enable Layout/SpaceAfterComma, Metrics/LineLength
-```
-It's not something that we encourage but we do recognize that it is sometimes necessary.
-Anyway I hope that helps :)</td>
+       <td><p class="word_break">@david22swan Thanks for your suggestions! I reorganized the code a bit so disabling rubocop LineLength checks to keep the code readable for humans is only used for one spec test statement.
+
+On my local machine with puppet 5  the changes now pass rubocop and spectests, but checks via github/travis with puppet 6 are still unsuccessful. These might be unrelated to my PR and rather coupled to the ssh_authorized_key resource type moving out of the puppet code with puppet 6? But I may be wrong ...
+
+Please let me know what I should do to proceed with the PR.
+
+As I'm new to contributing via github: should I throw the current branch away and resubmit the whole thing including the style fixes as one new commit?</p></td>
       
   
   
   
       
-        <td>david22swan</td>
+       <td><p class="word_break">janit42</p></td>
       
   
   
   
       
-        <td>3</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>2</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">true</p></td>
       
   
   
@@ -154,55 +189,55 @@ Anyway I hope that helps :)</td>
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+       <td><p class="word_break">No previous comment other than codecov-io</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -224,55 +259,55 @@ Anyway I hope that helps :)</td>
   
   
       
-        <td>1</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>HoucemEddine</td>
+       <td><p class="word_break">HoucemEddine</p></td>
       
   
   
   
       
-        <td>adding SetInputFilter</td>
+       <td><p class="word_break">adding SetInputFilter</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -294,125 +329,55 @@ Anyway I hope that helps :)</td>
   
   
       
-        <td>1</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>vStone</td>
+       <td><p class="word_break">vStone</p></td>
       
   
   
   
       
-        <td>Re-add package for fcgid on debian/ubuntu machines</td>
+       <td><p class="word_break">Re-add package for fcgid on debian/ubuntu machines</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apt'>puppetlabs-apt</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apt/pull/916'>916</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10559) - v7.4.0 Release Preparation</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -434,55 +399,125 @@ Anyway I hope that helps :)</td>
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">No previous comment other than codecov-io</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apt'>puppetlabs-apt</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apt/pull/916'>916</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">4</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">(MODULES-10559) - v7.4.0 Release Preparation</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0 comments</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break"></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -504,125 +539,55 @@ Anyway I hope that helps :)</td>
   
   
       
-        <td>324</td>
+       <td><p class="word_break">327</p></td>
       
   
   
   
       
-        <td>dkrand</td>
+       <td><p class="word_break">dkrand</p></td>
       
   
   
   
       
-        <td>Allow URI escaping in any user/pass in the URL</td>
+       <td><p class="word_break">Allow URI escaping in any user/pass in the URL</p></td>
       
   
   
   
       
-        <td>@dkrand In order to help you get this merged I have rebased your work onto the master and added a pair of acceptance tests. Unfortunately I ran into a problem on the way as although your change works for most special characters, it errors out when a '@' is given, likely due to it's use in clarifying the use of a password  as a divider between the username:password and the url, i.e. dummyuser:dummypassword@apt.puppetlabs.com/.......</td>
+       <td><p class="word_break">@dkrand In order to help you get this merged I have rebased your work onto the master and added a pair of acceptance tests. Unfortunately I ran into a problem on the way as although your change works for most special characters, it errors out when a '@' is given, likely due to it's use in clarifying the use of a password  as a divider between the username:password and the url, i.e. dummyuser:dummypassword@apt.puppetlabs.com/.......</p></td>
       
   
   
   
       
-        <td>david22swan</td>
+       <td><p class="word_break">david22swan</p></td>
       
   
   
   
       
-        <td>8</td>
+       <td><p class="word_break">11</p></td>
       
   
   
   
       
-        <td>9</td>
+       <td><p class="word_break">9</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-concat'>puppetlabs-concat</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-concat/pull/635'>635</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -644,55 +609,55 @@ Anyway I hope that helps :)</td>
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -709,60 +674,130 @@ Anyway I hope that helps :)</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/460'>460</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/477'>477</a></td>
   
   
   
       
-        <td>346</td>
-      
-  
-  
-  
-      
-        <td>SmithJosh</td>
+       <td><p class="word_break">311</p></td>
       
   
   
   
       
-        <td>WIP: Allow use of .env configuration file when running docker-compose</td>
+       <td><p class="word_break">esalberg</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">Allow bypassing curl package ensure if needed</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break">@esalberg Sorry to keep pinging, but is there any chance that you're gonna come back and finish this?</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">david22swan</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">10</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">7</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">56</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">matthanley</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Fix regex for installing docker-ce version 17.06 onwards</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Thank you @matthanley for submitting the PR. Could you please fix the Travis failures and also add a test to verify the change. Thank you.</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">sheenaajay</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">47</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">1</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -784,125 +819,55 @@ Anyway I hope that helps :)</td>
   
   
       
-        <td>1</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>jantman</td>
+       <td><p class="word_break">jantman</p></td>
       
   
   
   
       
-        <td>Add after_start and after_stop options to docker::run define</td>
+       <td><p class="word_break">Add after_start and after_stop options to docker::run define</p></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+       <td><p class="word_break">No previous comment other than codecov-io</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/562'>562</a></td>
-  
-  
-  
-      
-        <td>69</td>
-      
-  
-  
-  
-      
-        <td>seriv</td>
-      
-  
-  
-  
-      
-        <td>Minimal changes to work with podman-docker</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>69</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -924,25 +889,25 @@ Anyway I hope that helps :)</td>
   
   
       
-        <td>104</td>
+       <td><p class="word_break">108</p></td>
       
   
   
   
       
-        <td>mgrzybowski</td>
+       <td><p class="word_break">mgrzybowski</p></td>
       
   
   
   
       
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+       <td><p class="word_break">Workaround for hangs of the docker_client in the facts genereation</p></td>
       
   
   
   
       
-        <td>Hi
+       <td><p class="word_break">Hi
   Since Facter::Util::Resolution is extended by Core::Execution (https://www.rubydoc.info/gems/facter/Facter/Util/Resolution)  i was sure that this should work the same.
 
 My facter have to be to old for execute **timeout** option to work:
@@ -981,107 +946,37 @@ i can not see how this **timeout** option should work since the command is execu
 out = %x{#{expanded_command}}.chomp
 ```
 
-</td>
+</p></td>
       
   
   
   
       
-        <td>mgrzybowski</td>
+       <td><p class="word_break">mgrzybowski</p></td>
       
   
   
   
       
-        <td>66</td>
+       <td><p class="word_break">70</p></td>
       
   
   
   
       
-        <td>4</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/477'>477</a></td>
-  
-  
-  
-      
-        <td>308</td>
-      
-  
-  
-  
-      
-        <td>esalberg</td>
-      
-  
-  
-  
-      
-        <td>Allow bypassing curl package ensure if needed</td>
-      
-  
-  
-  
-      
-        <td>@esalberg Sorry to keep pinging, but is there any chance that you're gonna come back and finish this?</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1098,60 +993,60 @@ out = %x{#{expanded_command}}.chomp
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/562'>562</a></td>
   
   
   
       
-        <td>52</td>
-      
-  
-  
-  
-      
-        <td>matthanley</td>
+       <td><p class="word_break">73</p></td>
       
   
   
   
       
-        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
+       <td><p class="word_break">seriv</p></td>
       
   
   
   
       
-        <td>Thank you @matthanley for submitting the PR. Could you please fix the Travis failures and also add a test to verify the change. Thank you.</td>
+       <td><p class="word_break">Minimal changes to work with podman-docker</p></td>
       
   
   
   
       
-        <td>sheenaajay</td>
+       <td><p class="word_break">No previous comment other than codecov-io</p></td>
       
   
   
   
       
-        <td>43</td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">73</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1168,62 +1063,60 @@ out = %x{#{expanded_command}}.chomp
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/554'>554</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/582'>582</a></td>
   
   
   
       
-        <td>99</td>
-      
-  
-  
-  
-      
-        <td>khaefeli</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>Add Docker service (create, remote, scale) tasks</td>
+       <td><p class="word_break">Flask</p></td>
       
   
   
   
       
-        <td>Hi @khaefeli 
-
-Thanks for submitting this PR, are you still planning on making the changes to get this and https://github.com/puppetlabs/puppetlabs-docker/pull/546 merged ? </td>
+       <td><p class="word_break">Updated: Add Docker service (create, remote, scale) tasks</p></td>
       
   
   
   
       
-        <td>carabasdaniel</td>
+       <td><p class="word_break">No previous comment other than codecov-io</p></td>
       
   
   
   
       
-        <td>8</td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>4</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1245,57 +1138,57 @@ Thanks for submitting this PR, are you still planning on making the changes to g
   
   
       
-        <td>116</td>
+       <td><p class="word_break">119</p></td>
       
   
   
   
       
-        <td>khaefeli</td>
+       <td><p class="word_break">khaefeli</p></td>
       
   
   
   
       
-        <td>Rename service_update to swarm_update for consistency</td>
+       <td><p class="word_break">Rename service_update to swarm_update for consistency</p></td>
       
   
   
   
       
-        <td>Same here - we're only running skeleton crew over the holidays.
+       <td><p class="word_break">Same here - we're only running skeleton crew over the holidays.
 
-Guten Rutsch!</td>
+Guten Rutsch!</p></td>
       
   
   
   
       
-        <td>DavidS</td>
+       <td><p class="word_break">DavidS</p></td>
       
   
   
   
       
-        <td>72</td>
+       <td><p class="word_break">76</p></td>
       
   
   
   
       
-        <td>3</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1312,60 +1205,62 @@ Guten Rutsch!</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/581'>581</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/554'>554</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">103</p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">khaefeli</p></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+       <td><p class="word_break">Add Docker service (create, remote, scale) tasks</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break">Hi @khaefeli 
+
+Thanks for submitting this PR, are you still planning on making the changes to get this and https://github.com/puppetlabs/puppetlabs-docker/pull/546 merged ? </p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">carabasdaniel</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">12</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1387,125 +1282,55 @@ Guten Rutsch!</td>
   
   
       
-        <td>570</td>
+       <td><p class="word_break">574</p></td>
       
   
   
   
       
-        <td>hesco</td>
+       <td><p class="word_break">hesco</p></td>
       
   
   
   
       
-        <td>RFC: WIP: Feature/gh296 play well with firewall</td>
+       <td><p class="word_break">RFC: WIP: Feature/gh296 play well with firewall</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-exec'>puppetlabs-exec</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-exec/pull/119'>119</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1514,7 +1339,7 @@ Guten Rutsch!</td>
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task'>puppetlabs-facter_task</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
   
   
   
@@ -1522,60 +1347,60 @@ Guten Rutsch!</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/115'>115</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/460'>460</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">349</p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">SmithJosh</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">WIP: Allow use of .env configuration file when running docker-compose</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1597,55 +1422,126 @@ Guten Rutsch!</td>
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task'>puppetlabs-facter_task</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/116'>116</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">3</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">sheenaajay <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">(IAC-285) Modify appveyor to run acceptance tests</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">
+</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">sheenaajay</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">3</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">1</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1667,129 +1563,55 @@ Guten Rutsch!</td>
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/889'>889</a></td>
-  
-  
-  
-      
-        <td>42</td>
-      
-  
-  
-  
-      
-        <td>mohammed-elhakim-sociomantic</td>
-      
-  
-  
-  
-      
-        <td>Add u32 to recognized modules</td>
-      
-  
-  
-  
-      
-        <td>Hey @mohammed-elhakim-sociomantic ,
-
-Thank you for this fix. It looks good to me, but the new rule should be tested. Would be possible to add a test to cover this?
-
-Cheers! </td>
-      
-  
-  
-  
-      
-        <td>lionce</td>
-      
-  
-  
-  
-      
-        <td>38</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1811,55 +1633,55 @@ Cheers! </td>
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1881,60 +1703,204 @@ Cheers! </td>
   
   
       
-        <td>28</td>
+       <td><p class="word_break">31</p></td>
       
   
   
   
       
-        <td>mattock</td>
+       <td><p class="word_break">mattock</p></td>
       
   
   
   
       
-        <td>MODULES-10522: Add support for the --condition parameter</td>
+       <td><p class="word_break">MODULES-10522: Add support for the --condition parameter</p></td>
       
   
   
   
       
-        <td>Hi @mattock 
+       <td><p class="word_break">Hi @mattock 
 
 Thanks for submitting this PR. 
 The issue you are having there seems to be caused by the warning you have received. The main problem is the parsing of the iptables output above this [line](https://github.com/puppetlabs/puppetlabs-firewall/blob/2a569afd70b82933b971864fcc1e174888ef3d81/lib/puppet/provider/firewall/iptables.rb#L546)
 
-Please let us know if you are having trouble fixing this problem. </td>
+Please let us know if you are having trouble fixing this problem. </p></td>
       
   
   
   
       
-        <td>carabasdaniel</td>
+       <td><p class="word_break">carabasdaniel</p></td>
       
   
   
   
       
-        <td>11</td>
+       <td><p class="word_break">14</p></td>
       
   
   
   
       
-        <td>2</td>
+       <td><p class="word_break">2</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/902'>902</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">3</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">alexconrey</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Add iptables --hex-string support to firewall resource</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0 comments</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break"></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/889'>889</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">46</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">mohammed-elhakim-sociomantic</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Add u32 to recognized modules</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Hey @mohammed-elhakim-sociomantic ,
+
+Thank you for this fix. It looks good to me, but the new rule should be tested. Would be possible to add a test to cover this?
+
+Cheers! </p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">lionce</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">42</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">1</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -1956,55 +1922,55 @@ Please let us know if you are having trouble fixing this problem. </td>
   
   
       
-        <td>102</td>
+       <td><p class="word_break">105</p></td>
       
   
   
   
       
-        <td>atarax</td>
+       <td><p class="word_break">atarax</p></td>
       
   
   
   
       
-        <td>(MODULES-10113) add option to ignore chains</td>
+       <td><p class="word_break">(MODULES-10113) add option to ignore chains</p></td>
       
   
   
   
       
-        <td>@sheenaajay this is currently a work-in-progress, i hope i will find time to work on this soon</td>
+       <td><p class="word_break">@sheenaajay this is currently a work-in-progress, i hope i will find time to work on this soon</p></td>
       
   
   
   
       
-        <td>atarax</td>
+       <td><p class="word_break">atarax</p></td>
       
   
   
   
       
-        <td>74</td>
+       <td><p class="word_break">77</p></td>
       
   
   
   
       
-        <td>2</td>
+       <td><p class="word_break">2</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
@@ -2026,195 +1992,55 @@ Please let us know if you are having trouble fixing this problem. </td>
   
   
       
-        <td>27</td>
+       <td><p class="word_break">31</p></td>
       
   
   
   
       
-        <td>treydock</td>
+       <td><p class="word_break">treydock</p></td>
       
   
   
   
       
-        <td>Add random_fully and rpfilter support</td>
+       <td><p class="word_break">Add random_fully and rpfilter support</p></td>
       
   
   
   
       
-        <td>I found the problem, I had not properly setup to `random_fully` feature. I think the only OSes that will support --random-fully is EL8 and Debian 10. The feature requires kernel >= 3.13 and iptables >= 1.6.2.  Added mention of versions required to property docs.</td>
+       <td><p class="word_break">I found the problem, I had not properly setup to `random_fully` feature. I think the only OSes that will support --random-fully is EL8 and Debian 10. The feature requires kernel >= 3.13 and iptables >= 1.6.2.  Added mention of versions required to property docs.</p></td>
       
   
   
   
       
-        <td>treydock</td>
+       <td><p class="word_break">treydock</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>16</td>
+       <td><p class="word_break">16</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy/pull/415'>415</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-helm'>puppetlabs-helm</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-helm/pull/114'>114</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -2236,129 +2062,59 @@ Please let us know if you are having trouble fixing this problem. </td>
   
   
       
-        <td>33</td>
+       <td><p class="word_break">36</p></td>
       
   
   
   
       
-        <td>AblionGE</td>
+       <td><p class="word_break">AblionGE</p></td>
       
   
   
   
       
-        <td>Add ability to deploy helm v3</td>
+       <td><p class="word_break">Add ability to deploy helm v3</p></td>
       
   
   
   
       
-        <td>Hi @AblionGE, thank you for your contribution. 
+       <td><p class="word_break">Hi @AblionGE, thank you for your contribution. 
 
 This draft looks really good.
 
-I think for now we should keep the possibility to install either version, for now, so I believe some conditional logic should be added, as you already did, so please go ahead and prepare a couple of tests and we'll give it a try once the PR is ready for review. </td>
+I think for now we should keep the possibility to install either version, for now, so I believe some conditional logic should be added, as you already did, so please go ahead and prepare a couple of tests and we'll give it a try once the PR is ready for review. </p></td>
       
   
   
   
       
-        <td>carabasdaniel</td>
+       <td><p class="word_break">carabasdaniel</p></td>
       
   
   
   
       
-        <td>22</td>
+       <td><p class="word_break">25</p></td>
       
   
   
   
       
-        <td>3</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ibm_installation_manager'>puppetlabs-ibm_installation_manager</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ibm_installation_manager/pull/145'>145</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -2380,55 +2136,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>45</td>
+       <td><p class="word_break">49</p></td>
       
   
   
   
       
-        <td>haloflightleader</td>
+       <td><p class="word_break">haloflightleader</p></td>
       
   
   
   
       
-        <td>Optional unzip</td>
+       <td><p class="word_break">Optional unzip</p></td>
       
   
   
   
       
-        <td>Thanks @haloflightleader for submitting the PR. Could you please add tests to verify the new parameter.</td>
+       <td><p class="word_break">Thanks @haloflightleader for submitting the PR. Could you please add tests to verify the new parameter.</p></td>
       
   
   
   
       
-        <td>sheenaajay</td>
+       <td><p class="word_break">sheenaajay</p></td>
       
   
   
   
       
-        <td>42</td>
+       <td><p class="word_break">46</p></td>
       
   
   
   
       
-        <td>3</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -2450,195 +2206,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/266'>266</a></td>
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Add weekly scheduled workflows</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
-  
-  
-  
-      
-        <td>316</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8953) add type and provider for mimetype</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -2660,55 +2276,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>316</td>
+       <td><p class="word_break">320</p></td>
       
   
   
   
       
-        <td>ThoughtCrhyme</td>
+       <td><p class="word_break">ThoughtCrhyme</p></td>
       
   
   
   
       
-        <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
+       <td><p class="word_break">WIP(MODULES-8954) add type and provider for webconfigurationproperty</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -2730,55 +2346,125 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>316</td>
+       <td><p class="word_break">320</p></td>
       
   
   
   
       
-        <td>ThoughtCrhyme</td>
+       <td><p class="word_break">ThoughtCrhyme</p></td>
       
   
   
   
       
-        <td>WIP(MODULES-8952) add isapfilter type and provider</td>
+       <td><p class="word_break">WIP(MODULES-8952) add isapfilter type and provider</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/266'>266</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">11</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">pdksync - Add weekly scheduled workflows</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0 comments</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break"></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -2800,55 +2486,125 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>316</td>
+       <td><p class="word_break">320</p></td>
       
   
   
   
       
-        <td>ThoughtCrhyme</td>
+       <td><p class="word_break">ThoughtCrhyme</p></td>
       
   
   
   
       
-        <td>WIP(MODULES-8951) Add type and provider for iis_httperror</td>
+       <td><p class="word_break">WIP(MODULES-8951) Add type and provider for iis_httperror</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">320</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">ThoughtCrhyme</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">WIP(MODULES-8953) add type and provider for mimetype</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0 comments</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break"></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -2870,125 +2626,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>316</td>
+       <td><p class="word_break">320</p></td>
       
   
   
   
       
-        <td>ThoughtCrhyme</td>
+       <td><p class="word_break">ThoughtCrhyme</p></td>
       
   
   
   
       
-        <td>WIP(MODULES-8955) add type and provider for webhandler</td>
+       <td><p class="word_break">WIP(MODULES-8955) add type and provider for webhandler</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-inifile'>puppetlabs-inifile</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-inifile/pull/385'>385</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -3010,55 +2696,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -3080,55 +2766,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -3150,195 +2836,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks'>puppetlabs-java_ks</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks/pull/310'>310</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/396'>396</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -3360,55 +2906,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>3</td>
+       <td><p class="word_break">6</p></td>
       
   
   
   
       
-        <td>Antiarchitect</td>
+       <td><p class="word_break">Antiarchitect</p></td>
       
   
   
   
       
-        <td>Update etcd repo from coreos to etcd-io</td>
+       <td><p class="word_break">Update etcd repo from coreos to etcd-io</p></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+       <td><p class="word_break">No previous comment other than codecov-io</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>3</td>
+       <td><p class="word_break">6</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -3430,125 +2976,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>128</td>
+       <td><p class="word_break">132</p></td>
       
   
   
   
       
-        <td>scoopex</td>
+       <td><p class="word_break">scoopex</p></td>
       
   
   
   
       
-        <td>improve package installation and dashboard installation</td>
+       <td><p class="word_break">improve package installation and dashboard installation</p></td>
       
   
   
   
       
-        <td>Thanks for the great PR @scoopex. Readme is updated with instructions on how to run the acceptance tests. Could you please resolve conflicts and rebase with the latest master. Thank you.</td>
+       <td><p class="word_break">Thanks for the great PR @scoopex. Readme is updated with instructions on how to run the acceptance tests. Could you please resolve conflicts and rebase with the latest master. Thank you.</p></td>
       
   
   
   
       
-        <td>sheenaajay</td>
+       <td><p class="word_break">sheenaajay</p></td>
       
   
   
   
       
-        <td>6</td>
+       <td><p class="word_break">10</p></td>
       
   
   
   
       
-        <td>11</td>
+       <td><p class="word_break">11</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/292'>292</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -3570,195 +3046,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>7</td>
+       <td><p class="word_break">11</p></td>
       
   
   
   
       
-        <td>tphoney <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">tphoney <span class='label label-warning'>puppet</span></p></td>
       
   
   
   
       
-        <td>{WIP} Bolt v2</td>
+       <td><p class="word_break">{WIP} Bolt v2</p></td>
       
   
   
   
       
-        <td>Based on https://github.com/puppetlabs/puppet_litmus/pull/254</td>
+       <td><p class="word_break">Based on https://github.com/puppetlabs/puppet_litmus/pull/254</p></td>
       
   
   
   
       
-        <td>DavidS</td>
+       <td><p class="word_break">DavidS</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1286'>1286</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1281'>1281</a></td>
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Add weekly scheduled workflows</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -3780,55 +3116,125 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>(MODULES-10562) - v10.4.0 Release Preperation</td>
+       <td><p class="word_break">(MODULES-10562) - v10.4.0 Release Preperation</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1281'>1281</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">11</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">pdksync - Add weekly scheduled workflows</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0 comments</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break"></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -3850,539 +3256,55 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>unki</td>
+       <td><p class="word_break">unki</p></td>
       
   
   
   
       
-        <td>allow changing the mysql-config-file group-ownership</td>
+       <td><p class="word_break">allow changing the mysql-config-file group-ownership</p></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+       <td><p class="word_break">No previous comment other than codecov-io</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1245'>1245</a></td>
-  
-  
-  
-      
-        <td>134</td>
-      
-  
-  
-  
-      
-        <td>fraenki</td>
-      
-  
-  
-  
-      
-        <td>Fix multiple xtrabackup regressions (+JIRA ticket)</td>
-      
-  
-  
-  
-      
-        <td>@carabasdaniel I've addressed these issues in https://github.com/puppetlabs/puppetlabs-mysql/pull/1245/commits/7d43a58bf15199db6a82db58b7e67310a1378e34. How can I run this "full suite of acceptance tests"?
-
-Besides that after the latest commit the RHEL6/7 tests fail on travis, although they work perfectly fine locally. No idea how this travis "timeout" error should be useful to anyone. :-/ Maybe you have access to logs or debug output.
-
-```
-┌ [✔] Running against 3 targets.
-├── [✔] a7fd595f70f6, waffleimage/centos7
-├── [✔] 4a786dcbdda7, waffleimage/oraclelinux7
-└── [✔] cc31598fc975, waffleimage/scientificlinux7
-================
-4a786dcbdda7, waffleimage/oraclelinux7
-.....................................................................................................
-
-Finished in 6 minutes 2 seconds (files took 38.73 seconds to load)
-101 examples, 0 failures
-
-Libhoney::Client: no writekey configured, disabling sending events
-pid 11620 exit 0
-================
-a7fd595f70f6, waffleimage/centos7
-.....................................................................................................
-
-Finished in 6 minutes 6 seconds (files took 1 minute 11.37 seconds to load)
-101 examples, 0 failures
-
-Libhoney::Client: no writekey configured, disabling sending events
-pid 11616 exit 0
-================
-cc31598fc975, waffleimage/scientificlinux7
-.....................................................................................................
-
-Finished in 7 minutes 47 seconds (files took 1 minute 38.01 seconds to load)
-101 examples, 0 failures
-```
-
-```
-┌ [✔] Running against 2 targets.
-├── [✔] 111f52cba808, waffleimage/centos6
-└── [✔] 1a1c889a9c3a, waffleimage/scientificlinux6
-================
-111f52cba808, waffleimage/centos6
-............................................................................................
-
-Finished in 5 minutes 52 seconds (files took 33.14 seconds to load)
-92 examples, 0 failures
-
-Libhoney::Client: no writekey configured, disabling sending events
-pid 19358 exit 0
-================
-1a1c889a9c3a, waffleimage/scientificlinux6
-............................................................................................
-
-Finished in 6 minutes 51 seconds (files took 57.87 seconds to load)
-92 examples, 0 failures
-```</td>
-      
-  
-  
-  
-      
-        <td>fraenki</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>13</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1194'>1194</a></td>
-  
-  
-  
-      
-        <td>298</td>
-      
-  
-  
-  
-      
-        <td>elfranne</td>
-      
-  
-  
-  
-      
-        <td>Debian dirs </td>
-      
-  
-  
-  
-      
-        <td>Hello any news on this PR ? This is a blocker for guys using Debian as package start mysql on post install scripts.
-Typically starting mysql without binlog dir will prevent mysql from starting then package installation is marked as failed.
-</td>
-      
-  
-  
-  
-      
-        <td>fuyar</td>
-      
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
-  
-  
-  
-      
-        <td>79</td>
-      
-  
-  
-  
-      
-        <td>baldurmen</td>
-      
-  
-  
-  
-      
-        <td>WIP: Don't try to install cron packages by default</td>
-      
-  
-  
-  
-      
-        <td>@baldurmen We have a similar fix in the following PR.https://github.com/puppetlabs/puppetlabs-mysql/pull/1206
-Do you want to take a quick look? Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1247'>1247</a></td>
-  
-  
-  
-      
-        <td>127</td>
-      
-  
-  
-  
-      
-        <td>alexjfisher <span class='label label-primary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>WIP: Improvement to mysql::sql task</td>
-      
-  
-  
-  
-      
-        <td>@alexjfisher Hey, just wondering if this was work that you intended to continue and if there was any help that you needed?</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1206'>1206</a></td>
-  
-  
-  
-      
-        <td>261</td>
-      
-  
-  
-  
-      
-        <td>comport3</td>
-      
-  
-  
-  
-      
-        <td>Fix regression introduced by PR#1175 for managing CRON package</td>
-      
-  
-  
-  
-      
-        <td>![Screen Shot 2020-02-21 at 11 08 25](https://user-images.githubusercontent.com/20660680/75030573-4a83bb80-549c-11ea-818a-ccab0bc1621a.png)
-</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
-  
-  
-  
-      
-        <td>157</td>
-      
-  
-  
-  
-      
-        <td>koshatul</td>
-      
-  
-  
-  
-      
-        <td>change split on whitespace to split on tab in mysql_user</td>
-      
-  
-  
-  
-      
-        <td>Hi @koshatul 
-
-Thank you for submitting this PR.
-
-I've added a commit to fix the unit testing for this change, however it appears there are some acceptance testing failures caused by this change that you can verify in travis. 
-
-Can you verify and fix the testing for those failures ? You might be able to run the tests on your local machine with Litmus to have an easier time getting these issues solved. Please let us know if you are having trouble with this.</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel</td>
-      
-  
-  
-  
-      
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -4404,56 +3326,56 @@ Can you verify and fix the testing for those failures ? You might be able to run
   
   
       
-        <td>91</td>
+       <td><p class="word_break">94</p></td>
       
   
   
   
       
-        <td>aloosnetmatch</td>
+       <td><p class="word_break">aloosnetmatch</p></td>
       
   
   
   
       
-        <td>create the folder for the logfile, not the logfile itself</td>
+       <td><p class="word_break">create the folder for the logfile, not the logfile itself</p></td>
       
   
   
   
       
-        <td>Thanks @aloosnetmatch for submitting the PR.
-Could you please look into the unit test case failures. Thank you.</td>
+       <td><p class="word_break">Thanks @aloosnetmatch for submitting the PR.
+Could you please look into the unit test case failures. Thank you.</p></td>
       
   
   
   
       
-        <td>sheenaajay</td>
+       <td><p class="word_break">sheenaajay</p></td>
       
   
   
   
       
-        <td>80</td>
+       <td><p class="word_break">84</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -4462,7 +3384,7 @@ Could you please look into the unit test case failures. Thank you.</td>
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
   
   
   
@@ -4470,60 +3392,422 @@ Could you please look into the unit test case failures. Thank you.</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/561'>561</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">160</p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">koshatul</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">change split on whitespace to split on tab in mysql_user</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break">Hi @koshatul 
+
+Thank you for submitting this PR.
+
+I've added a commit to fix the unit testing for this change, however it appears there are some acceptance testing failures caused by this change that you can verify in travis. 
+
+Can you verify and fix the testing for those failures ? You might be able to run the tests on your local machine with Litmus to have an easier time getting these issues solved. Please let us know if you are having trouble with this.</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">carabasdaniel</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">18</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">83</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">baldurmen</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">WIP: Don't try to install cron packages by default</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">@baldurmen We have a similar fix in the following PR.https://github.com/puppetlabs/puppetlabs-mysql/pull/1206
+Do you want to take a quick look? Thank you.</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">sheenaajay</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">10</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">4</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1194'>1194</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">301</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">elfranne</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Debian dirs </p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Hello any news on this PR ? This is a blocker for guys using Debian as package start mysql on post install scripts.
+Typically starting mysql without binlog dir will prevent mysql from starting then package installation is marked as failed.
+</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">fuyar</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">25</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">7</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1245'>1245</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">138</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">fraenki</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Fix multiple xtrabackup regressions (+JIRA ticket)</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">@david22swan Thanks for fixing the travis tests! :+1: 
+
+@sheenaajay I've addressed the CentOS/RHEL 5 errors in https://github.com/puppetlabs/puppetlabs-mysql/pull/1245/commits/3efa12355b87c1354a748f69abdd7f9db7c57eb1. However, RHEL5 is EOL so the available docker images are pretty useless and couldn't run all tests. I couldn't find docker images SLES11 so I can't test it at all. Regarding the EL6 failures: Why don't these failures show up in travis, or: why does Puppetlabs use different images for the final tests? Since I can't trigger these failures, I have to ask you for the full error messages for all EL6-like operating systems.</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">fraenki</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">1</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">15</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1206'>1206</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">264</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">comport3</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Fix regression introduced by PR#1175 for managing CRON package</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">![Screen Shot 2020-02-21 at 11 08 25](https://user-images.githubusercontent.com/20660680/75030573-4a83bb80-549c-11ea-818a-ccab0bc1621a.png)
+</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">sheenaajay</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">10</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">14</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1247'>1247</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">131</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">alexjfisher <span class='label label-primary'>vox</span></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">WIP: Improvement to mysql::sql task</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">@alexjfisher Hey, just wondering if this was work that you intended to continue and if there was any help that you needed?</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">david22swan</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">6</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">3</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -4545,125 +3829,55 @@ Could you please look into the unit test case failures. Thank you.</td>
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/184'>184</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -4672,7 +3886,7 @@ Could you please look into the unit test case failures. Thank you.</td>
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
   
   
   
@@ -4680,60 +3894,60 @@ Could you please look into the unit test case failures. Thank you.</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1149'>1149</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/561'>561</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -4755,125 +3969,55 @@ Could you please look into the unit test case failures. Thank you.</td>
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>pedrocr</td>
+       <td><p class="word_break">pedrocr</p></td>
       
   
   
   
       
-        <td>Add Ubuntu 19.04/19.10 compatibility</td>
+       <td><p class="word_break">Add Ubuntu 19.04/19.10 compatibility</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">No previous comment other than codecov-io</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
-  
-  
-  
-      
-        <td>45</td>
-      
-  
-  
-  
-      
-        <td>Bouke</td>
-      
-  
-  
-  
-      
-        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
-      
-  
-  
-  
-      
-        <td>@carabasdaniel I'm not familiar with writing tests, but if you can provide me with some pointers for existing test that I can extend, I'd be happy to. Is there a similar unit test for the MD5 case?</td>
-      
-  
-  
-  
-      
-        <td>Bouke</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -4895,55 +4039,55 @@ Could you please look into the unit test case failures. Thank you.</td>
   
   
       
-        <td>8</td>
+       <td><p class="word_break">11</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Add weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Add weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -4952,7 +4096,7 @@ Could you please look into the unit test case failures. Thank you.</td>
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell'>puppetlabs-powershell</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
   
   
   
@@ -4960,60 +4104,60 @@ Could you please look into the unit test case failures. Thank you.</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/295'>295</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">48</p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">Bouke</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">Don't update password encrypted with SCRAM-SHA-256 if not changed</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break">@carabasdaniel I'm not familiar with writing tests, but if you can provide me with some pointers for existing test that I can extend, I'd be happy to. Is there a similar unit test for the MD5 case?</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">Bouke</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">true</p></td>
       
   
   
@@ -5035,59 +4179,59 @@ Could you please look into the unit test case failures. Thank you.</td>
   
   
       
-        <td>18</td>
+       <td><p class="word_break">21</p></td>
       
   
   
   
       
-        <td>iakovgan</td>
+       <td><p class="word_break">iakovgan</p></td>
       
   
   
   
       
-        <td>Modules 10539</td>
+       <td><p class="word_break">Modules 10539</p></td>
       
   
   
   
       
-        <td>@iakovgan thank you for this fix!
+       <td><p class="word_break">@iakovgan thank you for this fix!
 
 While it _would_ bandaid the problem, there's a deeper issue - this code should not be evaluating at all and instead relying on the feature confine to ensure the dependency is installed; this is only running because of the way the `commands` provider idiom is implemented.
 
-I have filed #287 with a more thorough fix - would very much appreciate if you could test that in your environment and let me know if it works for you!</td>
+I have filed #287 with a more thorough fix - would very much appreciate if you could test that in your environment and let me know if it works for you!</p></td>
       
   
   
   
       
-        <td>michaeltlombardi</td>
+       <td><p class="word_break">michaeltlombardi</p></td>
       
   
   
   
       
-        <td>15</td>
+       <td><p class="word_break">18</p></td>
       
   
   
   
       
-        <td>2</td>
+       <td><p class="word_break">2</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -5104,270 +4248,61 @@ I have filed #287 with a more thorough fix - would very much appreciate if you c
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/103'>103</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/104'>104</a></td>
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">sheenaajay <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">(IAC-285) Modify appveyor to run acceptance tests</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">
+</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break">sheenaajay</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot'>puppetlabs-reboot</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot/pull/241'>241</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-registry'>puppetlabs-registry</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-registry/pull/209'>209</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-resource'>puppetlabs-resource</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-resource/pull/89'>89</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -5389,125 +4324,55 @@ I have filed #287 with a more thorough fix - would very much appreciate if you c
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-rook'>puppetlabs-rook</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-rook/pull/78'>78</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -5529,125 +4394,55 @@ I have filed #287 with a more thorough fix - would very much appreciate if you c
   
   
       
-        <td>6</td>
+       <td><p class="word_break">10</p></td>
       
   
   
   
       
-        <td>fxbe</td>
+       <td><p class="word_break">fxbe</p></td>
       
   
   
   
       
-        <td>replace puppet[:compatibility] with function call compatibility since…</td>
+       <td><p class="word_break">replace puppet[:compatibility] with function call compatibility since…</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/126'>126</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -5669,55 +4464,55 @@ I have filed #287 with a more thorough fix - would very much appreciate if you c
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -5739,125 +4534,55 @@ I have filed #287 with a more thorough fix - would very much appreciate if you c
   
   
       
-        <td>8</td>
+       <td><p class="word_break">11</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Add weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Add weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-sqlserver'>puppetlabs-sqlserver</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-sqlserver/pull/348'>348</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -5879,125 +4604,55 @@ I have filed #287 with a more thorough fix - would very much appreciate if you c
   
   
       
-        <td>27</td>
+       <td><p class="word_break">31</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>(FM-8199) - Port module to Litmus</td>
+       <td><p class="word_break">(FM-8199) - Port module to Litmus</p></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+       <td><p class="word_break">No previous comment other than codecov-io</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>7</td>
+       <td><p class="word_break">10</p></td>
       
   
   
   
       
-        <td>1</td>
+       <td><p class="word_break">1</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1094'>1094</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -6019,55 +4674,55 @@ I have filed #287 with a more thorough fix - would very much appreciate if you c
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -6089,61 +4744,61 @@ I have filed #287 with a more thorough fix - would very much appreciate if you c
   
   
       
-        <td>16</td>
+       <td><p class="word_break">20</p></td>
       
   
   
   
       
-        <td>justinstoller <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">justinstoller <span class='label label-warning'>puppet</span></p></td>
       
   
   
   
       
-        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
+       <td><p class="word_break">(wip) use json, not pson, steal Bens work to make pup4</p></td>
       
   
   
   
       
-        <td>Hi @justinstoller,
+       <td><p class="word_break">Hi @justinstoller,
 
 Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
 
 With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
 
-cc @binford2k </td>
+cc @binford2k </p></td>
       
   
   
   
       
-        <td>DavidS</td>
+       <td><p class="word_break">DavidS</p></td>
       
   
   
   
       
-        <td>7</td>
+       <td><p class="word_break">10</p></td>
       
   
   
   
       
-        <td>2</td>
+       <td><p class="word_break">2</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
@@ -6165,131 +4820,55 @@ cc @binford2k </td>
   
   
       
-        <td>52</td>
+       <td><p class="word_break">56</p></td>
       
   
   
   
       
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='label label-primary'>vox</span></td>
+       <td><p class="word_break">binford2k <span class='label label-warning'>puppet</span> <span class='label label-primary'>vox</span></p></td>
       
   
   
   
       
-        <td>Puppet 4 functions</td>
+       <td><p class="word_break">Puppet 4 functions</p></td>
       
   
   
   
       
-        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
+       <td><p class="word_break">I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</p></td>
       
   
   
   
       
-        <td>DavidS</td>
+       <td><p class="word_break">DavidS</p></td>
       
   
   
   
       
-        <td>11</td>
+       <td><p class="word_break">14</p></td>
       
   
   
   
       
-        <td>2</td>
+       <td><p class="word_break">2</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
-  
-  
-  
-      
-        <td>357</td>
-      
-  
-  
-  
-      
-        <td>Rathios</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-8732) Cron types</td>
-      
-  
-  
-  
-      
-        <td>Hi @Rathios,
-
-Thank you for your contribution, this looks really great!
-
-This would be better suited to the core cron module: https://github.com/puppetlabs/puppetlabs-cron_core
-
-If you submit it there, please ping me on the PR so I can make sure it gets merged quickly. </td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel</td>
-      
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -6311,59 +4890,135 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>99</td>
+       <td><p class="word_break">102</p></td>
       
   
   
   
       
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='label label-primary'>vox</span></td>
+       <td><p class="word_break">binford2k <span class='label label-warning'>puppet</span> <span class='label label-primary'>vox</span></p></td>
       
   
   
   
       
-        <td>(WIP) Add volatile_fact() function</td>
+       <td><p class="word_break">(WIP) Add volatile_fact() function</p></td>
       
   
   
   
       
-        <td>So, there are issues with getting the facts if not set in scope as `$facts`, a) risk of getting server side facts when called on master and b) if there are many "deferred facts" they would all result in running Facter and this would be slow c) since each call will run Facter, the values may differ for the same fact
+       <td><p class="word_break">So, there are issues with getting the facts if not set in scope as `$facts`, a) risk of getting server side facts when called on master and b) if there are many "deferred facts" they would all result in running Facter and this would be slow c) since each call will run Facter, the values may differ for the same fact
  
 The best would be if the facts were already present in scope when deferred calls are resolved. That requires a change to Puppet however as the setup and use of PAL on the agent side for resolution of Deferred must be given the facts to use. (The rest should already be supported by PAL; i.e. setting `$facts` etc.)
 
-If not computed and set up front, then I think the result needs to be cached and kept while resolving deferred values. This would be good since if there is no call to get a deferred fact then Facter does not need to run at all. If going this route, there is a supported caching mechanism that functions can use. With this there is still the problem of getting the wrong facts (for server when agent was intended) as the place intention is known is when setting up the context (i.e. when setting up PAL for resolution, or when setting up for apply, master compile, bolt apply compile, etc.).</td>
+If not computed and set up front, then I think the result needs to be cached and kept while resolving deferred values. This would be good since if there is no call to get a deferred fact then Facter does not need to run at all. If going this route, there is a supported caching mechanism that functions can use. With this there is still the problem of getting the wrong facts (for server when agent was intended) as the place intention is known is when setting up the context (i.e. when setting up PAL for resolution, or when setting up for apply, master compile, bolt apply compile, etc.).</p></td>
       
   
   
   
       
-        <td>hlindberg</td>
+       <td><p class="word_break">hlindberg</p></td>
       
   
   
   
       
-        <td>90</td>
+       <td><p class="word_break">93</p></td>
       
   
   
   
       
-        <td>7</td>
+       <td><p class="word_break">7</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">360</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Rathios</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">(MODULES-8732) Cron types</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Hi @Rathios,
+
+Thank you for your contribution, this looks really great!
+
+This would be better suited to the core cron module: https://github.com/puppetlabs/puppetlabs-cron_core
+
+If you submit it there, please ping me on the PR so I can make sure it gets merged quickly. </p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">carabasdaniel</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">24</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">10</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -6385,55 +5040,55 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -6455,125 +5110,55 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
       
-        <td>8</td>
+       <td><p class="word_break">11</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Add weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Add weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat'>puppetlabs-tomcat</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat/pull/390'>390</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -6595,55 +5180,55 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
       
-        <td>8</td>
+       <td><p class="word_break">11</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Add weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Add weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -6652,7 +5237,7 @@ If not computed and set up front, then I think the result needs to be cached and
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-translate'>puppetlabs-translate</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat'>puppetlabs-tomcat</a></td>
   
   
   
@@ -6660,60 +5245,60 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-translate/pull/76'>76</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat/pull/390'>390</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -6735,210 +5320,55 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
       
-        <td>2</td>
+       <td><p class="word_break">5</p></td>
       
   
   
   
       
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/450'>450</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Update weekly scheduled workflows</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/418'>418</a></td>
-  
-  
-  
-      
-        <td>294</td>
-      
-  
-  
-  
-      
-        <td>evanstachowiak</td>
-      
-  
-  
-  
-      
-        <td>Don't set --branch equal to revision when depth > 0</td>
-      
-  
-  
-  
-      
-        <td>Hi @evanstachowiak,
-
-Thanks for opening this PR.
-
-In order to check out a specific revision I recommend you avoid using the depth parameter and just use a reset to your desired revision after cloning the branch you need. Here's an example manifest that does a reset on a commit SHA:
-
-```
-vcsrepo { '/test/repo':
-  ensure   => present,
-  provider => git,
-  source   => 'git://github.com/puppetlabs/puppetlabs-vcsrepo.git',
-  revision => 'efea838d92b283fff697a58ebdd723a02e7a0e84',
-}
-```
-
-</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel</td>
-      
-  
-  
-  
-      
-        <td>13</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -6960,55 +5390,210 @@ vcsrepo { '/test/repo':
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/450'>450</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">5</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">carabasdaniel <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">pdksync - Update weekly scheduled workflows</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0 comments</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break"></p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">true</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/418'>418</a></td>
+  
+  
+  
+      
+       <td><p class="word_break">297</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">evanstachowiak</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Don't set --branch equal to revision when depth > 0</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">Hi @evanstachowiak,
+
+Thanks for opening this PR.
+
+In order to check out a specific revision I recommend you avoid using the depth parameter and just use a reset to your desired revision after cloning the branch you need. Here's an example manifest that does a reset on a commit SHA:
+
+```
+vcsrepo { '/test/repo':
+  ensure   => present,
+  provider => git,
+  source   => 'git://github.com/puppetlabs/puppetlabs-vcsrepo.git',
+  revision => 'efea838d92b283fff697a58ebdd723a02e7a0e84',
+}
+```
+
+</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">carabasdaniel</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">17</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">4</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
+      
+  
+  
+  
+      
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -7030,55 +5615,55 @@ vcsrepo { '/test/repo':
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -7100,59 +5685,59 @@ vcsrepo { '/test/repo':
   
   
       
-        <td>43</td>
+       <td><p class="word_break">47</p></td>
       
   
   
   
       
-        <td>psreed <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">psreed <span class='label label-warning'>puppet</span></p></td>
       
   
   
   
       
-        <td>A Puppet Plan which can be used to clone an IBM WAS Package/FixPack repository</td>
+       <td><p class="word_break">A Puppet Plan which can be used to clone an IBM WAS Package/FixPack repository</p></td>
       
   
   
   
       
-        <td>Hi @psreed 
+       <td><p class="word_break">Hi @psreed 
 
 Thanks for submitting this PR. In order to run tests for Bolt plans or Bolt tasks you can use the documentation from https://github.com/puppetlabs/bolt/blob/master/developer-docs/bolt_spec-run.md. 
 
-See the example guide for writing tasks here: https://puppet.com/blog/writing-robust-bolt-tasks-guide/</td>
+See the example guide for writing tasks here: https://puppet.com/blog/writing-robust-bolt-tasks-guide/</p></td>
       
   
   
   
       
-        <td>carabasdaniel</td>
+       <td><p class="word_break">carabasdaniel</p></td>
       
   
   
   
       
-        <td>20</td>
+       <td><p class="word_break">24</p></td>
       
   
   
   
       
-        <td>4</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
@@ -7174,55 +5759,55 @@ See the example guide for writing tasks here: https://puppet.com/blog/writing-ro
   
   
       
-        <td>34</td>
+       <td><p class="word_break">38</p></td>
       
   
   
   
       
-        <td>vkorehov</td>
+       <td><p class="word_break">vkorehov</p></td>
       
   
   
   
       
-        <td>relaxing validation for repository</td>
+       <td><p class="word_break">relaxing validation for repository</p></td>
       
   
   
   
       
-        <td>@vkorehov Thanks for submitting the PR. Is it a WIP status?</td>
+       <td><p class="word_break">@vkorehov Thanks for submitting the PR. Is it a WIP status?</p></td>
       
   
   
   
       
-        <td>sheenaajay</td>
+       <td><p class="word_break">sheenaajay</p></td>
       
   
   
   
       
-        <td>2</td>
+       <td><p class="word_break">6</p></td>
       
   
   
   
       
-        <td>3</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -7244,151 +5829,55 @@ See the example guide for writing tasks here: https://puppet.com/blog/writing-ro
   
   
       
-        <td>0</td>
+       <td><p class="word_break">4</p></td>
       
   
   
   
       
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
+       <td><p class="word_break">david22swan <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>iac</span></p></td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+       <td><p class="word_break">pdksync - (maint) - Pdk Update</p></td>
       
   
   
   
       
-        <td>0 comments</td>
+       <td><p class="word_break">0 comments</p></td>
       
   
   
   
       
-        <td></td>
+       <td><p class="word_break"></p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>0</td>
+       <td><p class="word_break">0</p></td>
       
   
   
   
       
-        <td>true</td>
+       <td><p class="word_break">true</p></td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos'>puppetlabs-panos</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/118'>118</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td># [Codecov](https://codecov.io/gh/puppetlabs/puppetlabs-panos/pull/118?src=pr&el=h1) Report
-> Merging [#118](https://codecov.io/gh/puppetlabs/puppetlabs-panos/pull/118?src=pr&el=desc) into [master](https://codecov.io/gh/puppetlabs/puppetlabs-panos/commit/7c27af6ad2a4fb95d9e0e21575e2552f3c413346?src=pr&el=desc) will **not change** coverage.
-> The diff coverage is `n/a`.
-
-[![Impacted file tree graph](https://codecov.io/gh/puppetlabs/puppetlabs-panos/pull/118/graphs/tree.svg?width=650&token=TehXkElt3n&height=150&src=pr)](https://codecov.io/gh/puppetlabs/puppetlabs-panos/pull/118?src=pr&el=tree)
-
-```diff
-@@          Coverage Diff          @@
-##           master   #118   +/-   ##
-=====================================
-  Coverage     100%   100%           
-=====================================
-  Files          40     40           
-  Lines        1136   1136           
-=====================================
-  Hits         1136   1136
-```
-
-
-
-------
-
-[Continue to review full report at Codecov](https://codecov.io/gh/puppetlabs/puppetlabs-panos/pull/118?src=pr&el=continue).
-> **Legend** - [Click here to learn more](https://docs.codecov.io/docs/codecov-delta)
-> `Δ = absolute  (impact)`, `ø = not affected`, `? = missing data`
-> Powered by [Codecov](https://codecov.io/gh/puppetlabs/puppetlabs-panos/pull/118?src=pr&el=footer). Last update [7c27af6...1483217](https://codecov.io/gh/puppetlabs/puppetlabs-panos/pull/118?src=pr&el=lastupdated). Read the [comment docs](https://docs.codecov.io/docs/pull-request-comments).
-</td>
-      
-  
-  
-  
-      
-        <td>codecov[bot]</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -7410,55 +5899,55 @@ See the example guide for writing tasks here: https://puppet.com/blog/writing-ro
   
   
       
-        <td>274</td>
+       <td><p class="word_break">277</p></td>
       
   
   
   
       
-        <td>shermdog</td>
+       <td><p class="word_break">shermdog</p></td>
       
   
   
   
       
-        <td>(maint) Add op_command task for executing arbitrary operational commands</td>
+       <td><p class="word_break">(maint) Add op_command task for executing arbitrary operational commands</p></td>
       
   
   
   
       
-        <td>@shermdog do you still intend to pick this PR up or should I close it? 💜 </td>
+       <td><p class="word_break">@shermdog do you still intend to pick this PR up or should I close it? 💜 </p></td>
       
   
   
   
       
-        <td>michaeltlombardi</td>
+       <td><p class="word_break">michaeltlombardi</p></td>
       
   
   
   
       
-        <td>31</td>
+       <td><p class="word_break">35</p></td>
       
   
   
   
       
-        <td>3</td>
+       <td><p class="word_break">3</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
@@ -7480,60 +5969,64 @@ See the example guide for writing tasks here: https://puppet.com/blog/writing-ro
   
   
       
-        <td>156</td>
+       <td><p class="word_break">159</p></td>
       
   
   
   
       
-        <td>gbrusick</td>
+       <td><p class="word_break">gbrusick</p></td>
       
   
   
   
       
-        <td>add new types: panos_decryption_policy_rule, panos_application_group, panos_custom_url_category, and panos_profiles_url_filtering</td>
+       <td><p class="word_break">add new types: panos_decryption_policy_rule, panos_application_group, panos_custom_url_category, and panos_profiles_url_filtering</p></td>
       
   
   
   
       
-        <td>I added examples that I took from production devices and modified the names, but I cannot run the acceptance, because the server that has access to the devices doesn't have a version of rubby recent enough. Could you please run it and tell me if there is something wrong.</td>
+       <td><p class="word_break">I added examples that I took from production devices and modified the names, but I cannot run the acceptance, because the server that has access to the devices doesn't have a version of rubby recent enough. Could you please run it and tell me if there is something wrong.</p></td>
       
   
   
   
       
-        <td>gbrusick</td>
+       <td><p class="word_break">gbrusick</p></td>
       
   
   
   
       
-        <td>140</td>
+       <td><p class="word_break">143</p></td>
       
   
   
   
       
-        <td>9</td>
+       <td><p class="word_break">9</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   
       
-        <td>false</td>
+       <td><p class="word_break">false</p></td>
       
   
   
   </tr>
  
 </table>
+
 </body>
+<script>
+  testFilter = new tablefilter("testFilter", ["test"], true, 1000)
+</script>
 </html>
