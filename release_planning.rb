@@ -93,15 +93,7 @@ parsed.each do |m|
     date_of_tag = util.date_of_ref("#{m['github_namespace']}/#{m['repo_name']}", tag_ref)
     commits_since_tag = util.commits_since_date_c("#{m['github_namespace']}/#{m['repo_name']}", date_of_tag)
     prs_since_tag = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", options = { state: 'closed', sort: 'updated' }, %i[statuses pull_request_commits issue_comments], attribute: 'closed_at', date: date_of_tag)
-
     no_maintenance_commits = get_number_of_commits_on_maintenance(util, commits_since_tag, prs_since_tag, 'maintenance', m)
-    no_features_commits = get_number_of_commits_on_maintenance(util, commits_since_tag, prs_since_tag, 'feature', m)
-    no_bugs_commits = get_number_of_commits_on_maintenance(util, commits_since_tag, prs_since_tag, 'bug', m)
-    no_backward_commits = get_number_of_commits_on_maintenance(util, commits_since_tag, prs_since_tag, 'backward-incompatible', m)
-
-
-
-
     repo_data << { 'repo' => "#{m['github_namespace']}/#{m['repo_name']}", 'date' => date_of_tag, 'commits' => commits_since_tag.size, 'downloads' => number_of_downloads(m['forge_name']), 'maintenance_commits' => no_maintenance_commits }
     puppet_modules << PuppetModule.new(repo, "#{m['github_namespace']}/#{m['repo_name']}", date_of_tag, commits_since_tag, no_maintenance_commits)
   rescue StandardError
