@@ -1,0 +1,64 @@
+[
+  {
+    "repo_name": "puppetlabs/community_management",
+    "github_namespace": "puppetlabs",
+    "tool_name": "community_management"
+  },
+  {
+    "repo_name": "puppetlabs/dependency_checker",
+    "github_namespace": "puppetlabs",
+    "tool_name": "dependency_checker"
+  },
+  {
+  	"repo_name": "puppetlabs/puppet_litmus",
+    "github_namespace": "puppetlabs",
+    "tool_name": "puppet_litmus"
+  },
+  {
+  	"repo_name": "puppetlabs/puppet_pdksync",
+    "github_namespace": "puppetlabs",
+    "tool_name": "pdksync"
+  },
+  {
+  	"repo_name": "puppetlabs/puppet-approved",
+    "github_namespace": "puppetlabs",
+    "tool_name": "puppet-approved"
+  },
+  {
+  	"repo_name": "puppetlabs/puppet-lint-i18n",
+    "github_namespace": "puppetlabs",
+    "tool_name": "puppet-lint-i18n"
+  },
+  {
+  	"repo_name": "puppetlabs/puppet-strings",
+    "github_namespace": "puppetlabs",
+    "tool_name": "puppet-strings"
+  },
+  {
+  	"repo_name": "puppetlabs/puppet-strings",
+    "github_namespace": "puppetlabs",
+    "tool_name": "puppet-strings"
+  },
+  {
+  	"repo_name": "puppetlabs/puppet_pot_generator",
+    "github_namespace": "puppetlabs",
+    "tool_name": "puppet_pot_generator"
+  },
+ {
+  	"repo_name": "puppetlabs/puppet-resource_api",
+    "github_namespace": "puppetlabs",
+    "tool_name": "puppet-resource_api"
+  },
+  {
+  	"repo_name": "puppetlabs/rubocop-i18n",
+    "github_namespace": "puppetlabs",
+    "tool_name": "rubocop-i18n"
+  },
+  {
+  	"repo_name": "puppetlabs/ruby-pwsh",
+    "github_namespace": "puppetlabs",
+    "tool_name": "ruby-pwsh"
+  }
+]
+
+  
