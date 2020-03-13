@@ -1,6 +1,13 @@
 require 'erb'
 require 'optparse'
 require_relative 'octokit_utils'
+require 'net/http'
+require 'json'
+uri = URI.parse("https://puppetlabs.github.io/iac/tools.json")
+response = Net::HTTP.get_response(uri)
+output = response.body.gsub(/\n/,'')
+output.gsub!(/output\".+?(?=previous)/,'')
+parsed = JSON.parse(output)
 
 options = {}
 options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
@@ -12,8 +19,6 @@ end
 
 parser.parse!
 
-options[:file] = 'tools.json' if options[:file].nil?
-
 missing = []
 missing << '-t' if options[:oauth].nil?
 unless missing.empty?
@@ -23,8 +28,6 @@ unless missing.empty?
 end
 
 util = OctokitUtils.new(options[:oauth])
-parsed = util.load_module_list(options[:file])
-
 open_prs = []
 
 def does_array_have_pr(array, pr_number)
@@ -37,7 +40,7 @@ end
 
 parsed.each do |m|
   sleep(2)
-  pr_information_cache = util.fetch_async("#{m['github_namespace']}/#{m['tool_name']}")
+  pr_information_cache = util.fetch_async("#{m['github']}")
   # no comment from a puppet employee
   puppet_uncommented_pulls = util.fetch_pull_requests_with_no_puppet_personnel_comments(pr_information_cache)
   # last comment mentions a puppet person
@@ -48,7 +51,7 @@ parsed.each do |m|
     sleep(2)
     row = {}
     row[:tool] = m['tool_name']
-    row[:address] = "https://github.com/#{m['github_namespace']}/#{m['tool_name']}"
+    row[:address] = "https://github.com/#{m['github']}"
     row[:pr] = pr[:pull].number
     row[:age] = ((Time.now - pr[:pull].created_at) / 60 / 60 / 24).round
     row[:owner] = pr[:pull].user.login
