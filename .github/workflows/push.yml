@@ -24,6 +24,8 @@ jobs:
           bundle exec ruby graph.rb --pr_work_done --created_prs_per_day --open_prs_per_day
           ### generate prs for triage report
           bundle exec ruby pr_review_list.rb -t $token
+          ### generate prs for tools report
+          bundle exec ruby tools.rb -t $token
           ### generate release planning
           bundle exec ruby release_planning.rb -c 0 -g '^v*\d*\.\d*\.\d*' -m 0 -t $token 
           ### generate github actions report
@@ -41,7 +43,6 @@ jobs:
           data=$("date")
           echo "Adding timestamp $data"
           sed -i -e "s|<p>.*<\/p>|<p>$data</p>|g" index.html
-          cat index.html
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
