@@ -54,7 +54,7 @@ parsed.each do |m|
   pr_information_cache.each do |pr|
     sleep(2)
     row = {}
-    row[:tool] = m['tool_name']
+    row[:tool] = m['title']
     row[:address] = "https://github.com/#{m['github']}"
     row[:pr] = pr[:pull].number
     row[:age] = ((Time.now - pr[:pull].created_at) / 60 / 60 / 24).round
