@@ -1,24 +1,22 @@
+# frozen_string_literal: true
+
 require 'erb'
 require 'optparse'
 require_relative 'octokit_utils'
 require 'net/http'
 require 'json'
-uri = URI.parse("https://puppetlabs.github.io/iac/tools.json")
-response = Net::HTTP.get_response(uri)
-output = response.body.gsub(/\n/,'')
-output.gsub!(/output\".+?(?=previous)/,'')
-parsed = JSON.parse(output)
 
 options = {}
 options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: stats.rb [options]'
-  opts.on('-f', '--file NAME', String, 'Module file list') { |v| options[:file] = v }
+  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for tools') { |v| options[:url] = v }
   opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
 end
 
 parser.parse!
 
+options[:url] = 'https://puppetlabs.github.io/iac/tools.json' if options[:url].nil?
 missing = []
 missing << '-t' if options[:oauth].nil?
 unless missing.empty?
@@ -28,7 +26,13 @@ unless missing.empty?
 end
 
 util = OctokitUtils.new(options[:oauth])
+
 open_prs = []
+uri = URI.parse(options[:url])
+response = Net::HTTP.get_response(uri)
+output = response.body.gsub(/\n/, '')
+output.gsub!(/output\".+?(?=previous)/, '')
+parsed = JSON.parse(output)
 
 def does_array_have_pr(array, pr_number)
   found = false
@@ -40,7 +44,7 @@ end
 
 parsed.each do |m|
   sleep(2)
-  pr_information_cache = util.fetch_async("#{m['github']}")
+  pr_information_cache = util.fetch_async((m['github']).to_s)
   # no comment from a puppet employee
   puppet_uncommented_pulls = util.fetch_pull_requests_with_no_puppet_personnel_comments(pr_information_cache)
   # last comment mentions a puppet person
@@ -91,7 +95,6 @@ html = ERB.new(File.read('tools.html.erb')).result(binding)
 open_prs.each do |row|
   puts(row)
 end
-
 File.open('report_tools.html', 'wb') do |f|
   f.puts(html)
 end
