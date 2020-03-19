@@ -1,0 +1,21 @@
+11:57:00.973282 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489963469 ecr 0,sackOK,eol], length 0
+11:57:01.975664 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489964470 ecr 0,sackOK,eol], length 0
+11:57:02.977457 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489965470 ecr 0,sackOK,eol], length 0
+11:57:03.980320 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489966470 ecr 0,sackOK,eol], length 0
+11:57:04.982194 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489967470 ecr 0,sackOK,eol], length 0
+11:57:05.984387 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489968471 ecr 0,sackOK,eol], length 0
+11:57:07.988572 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489970471 ecr 0,sackOK,eol], length 0
+11:57:12.002179 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489974471 ecr 0,sackOK,eol], length 0
+11:57:20.044212 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489982471 ecr 0,sackOK,eol], length 0
+11:57:36.076958 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [S], seq 279915210, win 65535, options [mss 1460,nop,wscale 5,nop,nop,TS val 489998471 ecr 0,sackOK,eol], length 0
+11:57:38.146450 IP lb-140-82-118-5-ams.github.com.https > 192-168-0-137.rdsnet.ro.50843: Flags [S.], seq 3792161560, ack 279915211, win 28480, options [mss 1436,sackOK,TS val 3538523985 ecr 489998471,nop,wscale 10], length 0
+11:57:38.146496 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [.], ack 1, win 4138, options [nop,nop,TS val 490000529 ecr 3538523985], length 0
+11:57:38.146752 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [P.], seq 1:518, ack 1, win 4138, options [nop,nop,TS val 490000529 ecr 3538523985], length 517
+11:57:38.399191 IP lb-140-82-118-5-ams.github.com.https > 192-168-0-137.rdsnet.ro.50843: Flags [.], seq 1:1425, ack 518, win 29, options [nop,nop,TS val 3538524048 ecr 490000529], length 1424
+11:57:38.402582 IP lb-140-82-118-5-ams.github.com.https > 192-168-0-137.rdsnet.ro.50843: Flags [.], seq 1425:2849, ack 518, win 29, options [nop,nop,TS val 3538524048 ecr 490000529], length 1424
+11:57:38.402610 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [.], ack 2849, win 4051, options [nop,nop,TS val 490000778 ecr 3538524048], length 0
+11:57:38.405500 IP lb-140-82-118-5-ams.github.com.https > 192-168-0-137.rdsnet.ro.50843: Flags [P.], seq 2849:3317, ack 518, win 29, options [nop,nop,TS val 3538524048 ecr 490000529], length 468
+11:57:38.405537 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [.], ack 3317, win 4081, options [nop,nop,TS val 490000780 ecr 3538524048], length 0
+11:57:38.414998 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.github.com.https: Flags [P.], seq 518:644, ack 3317, win 4096, options [nop,nop,TS val 490000788 ecr 3538524048], length 126
+11:57:38.484448 IP lb-140-82-118-5-ams.github.com.https > 192-168-0-137.rdsnet.ro.50843: Flags [P.], seq 3317:3368, ack 644, win 29, options [nop,nop,TS val 3538524069 ecr 490000788], length 51
+11:57:38.484508 IP 192-168-0-137.rdsnet.ro.50843 > lb-140-82-118-5-ams.

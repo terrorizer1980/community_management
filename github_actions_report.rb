@@ -33,14 +33,14 @@ parsed = util.load_module_list(options[:file])
 result_hash = []
 headers = { Authorization: "token #{options[:oauth]}" }
 
-count = 0
 parsed.each do |m|
   begin
-    count += 1
+    limit = util.client.rate_limit!
     puts "Getting data from Github API for #{m['github_namespace']}/#{m['repo_name']}"
-    if count == 15
+    if limit.remaining == 0
       #  sleep 60 #Sleep between requests to prevent Github API - 403 response
-      count = 0
+      sleep limit.resets_in
+      puts "Waiting for rate limit reset in Github API"
     end
     sleep 2 # Keep Github API happy
     url = "https://api.github.com/repos/#{m['github_namespace']}/#{m['repo_name']}/actions/workflows"
