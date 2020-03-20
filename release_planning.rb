@@ -88,6 +88,14 @@ repo_data = []
 
 parsed.each do |m|
   begin
+    limit = util.client.rate_limit!
+    puts "Getting data from Github API for #{m['github_namespace']}/#{m['repo_name']}"
+    if limit.remaining == 0
+      #  sleep 60 #Sleep between requests to prevent Github API - 403 response
+      sleep limit.resets_in
+      puts "Waiting for rate limit reset in Github API"
+    end
+    sleep 2 # Keep Github API happy
     latest_tag = util.fetch_tags("#{m['github_namespace']}/#{m['repo_name']}", options).first
     tag_ref = util.ref_from_tag(latest_tag)
     date_of_tag = util.date_of_ref("#{m['github_namespace']}/#{m['repo_name']}", tag_ref)
