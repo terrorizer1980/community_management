@@ -10,6 +10,11 @@ jobs:
       token: '${{ secrets.token }}'
     steps:
       - uses: actions/checkout@master
+        with:
+         persist-credentials: false
+         fetch-depth: 0
+
+
       - name: Setup ruby
         uses: actions/setup-ruby@v1
         with:
