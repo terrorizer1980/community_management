@@ -625,76 +625,6 @@
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-apt/pull/925'>925</a></td>
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4 prerelease</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-apt'>puppetlabs-apt</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a href='https://github.com/puppetlabs/puppetlabs-apt/pull/927'>927</a></td>
   
   
@@ -737,6 +667,76 @@
   
       
         <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-apt'>puppetlabs-apt</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-apt/pull/925'>925</a></td>
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4 prerelease</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -1115,115 +1115,6 @@
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
-  
-  
-  
-      
-        <td>129</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
-      
-  
-  
-  
-      
-        <td>Hi
-  Since Facter::Util::Resolution is extended by Core::Execution (https://www.rubydoc.info/gems/facter/Facter/Util/Resolution)  i was sure that this should work the same.
-
-My facter have to be to old for execute **timeout** option to work:
-```
-# cat  /var/lib/puppet/lib/facter/sleep.rb 
-require 'facter'
-Facter.add(:sleep) do
-  setcode do
-    begin
-      Facter::Core::Execution.execute('sleep 10', options = {:timeout => 5})
-      'did not timeout!'
-    rescue Facter::Core::Execution::ExecutionFailure
-      'timeout!'
-    end
-  end
-end
-```
-
-```
-# date; facter -p sleep; date
-Mon Dec 23 14:49:23 UTC 2019
-did not timeout!
-Mon Dec 23 14:49:33 UTC 2019
-```
-
-```
-# facter  -v
-2.4.6
-# facter  -p os 
-{"name"=>"Ubuntu", "family"=>"Debian", "release"=>{"major"=>"16.04", "full"=>"16.04"}, "lsb"=>{"distcodename"=>"xenial", "distid"=>"Ubuntu", "distdescription"=>"Ubuntu 16.04.6 LTS", "distrelease"=>"16.04", "majdistrelease"=>"16.04"}}
-```
-
-I barely know ruby but looking at the gem source: https://www.rubydoc.info/gems/facter/Facter/Core/Execution/Base
-i can not see how this **timeout** option should work since the command is executeded by statement
-```
-out = %x{#{expanded_command}}.chomp
-```
-
-</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>91</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/460'>460</a></td>
   
   
@@ -1294,42 +1185,42 @@ out = %x{#{expanded_command}}.chomp
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
+      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/562'>562</a></td>
   
   
   
       
-        <td>77</td>
-      
-  
-  
-  
-      
-        <td>matthanley</td>
+        <td>94</td>
       
   
   
   
       
-        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
+        <td>seriv</td>
       
   
   
   
       
-        <td>Thank you @matthanley for submitting the PR. Could you please fix the Travis failures and also add a test to verify the change. Thank you.</td>
+        <td>Minimal changes to work with podman-docker</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>68</td>
+        <td></td>
+      
+  
+  
+  
+      
+        <td>94</td>
       
   
   
@@ -1341,7 +1232,7 @@ out = %x{#{expanded_command}}.chomp
   
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -1434,114 +1325,42 @@ out = %x{#{expanded_command}}.chomp
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/546'>546</a></td>
+      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
   
   
   
       
-        <td>140</td>
-      
-  
-  
-  
-      
-        <td>khaefeli</td>
+        <td>77</td>
       
   
   
   
       
-        <td>Rename service_update to swarm_update for consistency</td>
+        <td>matthanley</td>
       
   
   
   
       
-        <td>Same here - we're only running skeleton crew over the holidays.
-
-Guten Rutsch!</td>
+        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
       
   
   
   
       
-        <td>DavidS</td>
+        <td>Thank you @matthanley for submitting the PR. Could you please fix the Travis failures and also add a test to verify the change. Thank you.</td>
       
   
   
   
       
-        <td>97</td>
+        <td>sheenaajay</td>
       
   
   
   
       
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/562'>562</a></td>
-  
-  
-  
-      
-        <td>94</td>
-      
-  
-  
-  
-      
-        <td>seriv</td>
-      
-  
-  
-  
-      
-        <td>Minimal changes to work with podman-docker</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>94</td>
+        <td>68</td>
       
   
   
@@ -1553,7 +1372,7 @@ Guten Rutsch!</td>
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -1716,12 +1535,12 @@ Guten Rutsch!</td>
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/554'>554</a></td>
+      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/546'>546</a></td>
   
   
   
       
-        <td>124</td>
+        <td>140</td>
       
   
   
@@ -1733,27 +1552,136 @@ Guten Rutsch!</td>
   
   
       
-        <td>Add Docker service (create, remote, scale) tasks</td>
+        <td>Rename service_update to swarm_update for consistency</td>
       
   
   
   
       
-        <td>Hi @khaefeli 
+        <td>Same here - we're only running skeleton crew over the holidays.
 
-Thanks for submitting this PR, are you still planning on making the changes to get this and https://github.com/puppetlabs/puppetlabs-docker/pull/546 merged ? </td>
+Guten Rutsch!</td>
       
   
   
   
       
-        <td>carabasdaniel</td>
+        <td>DavidS</td>
       
   
   
   
       
-        <td>33</td>
+        <td>97</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+  
+  
+  
+      
+        <td>129</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+      
+  
+  
+  
+      
+        <td>Hi
+  Since Facter::Util::Resolution is extended by Core::Execution (https://www.rubydoc.info/gems/facter/Facter/Util/Resolution)  i was sure that this should work the same.
+
+My facter have to be to old for execute **timeout** option to work:
+```
+# cat  /var/lib/puppet/lib/facter/sleep.rb 
+require 'facter'
+Facter.add(:sleep) do
+  setcode do
+    begin
+      Facter::Core::Execution.execute('sleep 10', options = {:timeout => 5})
+      'did not timeout!'
+    rescue Facter::Core::Execution::ExecutionFailure
+      'timeout!'
+    end
+  end
+end
+```
+
+```
+# date; facter -p sleep; date
+Mon Dec 23 14:49:23 UTC 2019
+did not timeout!
+Mon Dec 23 14:49:33 UTC 2019
+```
+
+```
+# facter  -v
+2.4.6
+# facter  -p os 
+{"name"=>"Ubuntu", "family"=>"Debian", "release"=>{"major"=>"16.04", "full"=>"16.04"}, "lsb"=>{"distcodename"=>"xenial", "distid"=>"Ubuntu", "distdescription"=>"Ubuntu 16.04.6 LTS", "distrelease"=>"16.04", "majdistrelease"=>"16.04"}}
+```
+
+I barely know ruby but looking at the gem source: https://www.rubydoc.info/gems/facter/Facter/Core/Execution/Base
+i can not see how this **timeout** option should work since the command is executeded by statement
+```
+out = %x{#{expanded_command}}.chomp
+```
+
+</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>91</td>
       
   
   
@@ -1836,6 +1764,78 @@ Thanks for submitting this PR, are you still planning on making the changes to g
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-docker/pull/554'>554</a></td>
+  
+  
+  
+      
+        <td>124</td>
+      
+  
+  
+  
+      
+        <td>khaefeli</td>
+      
+  
+  
+  
+      
+        <td>Add Docker service (create, remote, scale) tasks</td>
+      
+  
+  
+  
+      
+        <td>Hi @khaefeli 
+
+Thanks for submitting this PR, are you still planning on making the changes to get this and https://github.com/puppetlabs/puppetlabs-docker/pull/546 merged ? </td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel</td>
+      
+  
+  
+  
+      
+        <td>33</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2283,80 +2283,6 @@ Please let us know if you are having trouble fixing this problem. </td>
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-firewall/pull/877'>877</a></td>
-  
-  
-  
-      
-        <td>126</td>
-      
-  
-  
-  
-      
-        <td>atarax</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10113) add option to ignore chains</td>
-      
-  
-  
-  
-      
-        <td>Hi, @atarax, it looks like this pull request hasn't seen any activity in about 90 days. Is this something that you're still able to work on? We're happy to keep this pull request open if there's forward movement, and we'll leave it open for another two weeks from now. If there isn't any activity by then we may have to close this pull request due to lack of activity.
-
-Closing the pull request wouldn't mean we don't consider this change valuable. However we try to keep all open pull requests moving towards completion, and closing stale pull requests help us focus on more active pull requests.
-
-If you have any questions or concerns, please don't hesitate to ping us in the Slack channel on slack.puppet.com.</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>11</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a href='https://github.com/puppetlabs/puppetlabs-firewall/pull/889'>889</a></td>
   
   
@@ -2403,6 +2329,80 @@ Cheers! </td>
   
       
         <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-firewall/pull/877'>877</a></td>
+  
+  
+  
+      
+        <td>126</td>
+      
+  
+  
+  
+      
+        <td>atarax</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10113) add option to ignore chains</td>
+      
+  
+  
+  
+      
+        <td>Hi, @atarax, it looks like this pull request hasn't seen any activity in about 90 days. Is this something that you're still able to work on? We're happy to keep this pull request open if there's forward movement, and we'll leave it open for another two weeks from now. If there isn't any activity by then we may have to close this pull request due to lack of activity.
+
+Closing the pull request wouldn't mean we don't consider this change valuable. However we try to keep all open pull requests moving towards completion, and closing stale pull requests help us focus on more active pull requests.
+
+If you have any questions or concerns, please don't hesitate to ping us in the Slack channel on slack.puppet.com.</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>12</td>
+      
+  
+  
+  
+      
+        <td>3</td>
       
   
   
@@ -2571,76 +2571,6 @@ Cheers! </td>
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-helm/pull/115'>115</a></td>
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4 prerelease</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-helm'>puppetlabs-helm</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a href='https://github.com/puppetlabs/puppetlabs-helm/pull/106'>106</a></td>
   
   
@@ -2693,6 +2623,76 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-helm'>puppetlabs-helm</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-helm/pull/115'>115</a></td>
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4 prerelease</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2855,146 +2855,6 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
-  
-  
-  
-      
-        <td>341</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/215'>215</a></td>
-  
-  
-  
-      
-        <td>341</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8951) Add type and provider for iis_httperror</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/219'>219</a></td>
   
   
@@ -3013,146 +2873,6 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>WIP(MODULES-8955) add type and provider for webhandler</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/269'>269</a></td>
-  
-  
-  
-      
-        <td>25</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
-  
-  
-  
-      
-        <td>341</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8953) add type and provider for mimetype</td>
       
   
   
@@ -3275,6 +2995,146 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
+      <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
+  
+  
+  
+      
+        <td>341</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8953) add type and provider for mimetype</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
+  
+  
+  
+      
+        <td>341</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
   
   
@@ -3293,6 +3153,146 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>WIP(MODULES-8952) add isapfilter type and provider</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/215'>215</a></td>
+  
+  
+  
+      
+        <td>341</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8951) Add type and provider for iis_httperror</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-iis/pull/269'>269</a></td>
+  
+  
+  
+      
+        <td>25</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (maint) - Pdk Update</td>
       
   
   
@@ -3975,6 +3975,76 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
+      <td><a href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
+  
+  
+  
+      
+        <td>104</td>
+      
+  
+  
+  
+      
+        <td>baldurmen</td>
+      
+  
+  
+  
+      
+        <td>WIP: Don't try to install cron packages by default</td>
+      
+  
+  
+  
+      
+        <td>@baldurmen Thanks for submitting the PR. Please let us know if you need any help in getting this PR.Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>21</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
   
   
@@ -4272,76 +4342,6 @@ redhat-8-x86_64
   <tr>
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
-  
-  
-  
-      
-        <td>104</td>
-      
-  
-  
-  
-      
-        <td>baldurmen</td>
-      
-  
-  
-  
-      
-        <td>WIP: Don't try to install cron packages by default</td>
-      
-  
-  
-  
-      
-        <td>@baldurmen Thanks for submitting the PR. Please let us know if you need any help in getting this PR.Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
   
   
@@ -4350,24 +4350,24 @@ redhat-8-x86_64
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-ntp/pull/560'>560</a></td>
+      <td><a href='https://github.com/puppetlabs/puppetlabs-ntp/pull/561'>561</a></td>
   
   
   
       
-        <td>26</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>25</td>
       
   
   
   
       
-        <td>pdksync - Update weekly scheduled workflows</td>
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (maint) - Pdk Update</td>
       
   
   
@@ -4490,24 +4490,24 @@ redhat-8-x86_64
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-ntp/pull/561'>561</a></td>
+      <td><a href='https://github.com/puppetlabs/puppetlabs-ntp/pull/565'>565</a></td>
   
   
   
       
-        <td>25</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>6</td>
       
   
   
   
       
-        <td>pdksync - (maint) - Pdk Update</td>
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4 prerelease</td>
       
   
   
@@ -4630,24 +4630,24 @@ redhat-8-x86_64
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-ntp/pull/565'>565</a></td>
+      <td><a href='https://github.com/puppetlabs/puppetlabs-ntp/pull/560'>560</a></td>
   
   
   
       
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
+        <td>26</td>
       
   
   
   
       
-        <td>pdksync - Test facter 4 prerelease</td>
+        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Update weekly scheduled workflows</td>
       
   
   
@@ -4770,48 +4770,54 @@ redhat-8-x86_64
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
+      <td><a href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1156'>1156</a></td>
   
   
   
       
-        <td>69</td>
-      
-  
-  
-  
-      
-        <td>Bouke</td>
+        <td>0</td>
       
   
   
   
       
-        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
+        <td>veninga</td>
       
   
   
   
       
-        <td>@carabasdaniel I'm not familiar with writing tests, but if you can provide me with some pointers for existing test that I can extend, I'd be happy to. Is there a similar unit test for the MD5 case?</td>
+        <td>add extra parameter "extra_systemd_config" </td>
       
   
   
   
       
-        <td>Bouke</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>26</td>
+        <td></td>
       
   
   
   
       
-        <td>3</td>
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -4821,9 +4827,73 @@ redhat-8-x86_64
       
   
   
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1152'>1152</a></td>
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4 prerelease</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -5000,54 +5070,48 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1156'>1156</a></td>
+      <td><a href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>veninga</td>
+        <td>69</td>
       
   
   
   
       
-        <td>add extra parameter "extra_systemd_config" </td>
+        <td>Bouke</td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
       
   
   
   
       
-        <td></td>
+        <td>@carabasdaniel I'm not familiar with writing tests, but if you can provide me with some pointers for existing test that I can extend, I'd be happy to. Is there a similar unit test for the MD5 case?</td>
       
   
   
   
       
-        <td>0</td>
+        <td>Bouke</td>
       
   
   
   
       
-        <td>0</td>
+        <td>26</td>
       
   
   
   
       
-        <td>true</td>
+        <td>3</td>
       
   
   
@@ -5057,73 +5121,9 @@ Exact matches are those that we can positively identify via namespace and the de
       
   
   
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1152'>1152</a></td>
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4 prerelease</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -5462,6 +5462,76 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-resource'>puppetlabs-resource</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-resource/pull/93'>93</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>daianamezdrea <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Release version 1.2.0</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
       
   
   
@@ -5998,6 +6068,76 @@ Some investigation is needed to ensure that `@resource` is properly populated wi
   
   
   
+      <td><a href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1099'>1099</a></td>
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4 prerelease</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1098'>1098</a></td>
   
   
@@ -6068,60 +6208,66 @@ Some investigation is needed to ensure that `@resource` is properly populated wi
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1099'>1099</a></td>
+      <td><a href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
   
       
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
+        <td>41</td>
       
   
   
   
       
-        <td>pdksync - Test facter 4 prerelease</td>
+        <td>justinstoller <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
       
   
   
   
       
-        <td></td>
+        <td>Hi @justinstoller,
+
+Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
+
+With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
+
+cc @binford2k </td>
       
   
   
   
       
-        <td>0</td>
+        <td>DavidS</td>
       
   
   
   
       
-        <td>0</td>
+        <td>31</td>
       
   
   
   
       
-        <td>true</td>
+        <td>2</td>
       
   
   
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -6350,82 +6496,6 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   <tr>
   
   
-      <td><a href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
-  
-  
-  
-      
-        <td>41</td>
-      
-  
-  
-  
-      
-        <td>justinstoller <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
-      
-  
-  
-  
-      
-        <td>Hi @justinstoller,
-
-Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
-
-With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
-
-cc @binford2k </td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>31</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a href='https://github.com/puppetlabs/puppetlabs-tagmail'>puppetlabs-tagmail</a></td>
   
   
@@ -6644,6 +6714,76 @@ cc @binford2k </td>
   
   
   
+      <td><a href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/453'>453</a></td>
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4 prerelease</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/418'>418</a></td>
   
   
@@ -6707,76 +6847,6 @@ vcsrepo { '/test/repo':
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/453'>453</a></td>
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4 prerelease</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -7044,7 +7114,7 @@ vcsrepo { '/test/repo':
   
   
       
-        <td>3</td>
+        <td>0</td>
       
   
   
