@@ -25,7 +25,7 @@ jobs:
         run: |
           gem install bundler
           ### generate pr graphs
-          bundle install --path .bundle/gems/
+          bundle install 
           bundle exec ruby pr_work_done.rb -t $token
           bundle exec ruby daily_open_prs.rb -t $token
           bundle exec ruby graph.rb --pr_work_done --created_prs_per_day --open_prs_per_day
