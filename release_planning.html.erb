@@ -33,7 +33,7 @@
   padding-top: 9px;
   padding-bottom: 9px;
   text-align: left;
-  background-color: #cfcfcf;
+ /* background-color: #cfcfcf;*/
   color: black;
  
 }
@@ -47,7 +47,10 @@
 <th>Module Name</th>
 <th>Last Release Tag Date</th>
 <th>Commits Since Then</th>
-<th>Commits on maintenance</th>
+<th bgcolor="#FFFF00"><button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Maintenance PRs">M</th>
+<th bgcolor="#222222"><button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Feature PRs">F</th>
+<th bgcolor="#00d87b"><button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Bugfix PRs">B</th>
+<th bgcolor="#d63700"><button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Backward Incompatible PRs">BI</th>
 <th>Number of downloads</th>
 </tr>
 <% repo_data.each do |puppet_module| %>
@@ -55,7 +58,10 @@
   <td><a target ="_blank" href='https://github.com/<%= puppet_module['repo']%>'><%=puppet_module['repo']%></a></td>
   <td><%= puppet_module['date']%></td>
   <td align=\"center\"><%= puppet_module['commits']%></td>
-  <td align=\"center\"><%= puppet_module['maintenance_commits']%></td>
+  <td align=\"center\"><%= puppet_module['maintenance_prs']%></td>
+  <td align=\"center\"><%= puppet_module['feature_prs']%></td>
+  <td align=\"center\"><%= puppet_module['bugfix_prs']%></td>
+  <td align=\"center\"><%= puppet_module['incompatible_prs']%></td>
   <td align=\"center\"><%= puppet_module['downloads']%></td>
   </tr>
 <% end %>
