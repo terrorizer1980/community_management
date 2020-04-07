@@ -3,7 +3,6 @@
 
 require 'octokit'
 require 'json'
-require 'pry'
 
 class OctokitUtils
   attr_accessor :client
