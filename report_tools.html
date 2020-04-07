@@ -123,64 +123,12 @@
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppet_litmus/pull/286'>286</a></td>
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Catch more errors in rake_helpers</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/puppet_litmus'>Litmus</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a href='https://github.com/puppetlabs/puppet_litmus/pull/283'>283</a></td>
   
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -227,12 +175,64 @@
   
   
   
+      <td><a href='https://github.com/puppetlabs/puppet_litmus/pull/286'>286</a></td>
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Catch more errors in rake_helpers</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/puppet_litmus'>Litmus</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a href='https://github.com/puppetlabs/puppet_litmus/pull/160'>160</a></td>
   
   
   
       
-        <td>267</td>
+        <td>268</td>
       
   
   
@@ -262,7 +262,7 @@
   
   
       
-        <td>263</td>
+        <td>264</td>
       
   
   
@@ -284,7 +284,7 @@
   
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -336,7 +336,7 @@
   
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -388,7 +388,7 @@
   
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -435,24 +435,24 @@
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppet-strings/pull/226'>226</a></td>
+      <td><a href='https://github.com/puppetlabs/puppet-strings/pull/224'>224</a></td>
   
   
   
       
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>glennsarti <span class='label label-warning'>puppet</span></td>
+        <td>6</td>
       
   
   
   
       
-        <td>(wip)  Document functions in Puppet Datatypes</td>
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Eliminate trailing spaces w/o descriptions</td>
       
   
   
@@ -487,24 +487,24 @@
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppet-strings/pull/224'>224</a></td>
+      <td><a href='https://github.com/puppetlabs/puppet-strings/pull/226'>226</a></td>
   
   
   
       
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+        <td>4</td>
       
   
   
   
       
-        <td>Eliminate trailing spaces w/o descriptions</td>
+        <td>glennsarti <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(wip)  Document functions in Puppet Datatypes</td>
       
   
   
@@ -544,7 +544,7 @@
   
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -596,7 +596,7 @@
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -626,7 +626,7 @@
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -643,42 +643,42 @@
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppet-resource_api/pull/255'>255</a></td>
+      <td><a href='https://github.com/puppetlabs/puppet-resource_api/pull/263'>263</a></td>
   
   
   
       
-        <td>64</td>
-      
-  
-  
-  
-      
-        <td>bastelfreak <span class='badge badge-secondary'>vox</span></td>
+        <td>18</td>
       
   
   
   
       
-        <td>Add `puppet` as runtime dependency</td>
+        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>mhm, this requires some rework on the travis configuration</td>
+        <td>(maint) Mock Hocon.load(...)</td>
       
   
   
   
       
-        <td>bastelfreak</td>
+        <td>@DavidS  the tests from `Puppet::ResourceApi::Transport::Wrapper` call Puppet, which in turn calls `Facter.debug(....)`. `Facter.debug()` can read the facter config file `facter.conf` (if the file exists) using `Hocon.load(...)`. If this happens, the test will fail, because of `Hocon.load(...)` mock. To safeguard agains this edge case, we should consider this PR.</td>
       
   
   
   
       
-        <td>62</td>
+        <td>IrimieBogdan</td>
+      
+  
+  
+  
+      
+        <td>0</td>
       
   
   
@@ -700,7 +700,7 @@
   
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -730,7 +730,7 @@
   
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -747,94 +747,42 @@
   
   
   
-      <td><a href='https://github.com/puppetlabs/puppet-resource_api/pull/263'>263</a></td>
+      <td><a href='https://github.com/puppetlabs/puppet-resource_api/pull/255'>255</a></td>
   
   
   
       
-        <td>17</td>
-      
-  
-  
-  
-      
-        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
+        <td>65</td>
       
   
   
   
       
-        <td>(maint) Mock Hocon.load(...)</td>
+        <td>bastelfreak <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>Interesting, master started to pass again last week (https://travis-ci.org/puppetlabs/puppet-resource_api/builds/668120415)  using facter 4.0.13 after failing earlier with facter 4.0.12. Is this still needed?</td>
+        <td>Add `puppet` as runtime dependency</td>
       
   
   
   
       
-        <td>DavidS</td>
+        <td>mhm, this requires some rework on the travis configuration</td>
       
   
   
   
       
-        <td>7</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a href='https://github.com/puppetlabs/rubocop-i18n'>Rubocop::I18n</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a href='https://github.com/puppetlabs/rubocop-i18n/pull/36'>36</a></td>
-  
-  
-  
-      
-        <td>26</td>
+        <td>bastelfreak</td>
       
   
   
   
       
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Update bundler requirement from ~> 1.17.3 to ~> 2.1.4</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
+        <td>63</td>
       
   
   
@@ -856,7 +804,7 @@
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -908,7 +856,7 @@
   
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -921,6 +869,58 @@
   
       
         <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a href='https://github.com/puppetlabs/rubocop-i18n'>Rubocop::I18n</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a href='https://github.com/puppetlabs/rubocop-i18n/pull/36'>36</a></td>
+  
+  
+  
+      
+        <td>27</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update bundler requirement from ~> 1.17.3 to ~> 2.1.4</td>
       
   
   
