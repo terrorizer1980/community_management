@@ -16,23 +16,13 @@ class PuppetModule
   end
 end
 
-def get_number_of_commits_on_maintenance(util, commits, prs, label, mod)
-  pr_commits = []
+def get_number_of_prs_by_label(util, prs, label, mod)
   nr = 0
   prs.each do |pr_since_tag|
-    label_on_maintenance = util.does_pr_have_label("#{mod['github_namespace']}/#{mod['repo_name']}", pr_since_tag[:pull][:number], label)
+    label_of_pr = util.does_pr_have_label("#{mod['github_namespace']}/#{mod['repo_name']}", pr_since_tag[:pull][:number], label)
 
-    next unless label_on_maintenance == true
-
-    pr_commits = util.client.pull_request_commits("#{mod['github_namespace']}/#{mod['repo_name']}", pr_since_tag[:pull][:number])
-
-    pr_commits.each do |c|
-      commits.each do |c1|
-        nr += 1 if c[:sha] == c1[:sha]
-      end
-    end
+    nr += 1 if label_of_pr == true && !pr_since_tag[:pull][:merged_at].nil?
   end
-
   nr
 end
 
@@ -58,9 +48,6 @@ options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: release_planning.rb [options]'
 
-  opts.on('-c', '--commit-threshold NUM', 'Number of commits since release') { |v| options[:commits] = v.to_i }
-  opts.on('-g', '--tag-regex REGEX', 'Tag regex') { |v| options[:tag_regex] = v }
-  opts.on('-m', '--time-threshold DAYS', 'Days since release') { |v| options[:time] = v.to_i }
   opts.on('-f', '--file NAME', String, 'Module file list') { |v| options[:file] = v }
   opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
   opts.on('-v', '--verbose', 'More output') { options[:verbose] = true }
@@ -72,7 +59,6 @@ options[:file] = 'modules.json' if options[:file].nil?
 
 missing = []
 missing << '-t' if options[:oauth].nil?
-missing << '-m or -c' if options[:time].nil? && options[:commits].nil?
 unless missing.empty?
   puts "Missing options: #{missing.join(', ')}"
   puts parser
@@ -93,45 +79,30 @@ parsed.each do |m|
     if limit.remaining == 0
       #  sleep 60 #Sleep between requests to prevent Github API - 403 response
       sleep limit.resets_in
-      puts "Waiting for rate limit reset in Github API"
+      puts 'Waiting for rate limit reset in Github API'
     end
     sleep 2 # Keep Github API happy
+
     latest_tag = util.fetch_tags("#{m['github_namespace']}/#{m['repo_name']}", options).first
     tag_ref = util.ref_from_tag(latest_tag)
     date_of_tag = util.date_of_ref("#{m['github_namespace']}/#{m['repo_name']}", tag_ref)
     commits_since_tag = util.commits_since_date_c("#{m['github_namespace']}/#{m['repo_name']}", date_of_tag)
-    prs_since_tag = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", options = { state: 'closed', sort: 'updated' }, %i[statuses pull_request_commits issue_comments], attribute: 'closed_at', date: date_of_tag)
-    no_maintenance_commits = get_number_of_commits_on_maintenance(util, commits_since_tag, prs_since_tag, 'maintenance', m)
-    repo_data << { 'repo' => "#{m['github_namespace']}/#{m['repo_name']}", 'date' => date_of_tag, 'commits' => commits_since_tag.size, 'downloads' => number_of_downloads(m['forge_name']), 'maintenance_commits' => no_maintenance_commits }
-    puppet_modules << PuppetModule.new(repo, "#{m['github_namespace']}/#{m['repo_name']}", date_of_tag, commits_since_tag, no_maintenance_commits)
+    prs_since_tag = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", options = { state: 'closed', sort: 'updated-desc' }, %i[statuses pull_request_commits issue_comments], attribute: 'closed_at', date: date_of_tag)
+
+    no_maintenance_prs = get_number_of_prs_by_label(util, prs_since_tag, 'maintenance', m)
+    no_feature_prs = get_number_of_prs_by_label(util, prs_since_tag, 'feature', m)
+    no_bugfix_prs = get_number_of_prs_by_label(util, prs_since_tag, 'bugfix', m)
+    no_incompatible_prs = get_number_of_prs_by_label(util, prs_since_tag, 'backwards-incompatible', m)
+
+    repo_data << { 'repo' => "#{m['github_namespace']}/#{m['repo_name']}", 'date' => date_of_tag, 'commits' => commits_since_tag.size, 'downloads' => number_of_downloads(m['forge_name']), 'maintenance_prs' => no_maintenance_prs, 'feature_prs' => no_feature_prs, 'bugfix_prs' => no_bugfix_prs, 'incompatible_prs' => no_incompatible_prs }
+    puppet_modules << PuppetModule.new(repo, "#{m['github_namespace']}/#{m['repo_name']}", date_of_tag, commits_since_tag)
   rescue StandardError
     puts "Unable to fetch tags for #{options[:namespace]}/#{repo}" if options[:verbose]
   end
 end
 sleep(2)
-puppet_modules.each { |puppet_module1| puts puppet_module1 }
-
-due_by_commit = repo_data.select { |x| x['commits'] > options[:commits] } if options[:commits]
-
-if options[:time]
-  threshold = Time.now - options[:time]
-  due_by_time = repo_data.select { |x| x['date'] < threshold }
-end
-
-due_for_release = if due_by_commit && due_by_time
-                    due_by_commit & due_by_time
-                  elsif due_by_commit
-                    due_by_commit
-                  else
-                    due_by_time
-                  end
 
 html = ERB.new(File.read('release_planning.html.erb')).result(binding)
-
 File.open('ModulesRelease.html', 'wb') do |f|
   f.puts(html)
-end
-
-File.open('ModulesRelease.json', 'wb') do |f|
-  JSON.dump(due_for_release, f)
 end

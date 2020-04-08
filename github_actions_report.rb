@@ -40,7 +40,7 @@ parsed.each do |m|
     if limit.remaining == 0
       #  sleep 60 #Sleep between requests to prevent Github API - 403 response
       sleep limit.resets_in
-      puts "Waiting for rate limit reset in Github API"
+      puts 'Waiting for rate limit reset in Github API'
     end
     sleep 2 # Keep Github API happy
     url = "https://api.github.com/repos/#{m['github_namespace']}/#{m['repo_name']}/actions/workflows"
