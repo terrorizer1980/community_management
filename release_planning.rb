@@ -48,9 +48,6 @@ options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: release_planning.rb [options]'
 
-  opts.on('-c', '--commit-threshold NUM', 'Number of commits since release') { |v| options[:commits] = v.to_i }
-  opts.on('-g', '--tag-regex REGEX', 'Tag regex') { |v| options[:tag_regex] = v }
-  opts.on('-m', '--time-threshold DAYS', 'Days since release') { |v| options[:time] = v.to_i }
   opts.on('-f', '--file NAME', String, 'Module file list') { |v| options[:file] = v }
   opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
   opts.on('-v', '--verbose', 'More output') { options[:verbose] = true }
@@ -62,7 +59,6 @@ options[:file] = 'modules.json' if options[:file].nil?
 
 missing = []
 missing << '-t' if options[:oauth].nil?
-missing << '-m or -c' if options[:time].nil? && options[:commits].nil?
 unless missing.empty?
   puts "Missing options: #{missing.join(', ')}"
   puts parser
@@ -109,22 +105,4 @@ sleep(2)
 html = ERB.new(File.read('release_planning.html.erb')).result(binding)
 File.open('ModulesRelease.html', 'wb') do |f|
   f.puts(html)
-end
-
-puppet_modules.each { |puppet_module1| puts puppet_module1 }
-due_by_commit = repo_data.select { |x| x['commits'] > options[:commits] } if options[:commits]
-if options[:time]
-  threshold = Time.now - options[:time]
-  due_by_time = repo_data.select { |x| x['date'] < threshold }
-end
-
-due_for_release = if due_by_commit && due_by_time
-                    due_by_commit & due_by_time
-                  elsif due_by_commit
-                    due_by_commit
-                  else
-                    due_by_time
-                  end
-File.open('ModulesRelease.json', 'wb') do |f|
-  JSON.dump(due_for_release, f)
 end

@@ -3,7 +3,6 @@
 
 require 'octokit'
 require 'json'
-require 'pry'
 
 class OctokitUtils
   attr_accessor :client
@@ -304,12 +303,11 @@ class OctokitUtils
   def date_of_ref(repo, ref)
     commit ||= client.commit(repo, ref)
 
-    if commit[:commit][:committer][:date] != nil
-        commit[:commit][:committer][:date]
-    else 
-        commit[:commit][:author][:date]
-    end    
-
+    if !commit[:commit][:committer][:date].nil?
+      commit[:commit][:committer][:date]
+    else
+      commit[:commit][:author][:date]
+    end
   end
 
   def commits_since_date(repo, date)
