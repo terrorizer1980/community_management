@@ -417,6 +417,76 @@ Hardest part for me is that the whole testing infrastructure here needs to be se
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
+  
+  
+  
+      
+        <td>94</td>
+      
+  
+  
+  
+      
+        <td>matthanley</td>
+      
+  
+  
+  
+      
+        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
+      
+  
+  
+  
+      
+        <td>@matthanley Could you try rebasing your work onto the master to see if that fixes the travis failures?</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/460'>460</a></td>
   
   
@@ -562,76 +632,6 @@ out = %x{#{expanded_command}}.chomp
   
       
         <td>107</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
-  
-  
-  
-      
-        <td>94</td>
-      
-  
-  
-  
-      
-        <td>matthanley</td>
-      
-  
-  
-  
-      
-        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
-      
-  
-  
-  
-      
-        <td>@matthanley Could you try rebasing your work onto the master to see if that fixes the travis failures?</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>3</td>
       
   
   
@@ -878,46 +878,36 @@ Guten Rutsch!</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/889'>889</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
   
       
-        <td>84</td>
-      
-  
-  
-  
-      
-        <td>mohammed-elhakim-sociomantic</td>
+        <td>69</td>
       
   
   
   
       
-        <td>Add u32 to recognized modules</td>
+        <td>mattock</td>
       
   
   
   
       
-        <td>Hey @mohammed-elhakim-sociomantic ,
-
-Thank you for this fix. It looks good to me, but the new rule should be tested. Would be possible to add a test to cover this?
-
-Cheers! </td>
+        <td>MODULES-10522: Add support for the --condition parameter</td>
       
   
   
   
       
-        <td>lionce</td>
+        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
       
   
   
   
       
-        <td>79</td>
+        <td>mattock</td>
       
   
   
@@ -929,13 +919,19 @@ Cheers! </td>
   
   
       
-        <td>false</td>
+        <td>4</td>
       
   
   
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1045,36 +1041,46 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/889'>889</a></td>
   
   
   
       
-        <td>69</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
+        <td>84</td>
       
   
   
   
       
-        <td>MODULES-10522: Add support for the --condition parameter</td>
+        <td>mohammed-elhakim-sociomantic</td>
       
   
   
   
       
-        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
+        <td>Add u32 to recognized modules</td>
       
   
   
   
       
-        <td>mattock</td>
+        <td>Hey @mohammed-elhakim-sociomantic ,
+
+Thank you for this fix. It looks good to me, but the new rule should be tested. Would be possible to add a test to cover this?
+
+Cheers! </td>
+      
+  
+  
+  
+      
+        <td>lionce</td>
+      
+  
+  
+  
+      
+        <td>80</td>
       
   
   
@@ -1086,19 +1092,13 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
       
-        <td>4</td>
-      
-  
-  
-  
-      
         <td>false</td>
       
   
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -1343,7 +1343,7 @@ Please let me know if you need any help with this PR. Thank you.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
   
   
   
@@ -1360,7 +1360,7 @@ Please let me know if you need any help with this PR. Thank you.
   
   
       
-        <td>WIP(MODULES-8953) add type and provider for mimetype</td>
+        <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
       
   
   
@@ -1483,7 +1483,7 @@ Please let me know if you need any help with this PR. Thank you.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
   
   
   
@@ -1500,7 +1500,77 @@ Please let me know if you need any help with this PR. Thank you.
   
   
       
-        <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
+        <td>WIP(MODULES-8952) add isapfilter type and provider</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
+  
+  
+  
+      
+        <td>357</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8953) add type and provider for mimetype</td>
       
   
   
@@ -1571,76 +1641,6 @@ Please let me know if you need any help with this PR. Thank you.
   
       
         <td>WIP(MODULES-8955) add type and provider for webhandler</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
-  
-  
-  
-      
-        <td>357</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8952) add isapfilter type and provider</td>
       
   
   
@@ -1912,76 +1912,6 @@ Please let us know if you need more information.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1247'>1247</a></td>
-  
-  
-  
-      
-        <td>168</td>
-      
-  
-  
-  
-      
-        <td>alexjfisher <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>WIP: Improvement to mysql::sql task</td>
-      
-  
-  
-  
-      
-        <td>@alexjfisher Hey, just wondering if this was work that you intended to continue and if there was any help that you needed?</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>44</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
   
   
@@ -2018,6 +1948,82 @@ Please let us know if you need more information.
   
       
         <td>38</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
+  
+  
+  
+      
+        <td>198</td>
+      
+  
+  
+  
+      
+        <td>koshatul</td>
+      
+  
+  
+  
+      
+        <td>change split on whitespace to split on tab in mysql_user</td>
+      
+  
+  
+  
+      
+        <td>Hi @koshatul 
+
+Thank you for submitting this PR.
+
+I've added a commit to fix the unit testing for this change, however it appears there are some acceptance testing failures caused by this change that you can verify in travis. 
+
+Can you verify and fix the testing for those failures ? You might be able to run the tests on your local machine with Litmus to have an easier time getting these issues solved. Please let us know if you are having trouble with this.</td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel</td>
+      
+  
+  
+  
+      
+        <td>55</td>
       
   
   
@@ -2126,54 +2132,48 @@ We will merge this PR as soon as the release from the agent team is available. H
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1247'>1247</a></td>
   
   
   
       
-        <td>198</td>
-      
-  
-  
-  
-      
-        <td>koshatul</td>
+        <td>168</td>
       
   
   
   
       
-        <td>change split on whitespace to split on tab in mysql_user</td>
+        <td>alexjfisher <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>Hi @koshatul 
-
-Thank you for submitting this PR.
-
-I've added a commit to fix the unit testing for this change, however it appears there are some acceptance testing failures caused by this change that you can verify in travis. 
-
-Can you verify and fix the testing for those failures ? You might be able to run the tests on your local machine with Litmus to have an easier time getting these issues solved. Please let us know if you are having trouble with this.</td>
+        <td>WIP: Improvement to mysql::sql task</td>
       
   
   
   
       
-        <td>carabasdaniel</td>
+        <td>@alexjfisher Hey, just wondering if this was work that you intended to continue and if there was any help that you needed?</td>
       
   
   
   
       
-        <td>55</td>
+        <td>david22swan</td>
       
   
   
   
       
-        <td>4</td>
+        <td>44</td>
+      
+  
+  
+  
+      
+        <td>3</td>
       
   
   
@@ -2207,7 +2207,7 @@ Can you verify and fix the testing for those failures ? You might be able to run
   
   
       
-        <td>23</td>
+        <td>24</td>
       
   
   
@@ -2623,6 +2623,76 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1098'>1098</a></td>
+  
+  
+  
+      
+        <td>29</td>
+      
+  
+  
+  
+      
+        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) Use Facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
@@ -2699,54 +2769,60 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1098'>1098</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
   
   
   
       
-        <td>29</td>
-      
-  
-  
-  
-      
-        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
+        <td>398</td>
       
   
   
   
       
-        <td>(maint) Use Facter 4</td>
+        <td>Rathios</td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>(MODULES-8732) Cron types</td>
       
   
   
   
       
-        <td></td>
+        <td>Hi @Rathios,
+
+Thank you for your contribution, this looks really great!
+
+This would be better suited to the core cron module: https://github.com/puppetlabs/puppetlabs-cron_core
+
+If you submit it there, please ping me on the PR so I can make sure it gets merged quickly. </td>
       
   
   
   
       
-        <td>0</td>
+        <td>carabasdaniel</td>
       
   
   
   
       
-        <td>0</td>
+        <td>62</td>
       
   
   
   
       
-        <td>true</td>
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2905,82 +2981,6 @@ If not computed and set up front, then I think the result needs to be cached and
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
-  
-  
-  
-      
-        <td>398</td>
-      
-  
-  
-  
-      
-        <td>Rathios</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-8732) Cron types</td>
-      
-  
-  
-  
-      
-        <td>Hi @Rathios,
-
-Thank you for your contribution, this looks really great!
-
-This would be better suited to the core cron module: https://github.com/puppetlabs/puppetlabs-cron_core
-
-If you submit it there, please ping me on the PR so I can make sure it gets merged quickly. </td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel</td>
-      
-  
-  
-  
-      
-        <td>62</td>
-      
-  
-  
-  
-      
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server'>puppetlabs-websphere_application_server</a></td>
   
   
@@ -2994,7 +2994,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>75</td>
+        <td>76</td>
       
   
   
@@ -3064,7 +3064,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
