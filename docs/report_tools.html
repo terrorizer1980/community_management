@@ -279,7 +279,7 @@
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-lint-i18n/pull/15'>15</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-lint-i18n/pull/14'>14</a></td>
   
   
   
@@ -290,13 +290,13 @@
   
   
       
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>dependabot-preview[bot]</td>
       
   
   
   
       
-        <td>Update deps</td>
+        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
       
   
   
@@ -383,7 +383,7 @@
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-lint-i18n/pull/14'>14</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-lint-i18n/pull/15'>15</a></td>
   
   
   
@@ -394,65 +394,13 @@
   
   
       
-        <td>dependabot-preview[bot]</td>
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-strings'>Puppet Strings</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-strings/pull/224'>224</a></td>
-  
-  
-  
-      
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Eliminate trailing spaces w/o descriptions</td>
+        <td>Update deps</td>
       
   
   
@@ -643,58 +591,6 @@
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/263'>263</a></td>
-  
-  
-  
-      
-        <td>26</td>
-      
-  
-  
-  
-      
-        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(maint) Mock Hocon.load(...)</td>
-      
-  
-  
-  
-      
-        <td>@DavidS  the tests from `Puppet::ResourceApi::Transport::Wrapper` call Puppet, which in turn calls `Facter.debug(....)`. `Facter.debug()` can read the facter config file `facter.conf` (if the file exists) using `Hocon.load(...)`. If this happens, the test will fail, because of `Hocon.load(...)` mock. To safeguard agains this edge case, we should consider this PR.</td>
-      
-  
-  
-  
-      
-        <td>IrimieBogdan</td>
-      
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/255'>255</a></td>
   
   
@@ -731,6 +627,58 @@
   
       
         <td>71</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/263'>263</a></td>
+  
+  
+  
+      
+        <td>26</td>
+      
+  
+  
+  
+      
+        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) Mock Hocon.load(...)</td>
+      
+  
+  
+  
+      
+        <td>@DavidS  the tests from `Puppet::ResourceApi::Transport::Wrapper` call Puppet, which in turn calls `Facter.debug(....)`. `Facter.debug()` can read the facter config file `facter.conf` (if the file exists) using `Hocon.load(...)`. If this happens, the test will fail, because of `Hocon.load(...)` mock. To safeguard agains this edge case, we should consider this PR.</td>
+      
+  
+  
+  
+      
+        <td>IrimieBogdan</td>
+      
+  
+  
+  
+      
+        <td>9</td>
       
   
   
