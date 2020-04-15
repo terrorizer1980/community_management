@@ -170,7 +170,7 @@
   
   
       
-        <td>43</td>
+        <td>44</td>
       
   
   
@@ -346,115 +346,6 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
-  
-  
-  
-      
-        <td>151</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
-      
-  
-  
-  
-      
-        <td>Hi
-  Since Facter::Util::Resolution is extended by Core::Execution (https://www.rubydoc.info/gems/facter/Facter/Util/Resolution)  i was sure that this should work the same.
-
-My facter have to be to old for execute **timeout** option to work:
-```
-# cat  /var/lib/puppet/lib/facter/sleep.rb 
-require 'facter'
-Facter.add(:sleep) do
-  setcode do
-    begin
-      Facter::Core::Execution.execute('sleep 10', options = {:timeout => 5})
-      'did not timeout!'
-    rescue Facter::Core::Execution::ExecutionFailure
-      'timeout!'
-    end
-  end
-end
-```
-
-```
-# date; facter -p sleep; date
-Mon Dec 23 14:49:23 UTC 2019
-did not timeout!
-Mon Dec 23 14:49:33 UTC 2019
-```
-
-```
-# facter  -v
-2.4.6
-# facter  -p os 
-{"name"=>"Ubuntu", "family"=>"Debian", "release"=>{"major"=>"16.04", "full"=>"16.04"}, "lsb"=>{"distcodename"=>"xenial", "distid"=>"Ubuntu", "distdescription"=>"Ubuntu 16.04.6 LTS", "distrelease"=>"16.04", "majdistrelease"=>"16.04"}}
-```
-
-I barely know ruby but looking at the gem source: https://www.rubydoc.info/gems/facter/Facter/Core/Execution/Base
-i can not see how this **timeout** option should work since the command is executeded by statement
-```
-out = %x{#{expanded_command}}.chomp
-```
-
-</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>114</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
   
   
@@ -597,6 +488,115 @@ Guten Rutsch!</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+  
+  
+  
+      
+        <td>151</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+      
+  
+  
+  
+      
+        <td>Hi
+  Since Facter::Util::Resolution is extended by Core::Execution (https://www.rubydoc.info/gems/facter/Facter/Util/Resolution)  i was sure that this should work the same.
+
+My facter have to be to old for execute **timeout** option to work:
+```
+# cat  /var/lib/puppet/lib/facter/sleep.rb 
+require 'facter'
+Facter.add(:sleep) do
+  setcode do
+    begin
+      Facter::Core::Execution.execute('sleep 10', options = {:timeout => 5})
+      'did not timeout!'
+    rescue Facter::Core::Execution::ExecutionFailure
+      'timeout!'
+    end
+  end
+end
+```
+
+```
+# date; facter -p sleep; date
+Mon Dec 23 14:49:23 UTC 2019
+did not timeout!
+Mon Dec 23 14:49:33 UTC 2019
+```
+
+```
+# facter  -v
+2.4.6
+# facter  -p os 
+{"name"=>"Ubuntu", "family"=>"Debian", "release"=>{"major"=>"16.04", "full"=>"16.04"}, "lsb"=>{"distcodename"=>"xenial", "distid"=>"Ubuntu", "distdescription"=>"Ubuntu 16.04.6 LTS", "distrelease"=>"16.04", "majdistrelease"=>"16.04"}}
+```
+
+I barely know ruby but looking at the gem source: https://www.rubydoc.info/gems/facter/Facter/Core/Execution/Base
+i can not see how this **timeout** option should work since the command is executeded by statement
+```
+out = %x{#{expanded_command}}.chomp
+```
+
+</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>114</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/307'>307</a></td>
   
   
@@ -645,80 +645,6 @@ Guten Rutsch!</td>
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/889'>889</a></td>
-  
-  
-  
-      
-        <td>90</td>
-      
-  
-  
-  
-      
-        <td>mohammed-elhakim-sociomantic</td>
-      
-  
-  
-  
-      
-        <td>Add u32 to recognized modules</td>
-      
-  
-  
-  
-      
-        <td>Hey @mohammed-elhakim-sociomantic ,
-
-Thank you for this fix. It looks good to me, but the new rule should be tested. Would be possible to add a test to cover this?
-
-Cheers! </td>
-      
-  
-  
-  
-      
-        <td>lionce</td>
-      
-  
-  
-  
-      
-        <td>86</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -887,7 +813,7 @@ Waiting for release</td>
   
   
       
-        <td>21</td>
+        <td>22</td>
       
   
   
@@ -947,6 +873,80 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
       
         <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/889'>889</a></td>
+  
+  
+  
+      
+        <td>90</td>
+      
+  
+  
+  
+      
+        <td>mohammed-elhakim-sociomantic</td>
+      
+  
+  
+  
+      
+        <td>Add u32 to recognized modules</td>
+      
+  
+  
+  
+      
+        <td>Hey @mohammed-elhakim-sociomantic ,
+
+Thank you for this fix. It looks good to me, but the new rule should be tested. Would be possible to add a test to cover this?
+
+Cheers! </td>
+      
+  
+  
+  
+      
+        <td>lionce</td>
+      
+  
+  
+  
+      
+        <td>86</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -1119,146 +1119,6 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
-  
-  
-  
-      
-        <td>363</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8952) add isapfilter type and provider</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
-  
-  
-  
-      
-        <td>363</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8953) add type and provider for mimetype</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
   
   
@@ -1277,6 +1137,146 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/219'>219</a></td>
+  
+  
+  
+      
+        <td>363</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8955) add type and provider for webhandler</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
+  
+  
+  
+      
+        <td>363</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8952) add isapfilter type and provider</td>
       
   
   
@@ -1399,7 +1399,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/219'>219</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
   
   
   
@@ -1416,7 +1416,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>WIP(MODULES-8955) add type and provider for webhandler</td>
+        <td>WIP(MODULES-8953) add type and provider for mimetype</td>
       
   
   
@@ -1583,7 +1583,7 @@ Please let us know if you need more information.
   
   
       
-        <td>48</td>
+        <td>49</td>
       
   
   
@@ -1618,54 +1618,48 @@ Please let us know if you need more information.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1295'>1295</a></td>
   
   
   
       
-        <td>204</td>
-      
-  
-  
-  
-      
-        <td>koshatul</td>
+        <td>13</td>
       
   
   
   
       
-        <td>change split on whitespace to split on tab in mysql_user</td>
+        <td>andeman</td>
       
   
   
   
       
-        <td>Hi @koshatul 
-
-Thank you for submitting this PR.
-
-I've added a commit to fix the unit testing for this change, however it appears there are some acceptance testing failures caused by this change that you can verify in travis. 
-
-Can you verify and fix the testing for those failures ? You might be able to run the tests on your local machine with Litmus to have an easier time getting these issues solved. Please let us know if you are having trouble with this.</td>
+        <td>(MODULES-1550) add new Feature MySQL login paths</td>
       
   
   
   
       
-        <td>carabasdaniel</td>
+        <td>Thanks @andeman for submitting the PR. Thanks for the detailed information on the ticket too. Good Work.</td>
       
   
   
   
       
-        <td>62</td>
+        <td>sheenaajay</td>
       
   
   
   
       
-        <td>4</td>
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -1764,48 +1758,54 @@ Can you verify and fix the testing for those failures ? You might be able to run
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1295'>1295</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
   
   
   
       
-        <td>13</td>
-      
-  
-  
-  
-      
-        <td>andeman</td>
+        <td>204</td>
       
   
   
   
       
-        <td>(MODULES-1550) add new Feature MySQL login paths</td>
+        <td>koshatul</td>
       
   
   
   
       
-        <td>Thanks @andeman for submitting the PR. Thanks for the detailed information on the ticket too. Good Work.</td>
+        <td>change split on whitespace to split on tab in mysql_user</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>Hi @koshatul 
+
+Thank you for submitting this PR.
+
+I've added a commit to fix the unit testing for this change, however it appears there are some acceptance testing failures caused by this change that you can verify in travis. 
+
+Can you verify and fix the testing for those failures ? You might be able to run the tests on your local machine with Litmus to have an easier time getting these issues solved. Please let us know if you are having trouble with this.</td>
       
   
   
   
       
-        <td>1</td>
+        <td>carabasdaniel</td>
       
   
   
   
       
-        <td>1</td>
+        <td>62</td>
+      
+  
+  
+  
+      
+        <td>4</td>
       
   
   
@@ -2331,24 +2331,24 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/297'>297</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/298'>298</a></td>
   
   
   
       
-        <td>25</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>16</td>
       
   
   
   
       
-        <td>(DO NOT MERGE) Testing env vars in CI</td>
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) Remove interpolate_powershell method</td>
       
   
   
@@ -2401,24 +2401,24 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/298'>298</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/297'>297</a></td>
   
   
   
       
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>25</td>
       
   
   
   
       
-        <td>(maint) Remove interpolate_powershell method</td>
+        <td>michaeltlombardi <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(DO NOT MERGE) Testing env vars in CI</td>
       
   
   
@@ -2611,6 +2611,76 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1098'>1098</a></td>
+  
+  
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+      
+        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) Use Facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
@@ -2687,54 +2757,54 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1098'>1098</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
   
       
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
+        <td>99</td>
       
   
   
   
       
-        <td>(maint) Use Facter 4</td>
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>Puppet 4 functions</td>
       
   
   
   
       
-        <td></td>
+        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
       
   
   
   
       
-        <td>0</td>
+        <td>DavidS</td>
       
   
   
   
       
-        <td>0</td>
+        <td>58</td>
       
   
   
   
       
-        <td>true</td>
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2803,76 +2873,6 @@ If not computed and set up front, then I think the result needs to be cached and
   
       
         <td>7</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>99</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>58</td>
-      
-  
-  
-  
-      
-        <td>2</td>
       
   
   
