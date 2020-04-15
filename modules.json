@@ -150,6 +150,12 @@
     "forge_name": "puppetlabs-package"
   },
   {
+    "repo_name": "puppetlabs-panos",
+    "github_namespace": "puppetlabs",
+    "module_name": "panos",
+    "forge_name": "puppetlabs-panos"
+  },
+  {
     "repo_name": "puppetlabs-postgresql",
     "github_namespace": "puppetlabs",
     "module_name": "postgresql",
@@ -256,12 +262,6 @@
     "github_namespace": "puppetlabs",
     "module_name": "hue",
     "forge_name": "puppetlabs-hue"
-  },
-  {
-    "repo_name": "puppetlabs-panos",
-    "github_namespace": "puppetlabs",
-    "module_name": "panos",
-    "forge_name": "puppetlabs-panos"
   },
   {
     "repo_name": "puppetlabs-test_device",
