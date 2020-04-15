@@ -1,5 +1,5 @@
 <html>
-<title>PRs that require review</title>
+<title>Tools PRs that require review</title>
 <head>
 <script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
 <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
@@ -48,6 +48,21 @@
   word-break: break-all;
   width: auto;
 }
+.button {
+         background-color: #ddd;
+         border: none;
+         color: white;
+         padding: 10px 20px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 20px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+
+
+
 #tools td, #reviews th {
   border: 1px solid #ddd;
   padding: 8px;
@@ -71,8 +86,11 @@
 </style>
 </head>
 <body>
-<h1 style="text-align:center;">Tools PRs</h1>
+<h1 style="text-align:center;">Tools PRs that require review</h1>
 <table border='1' id='tools' style='width:100%' class='sortable table table-hover'> 
+ <a href="https://puppetlabs.github.io/community_management/report_tools60.html" class="button">30 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report_tools60.html" class="button">60 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report_tools90.html" class="button">90 Days</a>
 <tr>
 <% open_prs.first.keys.each do |header| %>
   <% if header != :address %>
