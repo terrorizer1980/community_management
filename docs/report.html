@@ -416,6 +416,78 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/546'>546</a></td>
+  
+  
+  
+      
+        <td>164</td>
+      
+  
+  
+  
+      
+        <td>khaefeli</td>
+      
+  
+  
+  
+      
+        <td>Rename service_update to swarm_update for consistency</td>
+      
+  
+  
+  
+      
+        <td>Same here - we're only running skeleton crew over the holidays.
+
+Guten Rutsch!</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>120</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
   
   
@@ -490,85 +562,13 @@ out = %x{#{expanded_command}}.chomp
   
   
       
-        <td>114</td>
+        <td>115</td>
       
   
   
   
       
         <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/546'>546</a></td>
-  
-  
-  
-      
-        <td>164</td>
-      
-  
-  
-  
-      
-        <td>khaefeli</td>
-      
-  
-  
-  
-      
-        <td>Rename service_update to swarm_update for consistency</td>
-      
-  
-  
-  
-      
-        <td>Same here - we're only running skeleton crew over the holidays.
-
-Guten Rutsch!</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>120</td>
-      
-  
-  
-  
-      
-        <td>3</td>
       
   
   
@@ -645,153 +645,6 @@ Guten Rutsch!</td>
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
-  
-  
-  
-      
-        <td>76</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10522: Add support for the --condition parameter</td>
-      
-  
-  
-  
-      
-        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/911'>911</a></td>
-  
-  
-  
-      
-        <td>15</td>
-      
-  
-  
-  
-      
-        <td>NITEMAN</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-8543) Remove nftables' backend warning from iptables_save outtput</td>
-      
-  
-  
-  
-      
-        <td>Just my 2 cents:
-It looks like it isn't so much an issue of having to suppress the the warning. From the errors we see (and as they are shown in the issue linked earlier) it looks like it's a problem with STDERR and STDOUT getting mixed together.
-
-The STDERR output (ie. the warnings about iptables-legacy) are spliced into STDOUT by whatever random timing it happens to produce the warning at, causing them to show up halfway into an iptables rule. After all, these warnings start with a `#`, which would mean they'd normally get ignored by the rule parser if they started at the start of the line like they should.
-
-I suspect if we properly split out STDOUT and STDERR (maybe concat STDERR to the end of STDOUT if we care about parsing it) that the problem should go away.
-
-**disclaimer**: I've not yet tested ANY of this. It's just what it looks like to me from experience.</td>
-      
-  
-  
-  
-      
-        <td>cFire</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -953,6 +806,153 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
       
         <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+  
+  
+  
+      
+        <td>76</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10522: Add support for the --condition parameter</td>
+      
+  
+  
+  
+      
+        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>8</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/911'>911</a></td>
+  
+  
+  
+      
+        <td>15</td>
+      
+  
+  
+  
+      
+        <td>NITEMAN</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-8543) Remove nftables' backend warning from iptables_save outtput</td>
+      
+  
+  
+  
+      
+        <td>Just my 2 cents:
+It looks like it isn't so much an issue of having to suppress the the warning. From the errors we see (and as they are shown in the issue linked earlier) it looks like it's a problem with STDERR and STDOUT getting mixed together.
+
+The STDERR output (ie. the warnings about iptables-legacy) are spliced into STDOUT by whatever random timing it happens to produce the warning at, causing them to show up halfway into an iptables rule. After all, these warnings start with a `#`, which would mean they'd normally get ignored by the rule parser if they started at the start of the line like they should.
+
+I suspect if we properly split out STDOUT and STDERR (maybe concat STDERR to the end of STDOUT if we care about parsing it) that the problem should go away.
+
+**disclaimer**: I've not yet tested ANY of this. It's just what it looks like to me from experience.</td>
+      
+  
+  
+  
+      
+        <td>cFire</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>4</td>
       
   
   
@@ -1195,7 +1195,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
   
   
   
@@ -1212,7 +1212,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>WIP(MODULES-8952) add isapfilter type and provider</td>
+        <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
       
   
   
@@ -1405,7 +1405,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
   
   
   
@@ -1422,7 +1422,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
+        <td>WIP(MODULES-8952) add isapfilter type and provider</td>
       
   
   
@@ -1624,6 +1624,80 @@ Please let us know if you need more information.
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1245'>1245</a></td>
+  
+  
+  
+      
+        <td>183</td>
+      
+  
+  
+  
+      
+        <td>fraenki</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10023) Fix multiple xtrabackup regressions</td>
+      
+  
+  
+  
+      
+        <td>@fraenki The PR is top of the list to get it merged. There is small change to exclude it from running on Oracle 6 box the (os[:family] is Redhat instead of redhat). We will do the changes now.
+All the tests are running clean on puppet agent 5. As you have mentioned there is a defect on puppet agent 6.14 version and the agent team will be doing a release in April.
+If we accept this PR the tests will be failing on PR level and on release checks.
+We will merge this PR as soon as the release from the agent team is available. Hope that's ok. Thanks again for a great PR.
+</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>20</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1295'>1295</a></td>
   
   
@@ -1694,12 +1768,82 @@ Please let us know if you need more information.
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
+  
+  
+  
+      
+        <td>127</td>
+      
+  
+  
+  
+      
+        <td>baldurmen</td>
+      
+  
+  
+  
+      
+        <td>WIP: Don't try to install cron packages by default</td>
+      
+  
+  
+  
+      
+        <td>@baldurmen Thanks for submitting the PR. Please let us know if you need any help in getting this PR.Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>45</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1247'>1247</a></td>
   
   
   
       
-        <td>175</td>
+        <td>176</td>
       
   
   
@@ -1805,157 +1949,13 @@ Can you verify and fix the testing for those failures ? You might be able to run
   
   
       
-        <td>62</td>
+        <td>63</td>
       
   
   
   
       
         <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
-  
-  
-  
-      
-        <td>127</td>
-      
-  
-  
-  
-      
-        <td>baldurmen</td>
-      
-  
-  
-  
-      
-        <td>WIP: Don't try to install cron packages by default</td>
-      
-  
-  
-  
-      
-        <td>@baldurmen Thanks for submitting the PR. Please let us know if you need any help in getting this PR.Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>45</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1245'>1245</a></td>
-  
-  
-  
-      
-        <td>183</td>
-      
-  
-  
-  
-      
-        <td>fraenki</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10023) Fix multiple xtrabackup regressions</td>
-      
-  
-  
-  
-      
-        <td>@fraenki The PR is top of the list to get it merged. There is small change to exclude it from running on Oracle 6 box the (os[:family] is Redhat instead of redhat). We will do the changes now.
-All the tests are running clean on puppet agent 5. As you have mentioned there is a defect on puppet agent 6.14 version and the agent team will be doing a release in April.
-If we accept this PR the tests will be failing on PR level and on release checks.
-We will merge this PR as soon as the release from the agent team is available. Hope that's ok. Thanks again for a great PR.
-</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>13</td>
-      
-  
-  
-  
-      
-        <td>20</td>
       
   
   
@@ -2124,6 +2124,76 @@ We will merge this PR as soon as the release from the agent team is available. H
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162'>1162</a></td>
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>alexjfisher <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Finish conversion of `postgresql_escape` function</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161'>1161</a></td>
   
   
@@ -2168,76 +2238,6 @@ Time permitting, I aim to tackle the other 2 functions from this module in separ
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162'>1162</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>alexjfisher <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Finish conversion of `postgresql_escape` function</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
       
   
   
@@ -2687,24 +2687,24 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1102'>1102</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1098'>1098</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>36</td>
       
   
   
   
       
-        <td>(IAC-579) Release prep v6.3.0</td>
+        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) Use Facter 4</td>
       
   
   
@@ -2757,54 +2757,54 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1098'>1098</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
   
       
-        <td>36</td>
-      
-  
-  
-  
-      
-        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
+        <td>100</td>
       
   
   
   
       
-        <td>(maint) Use Facter 4</td>
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>Puppet 4 functions</td>
       
   
   
   
       
-        <td></td>
+        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
       
   
   
   
       
-        <td>0</td>
+        <td>DavidS</td>
       
   
   
   
       
-        <td>0</td>
+        <td>59</td>
       
   
   
   
       
-        <td>true</td>
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2887,76 +2887,6 @@ cc @binford2k </td>
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>100</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>59</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -3101,6 +3031,76 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1102'>1102</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-579) Release prep v6.3.0</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
