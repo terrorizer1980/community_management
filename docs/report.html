@@ -766,24 +766,24 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/460'>460</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/598'>598</a></td>
   
   
   
       
-        <td>398</td>
-      
-  
-  
-  
-      
-        <td>SmithJosh</td>
+        <td>4</td>
       
   
   
   
       
-        <td>WIP: Allow use of .env configuration file when running docker-compose</td>
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
       
   
   
@@ -854,6 +854,76 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
       
         <td>[MODULES-10628] Update documentation for docker volume and set options as parameter</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/460'>460</a></td>
+  
+  
+  
+      
+        <td>398</td>
+      
+  
+  
+  
+      
+        <td>SmithJosh</td>
+      
+  
+  
+  
+      
+        <td>WIP: Allow use of .env configuration file when running docker-compose</td>
       
   
   
@@ -1050,7 +1120,7 @@ out = %x{#{expanded_command}}.chomp
   
   
       
-        <td>118</td>
+        <td>119</td>
       
   
   
@@ -1063,76 +1133,6 @@ out = %x{#{expanded_command}}.chomp
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/598'>598</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -1437,54 +1437,153 @@ Guten Rutsch!</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/913'>913</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
   
   
   
       
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
+        <td>26</td>
       
   
   
   
       
-        <td>pdksync - Test facter 4</td>
+        <td>jbro</td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>Add --notrack flag</td>
       
   
   
   
       
-        <td></td>
+        <td>So I've had a look a look, and I can easily enough add something like:
+
+    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
+    index bcf8197..96e1560 100644
+    --- a/spec/acceptance/standard_usage_spec.rb
+    +++ b/spec/acceptance/standard_usage_spec.rb
+    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
+               proto   => 'all',
+               ctstate => ['RELATED', 'ESTABLISHED'],
+               action  => 'accept',
+    +        }->
+    +        firewall { '004 do not track UDP connections to port 53':
+    +          chain => 'PREROUTING',
+    +          table => 'raw',
+    +          proto  => 'udp',
+    +          dport => 53,
+    +          jump => 'CT',
+    +          notrack => true,
+             }
+           }
+           class my_fw::post {
+
+But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
+</td>
       
   
   
   
       
-        <td>0</td>
+        <td>jbro</td>
       
   
   
   
       
-        <td>0</td>
+        <td>25</td>
       
   
   
   
       
-        <td>true</td>
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/911'>911</a></td>
+  
+  
+  
+      
+        <td>19</td>
+      
+  
+  
+  
+      
+        <td>NITEMAN</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-8543) Remove nftables' backend warning from iptables_save outtput</td>
+      
+  
+  
+  
+      
+        <td>FTR, my warning try consisted on inserting this block between the two lines:
+```ruby
+    if iptables_save =~ %r{#{nf_warning_msg}}
+      warning "Sripping '#{nf_warning_msg}' form ip6?tables-save combined output"
+    end 
+
+```</td>
+      
+  
+  
+  
+      
+        <td>NITEMAN</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1553,99 +1652,6 @@ Cheers! </td>
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
-  
-  
-  
-      
-        <td>26</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>Add --notrack flag</td>
-      
-  
-  
-  
-      
-        <td>So I've had a look a look, and I can easily enough add something like:
-
-    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
-    index bcf8197..96e1560 100644
-    --- a/spec/acceptance/standard_usage_spec.rb
-    +++ b/spec/acceptance/standard_usage_spec.rb
-    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
-               proto   => 'all',
-               ctstate => ['RELATED', 'ESTABLISHED'],
-               action  => 'accept',
-    +        }->
-    +        firewall { '004 do not track UDP connections to port 53':
-    +          chain => 'PREROUTING',
-    +          table => 'raw',
-    +          proto  => 'udp',
-    +          dport => 53,
-    +          jump => 'CT',
-    +          notrack => true,
-             }
-           }
-           class my_fw::post {
-
-But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
-</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>25</td>
-      
-  
-  
-  
-      
-        <td>5</td>
       
   
   
@@ -1744,60 +1750,54 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/911'>911</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/913'>913</a></td>
   
   
   
       
-        <td>19</td>
-      
-  
-  
-  
-      
-        <td>NITEMAN</td>
+        <td>4</td>
       
   
   
   
       
-        <td>(MODULES-8543) Remove nftables' backend warning from iptables_save outtput</td>
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>FTR, my warning try consisted on inserting this block between the two lines:
-```ruby
-    if iptables_save =~ %r{#{nf_warning_msg}}
-      warning "Sripping '#{nf_warning_msg}' form ip6?tables-save combined output"
-    end 
-
-```</td>
+        <td>pdksync - Test facter 4</td>
       
   
   
   
       
-        <td>NITEMAN</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>2</td>
+        <td></td>
       
   
   
   
       
-        <td>7</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2174,6 +2174,76 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
+  
+  
+  
+      
+        <td>368</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8953) add type and provider for mimetype</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
   
   
@@ -2192,6 +2262,76 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/219'>219</a></td>
+  
+  
+  
+      
+        <td>368</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8955) add type and provider for webhandler</td>
       
   
   
@@ -2314,76 +2454,6 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/217'>217</a></td>
-  
-  
-  
-      
-        <td>368</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8953) add type and provider for mimetype</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
   
   
@@ -2402,76 +2472,6 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>WIP(MODULES-8952) add isapfilter type and provider</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/219'>219</a></td>
-  
-  
-  
-      
-        <td>368</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8955) add type and provider for webhandler</td>
       
   
   
@@ -3093,48 +3093,48 @@ Please let us know if you need more information.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1247'>1247</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
   
   
   
       
-        <td>179</td>
-      
-  
-  
-  
-      
-        <td>alexjfisher <span class='badge badge-secondary'>vox</span></td>
+        <td>131</td>
       
   
   
   
       
-        <td>WIP: Improvement to mysql::sql task</td>
+        <td>baldurmen</td>
       
   
   
   
       
-        <td>@alexjfisher Hey, just wondering if this was work that you intended to continue and if there was any help that you needed?</td>
+        <td>WIP: Don't try to install cron packages by default</td>
       
   
   
   
       
-        <td>david22swan</td>
+        <td>@baldurmen Thanks for submitting the PR. Please let us know if you need any help in getting this PR.Thank you.</td>
       
   
   
   
       
-        <td>55</td>
+        <td>sheenaajay</td>
       
   
   
   
       
-        <td>3</td>
+        <td>49</td>
+      
+  
+  
+  
+      
+        <td>4</td>
       
   
   
@@ -3233,48 +3233,48 @@ Please let us know if you need more information.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1247'>1247</a></td>
   
   
   
       
-        <td>131</td>
-      
-  
-  
-  
-      
-        <td>baldurmen</td>
+        <td>180</td>
       
   
   
   
       
-        <td>WIP: Don't try to install cron packages by default</td>
+        <td>alexjfisher <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>@baldurmen Thanks for submitting the PR. Please let us know if you need any help in getting this PR.Thank you.</td>
+        <td>WIP: Improvement to mysql::sql task</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>@alexjfisher Hey, just wondering if this was work that you intended to continue and if there was any help that you needed?</td>
       
   
   
   
       
-        <td>49</td>
+        <td>david22swan</td>
       
   
   
   
       
-        <td>4</td>
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>3</td>
       
   
   
@@ -3344,7 +3344,7 @@ Can you verify and fix the testing for those failures ? You might be able to run
   
   
       
-        <td>66</td>
+        <td>67</td>
       
   
   
@@ -3593,24 +3593,24 @@ We will merge this PR as soon as the release from the agent team is available. H
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/192'>192</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/193'>193</a></td>
   
   
   
       
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>adrianiurca <span class='label label-warning'>puppet</span></td>
+        <td>4</td>
       
   
   
   
       
-        <td>(IAC-677) improve acceptance test platform coverage</td>
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
       
   
   
@@ -3663,24 +3663,24 @@ We will merge this PR as soon as the release from the agent team is available. H
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/193'>193</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/192'>192</a></td>
   
   
   
       
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
+        <td>7</td>
       
   
   
   
       
-        <td>pdksync - Test facter 4</td>
+        <td>adrianiurca <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-677) improve acceptance test platform coverage</td>
       
   
   
@@ -3751,76 +3751,6 @@ We will merge this PR as soon as the release from the agent team is available. H
   
       
         <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162'>1162</a></td>
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>alexjfisher <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Finish conversion of `postgresql_escape` function</td>
       
   
   
@@ -4078,6 +4008,146 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162'>1162</a></td>
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>alexjfisher <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Finish conversion of `postgresql_escape` function</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell'>puppetlabs-powershell</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/297'>297</a></td>
+  
+  
+  
+      
+        <td>30</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(DO NOT MERGE) Testing env vars in CI</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell'>puppetlabs-powershell</a></td>
   
   
@@ -4174,76 +4244,6 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
       
         <td>(maint) Remove interpolate_powershell method</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell'>puppetlabs-powershell</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/297'>297</a></td>
-  
-  
-  
-      
-        <td>30</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(DO NOT MERGE) Testing env vars in CI</td>
       
   
   
@@ -5136,76 +5136,6 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1104'>1104</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1098'>1098</a></td>
   
   
@@ -5276,52 +5206,124 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1104'>1104</a></td>
   
   
   
       
-        <td>151</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+        <td>4</td>
       
   
   
   
       
-        <td>(WIP) Add volatile_fact() function</td>
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>So, there are issues with getting the facts if not set in scope as `$facts`, a) risk of getting server side facts when called on master and b) if there are many "deferred facts" they would all result in running Facter and this would be slow c) since each call will run Facter, the values may differ for the same fact
- 
-The best would be if the facts were already present in scope when deferred calls are resolved. That requires a change to Puppet however as the setup and use of PAL on the agent side for resolution of Deferred must be given the facts to use. (The rest should already be supported by PAL; i.e. setting `$facts` etc.)
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
 
-If not computed and set up front, then I think the result needs to be cached and kept while resolving deferred values. This would be good since if there is no call to get a deferred fact then Facter does not need to run at all. If going this route, there is a supported caching mechanism that functions can use. With this there is still the problem of getting the wrong facts (for server when agent was intended) as the place intention is known is when setting up the context (i.e. when setting up PAL for resolution, or when setting up for apply, master compile, bolt apply compile, etc.).</td>
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
+  
+  
+  
+      
+        <td>68</td>
       
   
   
   
       
-        <td>hlindberg</td>
+        <td>justinstoller <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>142</td>
+        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
       
   
   
   
       
-        <td>7</td>
+        <td>Hi @justinstoller,
+
+Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
+
+With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
+
+cc @binford2k </td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>59</td>
+      
+  
+  
+  
+      
+        <td>2</td>
       
   
   
@@ -5333,7 +5335,7 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -5420,54 +5422,52 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
   
   
   
       
-        <td>68</td>
-      
-  
-  
-  
-      
-        <td>justinstoller <span class='label label-warning'>puppet</span></td>
+        <td>151</td>
       
   
   
   
       
-        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>Hi @justinstoller,
+        <td>(WIP) Add volatile_fact() function</td>
+      
+  
+  
+  
+      
+        <td>So, there are issues with getting the facts if not set in scope as `$facts`, a) risk of getting server side facts when called on master and b) if there are many "deferred facts" they would all result in running Facter and this would be slow c) since each call will run Facter, the values may differ for the same fact
+ 
+The best would be if the facts were already present in scope when deferred calls are resolved. That requires a change to Puppet however as the setup and use of PAL on the agent side for resolution of Deferred must be given the facts to use. (The rest should already be supported by PAL; i.e. setting `$facts` etc.)
 
-Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
-
-With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
-
-cc @binford2k </td>
+If not computed and set up front, then I think the result needs to be cached and kept while resolving deferred values. This would be good since if there is no call to get a deferred fact then Facter does not need to run at all. If going this route, there is a supported caching mechanism that functions can use. With this there is still the problem of getting the wrong facts (for server when agent was intended) as the place intention is known is when setting up the context (i.e. when setting up PAL for resolution, or when setting up for apply, master compile, bolt apply compile, etc.).</td>
       
   
   
   
       
-        <td>DavidS</td>
+        <td>hlindberg</td>
       
   
   
   
       
-        <td>59</td>
+        <td>142</td>
       
   
   
   
       
-        <td>2</td>
+        <td>7</td>
       
   
   
@@ -5479,7 +5479,7 @@ cc @binford2k </td>
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
