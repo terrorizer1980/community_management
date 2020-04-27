@@ -17,6 +17,7 @@ end
 parser.parse!
 
 options[:url] = 'https://puppetlabs.github.io/iac/tools.json' if options[:url].nil?
+puts options[:url]
 missing = []
 missing << '-t' if options[:oauth].nil?
 unless missing.empty?
@@ -42,9 +43,10 @@ def does_array_have_pr(array, pr_number)
   found
 end
 
-parsed.each do |m|
+parsed.each do |k, v|
   sleep(2)
-  pr_information_cache = util.fetch_async((m['github']).to_s)
+  pr_information_cache = util.fetch_async("#{v["github"]}")
+
   # no comment from a puppet employee
   puppet_uncommented_pulls = util.fetch_pull_requests_with_no_puppet_personnel_comments(pr_information_cache)
   # last comment mentions a puppet person
@@ -54,8 +56,8 @@ parsed.each do |m|
   pr_information_cache.each do |pr|
     sleep(2)
     row = {}
-    row[:tool] = m['title']
-    row[:address] = "https://github.com/#{m['github']}"
+    row[:tool] = v['title']
+    row[:address] = "https://github.com/#{v['github']}"
     row[:pr] = pr[:pull].number
     row[:age] = ((Time.now - pr[:pull].created_at) / 60 / 60 / 24).round
     row[:owner] = pr[:pull].user.login
@@ -87,6 +89,7 @@ parsed.each do |m|
     end
 
     open_prs.push(row)
+    
   end
 end
 
