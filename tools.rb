@@ -17,7 +17,6 @@ end
 parser.parse!
 
 options[:url] = 'https://puppetlabs.github.io/iac/tools.json' if options[:url].nil?
-puts options[:url]
 missing = []
 missing << '-t' if options[:oauth].nil?
 unless missing.empty?
