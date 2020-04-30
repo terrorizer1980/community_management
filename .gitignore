@@ -11,6 +11,7 @@
 /test/version_tmp/
 /tmp/
 report.*
+report_tools.*
 ModulesRelease.*
 
 ## Specific to RubyMotion:
