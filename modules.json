@@ -1,8 +1,8 @@
  [
   {
     "repo_name": "cisco-network-puppet-module",
-    "github_namespace": "cisco",
-    "module_name": "network-puppet-module",
+    "github_namespace": "puppetlabs",
+    "module_name": "cisco-network-puppet-module",
     "forge_name": "puppetlabs-ciscopuppet"
   },
   {
@@ -186,16 +186,16 @@
     "forge_name": "puppetlabs-registry"
   },
   {
-    "repo_name": "puppetlabs-resource",
-    "github_namespace": "puppetlabs",
-    "module_name": "resource",
-    "forge_name": "puppetlabs-resource"
-  },
-  {
     "repo_name": "puppetlabs-rook",
     "github_namespace": "puppetlabs",
     "module_name": "rook",
     "forge_name": "puppetlabs-rook"
+  },
+  {
+    "repo_name": "puppetlabs-satellite_pe_tools",
+    "github_namespace": "puppetlabs",
+    "module_name": "satellite_pe_tools",
+    "forge_name": "puppetlabs-satellite_pe_tools"
   },
   {
     "repo_name": "puppetlabs-scheduled_task",
