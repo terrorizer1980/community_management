@@ -3,8 +3,7 @@
 require 'erb'
 require 'optparse'
 require_relative 'octokit_utils'
-require 'net/http'
-require 'json'
+require 'net/http''
 
 options = {}
 options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
@@ -92,11 +91,30 @@ parsed.each do |k, v|
   end
 end
 
+copy_open_prs=[]
+copy_open_prs=open_prs
+
+open_prs=copy_open_prs.select { |row| row[:age_comment] > 60 && row[:age_comment] < 90}
+html60 = ERB.new(File.read('tools.html.erb')).result(binding)
+File.open('report_tools60.html', 'wb') do |f|
+  f.puts(html60)
+end
+
+open_prs=copy_open_prs.select { |row| row[:age_comment] > 30 && row[:age_comment] < 60}
+html30 = ERB.new(File.read('tools.html.erb')).result(binding)
+File.open('report_tools30.html', 'wb') do |f|
+  f.puts(html30)
+end
+
+open_prs=copy_open_prs.select { |row| row[:age_comment] > 90 }
+html90 = ERB.new(File.read('tools.html.erb')).result(binding)
+File.open('report_tools90.html', 'wb') do |f|
+  f.puts(html90)
+end
+
+open_prs=copy_open_prs
 html = ERB.new(File.read('tools.html.erb')).result(binding)
 
-open_prs.each do |row|
-  puts(row)
-end
 File.open('report_tools.html', 'wb') do |f|
   f.puts(html)
 end
