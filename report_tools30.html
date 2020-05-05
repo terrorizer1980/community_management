@@ -1,0 +1,360 @@
+<html>
+<title>Tools PRs that require review</title>
+<head>
+<script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
+<script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
+<script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
+<script type="text/javascript">
+    $(document).ready(function() {
+    // Setup - add a text input to each footer cell
+    $('#tools thead tr td').each( function () {
+        var title = $(this).text();
+        $(this).append( '<input class="something" type="text" placeholder="Search '+title+'" />' );
+    } );
+ 
+    // DataTable
+    var table = $('#tools').DataTable();
+ 
+    // Apply the search
+
+
+    table.columns().every( function () {
+        var that = this;
+        $( 'input.something', this.header() ).on( 'keyup change clear', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();  
+            }
+        } );
+    } );
+
+    $( 'input.something' ).on('click', function(e){
+      e.stopPropagation();
+      e.preventDefault();
+    })
+} );
+</script>
+<style>
+#tools {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   font-size: 18px;
+  border-collapse: collapse;
+  width: 50%;
+
+
+}
+.word_break {
+  word-break: break-all;
+  width: auto;
+}
+.button {
+         background-color: #ddd;
+         border: none;
+         color: white;
+         padding: 10px 20px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 20px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+
+
+
+#tools td, #reviews th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tools tr:nth-child(even){background-color: #f2f2f2;
+
+ }
+
+#tools tr:hover {background-color: #ddd;
+ }
+
+#tools th {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-align: left;
+  background-color: #cfcfcf;
+  color: black;
+ 
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center;">Tools PRs that require review</h1>
+<table border='1' id='tools' style='width:100%' class='sortable table table-hover'> 
+ <a href="https://puppetlabs.github.io/community_management/report_tools60.html" class="button">30 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report_tools60.html" class="button">60 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report_tools90.html" class="button">90 Days</a>
+<tr>
+
+  
+    <td> tool</td> 
+   
+
+   
+
+  
+    <td> pr</td> 
+   
+
+  
+    <td> age</td> 
+   
+
+  
+    <td> owner</td> 
+   
+
+  
+    <td> title</td> 
+   
+
+  
+    <td> last_comment</td> 
+   
+
+  
+    <td> by</td> 
+   
+
+  
+    <td> age_comment</td> 
+   
+
+</tr>
+
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/303'>303</a></td>
+  
+  
+  
+      
+        <td>56</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
+      
+  
+  
+  
+      
+        <td>CLA signed by all contributors.</td>
+      
+  
+  
+  
+      
+        <td>puppetcla</td>
+      
+  
+  
+  
+      
+        <td>56</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+  
+  
+  
+      
+        <td>57</td>
+      
+  
+  
+  
+      
+        <td>findmyname666</td>
+      
+  
+  
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
+      
+  
+  
+  
+      
+        <td>> This seems likely to be correct. Can you elaborate on the steps you took or the module/repo involved that generated the error?
+It internal modules which has general structure:
+```
+module_name
+├── lib
+├── manifests
+└── templates
+```
+this module is part of Puppet code base so it lives in *site* directory:
+```
+puppet (root of code base)
+ ├── site
+   ├── module_name
+     ├── lib
+     ├── manifests
+     └── templates
+```
+As you can see module can contain manifests folder so it is in conflict with manifests folder in root path of code base.</td>
+      
+  
+  
+  
+      
+        <td>findmyname666</td>
+      
+  
+  
+  
+      
+        <td>36</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/301'>301</a></td>
+  
+  
+  
+      
+        <td>56</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update rack requirement from ~> 1 to ~> 2</td>
+      
+  
+  
+  
+      
+        <td>CLA signed by all contributors.</td>
+      
+  
+  
+  
+      
+        <td>puppetcla</td>
+      
+  
+  
+  
+      
+        <td>56</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/262'>262</a></td>
+  
+  
+  
+      
+        <td>56</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
+      
+  
+  
+  
+      
+        <td>Can one of the admins verify this patch?</td>
+      
+  
+  
+  
+      
+        <td>puppetlabs-jenkins</td>
+      
+  
+  
+  
+      
+        <td>56</td>
+      
+  
+  
+  </tr>
+ 
+</table>
+</body>
+</html>
