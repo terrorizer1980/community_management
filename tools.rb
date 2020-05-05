@@ -3,7 +3,7 @@
 require 'erb'
 require 'optparse'
 require_relative 'octokit_utils'
-require 'net/http''
+require 'net/http'
 
 options = {}
 options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
