@@ -150,6 +150,12 @@
     "forge_name": "puppetlabs-package"
   },
   {
+    "repo_name": "puppetlabs-panos",
+    "github_namespace": "puppetlabs",
+    "module_name": "panos",
+    "forge_name": "puppetlabs-panos"
+  },
+  {
     "repo_name": "puppetlabs-postgresql",
     "github_namespace": "puppetlabs",
     "module_name": "postgresql",
@@ -184,12 +190,6 @@
     "github_namespace": "puppetlabs",
     "module_name": "resource",
     "forge_name": "puppetlabs-resource"
-  },
-  {
-    "repo_name": "puppetlabs-resource_api",
-    "github_namespace": "puppetlabs",
-    "module_name": "resource_api",
-    "forge_name": "puppetlabs-resource_api"
   },
   {
     "repo_name": "puppetlabs-rook",
@@ -262,12 +262,6 @@
     "github_namespace": "puppetlabs",
     "module_name": "hue",
     "forge_name": "puppetlabs-hue"
-  },
-  {
-    "repo_name": "puppetlabs-panos",
-    "github_namespace": "puppetlabs",
-    "module_name": "panos",
-    "forge_name": "puppetlabs-panos"
   },
   {
     "repo_name": "puppetlabs-test_device",
