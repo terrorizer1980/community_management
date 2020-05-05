@@ -1,0 +1,574 @@
+<html>
+<title>PRs that require review</title>
+<head>
+<script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
+<script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
+<script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+  $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        var min = parseInt( $('#min').val(), 10 );
+        var max = parseInt( $('#max').val(), 10 );
+        var age = parseFloat( data[7] ) || 0; // use data for the age column
+ 
+        if ( ( isNaN( min ) && isNaN( max ) ) ||
+             ( isNaN( min ) && age <= max ) ||
+             ( min <= age   && isNaN( max ) ) ||
+             ( min <= age   && age <= max ) )
+        {
+            return true;
+        }
+        return false;
+    }
+);
+  $(document).ready(function() {
+    var table = $('#reviews').DataTable();
+     
+    // Event listener to the two range filtering inputs to redraw on input
+    $('#min, #max').keyup( function() {
+        table.draw();
+    } );
+} );
+ 
+    $(document).ready(function() {
+    // Setup - add a text input to each footer cell
+    $('#reviews thead tr td').each( function () {
+        var title = $(this).text();
+        $(this).append( '<input class="something" type="text" placeholder="Search '+title+'" />' );
+    } );
+ 
+    // DataTable
+    var table = $('#reviews').DataTable();
+ 
+    // Apply the search
+
+
+    table.columns().every( function () {
+        var that = this;
+        $( 'input.something', this.header() ).on( 'keyup change clear', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();  
+            }
+        } );
+    } );
+
+    $( 'input.something' ).on('click', function(e){
+      e.stopPropagation();
+      e.preventDefault();
+    })
+} );
+</script>
+<style>
+   .button {
+         background-color: #ddd;
+         border: none;
+         color: white;
+         padding: 10px 20px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 20px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+
+
+         .btn {
+  border: none;
+  background-color: inherit;
+  padding: 10px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #eee;}
+
+.minim_button {color: grey;}
+
+.maxim_button {color: grey;}
+
+
+#reviews {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   font-size: 18px;
+  border-collapse: collapse;
+  width: 50%;
+
+
+}
+.word_break {
+  word-break: break-all;
+  width: auto;
+}
+#reviews td, #reviews th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#reviews tr:nth-child(even){background-color: #f2f2f2;
+
+ }
+
+#reviews tr:hover {background-color: #ddd;
+ }
+
+#reviews th {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-align: left;
+  background-color: #cfcfcf;
+  color: black;
+ 
+}
+</style>
+</head>
+<body>
+<h1>Modules PRs that require review</h1>
+ <a href="https://puppetlabs.github.io/community_management/report60.html" class="button">30 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report60.html" class="button">60 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report90.html" class="button">90 Days</a>
+ <table border="0" cellspacing="3" cellpadding="3">
+        <tbody><tr>
+            <button class="btn minim_button">Minimum:</button>
+            <button><input type="text" id="min" name="min"></button>  
+            <button class="btn maxim_button">Maximum:</button>
+            <button><input type="text" id="max" name="max"></button>
+    </tbody></table><table id="example" class="display" style="width:100%">
+<table border='1' id='reviews' style='width:100%' class='sortable table table-hover'> 
+<tr>
+
+  
+    <td> repo</td> 
+   
+
+   
+
+  
+    <td> pr</td> 
+   
+
+  
+    <td> age</td> 
+   
+
+  
+    <td> owner</td> 
+   
+
+  
+    <td> title</td> 
+   
+
+  
+    <td> last_comment</td> 
+   
+
+  
+    <td> by</td> 
+   
+
+  
+    <td> age_comment</td> 
+   
+
+  
+    <td> num_comments</td> 
+   
+
+  
+    <td> no_comment_from_puppet</td> 
+   
+
+  
+    <td> last_comment_mentions_puppet</td> 
+   
+
+</tr>
+
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
+  
+  
+  
+      
+        <td>42</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>Add --notrack flag</td>
+      
+  
+  
+  
+      
+        <td>So I've had a look a look, and I can easily enough add something like:
+
+    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
+    index bcf8197..96e1560 100644
+    --- a/spec/acceptance/standard_usage_spec.rb
+    +++ b/spec/acceptance/standard_usage_spec.rb
+    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
+               proto   => 'all',
+               ctstate => ['RELATED', 'ESTABLISHED'],
+               action  => 'accept',
+    +        }->
+    +        firewall { '004 do not track UDP connections to port 53':
+    +          chain => 'PREROUTING',
+    +          table => 'raw',
+    +          proto  => 'udp',
+    +          dport => 53,
+    +          jump => 'CT',
+    +          notrack => true,
+             }
+           }
+           class my_fw::post {
+
+But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
+</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>40</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1245'>1245</a></td>
+  
+  
+  
+      
+        <td>202</td>
+      
+  
+  
+  
+      
+        <td>fraenki</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10023) Fix multiple xtrabackup regressions</td>
+      
+  
+  
+  
+      
+        <td>@fraenki The PR is top of the list to get it merged. There is small change to exclude it from running on Oracle 6 box the (os[:family] is Redhat instead of redhat). We will do the changes now.
+All the tests are running clean on puppet agent 5. As you have mentioned there is a defect on puppet agent 6.14 version and the agent team will be doing a release in April.
+If we accept this PR the tests will be failing on PR level and on release checks.
+We will merge this PR as soon as the release from the agent team is available. Hope that's ok. Thanks again for a great PR.
+</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>32</td>
+      
+  
+  
+  
+      
+        <td>20</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos'>puppetlabs-panos</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/119'>119</a></td>
+  
+  
+  
+      
+        <td>47</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(WIP) (MODULES-10385) - Allow vsys to be set</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>42</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
+  
+  
+  
+      
+        <td>112</td>
+      
+  
+  
+  
+      
+        <td>Bouke</td>
+      
+  
+  
+  
+      
+        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
+      
+  
+  
+  
+      
+        <td>Hi @Bouke, you can find acceptance tests here: [puppetlabs-postgresql/spec/acceptance/server](https://github.com/puppetlabs/puppetlabs-postgresql/tree/master/spec/acceptance/server)
+and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.com/puppetlabs/puppetlabs-postgresql/tree/master/spec/unit/defines/server). Let me know if you need help! </td>
+      
+  
+  
+  
+      
+        <td>daianamezdrea</td>
+      
+  
+  
+  
+      
+        <td>34</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/123'>123</a></td>
+  
+  
+  
+      
+        <td>74</td>
+      
+  
+  
+  
+      
+        <td>fxbe</td>
+      
+  
+  
+  
+      
+        <td>replace puppet[:compatibility] with function call compatibility since…</td>
+      
+  
+  
+  
+      
+        <td>@fxbe Just checking in to see how your doing with this and whether you need any help?</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>33</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+ 
+</table>
+</body>
+</html>

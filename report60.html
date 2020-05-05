@@ -1,0 +1,848 @@
+<html>
+<title>PRs that require review</title>
+<head>
+<script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
+<script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
+<script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+  $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        var min = parseInt( $('#min').val(), 10 );
+        var max = parseInt( $('#max').val(), 10 );
+        var age = parseFloat( data[7] ) || 0; // use data for the age column
+ 
+        if ( ( isNaN( min ) && isNaN( max ) ) ||
+             ( isNaN( min ) && age <= max ) ||
+             ( min <= age   && isNaN( max ) ) ||
+             ( min <= age   && age <= max ) )
+        {
+            return true;
+        }
+        return false;
+    }
+);
+  $(document).ready(function() {
+    var table = $('#reviews').DataTable();
+     
+    // Event listener to the two range filtering inputs to redraw on input
+    $('#min, #max').keyup( function() {
+        table.draw();
+    } );
+} );
+ 
+    $(document).ready(function() {
+    // Setup - add a text input to each footer cell
+    $('#reviews thead tr td').each( function () {
+        var title = $(this).text();
+        $(this).append( '<input class="something" type="text" placeholder="Search '+title+'" />' );
+    } );
+ 
+    // DataTable
+    var table = $('#reviews').DataTable();
+ 
+    // Apply the search
+
+
+    table.columns().every( function () {
+        var that = this;
+        $( 'input.something', this.header() ).on( 'keyup change clear', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();  
+            }
+        } );
+    } );
+
+    $( 'input.something' ).on('click', function(e){
+      e.stopPropagation();
+      e.preventDefault();
+    })
+} );
+</script>
+<style>
+   .button {
+         background-color: #ddd;
+         border: none;
+         color: white;
+         padding: 10px 20px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 20px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+
+
+         .btn {
+  border: none;
+  background-color: inherit;
+  padding: 10px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #eee;}
+
+.minim_button {color: grey;}
+
+.maxim_button {color: grey;}
+
+
+#reviews {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   font-size: 18px;
+  border-collapse: collapse;
+  width: 50%;
+
+
+}
+.word_break {
+  word-break: break-all;
+  width: auto;
+}
+#reviews td, #reviews th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#reviews tr:nth-child(even){background-color: #f2f2f2;
+
+ }
+
+#reviews tr:hover {background-color: #ddd;
+ }
+
+#reviews th {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-align: left;
+  background-color: #cfcfcf;
+  color: black;
+ 
+}
+</style>
+</head>
+<body>
+<h1>Modules PRs that require review</h1>
+ <a href="https://puppetlabs.github.io/community_management/report60.html" class="button">30 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report60.html" class="button">60 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report90.html" class="button">90 Days</a>
+ <table border="0" cellspacing="3" cellpadding="3">
+        <tbody><tr>
+            <button class="btn minim_button">Minimum:</button>
+            <button><input type="text" id="min" name="min"></button>  
+            <button class="btn maxim_button">Maximum:</button>
+            <button><input type="text" id="max" name="max"></button>
+    </tbody></table><table id="example" class="display" style="width:100%">
+<table border='1' id='reviews' style='width:100%' class='sortable table table-hover'> 
+<tr>
+
+  
+    <td> repo</td> 
+   
+
+   
+
+  
+    <td> pr</td> 
+   
+
+  
+    <td> age</td> 
+   
+
+  
+    <td> owner</td> 
+   
+
+  
+    <td> title</td> 
+   
+
+  
+    <td> last_comment</td> 
+   
+
+  
+    <td> by</td> 
+   
+
+  
+    <td> age_comment</td> 
+   
+
+  
+    <td> num_comments</td> 
+   
+
+  
+    <td> no_comment_from_puppet</td> 
+   
+
+  
+    <td> last_comment_mentions_puppet</td> 
+   
+
+</tr>
+
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-helm'>puppetlabs-helm</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-helm/pull/106'>106</a></td>
+  
+  
+  
+      
+        <td>100</td>
+      
+  
+  
+  
+      
+        <td>AblionGE</td>
+      
+  
+  
+  
+      
+        <td>Add ability to deploy helm v3</td>
+      
+  
+  
+  
+      
+        <td>Hi @AblionGE, thank you for your contribution. 
+
+This draft looks really good.
+
+I think for now we should keep the possibility to install either version, for now, so I believe some conditional logic should be added, as you already did, so please go ahead and prepare a couple of tests and we'll give it a try once the PR is ready for review. </td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel</td>
+      
+  
+  
+  
+      
+        <td>89</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/286'>286</a></td>
+  
+  
+  
+      
+        <td>75</td>
+      
+  
+  
+  
+      
+        <td>tphoney <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>{WIP} Bolt v2</td>
+      
+  
+  
+  
+      
+        <td>Based on https://github.com/puppetlabs/puppet_litmus/pull/254</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>69</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1269'>1269</a></td>
+  
+  
+  
+      
+        <td>147</td>
+      
+  
+  
+  
+      
+        <td>baldurmen</td>
+      
+  
+  
+  
+      
+        <td>WIP: Don't try to install cron packages by default</td>
+      
+  
+  
+  
+      
+        <td>@baldurmen Thanks for submitting the PR. Please let us know if you need any help in getting this PR.Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>64</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1247'>1247</a></td>
+  
+  
+  
+      
+        <td>195</td>
+      
+  
+  
+  
+      
+        <td>alexjfisher <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Improvement to mysql::sql task</td>
+      
+  
+  
+  
+      
+        <td>@alexjfisher Hey, just wondering if this was work that you intended to continue and if there was any help that you needed?</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>70</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
+  
+  
+  
+      
+        <td>224</td>
+      
+  
+  
+  
+      
+        <td>koshatul</td>
+      
+  
+  
+  
+      
+        <td>change split on whitespace to split on tab in mysql_user</td>
+      
+  
+  
+  
+      
+        <td>Hi @koshatul 
+
+Thank you for submitting this PR.
+
+I've added a commit to fix the unit testing for this change, however it appears there are some acceptance testing failures caused by this change that you can verify in travis. 
+
+Can you verify and fix the testing for those failures ? You might be able to run the tests on your local machine with Litmus to have an easier time getting these issues solved. Please let us know if you are having trouble with this.</td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel</td>
+      
+  
+  
+  
+      
+        <td>82</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
+  
+  
+  
+      
+        <td>84</td>
+      
+  
+  
+  
+      
+        <td>justinstoller <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
+      
+  
+  
+  
+      
+        <td>Hi @justinstoller,
+
+Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
+
+With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
+
+cc @binford2k </td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>74</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
+  
+  
+  
+      
+        <td>424</td>
+      
+  
+  
+  
+      
+        <td>Rathios</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-8732) Cron types</td>
+      
+  
+  
+  
+      
+        <td>Hi @Rathios,
+
+Thank you for your contribution, this looks really great!
+
+This would be better suited to the core cron module: https://github.com/puppetlabs/puppetlabs-cron_core
+
+If you submit it there, please ping me on the PR so I can make sure it gets merged quickly. </td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel</td>
+      
+  
+  
+  
+      
+        <td>88</td>
+      
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>120</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>78</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server'>puppetlabs-websphere_application_server</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/191'>191</a></td>
+  
+  
+  
+      
+        <td>102</td>
+      
+  
+  
+  
+      
+        <td>vkorehov</td>
+      
+  
+  
+  
+      
+        <td>relaxing validation for repository</td>
+      
+  
+  
+  
+      
+        <td>@vkorehov Thanks for submitting the PR. Is it in WIP status?</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>63</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+ 
+</table>
+</body>
+</html>
