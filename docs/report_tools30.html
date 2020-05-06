@@ -141,42 +141,59 @@
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/303'>303</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
   
   
   
       
-        <td>56</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
+        <td>58</td>
       
   
   
   
       
-        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
+        <td>findmyname666</td>
       
   
   
   
       
-        <td>CLA signed by all contributors.</td>
+        <td>Remove all sub-folders from source repository / folder</td>
       
   
   
   
       
-        <td>puppetcla</td>
+        <td>> This seems likely to be correct. Can you elaborate on the steps you took or the module/repo involved that generated the error?
+It internal modules which has general structure:
+```
+module_name
+├── lib
+├── manifests
+└── templates
+```
+this module is part of Puppet code base so it lives in *site* directory:
+```
+puppet (root of code base)
+ ├── site
+   ├── module_name
+     ├── lib
+     ├── manifests
+     └── templates
+```
+As you can see module can contain manifests folder so it is in conflict with manifests folder in root path of code base.</td>
       
   
   
   
       
-        <td>56</td>
+        <td>findmyname666</td>
+      
+  
+  
+  
+      
+        <td>37</td>
       
   
   
@@ -245,59 +262,42 @@
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/303'>303</a></td>
   
   
   
       
-        <td>58</td>
-      
-  
-  
-  
-      
-        <td>findmyname666</td>
+        <td>56</td>
       
   
   
   
       
-        <td>Remove all sub-folders from source repository / folder</td>
+        <td>dependabot-preview[bot]</td>
       
   
   
   
       
-        <td>> This seems likely to be correct. Can you elaborate on the steps you took or the module/repo involved that generated the error?
-It internal modules which has general structure:
-```
-module_name
-├── lib
-├── manifests
-└── templates
-```
-this module is part of Puppet code base so it lives in *site* directory:
-```
-puppet (root of code base)
- ├── site
-   ├── module_name
-     ├── lib
-     ├── manifests
-     └── templates
-```
-As you can see module can contain manifests folder so it is in conflict with manifests folder in root path of code base.</td>
+        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
       
   
   
   
       
-        <td>findmyname666</td>
+        <td>CLA signed by all contributors.</td>
       
   
   
   
       
-        <td>36</td>
+        <td>puppetcla</td>
+      
+  
+  
+  
+      
+        <td>56</td>
       
   
   
