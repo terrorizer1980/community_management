@@ -194,80 +194,6 @@
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-helm'>puppetlabs-helm</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-helm/pull/106'>106</a></td>
-  
-  
-  
-      
-        <td>100</td>
-      
-  
-  
-  
-      
-        <td>AblionGE</td>
-      
-  
-  
-  
-      
-        <td>Add ability to deploy helm v3</td>
-      
-  
-  
-  
-      
-        <td>Hi @AblionGE, thank you for your contribution. 
-
-This draft looks really good.
-
-I think for now we should keep the possibility to install either version, for now, so I believe some conditional logic should be added, as you already did, so please go ahead and prepare a couple of tests and we'll give it a try once the PR is ready for review. </td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel</td>
-      
-  
-  
-  
-      
-        <td>89</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
   
   
@@ -381,7 +307,83 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>64</td>
+        <td>65</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
+  
+  
+  
+      
+        <td>225</td>
+      
+  
+  
+  
+      
+        <td>koshatul</td>
+      
+  
+  
+  
+      
+        <td>change split on whitespace to split on tab in mysql_user</td>
+      
+  
+  
+  
+      
+        <td>Hi @koshatul 
+
+Thank you for submitting this PR.
+
+I've added a commit to fix the unit testing for this change, however it appears there are some acceptance testing failures caused by this change that you can verify in travis. 
+
+Can you verify and fix the testing for those failures ? You might be able to run the tests on your local machine with Litmus to have an easier time getting these issues solved. Please let us know if you are having trouble with this.</td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel</td>
+      
+  
+  
+  
+      
+        <td>82</td>
       
   
   
@@ -451,89 +453,13 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>70</td>
+        <td>71</td>
       
   
   
   
       
         <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
-  
-  
-  
-      
-        <td>224</td>
-      
-  
-  
-  
-      
-        <td>koshatul</td>
-      
-  
-  
-  
-      
-        <td>change split on whitespace to split on tab in mysql_user</td>
-      
-  
-  
-  
-      
-        <td>Hi @koshatul 
-
-Thank you for submitting this PR.
-
-I've added a commit to fix the unit testing for this change, however it appears there are some acceptance testing failures caused by this change that you can verify in travis. 
-
-Can you verify and fix the testing for those failures ? You might be able to run the tests on your local machine with Litmus to have an easier time getting these issues solved. Please let us know if you are having trouble with this.</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel</td>
-      
-  
-  
-  
-      
-        <td>82</td>
-      
-  
-  
-  
-      
-        <td>4</td>
       
   
   
@@ -603,7 +529,7 @@ cc @binford2k </td>
   
   
       
-        <td>74</td>
+        <td>75</td>
       
   
   
@@ -622,6 +548,76 @@ cc @binford2k </td>
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>120</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>79</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -679,83 +675,13 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>88</td>
+        <td>89</td>
       
   
   
   
       
         <td>10</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>120</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>78</td>
-      
-  
-  
-  
-      
-        <td>2</td>
       
   
   
@@ -819,7 +745,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>63</td>
+        <td>64</td>
       
   
   
