@@ -141,75 +141,6 @@
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
-  
-  
-  
-      
-        <td>59</td>
-      
-  
-  
-  
-      
-        <td>findmyname666</td>
-      
-  
-  
-  
-      
-        <td>Remove all sub-folders from source repository / folder</td>
-      
-  
-  
-  
-      
-        <td>> This seems likely to be correct. Can you elaborate on the steps you took or the module/repo involved that generated the error?
-It internal modules which has general structure:
-```
-module_name
-├── lib
-├── manifests
-└── templates
-```
-this module is part of Puppet code base so it lives in *site* directory:
-```
-puppet (root of code base)
- ├── site
-   ├── module_name
-     ├── lib
-     ├── manifests
-     └── templates
-```
-As you can see module can contain manifests folder so it is in conflict with manifests folder in root path of code base.</td>
-      
-  
-  
-  
-      
-        <td>findmyname666</td>
-      
-  
-  
-  
-      
-        <td>37</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/301'>301</a></td>
   
   
@@ -298,6 +229,75 @@ As you can see module can contain manifests folder so it is in conflict with man
   
       
         <td>57</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+  
+  
+  
+      
+        <td>59</td>
+      
+  
+  
+  
+      
+        <td>findmyname666</td>
+      
+  
+  
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
+      
+  
+  
+  
+      
+        <td>> This seems likely to be correct. Can you elaborate on the steps you took or the module/repo involved that generated the error?
+It internal modules which has general structure:
+```
+module_name
+├── lib
+├── manifests
+└── templates
+```
+this module is part of Puppet code base so it lives in *site* directory:
+```
+puppet (root of code base)
+ ├── site
+   ├── module_name
+     ├── lib
+     ├── manifests
+     └── templates
+```
+As you can see module can contain manifests folder so it is in conflict with manifests folder in root path of code base.</td>
+      
+  
+  
+  
+      
+        <td>findmyname666</td>
+      
+  
+  
+  
+      
+        <td>38</td>
       
   
   
