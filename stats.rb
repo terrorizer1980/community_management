@@ -10,9 +10,9 @@ options = {}
 options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: stats.rb [options]'
-  opts.on('-f', '--file NAME', String, 'Module file list') { |v| options[:file] = v }
-  opts.on('-s', '--sort', 'Sort output based on number of pull requests') { options[:sort] = true }
+  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| options[:url] = v }
   opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
+  opts.on('-s', '--sort', 'Sort output based on number of pull requests') { options[:sort] = true }
   opts.on('-v', '--verbose', 'More output') { options[:verbose] = true }
   opts.on('-o', '--overview', 'Output overview, summary totals to csv') { options[:display_overview] = true }
   opts.on('-w', '--work', 'Output PRs that need work to HTML') { options[:work] = true }
@@ -20,8 +20,7 @@ end
 
 parser.parse!
 
-options[:file] = 'modules.json' if options[:file].nil?
-
+options[:url] = 'https://puppetlabs.github.io/iac/modules.json' if options[:url].nil?
 missing = []
 missing << '-t' if options[:oauth].nil?
 unless missing.empty?
@@ -30,8 +29,12 @@ unless missing.empty?
   exit
 end
 
+uri = URI.parse(options[:url])
+response = Net::HTTP.get_response(uri)
+output = response.body
+parsed = JSON.parse(output)
+
 util = OctokitUtils.new(options[:oauth])
-parsed = util.load_module_list(options[:file])
 
 array_last_comment_pulls = []
 array_uncommented_pulls = []
@@ -49,11 +52,11 @@ total_merged_pulls = 0
 total_mentioned_pulls = 0
 
 puts 'repo, last comment, needs rebase, fails test, needs squash, no comments, total open, has mention, no activty 40 days'
-parsed.each do |m|
+parsed.each do |_k, v|
   # Disbled because default value on filter causes github api issues
-  pr_information_cache = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", { state: 'open', sort: 'updated' }, %i[statuses pull_request_commits issue_comments pull_request])
+  pr_information_cache = util.fetch_async((v['github']).to_s, { state: 'open', sort: 'updated' }, %i[statuses pull_request_commits issue_comments pull_request])
 
-  closed_pr_information_cache = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", { state: 'closed', sort: 'updated' }, [])
+  closed_pr_information_cache = util.fetch_async((v['github']).to_s, { state: 'closed', sort: 'updated' }, [])
 
   # these are arrays used in generating the report
   # no comment from contributer in 30 days
@@ -75,7 +78,7 @@ parsed.each do |m|
   rebase_pulls = util.fetch_pull_requests_which_need_rebase(pr_information_cache)
   total_rebase_pulls += rebase_pulls.size
   rebase_pulls.each do |rebase|
-    array_needs_rebase_no_label_pulls.push(rebase) unless util.does_pr_have_label("#{m['github_namespace']}/#{m['repo_name']}", rebase.number, 'needs-rebase')
+    array_needs_rebase_no_label_pulls.push(rebase) unless util.does_pr_have_label((v['github']).to_s, rebase.number, 'needs-rebase')
   end
   # prs that have had no activity in 40 days
   no_activity_pulls = util.fetch_pull_requests_with_no_activity_40_days(pr_information_cache)
@@ -100,7 +103,7 @@ parsed.each do |m|
   total_repo_merged_pulls = util.fetch_merged_pull_requests(closed_pr_information_cache)
   total_merged_pulls += total_repo_merged_pulls.size
 
-  puts "#{m['github_namespace']}/#{m['repo_name']}, #{last_comment_pulls.size}, #{rebase_pulls.size}, #{bad_status_pulls.size}, #{squashed_pulls.size}, #{uncommented_pulls.size}, #{total_repo_open_pulls.size}, #{total_mentioned_pulls}, #{no_activity_pulls.size}"
+  puts "#{v['github']}, #{last_comment_pulls.size}, #{rebase_pulls.size}, #{bad_status_pulls.size}, #{squashed_pulls.size}, #{uncommented_pulls.size}, #{total_repo_open_pulls.size}, #{total_mentioned_pulls}, #{no_activity_pulls.size}"
 end
 
 if options[:display_overview]

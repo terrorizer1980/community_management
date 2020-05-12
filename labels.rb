@@ -8,15 +8,15 @@ options = {}
 options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: labels.rb [options]'
+  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| options[:url] = v }
   opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
   opts.on('-f', '--fix-labels', 'Add the missing labels to repo') { options[:fix_labels] = true }
   opts.on('-d', '--delete-labels', 'Delete unwanted labels from repo') { options[:delete_labels] = true }
-  opts.on('-f', '--file NAME', String, 'Module file list') { |v| options[:file] = v }
 end
 
 parser.parse!
-options[:file] = 'modules.json' if options[:file].nil?
 
+options[:url] = 'https://puppetlabs.github.io/iac/modules.json' if options[:url].nil?
 missing = []
 missing << '-t' if options[:oauth].nil?
 unless missing.empty?
@@ -24,6 +24,11 @@ unless missing.empty?
   puts parser
   exit
 end
+
+uri = URI.parse(options[:url])
+response = Net::HTTP.get_response(uri)
+output = response.body
+parsed = JSON.parse(output)
 
 util = OctokitUtils.new(options[:oauth])
 
@@ -36,8 +41,8 @@ wanted_labels.each do |wanted_label|
 end
 puts "Checking for the following labels: #{label_names}"
 
-parsed.each do |m|
-  repo_name = "#{m['github_namespace']}/#{m['repo_name']}"
+parsed.each do |_k, v|
+  repo_name = (v['github']).to_s
   missing_labels = util.fetch_repo_missing_labels(repo_name, wanted_labels)
   incorrect_labels = util.fetch_repo_incorrect_labels(repo_name, wanted_labels)
   extra_labels = util.fetch_repo_extra_labels(repo_name, wanted_labels)

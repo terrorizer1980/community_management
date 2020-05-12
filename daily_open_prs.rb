@@ -12,14 +12,14 @@ options = {}
 options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: open_and_created.rb [options]'
+  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| options[:url] = v }
   opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
   opts.on('-o', '--overview', 'Output overview, summary totals to csv') { options[:display_overview] = true }
-  opts.on('-f', '--file NAME', String, 'Module file list') { |v| options[:file] = v }
 end
 
 parser.parse!
-options[:file] = 'modules.json' if options[:file].nil?
 
+options[:url] = 'https://puppetlabs.github.io/iac/modules.json' if options[:url].nil?
 missing = []
 missing << '-t' if options[:oauth].nil?
 unless missing.empty?
@@ -28,16 +28,20 @@ unless missing.empty?
   exit
 end
 
+uri = URI.parse(options[:url])
+response = Net::HTTP.get_response(uri)
+output = response.body
+parsed = JSON.parse(output)
+
 util = OctokitUtils.new(options[:oauth])
-parsed = util.load_module_list(options[:file])
 
 all_pulls = []
 pr_cache = []
 
-parsed.each do |m|
+parsed.each do |_k, v|
   # Retrieves all PRs for the repo
-  pr_cache = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", { state: 'open' }, [])
-  pr_cache.concat(util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", { state: 'closed' }, []))
+  pr_cache = util.fetch_async((v['github']).to_s, { state: 'open' }, [])
+  pr_cache.concat(util.fetch_async((v['github']).to_s, { state: 'closed' }, []))
 
   pr_cache.each do |pr|
     all_pulls.push(pr[:pull])

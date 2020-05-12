@@ -36,7 +36,7 @@ util = OctokitUtils.new(options[:oauth])
 result_hash = []
 headers = { Authorization: "token #{options[:oauth]}" }
 
-parsed.each do |k,v|
+parsed.each do |_k, v|
   limit = util.client.rate_limit!
   puts "Getting data from Github API for #{v['github']}"
   if limit.remaining == 0
