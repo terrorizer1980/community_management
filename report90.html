@@ -207,7 +207,7 @@
   
   
       
-        <td>177</td>
+        <td>178</td>
       
   
   
@@ -276,87 +276,13 @@ out = %x{#{expanded_command}}.chomp
   
   
       
-        <td>139</td>
+        <td>140</td>
       
   
   
   
       
         <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/889'>889</a></td>
-  
-  
-  
-      
-        <td>116</td>
-      
-  
-  
-  
-      
-        <td>mohammed-elhakim-sociomantic</td>
-      
-  
-  
-  
-      
-        <td>Add u32 to recognized modules</td>
-      
-  
-  
-  
-      
-        <td>Hey @mohammed-elhakim-sociomantic ,
-
-Thank you for this fix. It looks good to me, but the new rule should be tested. Would be possible to add a test to cover this?
-
-Cheers! </td>
-      
-  
-  
-  
-      
-        <td>lionce</td>
-      
-  
-  
-  
-      
-        <td>111</td>
-      
-  
-  
-  
-      
-        <td>1</td>
       
   
   
@@ -390,7 +316,7 @@ Cheers! </td>
   
   
       
-        <td>106</td>
+        <td>107</td>
       
   
   
@@ -424,7 +350,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>95</td>
+        <td>96</td>
       
   
   
@@ -459,12 +385,86 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
+  
+  
+  
+      
+        <td>173</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>(WIP) Add volatile_fact() function</td>
+      
+  
+  
+  
+      
+        <td>So, there are issues with getting the facts if not set in scope as `$facts`, a) risk of getting server side facts when called on master and b) if there are many "deferred facts" they would all result in running Facter and this would be slow c) since each call will run Facter, the values may differ for the same fact
+ 
+The best would be if the facts were already present in scope when deferred calls are resolved. That requires a change to Puppet however as the setup and use of PAL on the agent side for resolution of Deferred must be given the facts to use. (The rest should already be supported by PAL; i.e. setting `$facts` etc.)
+
+If not computed and set up front, then I think the result needs to be cached and kept while resolving deferred values. This would be good since if there is no call to get a deferred fact then Facter does not need to run at all. If going this route, there is a supported caching mechanism that functions can use. With this there is still the problem of getting the wrong facts (for server when agent was intended) as the place intention is known is when setting up the context (i.e. when setting up PAL for resolution, or when setting up for apply, master compile, bolt apply compile, etc.).</td>
+      
+  
+  
+  
+      
+        <td>hlindberg</td>
+      
+  
+  
+  
+      
+        <td>164</td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
   
   
   
       
-        <td>430</td>
+        <td>431</td>
       
   
   
@@ -500,87 +500,13 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>94</td>
+        <td>95</td>
       
   
   
   
       
         <td>10</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
-  
-  
-  
-      
-        <td>172</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>(WIP) Add volatile_fact() function</td>
-      
-  
-  
-  
-      
-        <td>So, there are issues with getting the facts if not set in scope as `$facts`, a) risk of getting server side facts when called on master and b) if there are many "deferred facts" they would all result in running Facter and this would be slow c) since each call will run Facter, the values may differ for the same fact
- 
-The best would be if the facts were already present in scope when deferred calls are resolved. That requires a change to Puppet however as the setup and use of PAL on the agent side for resolution of Deferred must be given the facts to use. (The rest should already be supported by PAL; i.e. setting `$facts` etc.)
-
-If not computed and set up front, then I think the result needs to be cached and kept while resolving deferred values. This would be good since if there is no call to get a deferred fact then Facter does not need to run at all. If going this route, there is a supported caching mechanism that functions can use. With this there is still the problem of getting the wrong facts (for server when agent was intended) as the place intention is known is when setting up the context (i.e. when setting up PAL for resolution, or when setting up for apply, master compile, bolt apply compile, etc.).</td>
-      
-  
-  
-  
-      
-        <td>hlindberg</td>
-      
-  
-  
-  
-      
-        <td>163</td>
-      
-  
-  
-  
-      
-        <td>7</td>
       
   
   
