@@ -5,7 +5,6 @@
 # the number of closed prs
 # the number of merged prs
 # the number of comments made on prs
-
 require 'optparse'
 require 'csv'
 require_relative 'octokit_utils'
@@ -14,14 +13,13 @@ options = {}
 options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: pr_work_done.rb [options]'
-  opts.on('-f', '--file NAME', String, 'Module file list') { |v| options[:file] = v }
+  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| options[:url] = v }
   opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
 end
 
 parser.parse!
 
-options[:file] = 'modules.json' if options[:file].nil?
-
+options[:url] = 'https://puppetlabs.github.io/iac/modules.json' if options[:url].nil?
 missing = []
 missing << '-t' if options[:oauth].nil?
 unless missing.empty?
@@ -30,8 +28,12 @@ unless missing.empty?
   exit
 end
 
+uri = URI.parse(options[:url])
+response = Net::HTTP.get_response(uri)
+output = response.body
+parsed = JSON.parse(output)
+
 util = OctokitUtils.new(options[:oauth])
-parsed = util.load_module_list(options[:file])
 
 number_of_weeks_to_show = 10
 
@@ -52,8 +54,8 @@ comments = []
 members_of_organisation = {}
 
 # gather all commments / merges / closed in our time range (since)
-parsed.each do |m|
-  closed_pr_information_cache = util.fetch_async("#{m['github_namespace']}/#{m['repo_name']}", { state: 'closed' }, [:issue_comments], attribute: 'closed_at', date: since)
+parsed.each do |_k, v|
+  closed_pr_information_cache = util.fetch_async((v['github']).to_s, { state: 'closed' }, [:issue_comments], attribute: 'closed_at', date: since)
   # closed prs
   all_closed_pulls.concat(util.fetch_unmerged_pull_requests(closed_pr_information_cache))
   # merged prs
@@ -71,7 +73,7 @@ parsed.each do |m|
     end
   end
 
-  puts "repo #{m}"
+  puts "repo #{v}"
 end
 
 week_data = []
