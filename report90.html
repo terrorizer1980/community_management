@@ -207,7 +207,7 @@
   
   
       
-        <td>99</td>
+        <td>100</td>
       
   
   
@@ -237,7 +237,7 @@
   
   
       
-        <td>99</td>
+        <td>100</td>
       
   
   
@@ -277,7 +277,7 @@
   
   
       
-        <td>314</td>
+        <td>315</td>
       
   
   
@@ -307,7 +307,7 @@
   
   
       
-        <td>253</td>
+        <td>254</td>
       
   
   
@@ -347,7 +347,7 @@
   
   
       
-        <td>187</td>
+        <td>188</td>
       
   
   
@@ -416,7 +416,7 @@ out = %x{#{expanded_command}}.chomp
   
   
       
-        <td>149</td>
+        <td>150</td>
       
   
   
@@ -456,7 +456,7 @@ out = %x{#{expanded_command}}.chomp
   
   
       
-        <td>116</td>
+        <td>117</td>
       
   
   
@@ -490,7 +490,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>105</td>
+        <td>106</td>
       
   
   
@@ -525,30 +525,36 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
   
       
-        <td>135</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+        <td>100</td>
       
   
   
   
       
-        <td>Puppet 4 functions</td>
+        <td>justinstoller <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
+        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
+      
+  
+  
+  
+      
+        <td>Hi @justinstoller,
+
+Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
+
+With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
+
+cc @binford2k </td>
       
   
   
@@ -560,7 +566,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>94</td>
+        <td>91</td>
       
   
   
@@ -578,7 +584,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -600,7 +606,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>182</td>
+        <td>183</td>
       
   
   
@@ -634,7 +640,7 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
       
-        <td>173</td>
+        <td>174</td>
       
   
   
@@ -669,12 +675,82 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>136</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>95</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
   
   
   
       
-        <td>440</td>
+        <td>441</td>
       
   
   
@@ -710,7 +786,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>104</td>
+        <td>105</td>
       
   
   
