@@ -146,7 +146,7 @@
   
   
       
-        <td>53</td>
+        <td>54</td>
       
   
   
@@ -198,7 +198,7 @@
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -228,7 +228,7 @@
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -250,7 +250,7 @@
   
   
       
-        <td>276</td>
+        <td>277</td>
       
   
   
@@ -282,97 +282,7 @@ https://rubygems.org/gems/little-plugger/versions/1.1.4  (38 Million downloads!)
   
   
       
-        <td>159</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-planning'>PDK Planning</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-planning/pull/54'>54</a></td>
-  
-  
-  
-      
-        <td>243</td>
-      
-  
-  
-  
-      
-        <td>glennsarti</td>
-      
-  
-  
-  
-      
-        <td>(wip) PDK Templating v2.0</td>
-      
-  
-  
-  
-      
-        <td>I am a bit against reworking the template system. Not because I think it doesn't require rework, but currently when I tell my clients about pdk-templates I just say it works like modulesync. Which is well documented and used by many.  
-
-While, the current implementation isn't perfect, making the user switch to another system is going to piss them off.   Many users coming from the modulesync workflow will start using pdksync with PDK.  So for a large corporation to convert to PDK and forgetting everything about how modulesync is a hard pill to swallow.
-
-Regarding the opt-in strategy.  This seems ideal.  I like it.  
-
-The way I use pdk-templates is always the same:
-1. Mirror official external templates into internal git repository
-2. Fork the internal mirror into a namespace that is intended for heavy internal usage
-3. Make changes that are reflective to my environment
-4. Remove all calls to the internet (rubygems.org, puppet.com, github.com)
-5. Add all my exclusions to the template_configs
-6. Create branches for each tag of the upstream templates
-
-With this in mind there should be an air-gaped setting too.  Provide a way to fill in special environment variables in the templates.yml that are then used in the template rendering.
-
-```yaml
-
-pdk_templates:
-  config: 
-    air_gaped: true
-    GEM_SOURCE: "ENV['GEM_SOURCE']"
-    ci_system:
-      - travis
-      - appveyor
-    scm_system: github_enterprise
-    upstream_template_repo: github.com/puppetlabs/pdk-templates
-    internal_template_repo: github.com/nwops/pdk-templates  
-```
-
-On a side note.  What I would like to see is the templates.yml file become the configuration code for describing an environment.  Take the upstream pdk-templates from puppet and "merge" them with an internal (subset).  Whereby,  the internal subset files take precedence over the upstream version. This should be similar in behavior to `Hash.merge.`   What this might look like:
-
-1. pdk new module --template_url=https://github.com/nwops/pdk-templates.git
-2. pdk clones https://github.com/nwops/pdk-templates.git
-3. pdk references the templates.yml file and finds the upstream_template_repo
-4. pdk clones the upstream template repo
-5. pdk starts to create new files and looks for template in internal_template_repo first and fails back to upstream templates for the requested template. 
-
-This keeps the user from having to keep an extra fork of pdk-templates around and constantly maintain them with upstream changes. </td>
-      
-  
-  
-  
-      
-        <td>logicminds</td>
-      
-  
-  
-  
-      
-        <td>230</td>
+        <td>160</td>
       
   
   
@@ -394,7 +304,7 @@ This keeps the user from having to keep an extra fork of pdk-templates around an
   
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -446,7 +356,7 @@ This keeps the user from having to keep an extra fork of pdk-templates around an
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -493,12 +403,64 @@ This keeps the user from having to keep an extra fork of pdk-templates around an
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/270'>270</a></td>
+  
+  
+  
+      
+        <td>313</td>
+      
+  
+  
+  
+      
+        <td>npwalker <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Add circleci and azure pipelines support</td>
+      
+  
+  
+  
+      
+        <td>What's the concern with including these by default?  All the other CI tool files are included by default and including them provides discoverability.  </td>
+      
+  
+  
+  
+      
+        <td>npwalker</td>
+      
+  
+  
+  
+      
+        <td>223</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/281'>281</a></td>
   
   
   
       
-        <td>244</td>
+        <td>245</td>
       
   
   
@@ -528,7 +490,7 @@ This keeps the user from having to keep an extra fork of pdk-templates around an
   
   
       
-        <td>168</td>
+        <td>169</td>
       
   
   
@@ -550,7 +512,7 @@ This keeps the user from having to keep an extra fork of pdk-templates around an
   
   
       
-        <td>314</td>
+        <td>315</td>
       
   
   
@@ -582,112 +544,7 @@ On a related note, we are definitely thinking about how to make config changes l
   
   
       
-        <td>286</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/270'>270</a></td>
-  
-  
-  
-      
-        <td>312</td>
-      
-  
-  
-  
-      
-        <td>npwalker <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Add circleci and azure pipelines support</td>
-      
-  
-  
-  
-      
-        <td>What's the concern with including these by default?  All the other CI tool files are included by default and including them provides discoverability.  </td>
-      
-  
-  
-  
-      
-        <td>npwalker</td>
-      
-  
-  
-  
-      
-        <td>222</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-vanagon'>PDK Packaging</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-vanagon/pull/263'>263</a></td>
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>underscorgan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(RE-13303) Update project definition to sign PuppetDevelopmentKit.psm1 at build time</td>
-      
-  
-  
-  
-      
-        <td>
-</td>
-      
-  
-  
-  
-      
-        <td>underscorgan</td>
-      
-  
-  
-  
-      
-        <td>9</td>
+        <td>287</td>
       
   
   
@@ -709,7 +566,7 @@ On a related note, we are definitely thinking about how to make config changes l
   
   
       
-        <td>25</td>
+        <td>26</td>
       
   
   
@@ -748,6 +605,59 @@ On a related note, we are definitely thinking about how to make config changes l
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-vanagon'>PDK Packaging</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-vanagon/pull/263'>263</a></td>
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>underscorgan <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(RE-13303) Update project definition to sign PuppetDevelopmentKit.psm1 at build time</td>
+      
+  
+  
+  
+      
+        <td>
+</td>
+      
+  
+  
+  
+      
+        <td>underscorgan</td>
+      
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
   
   
@@ -761,7 +671,7 @@ On a related note, we are definitely thinking about how to make config changes l
   
   
       
-        <td>223</td>
+        <td>224</td>
       
   
   
@@ -795,59 +705,7 @@ Coverage decreased (-4.0%) to 87.724% when pulling **05f9d8542f72d56f09f892c3ff5
   
   
       
-        <td>222</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/838'>838</a></td>
-  
-  
-  
-      
-        <td>116</td>
-      
-  
-  
-  
-      
-        <td>sebastian-miclea <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Replace facter with facter-ng to run tests</td>
-      
-  
-  
-  
-      
-        <td>Reopened PR to have builds available.</td>
-      
-  
-  
-  
-      
-        <td>sebastian-miclea</td>
-      
-  
-  
-  
-      
-        <td>104</td>
+        <td>223</td>
       
   
   
@@ -869,7 +727,7 @@ Coverage decreased (-4.0%) to 87.724% when pulling **05f9d8542f72d56f09f892c3ff5
   
   
       
-        <td>237</td>
+        <td>238</td>
       
   
   
@@ -899,7 +757,59 @@ Coverage decreased (-4.0%) to 87.724% when pulling **05f9d8542f72d56f09f892c3ff5
   
   
       
-        <td>201</td>
+        <td>202</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/838'>838</a></td>
+  
+  
+  
+      
+        <td>117</td>
+      
+  
+  
+  
+      
+        <td>sebastian-miclea <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Replace facter with facter-ng to run tests</td>
+      
+  
+  
+  
+      
+        <td>Reopened PR to have builds available.</td>
+      
+  
+  
+  
+      
+        <td>sebastian-miclea</td>
+      
+  
+  
+  
+      
+        <td>105</td>
       
   
   
@@ -921,7 +831,7 @@ Coverage decreased (-4.0%) to 87.724% when pulling **05f9d8542f72d56f09f892c3ff5
   
   
       
-        <td>44</td>
+        <td>45</td>
       
   
   
@@ -953,59 +863,7 @@ I also [commented on a public issue which seems to be related](https://github.co
   
   
       
-        <td>41</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-lint-i18n'>puppet-lint-i18n plugin</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-lint-i18n/pull/13'>13</a></td>
-  
-  
-  
-      
-        <td>75</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Bump github_changelog_generator from 33f89614d47a4bca1a3ae02bdcc37edd0b012e86 to 1.15.0</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
+        <td>42</td>
       
   
   
@@ -1027,7 +885,7 @@ I also [commented on a public issue which seems to be related](https://github.co
   
   
       
-        <td>75</td>
+        <td>76</td>
       
   
   
@@ -1079,7 +937,7 @@ I also [commented on a public issue which seems to be related](https://github.co
   
   
       
-        <td>75</td>
+        <td>76</td>
       
   
   
@@ -1118,7 +976,7 @@ I also [commented on a public issue which seems to be related](https://github.co
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-lint-i18n'>puppet-lint-i18n plugin</a></td>
   
   
   
@@ -1126,24 +984,24 @@ I also [commented on a public issue which seems to be related](https://github.co
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/779'>779</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-lint-i18n/pull/13'>13</a></td>
   
   
   
       
-        <td>931</td>
-      
-  
-  
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+        <td>76</td>
       
   
   
   
       
-        <td>[WIP] Revamp docs site</td>
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Bump github_changelog_generator from 33f89614d47a4bca1a3ae02bdcc37edd0b012e86 to 1.15.0</td>
       
   
   
@@ -1183,7 +1041,7 @@ I also [commented on a public issue which seems to be related](https://github.co
   
   
       
-        <td>868</td>
+        <td>869</td>
       
   
   
@@ -1230,12 +1088,64 @@ I also [commented on a public issue which seems to be related](https://github.co
   
   
   
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/779'>779</a></td>
+  
+  
+  
+      
+        <td>932</td>
+      
+  
+  
+  
+      
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>[WIP] Revamp docs site</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/834'>834</a></td>
   
   
   
       
-        <td>616</td>
+        <td>617</td>
       
   
   
@@ -1282,12 +1192,66 @@ I also [commented on a public issue which seems to be related](https://github.co
   
   
   
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/883'>883</a></td>
+  
+  
+  
+      
+        <td>231</td>
+      
+  
+  
+  
+      
+        <td>usev6</td>
+      
+  
+  
+  
+      
+        <td>Include check name in log output by default</td>
+      
+  
+  
+  
+      
+        <td>This is meant as a suggestion or a basis for discussion.
+
+The change might break existing setups that rely on the old log output format, so it might be better to wait for version 3?</td>
+      
+  
+  
+  
+      
+        <td>usev6</td>
+      
+  
+  
+  
+      
+        <td>231</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/919'>919</a></td>
   
   
   
       
-        <td>49</td>
+        <td>50</td>
       
   
   
@@ -1339,7 +1303,7 @@ I also [commented on a public issue which seems to be related](https://github.co
   
   
       
-        <td>1145</td>
+        <td>1146</td>
       
   
   
@@ -1389,61 +1353,7 @@ WARNING: space needed on left side of opening bracket on line **_line with the r
   
   
       
-        <td>682</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/883'>883</a></td>
-  
-  
-  
-      
-        <td>230</td>
-      
-  
-  
-  
-      
-        <td>usev6</td>
-      
-  
-  
-  
-      
-        <td>Include check name in log output by default</td>
-      
-  
-  
-  
-      
-        <td>This is meant as a suggestion or a basis for discussion.
-
-The change might break existing setups that rely on the old log output format, so it might be better to wait for version 3?</td>
-      
-  
-  
-  
-      
-        <td>usev6</td>
-      
-  
-  
-  
-      
-        <td>230</td>
+        <td>683</td>
       
   
   
@@ -1465,7 +1375,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>1258</td>
+        <td>1259</td>
       
   
   
@@ -1495,7 +1405,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -1569,7 +1479,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -1599,7 +1509,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -1616,24 +1526,24 @@ The change might break existing setups that rely on the old log output format, s
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-strings/pull/226'>226</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-strings/pull/234'>234</a></td>
   
   
   
       
-        <td>52</td>
-      
-  
-  
-  
-      
-        <td>glennsarti</td>
+        <td>3</td>
       
   
   
   
       
-        <td>(wip)  Document functions in Puppet Datatypes</td>
+        <td>scotje <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(MAINT) Misc testing cleanups</td>
       
   
   
@@ -1673,7 +1583,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>23</td>
+        <td>24</td>
       
   
   
@@ -1703,59 +1613,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>23</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-strings'>Puppet Strings</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-strings/pull/234'>234</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>scotje <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MAINT) Misc testing cleanups</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
+        <td>24</td>
       
   
   
@@ -1777,7 +1635,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>75</td>
+        <td>76</td>
       
   
   
@@ -1808,6 +1666,110 @@ The change might break existing setups that rely on the old log output format, s
   
       
         <td>0</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/290'>290</a></td>
+  
+  
+  
+      
+        <td>348</td>
+      
+  
+  
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(MAINT) Removes old rubies and puppet versions</td>
+      
+  
+  
+  
+      
+        <td>If my module contains Ruby that is executed on the master like types or functions then it's entirely feasible that I would want to run my tests against Ruby 1.9.3 or JRuby 1.7 in which case puppetlabs_spec_helper would be loaded.</td>
+      
+  
+  
+  
+      
+        <td>rodjek</td>
+      
+  
+  
+  
+      
+        <td>262</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/310'>310</a></td>
+  
+  
+  
+      
+        <td>17</td>
+      
+  
+  
+  
+      
+        <td>bastelfreak <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10658) Require puppet-syntax 3.x</td>
+      
+  
+  
+  
+      
+        <td>CLA signed by all contributors.</td>
+      
+  
+  
+  
+      
+        <td>puppetcla</td>
+      
+  
+  
+  
+      
+        <td>16</td>
       
   
   
@@ -1859,59 +1821,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>13</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/303'>303</a></td>
-  
-  
-  
-      
-        <td>75</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
-      
-  
-  
-  
-      
-        <td>CLA signed by all contributors.</td>
-      
-  
-  
-  
-      
-        <td>puppetcla</td>
-      
-  
-  
-  
-      
-        <td>75</td>
+        <td>14</td>
       
   
   
@@ -1963,7 +1873,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>34</td>
+        <td>35</td>
       
   
   
@@ -1980,24 +1890,24 @@ The change might break existing setups that rely on the old log output format, s
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/292'>292</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/303'>303</a></td>
   
   
   
       
-        <td>286</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
+        <td>76</td>
       
   
   
   
       
-        <td>(MAINT) Fix initialize of Gettext call</td>
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
       
   
   
@@ -2015,7 +1925,111 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>286</td>
+        <td>76</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/314'>314</a></td>
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update rubocop requirement from = 0.49 to 0.84.0</td>
+      
+  
+  
+  
+      
+        <td>CLA signed by all contributors.</td>
+      
+  
+  
+  
+      
+        <td>puppetcla</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/301'>301</a></td>
+  
+  
+  
+      
+        <td>76</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update rack requirement from ~> 1 to ~> 2</td>
+      
+  
+  
+  
+      
+        <td>CLA signed by all contributors.</td>
+      
+  
+  
+  
+      
+        <td>puppetcla</td>
+      
+  
+  
+  
+      
+        <td>76</td>
       
   
   
@@ -2037,7 +2051,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>77</td>
+        <td>78</td>
       
   
   
@@ -2106,7 +2120,7 @@ As you can see module can contain manifests folder so it is in conflict with man
   
   
       
-        <td>332</td>
+        <td>333</td>
       
   
   
@@ -2138,7 +2152,7 @@ Parallel execution might help, but not with this PR as it pass installation of m
   
   
       
-        <td>320</td>
+        <td>321</td>
       
   
   
@@ -2155,24 +2169,24 @@ Parallel execution might help, but not with this PR as it pass installation of m
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/310'>310</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/292'>292</a></td>
   
   
   
       
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>bastelfreak <span class='badge badge-secondary'>vox</span></td>
+        <td>287</td>
       
   
   
   
       
-        <td>(MODULES-10658) Require puppet-syntax 3.x</td>
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>(MAINT) Fix initialize of Gettext call</td>
       
   
   
@@ -2190,163 +2204,7 @@ Parallel execution might help, but not with this PR as it pass installation of m
   
   
       
-        <td>15</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/301'>301</a></td>
-  
-  
-  
-      
-        <td>75</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Update rack requirement from ~> 1 to ~> 2</td>
-      
-  
-  
-  
-      
-        <td>CLA signed by all contributors.</td>
-      
-  
-  
-  
-      
-        <td>puppetcla</td>
-      
-  
-  
-  
-      
-        <td>75</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/314'>314</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Update rubocop requirement from = 0.49 to 0.84.0</td>
-      
-  
-  
-  
-      
-        <td>CLA signed by all contributors.</td>
-      
-  
-  
-  
-      
-        <td>puppetcla</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/290'>290</a></td>
-  
-  
-  
-      
-        <td>347</td>
-      
-  
-  
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MAINT) Removes old rubies and puppet versions</td>
-      
-  
-  
-  
-      
-        <td>If my module contains Ruby that is executed on the master like types or functions then it's entirely feasible that I would want to run my tests against Ruby 1.9.3 or JRuby 1.7 in which case puppetlabs_spec_helper would be loaded.</td>
-      
-  
-  
-  
-      
-        <td>rodjek</td>
-      
-  
-  
-  
-      
-        <td>261</td>
+        <td>286</td>
       
   
   
@@ -2368,7 +2226,7 @@ Parallel execution might help, but not with this PR as it pass installation of m
   
   
       
-        <td>406</td>
+        <td>407</td>
       
   
   
@@ -2406,59 +2264,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
       
-        <td>326</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/207'>207</a></td>
-  
-  
-  
-      
-        <td>1005</td>
-      
-  
-  
-  
-      
-        <td>danzilio <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Adding the ability to install fixtures from Puppetfile</td>
-      
-  
-  
-  
-      
-        <td>@logicminds Yes, I think it would be good to document that. Speaking of which @danzilio, we should include some overall documentation for this feature in the README as well.</td>
-      
-  
-  
-  
-      
-        <td>scotje</td>
-      
-  
-  
-  
-      
-        <td>328</td>
+        <td>327</td>
       
   
   
@@ -2480,7 +2286,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
       
-        <td>807</td>
+        <td>808</td>
       
   
   
@@ -2527,116 +2333,12 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/228'>228</a></td>
-  
-  
-  
-      
-        <td>829</td>
-      
-  
-  
-  
-      
-        <td>eputnam <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>fixture_rebuild task</td>
-      
-  
-  
-  
-      
-        <td>Reading through #109 I realised this is not a new idea. See [this comment](https://github.com/puppetlabs/puppetlabs_spec_helper/pull/109#issuecomment-125885255) for more details on how this should be implemented</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>465</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
-  
-  
-  
-      
-        <td>513</td>
-      
-  
-  
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-      
-        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
-      
-  
-  
-  
-      
-        <td>CLA signed by all contributors.</td>
-      
-  
-  
-  
-      
-        <td>puppetcla</td>
-      
-  
-  
-  
-      
-        <td>513</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/283'>283</a></td>
   
   
   
       
-        <td>429</td>
+        <td>430</td>
       
   
   
@@ -2666,7 +2368,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
       
-        <td>429</td>
+        <td>430</td>
       
   
   
@@ -2675,7 +2377,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
   
   
   
@@ -2683,94 +2385,42 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/269'>269</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/207'>207</a></td>
   
   
   
       
-        <td>33</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>1006</td>
       
   
   
   
       
-        <td>(maint) test handling of untyped and single-element arrays</td>
+        <td>danzilio <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>Adding the ability to install fixtures from Puppetfile</td>
       
   
   
   
       
-        <td></td>
+        <td>@logicminds Yes, I think it would be good to document that. Speaking of which @danzilio, we should include some overall documentation for this feature in the README as well.</td>
       
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/262'>262</a></td>
-  
-  
-  
-      
-        <td>75</td>
+        <td>scotje</td>
       
   
   
   
       
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
-      
-  
-  
-  
-      
-        <td>Can one of the admins verify this patch?</td>
-      
-  
-  
-  
-      
-        <td>puppetlabs-jenkins</td>
-      
-  
-  
-  
-      
-        <td>75</td>
+        <td>329</td>
       
   
   
@@ -2779,7 +2429,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
   
   
   
@@ -2787,42 +2437,94 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/272'>272</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/228'>228</a></td>
   
   
   
       
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
+        <td>830</td>
       
   
   
   
       
-        <td>Update rubocop requirement from ~> 0.57.0 to ~> 0.84.0</td>
+        <td>eputnam <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>Can one of the admins verify this patch?</td>
+        <td>fixture_rebuild task</td>
       
   
   
   
       
-        <td>puppetlabs-jenkins</td>
+        <td>Reading through #109 I realised this is not a new idea. See [this comment](https://github.com/puppetlabs/puppetlabs_spec_helper/pull/109#issuecomment-125885255) for more details on how this should be implemented</td>
       
   
   
   
       
-        <td>4</td>
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>466</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
+  
+  
+  
+      
+        <td>514</td>
+      
+  
+  
+  
+      
+        <td>nabertrand</td>
+      
+  
+  
+  
+      
+        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
+      
+  
+  
+  
+      
+        <td>CLA signed by all contributors.</td>
+      
+  
+  
+  
+      
+        <td>puppetcla</td>
+      
+  
+  
+  
+      
+        <td>514</td>
       
   
   
@@ -2891,12 +2593,168 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/269'>269</a></td>
+  
+  
+  
+      
+        <td>34</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) test handling of untyped and single-element arrays</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/272'>272</a></td>
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update rubocop requirement from ~> 0.57.0 to ~> 0.84.0</td>
+      
+  
+  
+  
+      
+        <td>Can one of the admins verify this patch?</td>
+      
+  
+  
+  
+      
+        <td>puppetlabs-jenkins</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/262'>262</a></td>
+  
+  
+  
+      
+        <td>76</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
+      
+  
+  
+  
+      
+        <td>Can one of the admins verify this patch?</td>
+      
+  
+  
+  
+      
+        <td>puppetlabs-jenkins</td>
+      
+  
+  
+  
+      
+        <td>76</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/255'>255</a></td>
   
   
   
       
-        <td>113</td>
+        <td>114</td>
       
   
   
@@ -2926,111 +2784,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
       
-        <td>111</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/793'>793</a></td>
-  
-  
-  
-      
-        <td>27</td>
-      
-  
-  
-  
-      
-        <td>ekinanp <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Add support for trusted external data</td>
-      
-  
-  
-  
-      
-        <td>Sounds good. We should change future docs to reference this as trusted_external instead of external_trusted b/c the docs was where I was going off of when naming this stuff.</td>
-      
-  
-  
-  
-      
-        <td>ekinanp</td>
-      
-  
-  
-  
-      
-        <td>27</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/720'>720</a></td>
-  
-  
-  
-      
-        <td>626</td>
-      
-  
-  
-  
-      
-        <td>hashar</td>
-      
-  
-  
-  
-      
-        <td>Patch service to default to systemd on Debian 9</td>
-      
-  
-  
-  
-      
-        <td>We see the same problem is there an open issue to this PR?</td>
-      
-  
-  
-  
-      
-        <td>TheMeier</td>
-      
-  
-  
-  
-      
-        <td>241</td>
+        <td>112</td>
       
   
   
@@ -3052,7 +2806,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
       
-        <td>45</td>
+        <td>46</td>
       
   
   
@@ -3084,275 +2838,7 @@ Also it seems that AppVeyor does not provide Ruby27-x64 yet.</td>
   
   
       
-        <td>45</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/755'>755</a></td>
-  
-  
-  
-      
-        <td>352</td>
-      
-  
-  
-  
-      
-        <td>npwalker <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Revert "Support directories for the manifest setting"</td>
-      
-  
-  
-  
-      
-        <td>
-[![Coverage Status](https://coveralls.io/builds/23868433/badge)](https://coveralls.io/builds/23868433)
-
-Coverage increased (+0.2%) to 86.087% when pulling **b0706a256ead394b89304363ba9070f4bec4b8af on npwalker:revert-748-master** into **491b7c8d6fe2c7fea615ed81aa90d96044b88a1d on rodjek:master**.
-</td>
-      
-  
-  
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-      
-        <td>352</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
-  
-  
-  
-      
-        <td>18</td>
-      
-  
-  
-  
-      
-        <td>NerdsvilleCEO</td>
-      
-  
-  
-  
-      
-        <td>Allow users to setup control repo</td>
-      
-  
-  
-  
-      
-        <td>@rodjek I am having trouble finding the tests for the `rspec-puppet-init` utility, could you point me to where I should be looking for that?</td>
-      
-  
-  
-  
-      
-        <td>NerdsvilleCEO</td>
-      
-  
-  
-  
-      
-        <td>18</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/792'>792</a></td>
-  
-  
-  
-      
-        <td>41</td>
-      
-  
-  
-  
-      
-        <td>Felixoid</td>
-      
-  
-  
-  
-      
-        <td>Do not raise failure if nothing is tested</td>
-      
-  
-  
-  
-      
-        <td>
-[![Coverage Status](https://coveralls.io/builds/30060111/badge)](https://coveralls.io/builds/30060111)
-
-Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1c165f5fcb3577 on Felixoid:master** into **6b29693ceddd1a71b2dae67fb8f266727d7f7608 on rodjek:master**.
-</td>
-      
-  
-  
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-      
-        <td>41</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/747'>747</a></td>
-  
-  
-  
-      
-        <td>452</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Add matcher for detecting duplicate attributes</td>
-      
-  
-  
-  
-      
-        <td>This is exactly what I'm trying to do.</td>
-      
-  
-  
-  
-      
-        <td>mikkergimenez</td>
-      
-  
-  
-  
-      
-        <td>452</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
-  
-  
-  
-      
-        <td>471</td>
-      
-  
-  
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>allow users to disable app_managment</td>
-      
-  
-  
-  
-      
-        <td>bump</td>
-      
-  
-  
-  
-      
-        <td>b4ldr</td>
-      
-  
-  
-  
-      
-        <td>178</td>
+        <td>46</td>
       
   
   
@@ -3374,7 +2860,7 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
   
   
       
-        <td>572</td>
+        <td>573</td>
       
   
   
@@ -3406,7 +2892,267 @@ As you mentioned though, the interaction of the different hiera layers with spec
   
   
       
-        <td>395</td>
+        <td>396</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/720'>720</a></td>
+  
+  
+  
+      
+        <td>627</td>
+      
+  
+  
+  
+      
+        <td>hashar</td>
+      
+  
+  
+  
+      
+        <td>Patch service to default to systemd on Debian 9</td>
+      
+  
+  
+  
+      
+        <td>We see the same problem is there an open issue to this PR?</td>
+      
+  
+  
+  
+      
+        <td>TheMeier</td>
+      
+  
+  
+  
+      
+        <td>242</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/747'>747</a></td>
+  
+  
+  
+      
+        <td>453</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Add matcher for detecting duplicate attributes</td>
+      
+  
+  
+  
+      
+        <td>This is exactly what I'm trying to do.</td>
+      
+  
+  
+  
+      
+        <td>mikkergimenez</td>
+      
+  
+  
+  
+      
+        <td>453</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
+  
+  
+  
+      
+        <td>19</td>
+      
+  
+  
+  
+      
+        <td>NerdsvilleCEO</td>
+      
+  
+  
+  
+      
+        <td>Allow users to setup control repo</td>
+      
+  
+  
+  
+      
+        <td>@rodjek I am having trouble finding the tests for the `rspec-puppet-init` utility, could you point me to where I should be looking for that?</td>
+      
+  
+  
+  
+      
+        <td>NerdsvilleCEO</td>
+      
+  
+  
+  
+      
+        <td>19</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/793'>793</a></td>
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>ekinanp <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Add support for trusted external data</td>
+      
+  
+  
+  
+      
+        <td>Sounds good. We should change future docs to reference this as trusted_external instead of external_trusted b/c the docs was where I was going off of when naming this stuff.</td>
+      
+  
+  
+  
+      
+        <td>ekinanp</td>
+      
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
+  
+  
+  
+      
+        <td>472</td>
+      
+  
+  
+  
+      
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>allow users to disable app_managment</td>
+      
+  
+  
+  
+      
+        <td>bump</td>
+      
+  
+  
+  
+      
+        <td>b4ldr</td>
+      
+  
+  
+  
+      
+        <td>179</td>
       
   
   
@@ -3428,7 +3174,7 @@ As you mentioned though, the interaction of the different hiera layers with spec
   
   
       
-        <td>809</td>
+        <td>810</td>
       
   
   
@@ -3462,7 +3208,119 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
   
   
       
-        <td>393</td>
+        <td>394</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/792'>792</a></td>
+  
+  
+  
+      
+        <td>42</td>
+      
+  
+  
+  
+      
+        <td>Felixoid</td>
+      
+  
+  
+  
+      
+        <td>Do not raise failure if nothing is tested</td>
+      
+  
+  
+  
+      
+        <td>
+[![Coverage Status](https://coveralls.io/builds/30060111/badge)](https://coveralls.io/builds/30060111)
+
+Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1c165f5fcb3577 on Felixoid:master** into **6b29693ceddd1a71b2dae67fb8f266727d7f7608 on rodjek:master**.
+</td>
+      
+  
+  
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+      
+        <td>42</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/755'>755</a></td>
+  
+  
+  
+      
+        <td>353</td>
+      
+  
+  
+  
+      
+        <td>npwalker <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Revert "Support directories for the manifest setting"</td>
+      
+  
+  
+  
+      
+        <td>
+[![Coverage Status](https://coveralls.io/builds/23868433/badge)](https://coveralls.io/builds/23868433)
+
+Coverage increased (+0.2%) to 86.087% when pulling **b0706a256ead394b89304363ba9070f4bec4b8af on npwalker:revert-748-master** into **491b7c8d6fe2c7fea615ed81aa90d96044b88a1d on rodjek:master**.
+</td>
+      
+  
+  
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+      
+        <td>353</td>
       
   
   
@@ -3484,7 +3342,7 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
   
   
       
-        <td>976</td>
+        <td>977</td>
       
   
   
@@ -3529,7 +3387,7 @@ end
   
   
       
-        <td>623</td>
+        <td>624</td>
       
   
   
@@ -3551,7 +3409,7 @@ end
   
   
       
-        <td>747</td>
+        <td>748</td>
       
   
   
@@ -3585,63 +3443,7 @@ Coverage remained the same at 92.011% when pulling **75b9be11767e4d7e2d8311bbe3e
   
   
       
-        <td>747</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
-  
-  
-  
-      
-        <td>1054</td>
-      
-  
-  
-  
-      
-        <td>kjetilho</td>
-      
-  
-  
-  
-      
-        <td>Add .tagged and .not_tagged methods for resource matcher</td>
-      
-  
-  
-  
-      
-        <td>
-[![Coverage Status](https://coveralls.io/builds/12274104/badge)](https://coveralls.io/builds/12274104)
-
-Changes Unknown when pulling **40cd1271b0c28a3b0cddaa0cbcf314a3f8a84728 on kjetilho:tagged_matcher** into ** on rodjek:master**.
-</td>
-      
-  
-  
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-      
-        <td>1054</td>
+        <td>748</td>
       
   
   
@@ -3663,7 +3465,7 @@ Changes Unknown when pulling **40cd1271b0c28a3b0cddaa0cbcf314a3f8a84728 on kjeti
   
   
       
-        <td>934</td>
+        <td>935</td>
       
   
   
@@ -3719,63 +3521,7 @@ end
   
   
       
-        <td>928</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/716'>716</a></td>
-  
-  
-  
-      
-        <td>644</td>
-      
-  
-  
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>[WIP]</td>
-      
-  
-  
-  
-      
-        <td>
-[![Coverage Status](https://coveralls.io/builds/21696103/badge)](https://coveralls.io/builds/21696103)
-
-Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a1669b6bdd24a2 on 100_coverage** into **ee7442b0b7893cb26824fa0aade52e7fa44fa0fc on master**.
-</td>
-      
-  
-  
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-      
-        <td>462</td>
+        <td>929</td>
       
   
   
@@ -3797,7 +3543,7 @@ Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a
   
   
       
-        <td>942</td>
+        <td>943</td>
       
   
   
@@ -3831,7 +3577,119 @@ Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae
   
   
       
-        <td>942</td>
+        <td>943</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/716'>716</a></td>
+  
+  
+  
+      
+        <td>645</td>
+      
+  
+  
+  
+      
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>[WIP]</td>
+      
+  
+  
+  
+      
+        <td>
+[![Coverage Status](https://coveralls.io/builds/21696103/badge)](https://coveralls.io/builds/21696103)
+
+Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a1669b6bdd24a2 on 100_coverage** into **ee7442b0b7893cb26824fa0aade52e7fa44fa0fc on master**.
+</td>
+      
+  
+  
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+      
+        <td>463</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
+  
+  
+  
+      
+        <td>1055</td>
+      
+  
+  
+  
+      
+        <td>kjetilho</td>
+      
+  
+  
+  
+      
+        <td>Add .tagged and .not_tagged methods for resource matcher</td>
+      
+  
+  
+  
+      
+        <td>
+[![Coverage Status](https://coveralls.io/builds/12274104/badge)](https://coveralls.io/builds/12274104)
+
+Changes Unknown when pulling **40cd1271b0c28a3b0cddaa0cbcf314a3f8a84728 on kjetilho:tagged_matcher** into ** on rodjek:master**.
+</td>
+      
+  
+  
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+      
+        <td>1055</td>
       
   
   
@@ -3853,7 +3711,7 @@ Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae
   
   
       
-        <td>1051</td>
+        <td>1052</td>
       
   
   
@@ -3887,7 +3745,7 @@ Changes Unknown when pulling **ca87da655846f63f3947bb695836159a41cccd73 on ruboc
   
   
       
-        <td>1051</td>
+        <td>1052</td>
       
   
   
