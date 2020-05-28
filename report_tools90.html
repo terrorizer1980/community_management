@@ -195,110 +195,6 @@ https://rubygems.org/gems/little-plugger/versions/1.1.4  (38 Million downloads!)
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/270'>270</a></td>
-  
-  
-  
-      
-        <td>316</td>
-      
-  
-  
-  
-      
-        <td>npwalker <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Add circleci and azure pipelines support</td>
-      
-  
-  
-  
-      
-        <td>What's the concern with including these by default?  All the other CI tool files are included by default and including them provides discoverability.  </td>
-      
-  
-  
-  
-      
-        <td>npwalker</td>
-      
-  
-  
-  
-      
-        <td>226</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/281'>281</a></td>
-  
-  
-  
-      
-        <td>247</td>
-      
-  
-  
-  
-      
-        <td>scotje <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MAINT) README updates for CI configs</td>
-      
-  
-  
-  
-      
-        <td>@scotje Ping. Open since Sept.</td>
-      
-  
-  
-  
-      
-        <td>glennsarti</td>
-      
-  
-  
-  
-      
-        <td>171</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/269'>269</a></td>
   
   
@@ -345,7 +241,7 @@ On a related note, we are definitely thinking about how to make config changes l
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
   
   
   
@@ -353,42 +249,94 @@ On a related note, we are definitely thinking about how to make config changes l
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/762'>762</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/281'>281</a></td>
   
   
   
       
-        <td>240</td>
-      
-  
-  
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
+        <td>248</td>
       
   
   
   
       
-        <td>Improve bundler speed</td>
+        <td>scotje <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>OK, that `pdk-templates` change seems simple enough and shouldn't break anyone.</td>
+        <td>(MAINT) README updates for CI configs</td>
       
   
   
   
       
-        <td>scotje</td>
+        <td>@scotje Ping. Open since Sept.</td>
       
   
   
   
       
-        <td>205</td>
+        <td>glennsarti</td>
+      
+  
+  
+  
+      
+        <td>171</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/270'>270</a></td>
+  
+  
+  
+      
+        <td>316</td>
+      
+  
+  
+  
+      
+        <td>npwalker <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Add circleci and azure pipelines support</td>
+      
+  
+  
+  
+      
+        <td>What's the concern with including these by default?  All the other CI tool files are included by default and including them provides discoverability.  </td>
+      
+  
+  
+  
+      
+        <td>npwalker</td>
+      
+  
+  
+  
+      
+        <td>226</td>
       
   
   
@@ -505,7 +453,7 @@ Coverage decreased (-4.0%) to 87.724% when pulling **05f9d8542f72d56f09f892c3ff5
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
   
   
   
@@ -513,62 +461,42 @@ Coverage decreased (-4.0%) to 87.724% when pulling **05f9d8542f72d56f09f892c3ff5
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/696'>696</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/762'>762</a></td>
   
   
   
       
-        <td>1149</td>
-      
-  
-  
-  
-      
-        <td>rothsa</td>
+        <td>240</td>
       
   
   
   
       
-        <td>add five new whitespace checks and fixes</td>
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>The new plugins show an error when you indent the parameter names on a class.
-```Puppet
-class test (
-  String               $foo = 'foo',
-  Variant[String,Hash] $bar = 'bar'
-) {
-
-...
-}
-```
-WARNING: too many spaces on line 2
-
-I also had an unexpected warning with a create resource function:
-```Puppet
-  create_resource(
-    test,
-    $testhash,
-    { require => File['/tmp/test'] }
-  )
-```
-WARNING: space needed on left side of opening bracket on line **_line with the require_**</td>
+        <td>Improve bundler speed</td>
       
   
   
   
       
-        <td>mmerfort</td>
+        <td>OK, that `pdk-templates` change seems simple enough and shouldn't break anyone.</td>
       
   
   
   
       
-        <td>685</td>
+        <td>scotje</td>
+      
+  
+  
+  
+      
+        <td>205</td>
       
   
   
@@ -639,58 +567,6 @@ The change might break existing setups that rely on the old log output format, s
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/292'>292</a></td>
-  
-  
-  
-      
-        <td>290</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>(MAINT) Fix initialize of Gettext call</td>
-      
-  
-  
-  
-      
-        <td>CLA signed by all contributors.</td>
-      
-  
-  
-  
-      
-        <td>puppetcla</td>
-      
-  
-  
-  
-      
-        <td>289</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/290'>290</a></td>
   
   
@@ -727,6 +603,58 @@ The change might break existing setups that rely on the old log output format, s
   
       
         <td>265</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/292'>292</a></td>
+  
+  
+  
+      
+        <td>290</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>(MAINT) Fix initialize of Gettext call</td>
+      
+  
+  
+  
+      
+        <td>CLA signed by all contributors.</td>
+      
+  
+  
+  
+      
+        <td>puppetcla</td>
+      
+  
+  
+  
+      
+        <td>289</td>
       
   
   
@@ -797,6 +725,58 @@ Parallel execution might help, but not with this PR as it pass installation of m
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/207'>207</a></td>
+  
+  
+  
+      
+        <td>1009</td>
+      
+  
+  
+  
+      
+        <td>danzilio <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Adding the ability to install fixtures from Puppetfile</td>
+      
+  
+  
+  
+      
+        <td>@logicminds Yes, I think it would be good to document that. Speaking of which @danzilio, we should include some overall documentation for this feature in the README as well.</td>
+      
+  
+  
+  
+      
+        <td>scotje</td>
+      
+  
+  
+  
+      
+        <td>332</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
   
   
@@ -833,66 +813,6 @@ Parallel execution might help, but not with this PR as it pass installation of m
   
       
         <td>516</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/288'>288</a></td>
-  
-  
-  
-      
-        <td>409</td>
-      
-  
-  
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>(PDK-1047) Add rake task to inspect module for class & defined type definitions</td>
-      
-  
-  
-  
-      
-        <td>> What I was saying is that retrospec already does the thing being built here.
-
-The goal of PDK-1047 is not to implement retrospec style functionality. We do not want to inspect the contents of the class or defined types to generate extensive tests for all the contained resources.
-
-> Test generators suffer from the problem that most people using them have no clue how to write or maintain the tests it creates. Test Education is more important IMHO.
-
-The scope of this is simply to be able to examine a module during `pdk convert` and feed this information into the existing PDK object generators so that the *very minimal* template specs are generated, the same specs that are generated by running `pdk new class` or `pdk new defined_type`.
-
-These generated tests are little more than `it { is_expected.to compile }`, which we've found is enough for most users.</td>
-      
-  
-  
-  
-      
-        <td>rodjek</td>
-      
-  
-  
-  
-      
-        <td>330</td>
       
   
   
@@ -961,42 +881,50 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/207'>207</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/288'>288</a></td>
   
   
   
       
-        <td>1009</td>
-      
-  
-  
-  
-      
-        <td>danzilio <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+        <td>409</td>
       
   
   
   
       
-        <td>Adding the ability to install fixtures from Puppetfile</td>
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>@logicminds Yes, I think it would be good to document that. Speaking of which @danzilio, we should include some overall documentation for this feature in the README as well.</td>
+        <td>(PDK-1047) Add rake task to inspect module for class & defined type definitions</td>
       
   
   
   
       
-        <td>scotje</td>
+        <td>> What I was saying is that retrospec already does the thing being built here.
+
+The goal of PDK-1047 is not to implement retrospec style functionality. We do not want to inspect the contents of the class or defined types to generate extensive tests for all the contained resources.
+
+> Test generators suffer from the problem that most people using them have no clue how to write or maintain the tests it creates. Test Education is more important IMHO.
+
+The scope of this is simply to be able to examine a module during `pdk convert` and feed this information into the existing PDK object generators so that the *very minimal* template specs are generated, the same specs that are generated by running `pdk new class` or `pdk new defined_type`.
+
+These generated tests are little more than `it { is_expected.to compile }`, which we've found is enough for most users.</td>
       
   
   
   
       
-        <td>332</td>
+        <td>rodjek</td>
+      
+  
+  
+  
+      
+        <td>330</td>
       
   
   
@@ -1117,6 +1045,58 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/747'>747</a></td>
+  
+  
+  
+      
+        <td>456</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Add matcher for detecting duplicate attributes</td>
+      
+  
+  
+  
+      
+        <td>This is exactly what I'm trying to do.</td>
+      
+  
+  
+  
+      
+        <td>mikkergimenez</td>
+      
+  
+  
+  
+      
+        <td>456</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/720'>720</a></td>
   
   
@@ -1169,42 +1149,98 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/747'>747</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
   
   
   
       
-        <td>456</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+        <td>812</td>
       
   
   
   
       
-        <td>Add matcher for detecting duplicate attributes</td>
+        <td>asharpe</td>
       
   
   
   
       
-        <td>This is exactly what I'm trying to do.</td>
+        <td>allow testing environment functions</td>
       
   
   
   
       
-        <td>mikkergimenez</td>
+        <td>
+[![Coverage Status](https://coveralls.io/builds/23064281/badge)](https://coveralls.io/builds/23064281)
+
+Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d46957397286aa91b on asharpe:environment-functions** into **5cc25d0083a4abc352ab13bd48f225f668311a3e on rodjek:master**.
+</td>
       
   
   
   
       
-        <td>456</td>
+        <td>coveralls</td>
+      
+  
+  
+  
+      
+        <td>397</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
+  
+  
+  
+      
+        <td>475</td>
+      
+  
+  
+  
+      
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>allow users to disable app_managment</td>
+      
+  
+  
+  
+      
+        <td>bump</td>
+      
+  
+  
+  
+      
+        <td>b4ldr</td>
+      
+  
+  
+  
+      
+        <td>181</td>
       
   
   
@@ -1331,187 +1367,12 @@ As you mentioned though, the interaction of the different hiera layers with spec
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
-  
-  
-  
-      
-        <td>812</td>
-      
-  
-  
-  
-      
-        <td>asharpe</td>
-      
-  
-  
-  
-      
-        <td>allow testing environment functions</td>
-      
-  
-  
-  
-      
-        <td>
-[![Coverage Status](https://coveralls.io/builds/23064281/badge)](https://coveralls.io/builds/23064281)
-
-Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d46957397286aa91b on asharpe:environment-functions** into **5cc25d0083a4abc352ab13bd48f225f668311a3e on rodjek:master**.
-</td>
-      
-  
-  
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-      
-        <td>397</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
-  
-  
-  
-      
-        <td>475</td>
-      
-  
-  
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>allow users to disable app_managment</td>
-      
-  
-  
-  
-      
-        <td>bump</td>
-      
-  
-  
-  
-      
-        <td>b4ldr</td>
-      
-  
-  
-  
-      
-        <td>181</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
-  
-  
-  
-      
-        <td>979</td>
-      
-  
-  
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>[RFC] New syntax</td>
-      
-  
-  
-  
-      
-        <td>How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
-
-Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
-```
-def verify_concat_fragment_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
-end
-
-def verify_concat_fragment_exact_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
-end
-```</td>
-      
-  
-  
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-      
-        <td>626</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/716'>716</a></td>
   
   
   
       
-        <td>647</td>
+        <td>648</td>
       
   
   
@@ -1674,6 +1535,129 @@ Changes Unknown when pulling **40cd1271b0c28a3b0cddaa0cbcf314a3f8a84728 on kjeti
   
   
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/618'>618</a></td>
+  
+  
+  
+      
+        <td>946</td>
+      
+  
+  
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>WIP: Adds rspec configuration to set default facterdb search paths</td>
+      
+  
+  
+  
+      
+        <td>
+[![Coverage Status](https://coveralls.io/builds/13891765/badge)](https://coveralls.io/builds/13891765)
+
+Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae563af61b946db0 on nwops:external_facts** into **11f93e70abaf35f774a3c7c87f9107fa62a0152c on rodjek:master**.
+</td>
+      
+  
+  
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+      
+        <td>946</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
+  
+  
+  
+      
+        <td>979</td>
+      
+  
+  
+  
+      
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>[RFC] New syntax</td>
+      
+  
+  
+  
+      
+        <td>How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
+
+Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
+```
+def verify_concat_fragment_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
+end
+
+def verify_concat_fragment_exact_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
+end
+```</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>626</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
   
   
@@ -1736,62 +1720,6 @@ end
   
       
         <td>932</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/618'>618</a></td>
-  
-  
-  
-      
-        <td>946</td>
-      
-  
-  
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>WIP: Adds rspec configuration to set default facterdb search paths</td>
-      
-  
-  
-  
-      
-        <td>
-[![Coverage Status](https://coveralls.io/builds/13891765/badge)](https://coveralls.io/builds/13891765)
-
-Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae563af61b946db0 on nwops:external_facts** into **11f93e70abaf35f774a3c7c87f9107fa62a0152c on rodjek:master**.
-</td>
-      
-  
-  
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-      
-        <td>946</td>
       
   
   
