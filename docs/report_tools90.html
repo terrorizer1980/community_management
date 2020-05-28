@@ -195,6 +195,58 @@ https://rubygems.org/gems/little-plugger/versions/1.1.4  (38 Million downloads!)
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/270'>270</a></td>
+  
+  
+  
+      
+        <td>315</td>
+      
+  
+  
+  
+      
+        <td>npwalker <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Add circleci and azure pipelines support</td>
+      
+  
+  
+  
+      
+        <td>What's the concern with including these by default?  All the other CI tool files are included by default and including them provides discoverability.  </td>
+      
+  
+  
+  
+      
+        <td>npwalker</td>
+      
+  
+  
+  
+      
+        <td>225</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/281'>281</a></td>
   
   
@@ -293,7 +345,7 @@ On a related note, we are definitely thinking about how to make config changes l
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
   
   
   
@@ -301,36 +353,40 @@ On a related note, we are definitely thinking about how to make config changes l
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/270'>270</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
   
   
   
       
-        <td>315</td>
-      
-  
-  
-  
-      
-        <td>npwalker <span class='label label-warning'>puppet</span></td>
+        <td>226</td>
       
   
   
   
       
-        <td>Add circleci and azure pipelines support</td>
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>What's the concern with including these by default?  All the other CI tool files are included by default and including them provides discoverability.  </td>
+        <td>(performance) - Sets up basic performance testing</td>
       
   
   
   
       
-        <td>npwalker</td>
+        <td>
+[![Coverage Status](https://coveralls.io/builds/26335717/badge)](https://coveralls.io/builds/26335717)
+
+Coverage decreased (-4.0%) to 87.724% when pulling **05f9d8542f72d56f09f892c3ff52249a7b9da889 on nwops:performance_test** into **c311c61c5b55ca47c92a53efec1ee82362dace11 on puppetlabs:master**.
+</td>
+      
+  
+  
+  
+      
+        <td>coveralls</td>
       
   
   
@@ -389,62 +445,6 @@ On a related note, we are definitely thinking about how to make config changes l
   
       
         <td>107</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
-  
-  
-  
-      
-        <td>226</td>
-      
-  
-  
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(performance) - Sets up basic performance testing</td>
-      
-  
-  
-  
-      
-        <td>
-[![Coverage Status](https://coveralls.io/builds/26335717/badge)](https://coveralls.io/builds/26335717)
-
-Coverage decreased (-4.0%) to 87.724% when pulling **05f9d8542f72d56f09f892c3ff52249a7b9da889 on nwops:performance_test** into **c311c61c5b55ca47c92a53efec1ee82362dace11 on puppetlabs:master**.
-</td>
-      
-  
-  
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-      
-        <td>225</td>
       
   
   
@@ -780,7 +780,7 @@ Parallel execution might help, but not with this PR as it pass installation of m
   
   
       
-        <td>288</td>
+        <td>289</td>
       
   
   
@@ -841,110 +841,6 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
       
         <td>329</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/228'>228</a></td>
-  
-  
-  
-      
-        <td>832</td>
-      
-  
-  
-  
-      
-        <td>eputnam <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>fixture_rebuild task</td>
-      
-  
-  
-  
-      
-        <td>Reading through #109 I realised this is not a new idea. See [this comment](https://github.com/puppetlabs/puppetlabs_spec_helper/pull/109#issuecomment-125885255) for more details on how this should be implemented</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>468</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/283'>283</a></td>
-  
-  
-  
-      
-        <td>432</td>
-      
-  
-  
-  
-      
-        <td>Ultimation</td>
-      
-  
-  
-  
-      
-        <td>Remove codecov from coverage generator</td>
-      
-  
-  
-  
-      
-        <td>CLA signed by all contributors.</td>
-      
-  
-  
-  
-      
-        <td>puppetcla</td>
-      
-  
-  
-  
-      
-        <td>432</td>
       
   
   
@@ -1049,6 +945,110 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
       
         <td>331</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/228'>228</a></td>
+  
+  
+  
+      
+        <td>832</td>
+      
+  
+  
+  
+      
+        <td>eputnam <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>fixture_rebuild task</td>
+      
+  
+  
+  
+      
+        <td>Reading through #109 I realised this is not a new idea. See [this comment](https://github.com/puppetlabs/puppetlabs_spec_helper/pull/109#issuecomment-125885255) for more details on how this should be implemented</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>468</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/283'>283</a></td>
+  
+  
+  
+      
+        <td>432</td>
+      
+  
+  
+  
+      
+        <td>Ultimation</td>
+      
+  
+  
+  
+      
+        <td>Remove codecov from coverage generator</td>
+      
+  
+  
+  
+      
+        <td>CLA signed by all contributors.</td>
+      
+  
+  
+  
+      
+        <td>puppetcla</td>
+      
+  
+  
+  
+      
+        <td>432</td>
       
   
   
@@ -1221,60 +1221,6 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/732'>732</a></td>
-  
-  
-  
-      
-        <td>575</td>
-      
-  
-  
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-      
-        <td>Allow customizing module-layer Hiera configuration</td>
-      
-  
-  
-  
-      
-        <td>@nabertrand Thanks for doing this. I'm more than happy to merge this in once the documentation has been updated. The new settings definitely need to be added to the configuration reference https://github.com/rodjek/rspec-puppet/blob/master/docs/documentation/configuration/index.md.
-
-As you mentioned though, the interaction of the different hiera layers with spec testing can be a confusing subject, so maybe a bit of a long form explanation as an fragment in https://github.com/rodjek/rspec-puppet/tree/master/docs/_includes that can then be included in the "testing classes", "testing defined types" pages as well.</td>
-      
-  
-  
-  
-      
-        <td>rodjek</td>
-      
-  
-  
-  
-      
-        <td>398</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/755'>755</a></td>
   
   
@@ -1315,6 +1261,58 @@ Coverage increased (+0.2%) to 86.087% when pulling **b0706a256ead394b89304363ba9
   
       
         <td>355</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
+  
+  
+  
+      
+        <td>474</td>
+      
+  
+  
+  
+      
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>allow users to disable app_managment</td>
+      
+  
+  
+  
+      
+        <td>bump</td>
+      
+  
+  
+  
+      
+        <td>b4ldr</td>
+      
+  
+  
+  
+      
+        <td>181</td>
       
   
   
@@ -1387,42 +1385,100 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/732'>732</a></td>
   
   
   
       
-        <td>474</td>
-      
-  
-  
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+        <td>575</td>
       
   
   
   
       
-        <td>allow users to disable app_managment</td>
+        <td>nabertrand</td>
       
   
   
   
       
-        <td>bump</td>
+        <td>Allow customizing module-layer Hiera configuration</td>
       
   
   
   
       
-        <td>b4ldr</td>
+        <td>@nabertrand Thanks for doing this. I'm more than happy to merge this in once the documentation has been updated. The new settings definitely need to be added to the configuration reference https://github.com/rodjek/rspec-puppet/blob/master/docs/documentation/configuration/index.md.
+
+As you mentioned though, the interaction of the different hiera layers with spec testing can be a confusing subject, so maybe a bit of a long form explanation as an fragment in https://github.com/rodjek/rspec-puppet/tree/master/docs/_includes that can then be included in the "testing classes", "testing defined types" pages as well.</td>
       
   
   
   
       
-        <td>181</td>
+        <td>rodjek</td>
+      
+  
+  
+  
+      
+        <td>398</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/618'>618</a></td>
+  
+  
+  
+      
+        <td>945</td>
+      
+  
+  
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>WIP: Adds rspec configuration to set default facterdb search paths</td>
+      
+  
+  
+  
+      
+        <td>
+[![Coverage Status](https://coveralls.io/builds/13891765/badge)](https://coveralls.io/builds/13891765)
+
+Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae563af61b946db0 on nwops:external_facts** into **11f93e70abaf35f774a3c7c87f9107fa62a0152c on rodjek:master**.
+</td>
+      
+  
+  
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+      
+        <td>945</td>
       
   
   
@@ -1591,62 +1647,6 @@ Changes Unknown when pulling **40cd1271b0c28a3b0cddaa0cbcf314a3f8a84728 on kjeti
   
       
         <td>1057</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/618'>618</a></td>
-  
-  
-  
-      
-        <td>945</td>
-      
-  
-  
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>WIP: Adds rspec configuration to set default facterdb search paths</td>
-      
-  
-  
-  
-      
-        <td>
-[![Coverage Status](https://coveralls.io/builds/13891765/badge)](https://coveralls.io/builds/13891765)
-
-Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae563af61b946db0 on nwops:external_facts** into **11f93e70abaf35f774a3c7c87f9107fa62a0152c on rodjek:master**.
-</td>
-      
-  
-  
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-      
-        <td>945</td>
       
   
   
