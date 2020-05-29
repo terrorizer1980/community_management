@@ -195,81 +195,12 @@ I also [commented on a public issue which seems to be related](https://github.co
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
-  
-  
-  
-      
-        <td>81</td>
-      
-  
-  
-  
-      
-        <td>findmyname666</td>
-      
-  
-  
-  
-      
-        <td>Remove all sub-folders from source repository / folder</td>
-      
-  
-  
-  
-      
-        <td>> This seems likely to be correct. Can you elaborate on the steps you took or the module/repo involved that generated the error?
-It internal modules which has general structure:
-```
-module_name
-├── lib
-├── manifests
-└── templates
-```
-this module is part of Puppet code base so it lives in *site* directory:
-```
-puppet (root of code base)
- ├── site
-   ├── module_name
-     ├── lib
-     ├── manifests
-     └── templates
-```
-As you can see module can contain manifests folder so it is in conflict with manifests folder in root path of code base.</td>
-      
-  
-  
-  
-      
-        <td>findmyname666</td>
-      
-  
-  
-  
-      
-        <td>59</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/309'>309</a></td>
   
   
   
       
-        <td>38</td>
+        <td>39</td>
       
   
   
@@ -316,46 +247,42 @@ As you can see module can contain manifests folder so it is in conflict with man
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/792'>792</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/793'>793</a></td>
   
   
   
       
-        <td>45</td>
-      
-  
-  
-  
-      
-        <td>Felixoid</td>
+        <td>31</td>
       
   
   
   
       
-        <td>Do not raise failure if nothing is tested</td>
+        <td>ekinanp <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>
-[![Coverage Status](https://coveralls.io/builds/30060111/badge)](https://coveralls.io/builds/30060111)
-
-Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1c165f5fcb3577 on Felixoid:master** into **6b29693ceddd1a71b2dae67fb8f266727d7f7608 on rodjek:master**.
-</td>
+        <td>Add support for trusted external data</td>
       
   
   
   
       
-        <td>coveralls</td>
+        <td>Sounds good. We should change future docs to reference this as trusted_external instead of external_trusted b/c the docs was where I was going off of when naming this stuff.</td>
       
   
   
   
       
-        <td>45</td>
+        <td>ekinanp</td>
+      
+  
+  
+  
+      
+        <td>31</td>
       
   
   
@@ -426,42 +353,46 @@ Also it seems that AppVeyor does not provide Ruby27-x64 yet.</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/793'>793</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/792'>792</a></td>
   
   
   
       
-        <td>31</td>
-      
-  
-  
-  
-      
-        <td>ekinanp <span class='label label-warning'>puppet</span></td>
+        <td>45</td>
       
   
   
   
       
-        <td>Add support for trusted external data</td>
+        <td>Felixoid</td>
       
   
   
   
       
-        <td>Sounds good. We should change future docs to reference this as trusted_external instead of external_trusted b/c the docs was where I was going off of when naming this stuff.</td>
+        <td>Do not raise failure if nothing is tested</td>
       
   
   
   
       
-        <td>ekinanp</td>
+        <td>
+[![Coverage Status](https://coveralls.io/builds/30060111/badge)](https://coveralls.io/builds/30060111)
+
+Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1c165f5fcb3577 on Felixoid:master** into **6b29693ceddd1a71b2dae67fb8f266727d7f7608 on rodjek:master**.
+</td>
       
   
   
   
       
-        <td>31</td>
+        <td>coveralls</td>
+      
+  
+  
+  
+      
+        <td>45</td>
       
   
   
