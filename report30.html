@@ -194,6 +194,95 @@
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2021'>2021</a></td>
+  
+  
+  
+      
+        <td>33</td>
+      
+  
+  
+  
+      
+        <td>farebers</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10586 Centos 8: wrong package used to install mod_authnz_ldap</td>
+      
+  
+  
+  
+      
+        <td>Hi @farebers,
+
+Firstly, thank you for the fix and highlighting the gap in the test coverage to capture this. As you pointed out, the unit tests did not catch this failure. We can certainly extend `spec/classes/mod/authnz_ldap_spec.rb` to verify that we are using the correct package name on RHEL systems based on their major versions, but, unfortunately this will not catch the failure until the manifest is actually compiled on an OS. 
+
+I think the best thing is to to add an acceptance test for this particular scenario in a file called `spec/acceptance/mod_authnz_ldap_spec.rb`, something along the lines of this:
+
+```ruby
+require 'spec_helper_acceptance'
+apache_hash = apache_settings_hash
+
+describe 'apache::mod_authnz_ldap' do
+  context 'Default mod_authnz_ldap module installation' do
+    pp =  6
+          it { is_expected.to contain_package('mod_ldap')}
+        end
+```
+
+...but there's a few issues I'm running in to with this approach.
+
+I think the path of least resistance would be to add an acceptance test, similar to above. Let me know if I can be of any further help.</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-chocolatey'>puppetlabs-chocolatey</a></td>
   
   
@@ -207,7 +296,7 @@
   
   
       
-        <td>89</td>
+        <td>90</td>
       
   
   
@@ -238,7 +327,7 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
       
-        <td>47</td>
+        <td>48</td>
       
   
   
@@ -348,7 +437,7 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
       
-        <td>121</td>
+        <td>122</td>
       
   
   
@@ -378,7 +467,7 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
       
-        <td>53</td>
+        <td>54</td>
       
   
   
@@ -418,7 +507,7 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
       
-        <td>221</td>
+        <td>222</td>
       
   
   
@@ -457,83 +546,13 @@ Please let us know if you need more information.
   
   
       
-        <td>53</td>
+        <td>54</td>
       
   
   
   
       
         <td>14</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/123'>123</a></td>
-  
-  
-  
-      
-        <td>100</td>
-      
-  
-  
-  
-      
-        <td>fxbe</td>
-      
-  
-  
-  
-      
-        <td>replace puppet[:compatibility] with function call compatibility since…</td>
-      
-  
-  
-  
-      
-        <td>@fxbe Just checking in to see how your doing with this and whether you need any help?</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>59</td>
-      
-  
-  
-  
-      
-        <td>2</td>
       
   
   
