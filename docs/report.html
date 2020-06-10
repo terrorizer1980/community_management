@@ -272,6 +272,146 @@
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
+  
+  
+  
+      
+        <td>133</td>
+      
+  
+  
+  
+      
+        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Strip slashes from directories</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/108'>108</a></td>
+  
+  
+  
+      
+        <td>98</td>
+      
+  
+  
+  
+      
+        <td>jmangt</td>
+      
+  
+  
+  
+      
+        <td>Provides support for Terraform</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
   
   
@@ -413,146 +553,6 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/108'>108</a></td>
-  
-  
-  
-      
-        <td>98</td>
-      
-  
-  
-  
-      
-        <td>jmangt</td>
-      
-  
-  
-  
-      
-        <td>Provides support for Terraform</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
-  
-  
-  
-      
-        <td>132</td>
-      
-  
-  
-  
-      
-        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Strip slashes from directories</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts'>puppetlabs-accounts</a></td>
   
   
@@ -566,7 +566,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -636,7 +636,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -701,101 +701,12 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2021'>2021</a></td>
-  
-  
-  
-      
-        <td>42</td>
-      
-  
-  
-  
-      
-        <td>farebers</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10586 Centos 8: wrong package used to install mod_authnz_ldap</td>
-      
-  
-  
-  
-      
-        <td>Hi @farebers,
-
-Firstly, thank you for the fix and highlighting the gap in the test coverage to capture this. As you pointed out, the unit tests did not catch this failure. We can certainly extend `spec/classes/mod/authnz_ldap_spec.rb` to verify that we are using the correct package name on RHEL systems based on their major versions, but, unfortunately this will not catch the failure until the manifest is actually compiled on an OS. 
-
-I think the best thing is to to add an acceptance test for this particular scenario in a file called `spec/acceptance/mod_authnz_ldap_spec.rb`, something along the lines of this:
-
-```ruby
-require 'spec_helper_acceptance'
-apache_hash = apache_settings_hash
-
-describe 'apache::mod_authnz_ldap' do
-  context 'Default mod_authnz_ldap module installation' do
-    pp =  6
-          it { is_expected.to contain_package('mod_ldap')}
-        end
-```
-
-...but there's a few issues I'm running in to with this approach.
-
-I think the path of least resistance would be to add an acceptance test, similar to above. Let me know if I can be of any further help.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>40</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2019'>2019</a></td>
   
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -922,6 +833,95 @@ I think the path of least resistance would be to add an acceptance test, similar
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2021'>2021</a></td>
+  
+  
+  
+      
+        <td>42</td>
+      
+  
+  
+  
+      
+        <td>farebers</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10586 Centos 8: wrong package used to install mod_authnz_ldap</td>
+      
+  
+  
+  
+      
+        <td>Hi @farebers,
+
+Firstly, thank you for the fix and highlighting the gap in the test coverage to capture this. As you pointed out, the unit tests did not catch this failure. We can certainly extend `spec/classes/mod/authnz_ldap_spec.rb` to verify that we are using the correct package name on RHEL systems based on their major versions, but, unfortunately this will not catch the failure until the manifest is actually compiled on an OS. 
+
+I think the best thing is to to add an acceptance test for this particular scenario in a file called `spec/acceptance/mod_authnz_ldap_spec.rb`, something along the lines of this:
+
+```ruby
+require 'spec_helper_acceptance'
+apache_hash = apache_settings_hash
+
+describe 'apache::mod_authnz_ldap' do
+  context 'Default mod_authnz_ldap module installation' do
+    pp =  6
+          it { is_expected.to contain_package('mod_ldap')}
+        end
+```
+
+...but there's a few issues I'm running in to with this approach.
+
+I think the path of least resistance would be to add an acceptance test, similar to above. Let me know if I can be of any further help.</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>40</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apt'>puppetlabs-apt</a></td>
   
   
@@ -935,7 +935,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -1005,7 +1005,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -1141,6 +1141,76 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-concat/pull/640'>640</a></td>
+  
+  
+  
+      
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-concat'>puppetlabs-concat</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-concat/pull/643'>643</a></td>
   
   
@@ -1203,7 +1273,7 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-concat'>puppetlabs-concat</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
   
   
   
@@ -1211,12 +1281,12 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-concat/pull/640'>640</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/598'>598</a></td>
   
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -1234,7 +1304,7 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
       
-        <td>0 comments</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
@@ -1246,13 +1316,13 @@ As for the Powershell comment, I'm not entirely sure what you mean. Could you ex
   
   
       
-        <td>0</td>
+        <td>7</td>
       
   
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -1390,6 +1460,76 @@ out = %x{#{expanded_command}}.chomp
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
+  
+  
+  
+      
+        <td>156</td>
+      
+  
+  
+  
+      
+        <td>matthanley</td>
+      
+  
+  
+  
+      
+        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
+      
+  
+  
+  
+      
+        <td>@matthanley Could you try rebasing your work onto the master to see if that fixes the travis failures?</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>65</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/307'>307</a></td>
   
   
@@ -1432,146 +1572,6 @@ out = %x{#{expanded_command}}.chomp
   
       
         <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
-  
-  
-  
-      
-        <td>155</td>
-      
-  
-  
-  
-      
-        <td>matthanley</td>
-      
-  
-  
-  
-      
-        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
-      
-  
-  
-  
-      
-        <td>@matthanley Could you try rebasing your work onto the master to see if that fixes the travis failures?</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>64</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/598'>598</a></td>
-  
-  
-  
-      
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>1</td>
       
   
   
@@ -1675,77 +1675,7 @@ out = %x{#{expanded_command}}.chomp
   
   
       
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-dsc_lite'>puppetlabs-dsc_lite</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-dsc_lite/pull/156'>156</a></td>
-  
-  
-  
-      
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -1872,6 +1802,76 @@ out = %x{#{expanded_command}}.chomp
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-dsc_lite'>puppetlabs-dsc_lite</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-dsc_lite/pull/156'>156</a></td>
+  
+  
+  
+      
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-exec'>puppetlabs-exec</a></td>
   
   
@@ -1885,7 +1885,7 @@ out = %x{#{expanded_command}}.chomp
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -1955,7 +1955,7 @@ out = %x{#{expanded_command}}.chomp
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -1968,6 +1968,76 @@ out = %x{#{expanded_command}}.chomp
   
       
         <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>mnejedlo-tds</td>
+      
+  
+  
+  
+      
+        <td>fix parsing of '! --hex-string' from iptables-save</td>
       
   
   
@@ -2090,152 +2160,12 @@ out = %x{#{expanded_command}}.chomp
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
-  
-  
-  
-      
-        <td>131</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10522: Add support for the --condition parameter</td>
-      
-  
-  
-  
-      
-        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>63</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>mnejedlo-tds</td>
-      
-  
-  
-  
-      
-        <td>fix parsing of '! --hex-string' from iptables-save</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/913'>913</a></td>
   
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -2372,6 +2302,76 @@ Thanks for the review. Is it okay with these newest commits?</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+  
+  
+  
+      
+        <td>131</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10522: Add support for the --condition parameter</td>
+      
+  
+  
+  
+      
+        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>63</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
   
   
@@ -2430,7 +2430,7 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
       
-        <td>75</td>
+        <td>76</td>
       
   
   
@@ -2443,76 +2443,6 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy/pull/422'>422</a></td>
-  
-  
-  
-      
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -2577,6 +2507,76 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
       
         <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy/pull/422'>422</a></td>
+  
+  
+  
+      
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -2684,7 +2684,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -2721,6 +2721,76 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ibm_installation_manager'>puppetlabs-ibm_installation_manager</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ibm_installation_manager/pull/149'>149</a></td>
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (maint) - Pdk Update</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
       
   
   
@@ -2824,7 +2894,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -2861,76 +2931,6 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ibm_installation_manager'>puppetlabs-ibm_installation_manager</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ibm_installation_manager/pull/149'>149</a></td>
-  
-  
-  
-      
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
       
   
   
@@ -3029,77 +3029,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/275'>275</a></td>
-  
-  
-  
-      
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/215'>215</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
   
   
   
@@ -3116,147 +3046,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>WIP(MODULES-8951) Add type and provider for iis_httperror</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/219'>219</a></td>
-  
-  
-  
-      
-        <td>419</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8955) add type and provider for webhandler</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
-  
-  
-  
-      
-        <td>419</td>
-      
-  
-  
-  
-      
-        <td>ThoughtCrhyme</td>
-      
-  
-  
-  
-      
-        <td>WIP(MODULES-8952) add isapfilter type and provider</td>
+        <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
       
   
   
@@ -3379,7 +3169,77 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/218'>218</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/275'>275</a></td>
+  
+  
+  
+      
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/216'>216</a></td>
   
   
   
@@ -3396,7 +3256,147 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>WIP(MODULES-8954) add type and provider for webconfigurationproperty</td>
+        <td>WIP(MODULES-8952) add isapfilter type and provider</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/219'>219</a></td>
+  
+  
+  
+      
+        <td>419</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8955) add type and provider for webhandler</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/215'>215</a></td>
+  
+  
+  
+      
+        <td>419</td>
+      
+  
+  
+  
+      
+        <td>ThoughtCrhyme</td>
+      
+  
+  
+  
+      
+        <td>WIP(MODULES-8951) Add type and provider for iis_httperror</td>
       
   
   
@@ -3454,7 +3454,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -3524,7 +3524,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -3589,82 +3589,12 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks/pull/319'>319</a></td>
-  
-  
-  
-      
-        <td>19</td>
-      
-  
-  
-  
-      
-        <td>tomkitchen</td>
-      
-  
-  
-  
-      
-        <td>Allow der formatted certificates with keys.</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>19</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks'>puppetlabs-java_ks</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks/pull/314'>314</a></td>
   
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -3701,6 +3631,76 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks'>puppetlabs-java_ks</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks/pull/319'>319</a></td>
+  
+  
+  
+      
+        <td>20</td>
+      
+  
+  
+  
+      
+        <td>tomkitchen</td>
+      
+  
+  
+  
+      
+        <td>Allow der formatted certificates with keys.</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>19</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -3804,7 +3804,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -3874,7 +3874,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -3939,24 +3939,94 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/311'>311</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/305'>305</a></td>
   
   
   
       
-        <td>15</td>
-      
-  
-  
-  
-      
-        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>28</td>
       
   
   
   
       
-        <td>Testing - IAC-825 </td>
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Bump github_changelog_generator from 20ee04ba1234e9e83eb2ffb5056e23d641c7a018 to 1.15.2</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/312'>312</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - do not merge: test litmus version 0.18.3 release-prep</td>
       
   
   
@@ -4079,94 +4149,24 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/312'>312</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/311'>311</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>15</td>
       
   
   
   
       
-        <td>pdksync - do not merge: test litmus version 0.18.3 release-prep</td>
+        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/305'>305</a></td>
-  
-  
-  
-      
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Bump github_changelog_generator from 20ee04ba1234e9e83eb2ffb5056e23d641c7a018 to 1.15.2</td>
+        <td>Testing - IAC-825 </td>
       
   
   
@@ -4191,76 +4191,6 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1307'>1307</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>mcb30</td>
-      
-  
-  
-  
-      
-        <td>Use ALTER USER for mariadb 10.2.0 or newer</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>1</td>
       
   
   
@@ -4359,24 +4289,24 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1304'>1304</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1307'>1307</a></td>
   
   
   
       
-        <td>11</td>
-      
-  
-  
-  
-      
-        <td>cspeterson</td>
+        <td>4</td>
       
   
   
   
       
-        <td>README: update params in backup examples</td>
+        <td>mcb30</td>
+      
+  
+  
+  
+      
+        <td>Use ALTER USER for mariadb 10.2.0 or newer</td>
       
   
   
@@ -4394,7 +4324,77 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>11</td>
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1296'>1296</a></td>
+  
+  
+  
+      
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>7</td>
       
   
   
@@ -4499,54 +4499,54 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1296'>1296</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
   
   
   
       
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
+        <td>260</td>
       
   
   
   
       
-        <td>pdksync - Test facter 4</td>
+        <td>koshatul</td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>change split on whitespace to split on tab in mysql_user</td>
       
   
   
   
       
-        <td></td>
+        <td>Not sure how to acknowledge or complete the change request, but I've added acceptance and spec tests and I've actually pointed the Puppetfile in my local environments at my fork to test it, so it also works for me.</td>
       
   
   
   
       
-        <td>7</td>
+        <td>koshatul</td>
       
   
   
   
       
-        <td>1</td>
+        <td>6</td>
       
   
   
   
       
-        <td>true</td>
+        <td>9</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -4639,100 +4639,30 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1233'>1233</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1304'>1304</a></td>
   
   
   
       
-        <td>260</td>
-      
-  
-  
-  
-      
-        <td>koshatul</td>
+        <td>11</td>
       
   
   
   
       
-        <td>change split on whitespace to split on tab in mysql_user</td>
+        <td>cspeterson</td>
       
   
   
   
       
-        <td>Not sure how to acknowledge or complete the change request, but I've added acceptance and spec tests and I've actually pointed the Puppetfile in my local environments at my fork to test it, so it also works for me.</td>
+        <td>README: update params in backup examples</td>
       
   
   
   
       
-        <td>koshatul</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/571'>571</a></td>
-  
-  
-  
-      
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
@@ -4744,13 +4674,13 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>0</td>
+        <td>11</td>
       
   
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -4784,7 +4714,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>85</td>
+        <td>86</td>
       
   
   
@@ -4841,7 +4771,7 @@ I think for now we should keep the possibility to install either version, for no
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
   
   
   
@@ -4849,82 +4779,12 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/192'>192</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/571'>571</a></td>
   
   
   
       
-        <td>57</td>
-      
-  
-  
-  
-      
-        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-677) improve acceptance test platform coverage</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/193'>193</a></td>
-  
-  
-  
-      
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -4994,7 +4854,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -5007,6 +4867,146 @@ I think for now we should keep the possibility to install either version, for no
   
       
         <td>pdksync - do not merge: test litmus version 0.18.3 release-prep</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/192'>192</a></td>
+  
+  
+  
+      
+        <td>58</td>
+      
+  
+  
+  
+      
+        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-677) improve acceptance test platform coverage</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/193'>193</a></td>
+  
+  
+  
+      
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
       
   
   
@@ -5134,7 +5134,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -5204,7 +5204,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -5320,6 +5320,76 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell'>puppetlabs-powershell</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/300'>300</a></td>
+  
+  
+  
+      
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -5474,76 +5544,6 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell'>puppetlabs-powershell</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/300'>300</a></td>
-  
-  
-  
-      
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-puppet_conf'>puppetlabs-puppet_conf</a></td>
   
   
@@ -5557,7 +5557,7 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -5594,76 +5594,6 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
       
         <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot'>puppetlabs-reboot</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot/pull/248'>248</a></td>
-  
-  
-  
-      
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (maint) - Pdk Update</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>1</td>
       
   
   
@@ -5801,6 +5731,76 @@ end
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot'>puppetlabs-reboot</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot/pull/248'>248</a></td>
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (maint) - Pdk Update</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>12</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-registry'>puppetlabs-registry</a></td>
   
   
@@ -5814,7 +5814,7 @@ end
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -5884,7 +5884,7 @@ end
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -5954,7 +5954,7 @@ end
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -6024,77 +6024,7 @@ end
   
   
       
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/134'>134</a></td>
-  
-  
-  
-      
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -6164,7 +6094,7 @@ end
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -6194,7 +6124,147 @@ end
   
   
       
-        <td>0</td>
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/123'>123</a></td>
+  
+  
+  
+      
+        <td>110</td>
+      
+  
+  
+  
+      
+        <td>fxbe</td>
+      
+  
+  
+  
+      
+        <td>replace puppet[:compatibility] with function call compatibility since…</td>
+      
+  
+  
+  
+      
+        <td>@fxbe Just checking in to see how your doing with this and whether you need any help?</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>69</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/134'>134</a></td>
+  
+  
+  
+      
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>7</td>
       
   
   
@@ -6291,76 +6361,6 @@ end
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/123'>123</a></td>
-  
-  
-  
-      
-        <td>110</td>
-      
-  
-  
-  
-      
-        <td>fxbe</td>
-      
-  
-  
-  
-      
-        <td>replace puppet[:compatibility] with function call compatibility since…</td>
-      
-  
-  
-  
-      
-        <td>@fxbe Just checking in to see how your doing with this and whether you need any help?</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>69</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-service'>puppetlabs-service</a></td>
   
   
@@ -6374,7 +6374,7 @@ end
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -6444,7 +6444,7 @@ end
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -6509,46 +6509,36 @@ end
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1104'>1104</a></td>
   
   
   
       
-        <td>202</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+        <td>55</td>
       
   
   
   
       
-        <td>(WIP) Add volatile_fact() function</td>
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>So, there are issues with getting the facts if not set in scope as `$facts`, a) risk of getting server side facts when called on master and b) if there are many "deferred facts" they would all result in running Facter and this would be slow c) since each call will run Facter, the values may differ for the same fact
- 
-The best would be if the facts were already present in scope when deferred calls are resolved. That requires a change to Puppet however as the setup and use of PAL on the agent side for resolution of Deferred must be given the facts to use. (The rest should already be supported by PAL; i.e. setting `$facts` etc.)
-
-If not computed and set up front, then I think the result needs to be cached and kept while resolving deferred values. This would be good since if there is no call to get a deferred fact then Facter does not need to run at all. If going this route, there is a supported caching mechanism that functions can use. With this there is still the problem of getting the wrong facts (for server when agent was intended) as the place intention is known is when setting up the context (i.e. when setting up PAL for resolution, or when setting up for apply, master compile, bolt apply compile, etc.).</td>
+        <td>pdksync - Test facter 4</td>
       
   
   
   
       
-        <td>hlindberg</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>193</td>
+        <td></td>
       
   
   
@@ -6560,77 +6550,13 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
       
-        <td>false</td>
+        <td>1</td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>155</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>114</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -6729,54 +6655,54 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1104'>1104</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
   
       
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
+        <td>155</td>
       
   
   
   
       
-        <td>pdksync - Test facter 4</td>
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>Puppet 4 functions</td>
       
   
   
   
       
-        <td></td>
+        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
       
   
   
   
       
-        <td>7</td>
+        <td>DavidS</td>
       
   
   
   
       
-        <td>1</td>
+        <td>114</td>
       
   
   
   
       
-        <td>true</td>
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -6867,6 +6793,80 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
+  
+  
+  
+      
+        <td>202</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>(WIP) Add volatile_fact() function</td>
+      
+  
+  
+  
+      
+        <td>So, there are issues with getting the facts if not set in scope as `$facts`, a) risk of getting server side facts when called on master and b) if there are many "deferred facts" they would all result in running Facter and this would be slow c) since each call will run Facter, the values may differ for the same fact
+ 
+The best would be if the facts were already present in scope when deferred calls are resolved. That requires a change to Puppet however as the setup and use of PAL on the agent side for resolution of Deferred must be given the facts to use. (The rest should already be supported by PAL; i.e. setting `$facts` etc.)
+
+If not computed and set up front, then I think the result needs to be cached and kept while resolving deferred values. This would be good since if there is no call to get a deferred fact then Facter does not need to run at all. If going this route, there is a supported caching mechanism that functions can use. With this there is still the problem of getting the wrong facts (for server when agent was intended) as the place intention is known is when setting up the context (i.e. when setting up PAL for resolution, or when setting up for apply, master compile, bolt apply compile, etc.).</td>
+      
+  
+  
+  
+      
+        <td>hlindberg</td>
+      
+  
+  
+  
+      
+        <td>193</td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tagmail'>puppetlabs-tagmail</a></td>
   
   
@@ -6880,7 +6880,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -6950,7 +6950,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -6987,6 +6987,76 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
       
         <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-translate'>puppetlabs-translate</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-translate/pull/82'>82</a></td>
+  
+  
+  
+      
+        <td>55</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -7077,76 +7147,6 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-translate'>puppetlabs-translate</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-translate/pull/82'>82</a></td>
-  
-  
-  
-      
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>florindragos <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Test facter 4</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
   
   
@@ -7160,7 +7160,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -7230,7 +7230,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -7300,7 +7300,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -7343,76 +7343,6 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server'>puppetlabs-websphere_application_server</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/191'>191</a></td>
-  
-  
-  
-      
-        <td>137</td>
-      
-  
-  
-  
-      
-        <td>vkorehov</td>
-      
-  
-  
-  
-      
-        <td>relaxing validation for repository</td>
-      
-  
-  
-  
-      
-        <td>@vkorehov Check out my PR #201 . It looks like we both automated namespace_bindings, shared_libraries, and auth aliases.</td>
-      
-  
-  
-  
-      
-        <td>bFekete</td>
-      
-  
-  
-  
-      
-        <td>13</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -7567,6 +7497,76 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server'>puppetlabs-websphere_application_server</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/191'>191</a></td>
+  
+  
+  
+      
+        <td>137</td>
+      
+  
+  
+  
+      
+        <td>vkorehov</td>
+      
+  
+  
+  
+      
+        <td>relaxing validation for repository</td>
+      
+  
+  
+  
+      
+        <td>@vkorehov Check out my PR #201 . It looks like we both automated namespace_bindings, shared_libraries, and auth aliases.</td>
+      
+  
+  
+  
+      
+        <td>bFekete</td>
+      
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-wsus_client'>puppetlabs-wsus_client</a></td>
   
   
@@ -7580,7 +7580,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   

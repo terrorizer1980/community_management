@@ -195,6 +195,60 @@ https://rubygems.org/gems/little-plugger/versions/1.1.4  (38 Million downloads!)
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/269'>269</a></td>
+  
+  
+  
+      
+        <td>330</td>
+      
+  
+  
+  
+      
+        <td>rtib</td>
+      
+  
+  
+  
+      
+        <td>test against puppet versions of latest PE, latest PE LTS and latest gem</td>
+      
+  
+  
+  
+      
+        <td>I think we will need a wider consensus that this is a desired set of defaults before we merge this into the base template repo.
+
+On a related note, we are definitely thinking about how to make config changes like this easier to roll out across your organization without having to fork pdk-templates.</td>
+      
+  
+  
+  
+      
+        <td>scotje</td>
+      
+  
+  
+  
+      
+        <td>302</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/281'>281</a></td>
   
   
@@ -239,7 +293,7 @@ https://rubygems.org/gems/little-plugger/versions/1.1.4  (38 Million downloads!)
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
   
   
   
@@ -247,44 +301,42 @@ https://rubygems.org/gems/little-plugger/versions/1.1.4  (38 Million downloads!)
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/269'>269</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/838'>838</a></td>
   
   
   
       
-        <td>330</td>
-      
-  
-  
-  
-      
-        <td>rtib</td>
+        <td>132</td>
       
   
   
   
       
-        <td>test against puppet versions of latest PE, latest PE LTS and latest gem</td>
+        <td>sebastian-miclea <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>I think we will need a wider consensus that this is a desired set of defaults before we merge this into the base template repo.
-
-On a related note, we are definitely thinking about how to make config changes like this easier to roll out across your organization without having to fork pdk-templates.</td>
+        <td>Replace facter with facter-ng to run tests</td>
       
   
   
   
       
-        <td>scotje</td>
+        <td>Reopened PR to have builds available.</td>
       
   
   
   
       
-        <td>302</td>
+        <td>sebastian-miclea</td>
+      
+  
+  
+  
+      
+        <td>120</td>
       
   
   
@@ -341,58 +393,6 @@ Coverage decreased (-4.0%) to 87.724% when pulling **05f9d8542f72d56f09f892c3ff5
   
       
         <td>238</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/838'>838</a></td>
-  
-  
-  
-      
-        <td>132</td>
-      
-  
-  
-  
-      
-        <td>sebastian-miclea <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Replace facter with facter-ng to run tests</td>
-      
-  
-  
-  
-      
-        <td>Reopened PR to have builds available.</td>
-      
-  
-  
-  
-      
-        <td>sebastian-miclea</td>
-      
-  
-  
-  
-      
-        <td>120</td>
       
   
   
@@ -463,7 +463,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/301'>301</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/303'>303</a></td>
   
   
   
@@ -480,7 +480,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>Update rack requirement from ~> 1 to ~> 2</td>
+        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
       
   
   
@@ -515,7 +515,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/303'>303</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/301'>301</a></td>
   
   
   
@@ -532,7 +532,7 @@ The change might break existing setups that rely on the old log output format, s
   
   
       
-        <td>Update rake requirement from ~> 10.0 to ~> 13.0</td>
+        <td>Update rack requirement from ~> 1 to ~> 2</td>
       
   
   
@@ -733,60 +733,6 @@ Parallel execution might help, but not with this PR as it pass installation of m
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/732'>732</a></td>
-  
-  
-  
-      
-        <td>588</td>
-      
-  
-  
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-      
-        <td>Allow customizing module-layer Hiera configuration</td>
-      
-  
-  
-  
-      
-        <td>@nabertrand Thanks for doing this. I'm more than happy to merge this in once the documentation has been updated. The new settings definitely need to be added to the configuration reference https://github.com/rodjek/rspec-puppet/blob/master/docs/documentation/configuration/index.md.
-
-As you mentioned though, the interaction of the different hiera layers with spec testing can be a confusing subject, so maybe a bit of a long form explanation as an fragment in https://github.com/rodjek/rspec-puppet/tree/master/docs/_includes that can then be included in the "testing classes", "testing defined types" pages as well.</td>
-      
-  
-  
-  
-      
-        <td>rodjek</td>
-      
-  
-  
-  
-      
-        <td>411</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/720'>720</a></td>
   
   
@@ -943,102 +889,44 @@ As you mentioned though, the interaction of the different hiera layers with spec
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/716'>716</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/732'>732</a></td>
   
   
   
       
-        <td>660</td>
-      
-  
-  
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+        <td>588</td>
       
   
   
   
       
-        <td>[WIP]</td>
+        <td>nabertrand</td>
       
   
   
   
       
-        <td>
-[![Coverage Status](https://coveralls.io/builds/21696103/badge)](https://coveralls.io/builds/21696103)
+        <td>Allow customizing module-layer Hiera configuration</td>
+      
+  
+  
+  
+      
+        <td>@nabertrand Thanks for doing this. I'm more than happy to merge this in once the documentation has been updated. The new settings definitely need to be added to the configuration reference https://github.com/rodjek/rspec-puppet/blob/master/docs/documentation/configuration/index.md.
 
-Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a1669b6bdd24a2 on 100_coverage** into **ee7442b0b7893cb26824fa0aade52e7fa44fa0fc on master**.
-</td>
+As you mentioned though, the interaction of the different hiera layers with spec testing can be a confusing subject, so maybe a bit of a long form explanation as an fragment in https://github.com/rodjek/rspec-puppet/tree/master/docs/_includes that can then be included in the "testing classes", "testing defined types" pages as well.</td>
       
   
   
   
       
-        <td>coveralls</td>
+        <td>rodjek</td>
       
   
   
   
       
-        <td>478</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/755'>755</a></td>
-  
-  
-  
-      
-        <td>368</td>
-      
-  
-  
-  
-      
-        <td>npwalker <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Revert "Support directories for the manifest setting"</td>
-      
-  
-  
-  
-      
-        <td>
-[![Coverage Status](https://coveralls.io/builds/23868433/badge)](https://coveralls.io/builds/23868433)
-
-Coverage increased (+0.2%) to 86.087% when pulling **b0706a256ead394b89304363ba9070f4bec4b8af on npwalker:revert-748-master** into **491b7c8d6fe2c7fea615ed81aa90d96044b88a1d on rodjek:master**.
-</td>
-      
-  
-  
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-      
-        <td>368</td>
+        <td>411</td>
       
   
   
@@ -1111,12 +999,68 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/755'>755</a></td>
   
   
   
       
-        <td>992</td>
+        <td>368</td>
+      
+  
+  
+  
+      
+        <td>npwalker <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Revert "Support directories for the manifest setting"</td>
+      
+  
+  
+  
+      
+        <td>
+[![Coverage Status](https://coveralls.io/builds/23868433/badge)](https://coveralls.io/builds/23868433)
+
+Coverage increased (+0.2%) to 86.087% when pulling **b0706a256ead394b89304363ba9070f4bec4b8af on npwalker:revert-748-master** into **491b7c8d6fe2c7fea615ed81aa90d96044b88a1d on rodjek:master**.
+</td>
+      
+  
+  
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+      
+        <td>368</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/716'>716</a></td>
+  
+  
+  
+      
+        <td>660</td>
       
   
   
@@ -1128,40 +1072,29 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
   
   
       
-        <td>[RFC] New syntax</td>
+        <td>[WIP]</td>
       
   
   
   
       
-        <td>How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
+        <td>
+[![Coverage Status](https://coveralls.io/builds/21696103/badge)](https://coveralls.io/builds/21696103)
 
-Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
-```
-def verify_concat_fragment_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
-end
-
-def verify_concat_fragment_exact_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
-end
-```</td>
+Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a1669b6bdd24a2 on 100_coverage** into **ee7442b0b7893cb26824fa0aade52e7fa44fa0fc on master**.
+</td>
       
   
   
   
       
-        <td>ekohl</td>
+        <td>coveralls</td>
       
   
   
   
       
-        <td>639</td>
+        <td>478</td>
       
   
   
@@ -1234,54 +1167,43 @@ Coverage remained the same at 92.011% when pulling **75b9be11767e4d7e2d8311bbe3e
   
   
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
   
   
   
       
-        <td>950</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+        <td>992</td>
       
   
   
   
       
-        <td>Adds the ability to spec test an arbitrary string</td>
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>Hmm. I'm not opposed to that idea, but how would we be able to invoke a spec programmatically then? We're using this now like so:
+        <td>[RFC] New syntax</td>
+      
+  
+  
+  
+      
+        <td>How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
 
-``` ruby
-  def run_rspec(spec_path, str)
-    require 'rspec/core'
+Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
+```
+def verify_concat_fragment_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
+end
 
-    # rspec needs an IO object to write to. We just want it as a string...
-    data = StringIO.new
-    RSpec::configure do |c|
-        c.output_stream = data
-        c.formatter     = 'json'
-    end
-
-    # require *after* setting the output stream or it screams at us
-    # String input depends on https://github.com/rodjek/rspec-puppet/pull/619
-    require 'rspec-puppet'
-    RSpec::configure do |c|
-        c.string        = str
-    end
-
-    begin
-        RSpec::Core::Runner.run([spec_path])
-        return data.string
-    rescue StandardError, LoadError => e
-        return "Error running spec test: #{e.message}",
+def verify_concat_fragment_exact_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
 end
 ```</td>
       
@@ -1289,13 +1211,13 @@ end
   
   
       
-        <td>binford2k</td>
+        <td>ekohl</td>
       
   
   
   
       
-        <td>944</td>
+        <td>639</td>
       
   
   
@@ -1408,6 +1330,84 @@ Changes Unknown when pulling **40cd1271b0c28a3b0cddaa0cbcf314a3f8a84728 on kjeti
   
       
         <td>1070</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
+  
+  
+  
+      
+        <td>950</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Adds the ability to spec test an arbitrary string</td>
+      
+  
+  
+  
+      
+        <td>Hmm. I'm not opposed to that idea, but how would we be able to invoke a spec programmatically then? We're using this now like so:
+
+``` ruby
+  def run_rspec(spec_path, str)
+    require 'rspec/core'
+
+    # rspec needs an IO object to write to. We just want it as a string...
+    data = StringIO.new
+    RSpec::configure do |c|
+        c.output_stream = data
+        c.formatter     = 'json'
+    end
+
+    # require *after* setting the output stream or it screams at us
+    # String input depends on https://github.com/rodjek/rspec-puppet/pull/619
+    require 'rspec-puppet'
+    RSpec::configure do |c|
+        c.string        = str
+    end
+
+    begin
+        RSpec::Core::Runner.run([spec_path])
+        return data.string
+    rescue StandardError, LoadError => e
+        return "Error running spec test: #{e.message}",
+end
+```</td>
+      
+  
+  
+  
+      
+        <td>binford2k</td>
+      
+  
+  
+  
+      
+        <td>944</td>
       
   
   
