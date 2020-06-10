@@ -3,75 +3,55 @@
 
 require 'optparse'
 require_relative 'octokit_utils'
+require_relative 'options'
 
-options = {}
-options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
-parser = OptionParser.new do |opts|
-  opts.banner = 'Usage: pull_requests.rb [options]'
-  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| options[:url] = v }
-  opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
-  opts.on('-a', '--after DAYS', 'Pull requests that were last updated after DAYS days ago.') { |v| options[:after] = v.to_i }
-  opts.on('-b', '--before DAYS', 'Pull requests that were last updated before DAYS days ago.') { |v| options[:before] = v.to_i }
-  opts.on('-c', '--count', 'Only print the count of pull requests.') { options[:count] = true }
-  opts.on('-e', '--show-empty', 'List repos with no pull requests') { options[:empty] = true }
-  opts.on('-s', '--sort', 'Sort output based on number of pull requests') { options[:sort] = true }
-  opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
-  opts.on('-v', '--verbose', 'More output') { options[:verbose] = true }
+options = parse_options do |opts, result|
+  opts.on('-a', '--after DAYS', 'Pull requests that were last updated after DAYS days ago.') { |v| result[:after] = v.to_i }
+  opts.on('-b', '--before DAYS', 'Pull requests that were last updated before DAYS days ago.') { |v| result[:before] = v.to_i }
+  opts.on('-c', '--count', 'Only print the count of pull requests.') { result[:count] = true }
+  opts.on('-e', '--show-empty', 'List repos with no pull requests') { result[:empty] = true }
+  opts.on('-s', '--sort', 'Sort output based on number of pull requests') { result[:sort] = true }
+  opts.on('-v', '--verbose', 'More output') { result[:verbose] = true }
 
   opts.on('--no-response', 'Select PRs which had no response in the last 30 days') do
-    options[:before] = 30
+    result[:before] = 30
   end
 
   opts.on('--needs-closing', 'Select PRs where the last response is from an owner, but no further activity for the last 30 days') do
-    options[:before] = 30
-    options[:last_comment] = :owner
+    result[:before] = 30
+    result[:last_comment] = :owner
   end
 
   opts.on('--bad-status', 'Select PRs where the status is bad') do
-    options[:bad_status] = 1
+    result[:bad_status] = 1
   end
 
   opts.on('--needs-squashed', 'Select PRs that need squashed') do
-    options[:needs_squashed] = 1
+    result[:needs_squashed] = 1
   end
 
   opts.on('--needs-rebase', 'Select PRs where they need a rebase') do
-    options[:needs_rebase] = 1
+    result[:needs_rebase] = 1
   end
 
   opts.on('--no-comments', 'Select PRs where there are no comments') do
-    options[:no_comments] = 1
+    result[:no_comments] = 1
   end
 
   opts.on('--no-puppet-comments', 'Select PRs where there are no comments from puppet members') do
-    options[:no_puppet_comments] = 1
+    result[:no_puppet_comments] = 1
   end
 
   opts.on('--last-comment-mention-member', 'Select PRs where the last comment mentions a puppet members') do
-    options[:comment_mention_member] = 1
+    result[:comment_mention_member] = 1
   end
 
   opts.on('--no-activity-40-days', 'Select PRs where there has been no activity in 40 days') do
-    options[:no_activity_40] = 1
+    result[:no_activity_40] = 1
   end
 end
 
-parser.parse!
-
-options[:url] = 'https://puppetlabs.github.io/iac/modules.json' if options[:url].nil?
-missing = []
-missing << '-t' if options[:oauth].nil?
-unless missing.empty?
-  puts "Missing options: #{missing.join(', ')}"
-  puts parser
-  exit
-end
-
-uri = URI.parse(options[:url])
-response = Net::HTTP.get_response(uri)
-output = response.body
-parsed = JSON.parse(output)
-
+parsed = load_url(options)
 util = OctokitUtils.new(options[:oauth])
 
 if options[:before] && options[:after]

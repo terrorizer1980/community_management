@@ -1,34 +1,15 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'optparse'
 require_relative 'octokit_utils'
+require_relative 'options'
 
-options = {}
-options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
-parser = OptionParser.new do |opts|
-  opts.banner = 'Usage: labels.rb [options]'
-  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| options[:url] = v }
-  opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
-  opts.on('-f', '--fix-labels', 'Add the missing labels to repo') { options[:fix_labels] = true }
-  opts.on('-d', '--delete-labels', 'Delete unwanted labels from repo') { options[:delete_labels] = true }
+options = parse_options do |opts, result|
+  opts.on('-f', '--fix-labels', 'Add the missing labels to repo') { result[:fix_labels] = true }
+  opts.on('-d', '--delete-labels', 'Delete unwanted labels from repo') { result[:delete_labels] = true }
 end
 
-parser.parse!
-
-options[:url] = 'https://puppetlabs.github.io/iac/modules.json' if options[:url].nil?
-missing = []
-missing << '-t' if options[:oauth].nil?
-unless missing.empty?
-  puts "Missing options: #{missing.join(', ')}"
-  puts parser
-  exit
-end
-
-uri = URI.parse(options[:url])
-response = Net::HTTP.get_response(uri)
-output = response.body
-parsed = JSON.parse(output)
+parsed = load_url(options)
 
 util = OctokitUtils.new(options[:oauth])
 

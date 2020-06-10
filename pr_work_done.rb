@@ -5,33 +5,13 @@
 # the number of closed prs
 # the number of merged prs
 # the number of comments made on prs
-require 'optparse'
 require 'csv'
 require_relative 'octokit_utils'
+require_relative 'options'
 
-options = {}
-options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
-parser = OptionParser.new do |opts|
-  opts.banner = 'Usage: pr_work_done.rb [options]'
-  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| options[:url] = v }
-  opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
-end
+options = parse_options
 
-parser.parse!
-
-options[:url] = 'https://puppetlabs.github.io/iac/modules.json' if options[:url].nil?
-missing = []
-missing << '-t' if options[:oauth].nil?
-unless missing.empty?
-  puts "Missing options: #{missing.join(', ')}"
-  puts parser
-  exit
-end
-
-uri = URI.parse(options[:url])
-response = Net::HTTP.get_response(uri)
-output = response.body
-parsed = JSON.parse(output)
+parsed = load_url(options)
 
 util = OctokitUtils.new(options[:oauth])
 
