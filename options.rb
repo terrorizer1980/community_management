@@ -10,7 +10,7 @@ def parse_options
     opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
     opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| result[:url] = v }
     opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| result[:oauth] = v }
-    yield opts, result
+    yield opts, result if block_given?
   end
 
   parser.parse!
