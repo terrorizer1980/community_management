@@ -88,20 +88,25 @@
 <body>
 <h1 style="text-align:center;">Tools PRs that require review</h1>
 <table border='1' id='tools' style='width:100%' class='sortable table table-hover'> 
- <a href="https://puppetlabs.github.io/community_management/report_tools60.html" class="button">30 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report_tools30.html" class="button">30 Days</a>
  <a href="https://puppetlabs.github.io/community_management/report_tools60.html" class="button">60 Days</a>
  <a href="https://puppetlabs.github.io/community_management/report_tools90.html" class="button">90 Days</a>
 <tr>
+
+<% if open_prs.empty?  %>
+<% puts "nothing to do here, no prs found" %>
+<% else %>
 <% open_prs.first.keys.each do |header| %>
   <% if header != :address %>
     <td> <%= header %></td> 
+     <% end %>
   <% end %> 
-<% end %>
+  <% end %>
 </tr>
-
 <% open_prs.each do |row| %>
   <tr>
   <% row.each do |key, value| %>
+
   <%  if key == :pr %>
       <td><a target ="_blank" href='<%= row[:address] %>/pull/<%= value %>'><%= value %></a></td>
   <%  elsif key == :tool%>
