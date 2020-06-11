@@ -3,36 +3,15 @@
 
 # This script is to output a csv file to tally how many PRs are currently open on each day between two date ranges. It is also split into both PRs raised by community members and PRs raised by Puppet members.
 
-require 'optparse'
 require 'csv'
-require 'octokit'
 require_relative 'octokit_utils'
+require_relative 'options'
 
-options = {}
-options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
-parser = OptionParser.new do |opts|
-  opts.banner = 'Usage: open_and_created.rb [options]'
-  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| options[:url] = v }
-  opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
+options = parse_options do |opts|
   opts.on('-o', '--overview', 'Output overview, summary totals to csv') { options[:display_overview] = true }
 end
 
-parser.parse!
-
-options[:url] = 'https://puppetlabs.github.io/iac/modules.json' if options[:url].nil?
-missing = []
-missing << '-t' if options[:oauth].nil?
-unless missing.empty?
-  puts "Missing options: #{missing.join(', ')}"
-  puts parser
-  exit
-end
-
-uri = URI.parse(options[:url])
-response = Net::HTTP.get_response(uri)
-output = response.body
-parsed = JSON.parse(output)
-
+parsed = load_url(options)
 util = OctokitUtils.new(options[:oauth])
 
 all_pulls = []

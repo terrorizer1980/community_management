@@ -4,6 +4,7 @@
 require 'erb'
 require 'optparse'
 require_relative 'octokit_utils'
+require_relative 'options'
 
 class PuppetModule
   attr_accessor :name, :namespace, :tag_date, :commits, :downloads
@@ -42,28 +43,8 @@ def number_of_downloads(slug)
   end
 end
 
-options = {}
-options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] if ENV['GITHUB_COMMUNITY_TOKEN']
-parser = OptionParser.new do |opts|
-  opts.banner = 'Usage: stats.rb [options]'
-  opts.on('-u MANDATORY', '--url=MANDATORY', String, 'Link to json file for modules') { |v| options[:url] = v }
-  opts.on('-t', '--oauth-token TOKEN', 'OAuth token. Required.') { |v| options[:oauth] = v }
-end
-
-parser.parse!
-
-options[:url] = 'https://puppetlabs.github.io/iac/modules.json' if options[:url].nil?
-missing = []
-missing << '-t' if options[:oauth].nil?
-unless missing.empty?
-  puts "Missing options: #{missing.join(', ')}"
-  exit
-end
-
-uri = URI.parse(options[:url])
-response = Net::HTTP.get_response(uri)
-output = response.body
-parsed = JSON.parse(output)
+options = parse_options
+parsed = load_url(options)
 util = OctokitUtils.new(options[:oauth])
 
 repo_data = []
