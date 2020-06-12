@@ -1,15 +1,20 @@
 <html>
 <title>Tools PRs that require review</title>
 <head>
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 <script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
 <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
 <script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
 <script type="text/javascript">
     $(document).ready(function() {
     // Setup - add a text input to each footer cell
-    $('#tools thead tr td').each( function () {
+    $('#tools thead tr th').each( function () {
         var title = $(this).text();
-        $(this).append( '<input class="something" type="text" placeholder="Search '+title+'" />' );
+        $(this).append( '<input class="something" type="text" placeholder="Search" />' );
     } );
  
     // DataTable
@@ -87,26 +92,31 @@
 </head>
 <body>
 <h1 style="text-align:center;">Tools PRs that require review</h1>
-<table border='1' id='tools' style='width:100%' class='sortable table table-hover'> 
+<table data-role='table' data-mode='columntoggle' border='1' id='tools' style='width:100%' class='sortable table table-hover'> 
  <a href="https://puppetlabs.github.io/community_management/report_tools30.html" class="button">30 Days</a>
  <a href="https://puppetlabs.github.io/community_management/report_tools60.html" class="button">60 Days</a>
  <a href="https://puppetlabs.github.io/community_management/report_tools90.html" class="button">90 Days</a>
-<tr>
 
-<% if open_prs.empty?  %>
-<% puts "nothing to do here, no prs found" %>
-<% else %>
-<% open_prs.first.keys.each do |header| %>
-  <% if header != :address %>
-    <td> <%= header %></td> 
-     <% end %>
-  <% end %> 
-  <% end %>
-</tr>
+<thead>
+  <tr>
+    <% if open_prs.empty?  %>
+    <% puts "nothing to do here, no prs found" %>
+      <% else %>
+      <% open_prs.first.keys.each do |header| %>
+       <% if header == :age_comment || header == :no_comment_from_puppet || header== :last_comment_mentions_puppet || header== :num_comments%>
+        <th data-priority="1"><%= header %></th>
+       <% else %>
+           <% if header != :address %>
+                  <th><%= header %></th> 
+                  <% end %>
+           <% end %>
+      <% end %> 
+    <% end %>
+  </tr>
+</thead>
 <% open_prs.each do |row| %>
   <tr>
   <% row.each do |key, value| %>
-
   <%  if key == :pr %>
       <td><a target ="_blank" href='<%= row[:address] %>/pull/<%= value %>'><%= value %></a></td>
   <%  elsif key == :tool%>

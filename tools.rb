@@ -85,6 +85,12 @@ parsed.each do |_k, v|
       row[:by] = ''
       row[:age_comment] = 0
     end
+    row[:num_comments] = pr[:issue_comments].size
+
+    # find prs not commented by puppet
+    row[:no_comment_from_puppet] = does_array_have_pr(puppet_uncommented_pulls, pr[:pull].number)
+    # last comment mentions puppet member
+    row[:last_comment_mentions_puppet] = does_array_have_pr(mentioned_pulls, pr[:pull].number)
 
     open_prs.push(row)
   end
