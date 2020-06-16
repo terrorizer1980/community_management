@@ -1,7 +1,7 @@
 <html>
 <title>Tools PRs that require review</title>
 <head>
-
+<link rel="stylesheet" type="text/css" href="tools.css">
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -58,152 +58,6 @@ $(document).on("click", '.show-more a', function(e) {
    });
 
 </script>
-<style>
-#tools {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-   font-size: 18px;
-  border-collapse: collapse;
-  width: 100%;
-  border-spacing: 0;
-  border: 1px solid #ddd;
-}
-
-}
-.word_break {
-  word-break: break-all;
-  width: auto;
-}
-/*.button {
-         background-color: #ddd;
-         border: none;
-         color: white;
-         padding: 10px 20px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 20px;
-         margin: 4px 2px;
-         cursor: pointer;
-         }*/
-
-
-
-#tools td, #reviews th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#tools tr:nth-child(even){background-color: #f2f2f2;
-
- }
-
-#tools tr:hover {background-color: #ddd;
- }
-
-#tools th {
-  padding-top: 9px;
-  padding-bottom: 9px;
-  text-align: left;
-  background-color: #cfcfcf;
-  color: black;
- 
-}
-td .long {
-  display: none;
-}
-
-td.more .long {
-  display: inherit;
-}
-
-td.more .short {
-  display: none;
-}
-
-.url, .toggle-more {
-float: left;
-}
-
-.url {
-padding-left: 4px;
-}
-
-.toggle-more {
-  display: none;
-  padding-left: 4px;
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.multi-url .toggle-more {
- display: inherit;
-}
-
-iv.text-container {
-    margin: 0 auto;
-    width: 75%;    
-}
-
-.hideContent {
-    overflow: hidden;
-    line-height: 1em;
-    height: 2em;
-}
-
-.showContent {
-    line-height: 1em;
-    height: auto;
-}
-.showContent{
-    height: auto;
-}
-.show-more {
-    padding: 10px 0;
-    text-align: center;
-}
- /*hereeeeeeeeeeee */
-
-.btn-group button {
-  background-color: #4CAF50; /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
-
-@media screen and (min-width: 20em) {
-   .my-custom-class th.ui-table-priority-1,
-   .my-custom-class td.ui-table-priority-1 {
-     display: table-cell;
-   }
-}
-/* Show priority 2 at 480px (30em x 16px) */
-@media screen and (min-width: 30em) {
-   .my-custom-class  th.ui-table-priority-2,
-   .my-custom-class td.ui-table-priority-2 {
-     display: table-cell;
-   }
-}
-
-</style>
 </head>
 <body>
  <form name="frmSite" style="float: left; margin-top: 5px;"> 
@@ -223,10 +77,6 @@ iv.text-container {
   </a>
   </form>
 <h1 style="text-align:center;">Tools PRs that require review</h1>
- <!--  <div class="btn-group">
- <a href="https://puppetlabs.github.io/community_management/report_tools30.html" class="button">30 Days</a>
- <a href="https://puppetlabs.github.io/community_management/report_tools60.html" class="button">60 Days</a>
- <a href="https://puppetlabs.github.io/community_management/report_tools90.html" class="button">90 Days</a> -->
 </div>
 <div style="overflow-x:auto;">
 <table data-role='table' data-mode='columntoggle' border='1' id='tools' style='width:relative' class='sortable table table-hover ui-responsive table-stroke'> 
