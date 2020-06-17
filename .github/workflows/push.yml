@@ -42,6 +42,7 @@ jobs:
           cp -r *.html docs/
           cp -r *.png docs/
           cp -r *.csv docs/
+          cp -r *.css docs/
           ls -la docs/
       - name: Add timestamp
         run: |
