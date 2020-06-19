@@ -207,7 +207,7 @@
   
   
       
-        <td>50</td>
+        <td>51</td>
       
   
   
@@ -256,7 +256,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>48</td>
+        <td>49</td>
       
   
   
@@ -275,6 +275,123 @@ I think the path of least resistance would be to add an acceptance test, similar
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot'>puppetlabs-reboot</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot/pull/246'>246</a></td>
+  
+  
+  
+      
+        <td>57</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>{BLOCKED} (IAC-140) Add release workflow config for GHActions</td>
+      
+  
+  
+  
+      
+        <td>Currently investigating an issue that is holding up the merge of this. On Github Actions, the [last few runs](https://github.com/puppetlabs/puppetlabs-reboot/runs/685479862) have shown that the `bundle exec rake spec` command is hanging. After some help debugging from @DavidS , it appears as though the GHAction runner is emulating an interactive shell and as part of that, trying to send an empty file / data to STDIN.
+
+We were able to reproduce the issue on this module by piping `/dev/null` to the `spec` Rake task:
+
+```
+bundle exec rake spec '
+# ./spec/unit/task/init_spec.rb:2:in `require_relative'
+# ./spec/unit/task/init_spec.rb:2:in `'
+Run options: exclude {:bolt=>true}
+
+Deprecation Warnings:
+
+puppetlabs_spec_helper: defaults `mock_with` to `:mocha`. See https://github.com/puppetlabs/puppetlabs_spec_helper#mock_with to choose a sensible value for you
+
+
+If you need more of the backtrace for any of these deprecations to
+identify where to make the necessary changes, you can configure
+`config.raise_errors_for_deprecations!`, and it will turn the
+deprecation warnings into errors, giving you the full backtrace.
+
+1 deprecation warning total
+
+Finished in 0.00003 seconds (files took 1.59 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I/Users/ciaran.mccrisken/gems/gems/rspec-core-3.9.2/lib:/Users/ciaran.mccrisken/gems/gems/rspec-support-3.9.3/lib /Users/ciaran.mccrisken/gems/gems/rspec-core-3.9.2/exe/rspec --pattern spec/\{aliases,classes,defines,functions,hosts,integration,plans,tasks,type_aliases,types,unit\}/\*\*/\*_spec.rb failed
+
+```
+
+In the [following lines in `tasks/init.rb`](https://github.com/puppetlabs/puppetlabs-reboot/blob/f7bcf65c68742588d2ca7c956c8ee6de389e598a/tasks/init.rb#L91-L92) we are getting `true` back to the following query on line 91:
+```
+unless STDIN.tty?
+```
+and then subsequently, an explosion on the `JSON.parse(STDIN.read)` as `STDIN.read` is not returning a valid JSON-formatted task to execute.
+
+We have two problems here:
+
+1. From the perspective of the application running in the context of a GHActions runner, it should not have a TTY available. See [this issue](https://github.com/actions/runner/issues/241) raised with Github that shows `echo "$(tty)"` run in the context of the GHA runner returns `not a tty`. However, it does seem to be providing an empty file on STDIN, which could very well affect other modules across the org if there's nothing handling that scenario.
+
+2. For this module, we should probably be much more robust in how we handle the `STDIN` piped task to execute. We should verify that it's valid JSON before instantiating a new `Reboot::Task` with it. Perhaps with a `begin; rescue JSON::ParserError` wrapping the `Reboot::Task.new` call. The following adjustment will work when running `bundle exec rake spec  'queued',
+      'timeout' => reboot.timeout,
+    }
+    JSON.dump(result, STDOUT)
+  rescue JSON::ParserError
+    Puppet.warning('Task provided on STDIN is invalid JSON')
+  end
+end
+```</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
