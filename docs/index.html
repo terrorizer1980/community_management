@@ -1,17 +1,12 @@
 <html>
-<head><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-  <style>
-  .footer {
-   position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: white;
-   color: grey;
-   text-align: right;
-}
-</style>
-<!-- Google Analytics -->
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Google Analytics -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -24,19 +19,50 @@
     </script>
     <!-- End Google Analytics -->
 </head>
-<body>
-<h2>Available reports</h2>
-<ul class="nav nav-tabs">
-    <li class="active"><a href="https://puppetlabs.github.io/community_management/graph.html" target="iframe_a">Graphs</a></li>
-    <li><a href="https://puppetlabs.github.io/community_management/report.html" target="iframe_a">PR Reviews</a></li>
-    <li><a href="https://puppetlabs.github.io/community_management/ModulesRelease.html" target="iframe_a">Module Releases</a></li>
-    <li><a href="https://puppetlabs.github.io/community_management/GithubActionsReport.html" target="iframe_a">Github Actions Report</a></li>
-    <li><a href="https://puppetlabs.github.io/community_management/report_tools.html" target="iframe_a">Tools</a></li>
-  </ul>
-
-<iframe height="100%" width="100%" src="graph.html" name="iframe_a"></iframe>
-<div class="footer">
-<p>Fri Jun 26 02:21:50 UTC 2020</p>
+<body>  
+    <div class="header">
+<p style="text-align:right;">Mon May 18 02:16:32 UTC 2020</p>
 </div>
+<div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+
+<a class="active" href="https://puppetlabs.github.io/iac/" target="iframe_a"><span class="iconify" data-icon="simple-icons:puppet" data-inline="false"></span>&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+
+<a  href="https://puppetlabs.github.io/iac/modules/" target="iframe_a"><span class="iconify" data-icon="ic:round-view-module" data-inline="false"></span></span>&nbsp;&nbsp;&nbsp;&nbsp;About modules</a>
+
+<a href="https://puppetlabs.github.io/iac/tools/" target="iframe_a"><span class= "iconify" data-icon="icomoon-free:blogger" data-inline="false"></span></script>&nbsp;&nbsp;&nbsp;&nbsp;About tools</a>
+
+<a href="c3_graphs.html" target="iframe_a"><span class="iconify" data-icon="ic:outline-assessment"></span>&nbsp;&nbsp;&nbsp;&nbsp;Graphs</a><br>
+
+<a href="https://puppetlabs.github.io/community_management/report.html" target="iframe_a"><span class="iconify" data-icon="carbon:report" data-inline="false"></span>&nbsp;&nbsp;&nbsp;&nbsp;PR Reviews</a><br>
+
+<a href="https://puppetlabs.github.io/community_management/ModulesRelease.html" target="iframe_a"><span class="iconify" data-icon="bx:bx-calendar-check" data-inline="false"></span>&nbsp;&nbsp;&nbsp;&nbsp;Module Releases</a><br>
+
+<a href="https://puppetlabs.github.io/community_management/GithubActionsReport.html" target="iframe_a"><span class="iconify" data-icon="ant-design:github-filled" data-inline="false"></span>&nbsp;&nbsp;&nbsp;&nbsp;Github Actions Report</a><br>
+
+<a href="https://puppetlabs.github.io/community_management/report_tools.html" target="iframe_a"><span class="iconify" data-icon="ic:baseline-build" data-inline="false"></span>&nbsp;&nbsp;&nbsp;&nbsp;Tools</a><br>
+
+</div>
+ <div id="main">
+      
+    </div>
+<script>
+ var mini = true;
+
+        function toggleSidebar() {
+            if (mini) {
+                console.log("opening sidebar");
+                document.getElementById("mySidebar").style.width = "370px";
+                document.getElementById("main").style.marginLeft = "250px";
+                this.mini = false;
+            } else {
+                console.log("closing sidebar");
+                document.getElementById("mySidebar").style.width = "85px";
+                document.getElementById("main").style.marginLeft = "85px";
+                this.mini = true;
+            }
+        }
+</script>
+ <iframe allowtransparency="true" style="position:relative; left:86px; " src="graph.html" 
+    frameborder="0" height="100%" width="100%" name="iframe_a" allow="fullscreen"></iframe> 
 </body>
 </html>
