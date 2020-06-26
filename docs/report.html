@@ -775,6 +775,84 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+  
+  
+  
+      
+        <td>224</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+      
+  
+  
+  
+      
+        <td>@mgrzybowski Apologies for the delay. timeout is facter 3 feature. we retested them and its all working for both scenarios.
+`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
+timeout!
+`
+`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
+did not timeout!
+`
+
+We will get the changes in. Thank you</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>16</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
   
   
@@ -887,84 +965,6 @@ I think the path of least resistance would be to add an acceptance test, similar
   
       
         <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
-  
-  
-  
-      
-        <td>224</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
-      
-  
-  
-  
-      
-        <td>@mgrzybowski Apologies for the delay. timeout is facter 3 feature. we retested them and its all working for both scenarios.
-`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
-timeout!
-`
-`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
-did not timeout!
-`
-
-We will get the changes in. Thank you</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>5</td>
       
   
   
@@ -1205,60 +1205,60 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
   
       
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>147</td>
       
   
   
   
       
-        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+        <td>mattock</td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>MODULES-10522: Add support for the --condition parameter</td>
       
   
   
   
       
-        <td></td>
+        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
       
   
   
   
       
-        <td>0</td>
+        <td>mattock</td>
       
   
   
   
       
-        <td>0</td>
+        <td>80</td>
       
   
   
   
       
-        <td>true</td>
+        <td>4</td>
       
   
   
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1345,76 +1345,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
-  
-  
-  
-      
-        <td>147</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10522: Add support for the --condition parameter</td>
-      
-  
-  
-  
-      
-        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>80</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
   
   
@@ -1465,6 +1395,76 @@ Thank you.</td>
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1822,12 +1822,12 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416'>416</a></td>
   
   
   
       
-        <td>13</td>
+        <td>21</td>
       
   
   
@@ -1839,19 +1839,21 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>Component installation</td>
+        <td>improve initial installation</td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>> I'll take a look at testing these changes on Ubuntu 18.04 on our internal infrastructure. I would be keen to see the error you got when running the `install_agent` task, from Litmus. If you still have it, or could re-run again to generate it, it would be great if you could share it with us. The IAC Team manages the Litmus project, so we're always keen to address any issues and improve it smiley
+
+i created a new issue for that, see #419 </td>
       
   
   
   
       
-        <td></td>
+        <td>scoopex</td>
       
   
   
@@ -1863,7 +1865,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -1963,38 +1965,36 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416'>416</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
   
   
   
       
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>improve initial installation</td>
-      
-  
-  
-  
-      
-        <td>> I'll take a look at testing these changes on Ubuntu 18.04 on our internal infrastructure. I would be keen to see the error you got when running the `install_agent` task, from Litmus. If you still have it, or could re-run again to generate it, it would be great if you could share it with us. The IAC Team manages the Litmus project, so we're always keen to address any issues and improve it smiley
-
-i created a new issue for that, see #419 </td>
+        <td>13</td>
       
   
   
   
       
         <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>Component installation</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
       
   
   
@@ -2006,7 +2006,7 @@ i created a new issue for that, see #419 </td>
   
   
       
-        <td>2</td>
+        <td>1</td>
       
   
   
@@ -2035,7 +2035,7 @@ i created a new issue for that, see #419 </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/306'>306</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/305'>305</a></td>
   
   
   
@@ -2052,7 +2052,7 @@ i created a new issue for that, see #419 </td>
   
   
       
-        <td>Update json requirement from = 2.1.0 to 2.3.0</td>
+        <td>Bump github_changelog_generator from 20ee04ba1234e9e83eb2ffb5056e23d641c7a018 to 1.15.2</td>
       
   
   
@@ -2105,7 +2105,7 @@ i created a new issue for that, see #419 </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/305'>305</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/306'>306</a></td>
   
   
   
@@ -2122,7 +2122,7 @@ i created a new issue for that, see #419 </td>
   
   
       
-        <td>Bump github_changelog_generator from 20ee04ba1234e9e83eb2ffb5056e23d641c7a018 to 1.15.2</td>
+        <td>Update json requirement from = 2.1.0 to 2.3.0</td>
       
   
   
@@ -2783,6 +2783,152 @@ end
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
+  
+  
+  
+      
+        <td>136</td>
+      
+  
+  
+  
+      
+        <td>justinstoller <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
+      
+  
+  
+  
+      
+        <td>Hi @justinstoller,
+
+Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
+
+With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
+
+cc @binford2k </td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>126</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>172</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>130</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
   
   
@@ -2925,152 +3071,6 @@ If not computed and set up front, then I think the result needs to be cached and
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
-  
-  
-  
-      
-        <td>136</td>
-      
-  
-  
-  
-      
-        <td>justinstoller <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
-      
-  
-  
-  
-      
-        <td>Hi @justinstoller,
-
-Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
-
-With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
-
-cc @binford2k </td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>126</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>172</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>130</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat'>puppetlabs-tomcat</a></td>
   
   
@@ -3097,76 +3097,6 @@ cc @binford2k </td>
   
       
         <td>Allow override status_command in case of use_init</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/463'>463</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Release prep version 3.1.1</td>
       
   
   
