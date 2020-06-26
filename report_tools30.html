@@ -7,14 +7,31 @@
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
 <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
+<script scr="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"></script>
 <script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
 <script type="text/javascript">
     $(document).ready(function() {
     // Setup - add a text input to each footer cell
     $('#tools thead tr th').each( function () {
         var title = $(this).text();
-        $(this).append( '<input class="something" type="text" placeholder="Search" />' );
-    } );
+        if(title == "age"  || title == "pr"){
+          $(this).append( '<input class="something" type="text" placeholder=" "style="width: 30px" />' );
+        }
+
+        else{
+          if(title == "age_comment"  || title == "num_comments"){
+          $(this).append( '<input class="something" type="text" placeholder=" "style="width: 60px" />' );
+        }
+
+        else{
+
+
+        $(this).append( '<input class="something" type="text" placeholder="Search " "style="width: 80px" />' );
+        }
+    }
+
+
+  } );
  
     // DataTable
     var table = $('#tools').DataTable();
@@ -42,6 +59,8 @@
 $(document).on("click", '.show-more a', function(e) {
       e.preventDefault();
       var $this = $(this); 
+      var maxLength = 300;
+      
       var $content = $this.parent().prev("div.content");
       var linkText = $this.text().toUpperCase();    
       if(linkText === "SHOW MORE"){
@@ -59,26 +78,13 @@ $(document).on("click", '.show-more a', function(e) {
 
 </script>
 </head>
-<body>
- <form name="frmSite" style="float: left; margin-top: 5px;"> 
-  <a class="loginPg_choices" href="https://puppetlabs.github.io/community_management/report_tools30.html" onclick="window.location.href = 'https://puppetlabs.github.io/community_management/report_tools30.html'">
-    <input type="radio" name="site" value="1" id="radio_btn_1" style="float: left; clear: both;" />
-    <span style="float: left; margin: 7px 0 0 20px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30 days</span>
-    <br/> 
-  </a>
-  <a class="loginPg_choices" href="https://puppetlabs.github.io/community_management/report_tools60.html"
-    onclick="window.location.href = 'https://puppetlabs.github.io/community_management/report_tools60.html'">
-    <input type="radio" name="site" value="1" id="radio_btn_1" style="float: left; clear: both;" />
-    <span style="float: left; margin: 7px 0 0 20px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60 days</span>
-    <br/> 
-    <a class="loginPg_choices" href="https://puppetlabs.github.io/community_management/report_tools90.html" onclick="window.location.href = 'https://puppetlabs.github.io/community_management/report_tools90.html'">
-    <input type="radio" name="site" value="1" id="radio_btn_1" style="float: left; clear: both;" />
-    <span style="float: left; margin: 7px 0 0 20px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 90 days</span>
-  </a>
-  </form>
+<body> 
 <h1 style="text-align:center;">Tools PRs that require review</h1>
 </div>
 <div style="overflow-x:auto;">
+  <a href="https://puppetlabs.github.io/community_management/report_tools30.html" class="button">30 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report_tools60.html" class="button">60 Days</a>
+ <a href="https://puppetlabs.github.io/community_management/report_tools90.html" class="button">90 Days</a>
 <table data-role='table' data-mode='columntoggle' border='1' id='tools' style='width:relative' class='sortable table table-hover ui-responsive table-stroke'> 
 <thead>
   <tr>
@@ -159,7 +165,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>1290</td>
+        <td>1291</td>
       
   
   
@@ -252,106 +258,6 @@ $(document).on("click", '.show-more a', function(e) {
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/793'>793</a></td>
-  
-  
-  
-
-  
-      
-        <td>59</td>
-      
-  
-  
-  
-
-  
-      
-        <td>ekinanp <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add support for trusted external data</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Sounds good. We should change future docs to reference this as trusted_external instead of external_trusted b/c the docs was where I was going off of when naming this stuff.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>ekinanp</td>
-      
-  
-  
-  
-
-  
-      
-        <td>59</td>
-      
-  
-  
-  
-
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
   
   
@@ -405,7 +311,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>50</td>
+        <td>51</td>
       
   
   
