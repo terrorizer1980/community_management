@@ -1,0 +1,169 @@
+<html>
+   <head>
+      <link href='./web_libraries/c3-0.7.15/c3.css' rel='stylesheet'>
+      <script src='./web_libraries/jquery.min.js'></script>
+      <script src="https://d3js.org/d3.v5.min.js"></script>
+      <script src='./web_libraries/c3-0.7.15/c3.js'></script>
+      <style type="text/css">
+         .flex-container {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         }
+         
+
+      </style>
+   </head>
+   <body>
+      <h1 style="text-align:center">Module PR work</h1>
+      <div class="flex-container">
+         <h2 style="text-align:center">PR Work Done:</h2>
+         <div id="chart" style="position:relative; width: 45%; height: 400px;display: inline-block;">
+            <script type = "text/javascript">
+               weeks_data=['weeks'];
+               commented_data=['commented'];
+               merged_data=['merged']
+               closed_data=['closed']
+
+                // graph_data.push('weeks');
+              
+              d3.csv('https://puppetlabs.github.io/community_management/pr_work_done.csv', function(data){
+
+               if (data != undefined ){
+                weeks_data.push(data['week ending on']);
+                commented_data.push(Number(data['commented']));
+                merged_data.push(Number(data['merged']));
+                closed_data.push(Number(data['closed']))
+
+                     }
+                 
+                console.log(weeks_data);
+                console.log(commented_data);
+                console.log(merged_data);
+                
+               
+              });
+
+
+                setTimeout(function(){
+
+ 
+               var chart = c3.generate({
+               bindto: '#chart',
+                 data: {
+                  type:'bar',
+                  columns:[
+             weeks_data,
+             commented_data,
+             merged_data,  
+             closed_data,                 
+                  ],
+                  x: 'weeks'
+               // url: 'https://puppetlabs.github.io/community_management/pr_work_done.csv'
+                 },
+                 axis: {
+        x: {
+            type: 'timeseries',
+            tick: {
+                format: '%Y-%m-%d'
+            }
+        }
+    }
+               })}, 1000);
+            </script>
+         </div>
+         <p style="text-align:center"><a href="pr_work_done.csv">CSV</a></p>
+         <br>
+         <br>
+         <h2 style="text-align:center">PRs Created Per Day:</h2>
+         <div id="chart1" style="position:relative; width: 45%; height: 400px;display: inline-block;">
+          <script type = "text/javascript">
+               weeks_data1=['date'];
+               commented_data1=['puppet'];
+               merged_data1=['community']
+
+                // graph_data.push('weeks');
+              
+              d3.csv('https://puppetlabs.github.io/community_management/created_per_day.csv', function(data){
+
+               if (data != undefined ){
+                weeks_data1.push(data['date']);
+                commented_data1.push(Number(data['puppet']));
+                merged_data1.push(Number(data['community']));
+
+                     }
+                 
+                // console.log(weeks_data);
+                // console.log(commented_data);
+                // console.log(merged_data);
+                
+               
+              });
+
+
+                setTimeout(function(){
+
+ 
+               var chart = c3.generate({
+               bindto: '#chart1',
+                 data: {
+                  columns:[
+             weeks_data1,
+             commented_data1,
+             merged_data1,                   
+                  ],
+
+
+                  x: 'date'
+               // url: 'https://puppetlabs.github.io/community_management/pr_work_done.csv'
+                 },
+                 axis: {
+
+                   y : {
+            min : 0,
+            padding : {
+              bottom : 0
+            }
+        },
+        x: {
+            type: 'timeseries',
+            tick: {
+                format: '%Y-%m-%d'
+            }
+        }
+
+       
+
+    }
+               })}, 1000);
+         
+            </script>
+         </div>
+         <p style="text-align:center"><a href="created_per_day.csv">CSV</a></p>
+         <br>
+         <br>
+         <h2 style="text-align:center">PRs Currently Open:</h2>
+         <div id="chart2" style="position:relative; width: 45%; height: 400px;display: inline-block;">
+            <script type = "text/javascript">
+               var chart1 = c3.generate({
+               bindto: '#chart2',
+                 data: {
+               url: 'https://puppetlabs.github.io/community_management/daily_open_prs.csv',
+               type : 'donut',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    },
+    donut: {
+        title: "PRs currently open"
+    }
+
+                 
+               });
+            </script>
+         </div>
+         <p style="text-align:center"><a href="daily_open_prs.csv">CSV</a></p>
+      </div>
+   </body>
+</html>
