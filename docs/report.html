@@ -272,69 +272,60 @@
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/123'>123</a></td>
   
   
   
       
-        <td>85</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
+        <td>0</td>
       
   
   
   
       
-        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>> Hi @reenberg! Let me know if you need some help! Cheers!
-
-Thanks for bumping this back up.
-
-I talked quite a bit with @DavidS on slack, but he didn't have the time back then to look at it.  
-Guess corona got me to totally forget about this one, as I initially was waiting for some pointers as to whether this PR would be even remotely accepted.  The `get_image_os_release_facts` is somewhat of a change, but as I talked to David about, then the other provisioners could benefit if implementing something like it.  Especially as higher level tasks could then use this information.
-
-He also pointed me towards `docker_exp`, but I totally forgot to have a look at that.
-
-Should I take it, that if I rebase it to master, and fix the failing tests, then this could be accepted?</td>
+        <td>Make use of ABS Priority Queuing</td>
       
   
   
   
       
-        <td>reenberg</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>28</td>
+        <td></td>
       
   
   
   
       
-        <td>3</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>0</td>
       
   
   
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -421,12 +412,91 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
+  
+  
+  
+      
+        <td>85</td>
+      
+  
+  
+  
+      
+        <td>reenberg</td>
+      
+  
+  
+  
+      
+        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
+      
+  
+  
+  
+      
+        <td>> Hi @reenberg! Let me know if you need some help! Cheers!
+
+Thanks for bumping this back up.
+
+I talked quite a bit with @DavidS on slack, but he didn't have the time back then to look at it.  
+Guess corona got me to totally forget about this one, as I initially was waiting for some pointers as to whether this PR would be even remotely accepted.  The `get_image_os_release_facts` is somewhat of a change, but as I talked to David about, then the other provisioners could benefit if implementing something like it.  Especially as higher level tasks could then use this information.
+
+He also pointed me towards `docker_exp`, but I totally forgot to have a look at that.
+
+Should I take it, that if I rebase it to master, and fix the failing tests, then this could be accepted?</td>
+      
+  
+  
+  
+      
+        <td>reenberg</td>
+      
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
   
   
   
       
-        <td>148</td>
+        <td>149</td>
       
   
   
@@ -477,165 +547,6 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/123'>123</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Make use of ABS Priority Queuing</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2021'>2021</a></td>
-  
-  
-  
-      
-        <td>58</td>
-      
-  
-  
-  
-      
-        <td>farebers</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10586 Centos 8: wrong package used to install mod_authnz_ldap</td>
-      
-  
-  
-  
-      
-        <td>Hi @farebers,
-
-Firstly, thank you for the fix and highlighting the gap in the test coverage to capture this. As you pointed out, the unit tests did not catch this failure. We can certainly extend `spec/classes/mod/authnz_ldap_spec.rb` to verify that we are using the correct package name on RHEL systems based on their major versions, but, unfortunately this will not catch the failure until the manifest is actually compiled on an OS. 
-
-I think the best thing is to to add an acceptance test for this particular scenario in a file called `spec/acceptance/mod_authnz_ldap_spec.rb`, something along the lines of this:
-
-```ruby
-require 'spec_helper_acceptance'
-apache_hash = apache_settings_hash
-
-describe 'apache::mod_authnz_ldap' do
-  context 'Default mod_authnz_ldap module installation' do
-    pp =  6
-          it { is_expected.to contain_package('mod_ldap')}
-        end
-```
-
-...but there's a few issues I'm running in to with this approach.
-
-I think the path of least resistance would be to add an acceptance test, similar to above. Let me know if I can be of any further help.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>56</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -757,7 +668,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -770,6 +681,95 @@ I think the path of least resistance would be to add an acceptance test, similar
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2021'>2021</a></td>
+  
+  
+  
+      
+        <td>58</td>
+      
+  
+  
+  
+      
+        <td>farebers</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10586 Centos 8: wrong package used to install mod_authnz_ldap</td>
+      
+  
+  
+  
+      
+        <td>Hi @farebers,
+
+Firstly, thank you for the fix and highlighting the gap in the test coverage to capture this. As you pointed out, the unit tests did not catch this failure. We can certainly extend `spec/classes/mod/authnz_ldap_spec.rb` to verify that we are using the correct package name on RHEL systems based on their major versions, but, unfortunately this will not catch the failure until the manifest is actually compiled on an OS. 
+
+I think the best thing is to to add an acceptance test for this particular scenario in a file called `spec/acceptance/mod_authnz_ldap_spec.rb`, something along the lines of this:
+
+```ruby
+require 'spec_helper_acceptance'
+apache_hash = apache_settings_hash
+
+describe 'apache::mod_authnz_ldap' do
+  context 'Default mod_authnz_ldap module installation' do
+    pp =  6
+          it { is_expected.to contain_package('mod_ldap')}
+        end
+```
+
+...but there's a few issues I'm running in to with this approach.
+
+I think the path of least resistance would be to add an acceptance test, similar to above. Let me know if I can be of any further help.</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>56</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -940,6 +940,76 @@ We will get the changes in. Thank you</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
+  
+  
+  
+      
+        <td>172</td>
+      
+  
+  
+  
+      
+        <td>matthanley</td>
+      
+  
+  
+  
+      
+        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
+      
+  
+  
+  
+      
+        <td>@matthanley Could you try rebasing your work onto the master to see if that fixes the travis failures?</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>81</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
   
   
@@ -982,76 +1052,6 @@ We will get the changes in. Thank you</td>
   
       
         <td>7</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
-  
-  
-  
-      
-        <td>171</td>
-      
-  
-  
-  
-      
-        <td>matthanley</td>
-      
-  
-  
-  
-      
-        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
-      
-  
-  
-  
-      
-        <td>@matthanley Could you try rebasing your work onto the master to see if that fixes the travis failures?</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>80</td>
-      
-  
-  
-  
-      
-        <td>4</td>
       
   
   
@@ -1432,78 +1432,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
-  
-  
-  
-      
-        <td>20</td>
-      
-  
-  
-  
-      
-        <td>mnejedlo-tds</td>
-      
-  
-  
-  
-      
-        <td>fix parsing of '! --hex-string' from iptables-save</td>
-      
-  
-  
-  
-      
-        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please add unit tests to verify the change.
-(https://github.com/puppetlabs/puppetlabs-firewall/blob/master/spec/fixtures/iptables/conversion_hash.rb#L724)
-Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
@@ -1632,13 +1560,85 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
       
-        <td>91</td>
+        <td>92</td>
       
   
   
   
       
         <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
+  
+  
+  
+      
+        <td>20</td>
+      
+  
+  
+  
+      
+        <td>mnejedlo-tds</td>
+      
+  
+  
+  
+      
+        <td>fix parsing of '! --hex-string' from iptables-save</td>
+      
+  
+  
+  
+      
+        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please add unit tests to verify the change.
+(https://github.com/puppetlabs/puppetlabs-firewall/blob/master/spec/fixtures/iptables/conversion_hash.rb#L724)
+Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -1944,7 +1944,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -1984,7 +1984,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -2014,7 +2014,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -2121,76 +2121,6 @@ i created a new issue for that, see #419 </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>Component installation</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/418'>418</a></td>
   
   
@@ -2227,13 +2157,83 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
   
       
         <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>Component installation</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -2262,7 +2262,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/305'>305</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/306'>306</a></td>
   
   
   
@@ -2279,7 +2279,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>Bump github_changelog_generator from 20ee04ba1234e9e83eb2ffb5056e23d641c7a018 to 1.15.2</td>
+        <td>Update json requirement from = 2.1.0 to 2.3.0</td>
       
   
   
@@ -2332,7 +2332,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/306'>306</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/305'>305</a></td>
   
   
   
@@ -2349,7 +2349,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>Update json requirement from = 2.1.0 to 2.3.0</td>
+        <td>Bump github_changelog_generator from 20ee04ba1234e9e83eb2ffb5056e23d641c7a018 to 1.15.2</td>
       
   
   
@@ -2477,7 +2477,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>101</td>
+        <td>102</td>
       
   
   
@@ -2490,6 +2490,146 @@ So probably you can fix potential acceptance test problems to get these useful c
   
       
         <td>(WIP, IAC-615) test avoiding parallelism</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/200'>200</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>fhrbek <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-908) Add support for package status in Windows</td>
+      
+  
+  
+  
+      
+        <td>Thank you @fhrbek for submitting the PR. Reviewing the PR now. Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/192'>192</a></td>
+  
+  
+  
+      
+        <td>74</td>
+      
+  
+  
+  
+      
+        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-677) improve acceptance test platform coverage</td>
       
   
   
@@ -2560,146 +2700,6 @@ So probably you can fix potential acceptance test problems to get these useful c
   
       
         <td>(IAC-696) Remove windows2008 from release checks.</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/200'>200</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>fhrbek <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-908) Add support for package status in Windows</td>
-      
-  
-  
-  
-      
-        <td>Thank you @fhrbek for submitting the PR. Reviewing the PR now. Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/192'>192</a></td>
-  
-  
-  
-      
-        <td>73</td>
-      
-  
-  
-  
-      
-        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-677) improve acceptance test platform coverage</td>
       
   
   
@@ -3150,76 +3150,6 @@ end
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/123'>123</a></td>
-  
-  
-  
-      
-        <td>126</td>
-      
-  
-  
-  
-      
-        <td>fxbe</td>
-      
-  
-  
-  
-      
-        <td>replace puppet[:compatibility] with function call compatibility since…</td>
-      
-  
-  
-  
-      
-        <td>@fxbe Just checking in to see how your doing with this and whether you need any help?</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>85</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/138'>138</a></td>
   
   
@@ -3282,7 +3212,7 @@ end
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
   
   
   
@@ -3290,54 +3220,48 @@ end
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/123'>123</a></td>
   
   
   
       
-        <td>476</td>
-      
-  
-  
-  
-      
-        <td>Rathios</td>
+        <td>126</td>
       
   
   
   
       
-        <td>(MODULES-8732) Cron types</td>
+        <td>fxbe</td>
       
   
   
   
       
-        <td>Hi @Rathios,
-
-Thank you for your contribution, this looks really great!
-
-This would be better suited to the core cron module: https://github.com/puppetlabs/puppetlabs-cron_core
-
-If you submit it there, please ping me on the PR so I can make sure it gets merged quickly. </td>
+        <td>replace puppet[:compatibility] with function call compatibility since…</td>
       
   
   
   
       
-        <td>carabasdaniel</td>
+        <td>@fxbe Just checking in to see how your doing with this and whether you need any help?</td>
       
   
   
   
       
-        <td>140</td>
+        <td>david22swan</td>
       
   
   
   
       
-        <td>10</td>
+        <td>85</td>
+      
+  
+  
+  
+      
+        <td>2</td>
       
   
   
@@ -3442,76 +3366,6 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>171</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>130</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
   
   
@@ -3558,6 +3412,152 @@ If not computed and set up front, then I think the result needs to be cached and
   
       
         <td>7</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
+  
+  
+  
+      
+        <td>476</td>
+      
+  
+  
+  
+      
+        <td>Rathios</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-8732) Cron types</td>
+      
+  
+  
+  
+      
+        <td>Hi @Rathios,
+
+Thank you for your contribution, this looks really great!
+
+This would be better suited to the core cron module: https://github.com/puppetlabs/puppetlabs-cron_core
+
+If you submit it there, please ping me on the PR so I can make sure it gets merged quickly. </td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel</td>
+      
+  
+  
+  
+      
+        <td>140</td>
+      
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>171</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>I've started some work to finalise this in https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api and https://tickets.puppetlabs.com/browse/IAC-114</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>130</td>
+      
+  
+  
+  
+      
+        <td>2</td>
       
   
   
