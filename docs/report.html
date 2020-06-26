@@ -1,10 +1,13 @@
 <html>
-<title>PRs that require review</title>
+<title>Module PRs that require review</title>
 <head>
+<link rel="stylesheet" type="text/css" href="reviews.css">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
 <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
 <script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script type="text/javascript">
   $.fn.dataTable.ext.search.push(
@@ -31,13 +34,26 @@
         table.draw();
     } );
 } );
- 
     $(document).ready(function() {
     // Setup - add a text input to each footer cell
-    $('#reviews thead tr td').each( function () {
+    $('#reviews thead tr th').each( function () {
         var title = $(this).text();
-        $(this).append( '<input class="something" type="text" placeholder="Search '+title+'" />' );
-    } );
+        if(title == "age"  || title == "pr"){
+          $(this).append( '<input class="something" type="text" placeholder=" "style="width: 30px" />' );
+        }
+         else{
+          if(title == "age_comment"  || title == "num_comments"){
+          $(this).append( '<input class="something" type="text" placeholder=" "style="width: 60px" />' );
+        }
+
+        else{
+
+
+        $(this).append( '<input class="something" type="text" placeholder="Search " "style="width: 80px" />' );
+        }
+    }
+    
+  } );
  
     // DataTable
     var table = $('#reviews').DataTable();
@@ -61,135 +77,102 @@
       e.preventDefault();
     })
 } );
+
+$(document).on("click", '.show-more a', function(e) {
+      e.preventDefault();
+      var $this = $(this); 
+      var maxLength = 300;
+      
+      var $content = $this.parent().prev("div.content");
+      var linkText = $this.text().toUpperCase();    
+      if(linkText === "SHOW MORE"){
+         linkText = "Show less";
+         $content.removeClass('hideContent');
+         $content.addClass('showContent');
+      } else {
+         linkText = "Show more";
+         $content.removeClass('showContent');
+         $content.addClass('hideContent');
+      };
+
+      $this.text(linkText);
+   });
+
 </script>
-<style>
-   .button {
-         background-color: #ddd;
-         border: none;
-         color: white;
-         padding: 10px 20px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 20px;
-         margin: 4px 2px;
-         cursor: pointer;
-         }
-
-
-         .btn {
-  border: none;
-  background-color: inherit;
-  padding: 10px 10px;
-  font-size: 14px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.btn:hover {background: #eee;}
-
-.minim_button {color: grey;}
-
-.maxim_button {color: grey;}
-
-
-#reviews {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-   font-size: 18px;
-  border-collapse: collapse;
-  width: 50%;
-
-
-}
-.word_break {
-  word-break: break-all;
-  width: auto;
-}
-#reviews td, #reviews th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#reviews tr:nth-child(even){background-color: #f2f2f2;
-
- }
-
-#reviews tr:hover {background-color: #ddd;
- }
-
-#reviews th {
-  padding-top: 9px;
-  padding-bottom: 9px;
-  text-align: left;
-  background-color: #cfcfcf;
-  color: black;
- 
-}
-  </style>
 </head>
 <body>
 <h1>Modules PRs that require review</h1>
+<div style="overflow-x:auto;">
  <a href="https://puppetlabs.github.io/community_management/report30.html" class="button">30 Days</a>
  <a href="https://puppetlabs.github.io/community_management/report60.html" class="button">60 Days</a>
  <a href="https://puppetlabs.github.io/community_management/report90.html" class="button">90 Days</a>
  <table border="0" cellspacing="3" cellpadding="3">
         <tbody><tr>
-            <button class="btn minim_button">Minimum:</button>
-            <button><input type="text" id="min" name="min"></button>  
-            <button class="btn maxim_button">Maximum:</button>
-            <button><input type="text" id="max" name="max"></button>
+            <tbody><tr>
+            <td>Minimum age:</td>
+            <td><input type="text" id="min" name="min"></td>
+        </tr>
+        <tr>
+            <td>Maximum age:</td>
+            <td><input type="text" id="max" name="max"></td>
+        </tr>
+    </tbody>
+           
     </tbody></table><table id="example" class="display" style="width:100%">
-<table border='1' id='reviews' style='width:100%' class='sortable table table-hover'> 
+      <table data-role='table' data-mode='columntoggle' border='1' id='reviews' style='width:relative' class='sortable table table-hover ui-responsive table-stroke'> 
+<thead> 
 <tr>
-
   
-    <td> repo</td> 
+      
+        
+           <th>repo</th> 
+        
+      
+        
+      
+        
+           <th>pr</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">age</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">owner</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">title</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">last_comment</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">by</th> 
+        
+      
+        
+           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">age_comment</th>
+        
+      
+        
+           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">num_comments</th>
+        
+      
+        
+           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">no_comment_from_puppet</th>
+        
+      
+        
+           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">last_comment_mentions_puppet</th>
+        
+      
    
-
-   
-
-  
-    <td> pr</td> 
-   
-
-  
-    <td> age</td> 
-   
-
-  
-    <td> owner</td> 
-   
-
-  
-    <td> title</td> 
-   
-
-  
-    <td> last_comment</td> 
-   
-
-  
-    <td> by</td> 
-   
-
-  
-    <td> age_comment</td> 
-   
-
-  
-    <td> num_comments</td> 
-   
-
-  
-    <td> no_comment_from_puppet</td> 
-   
-
-  
-    <td> last_comment_mentions_puppet</td> 
-   
-
 </tr>
-
+</thead>
 
   <tr>
   
@@ -207,7 +190,7 @@
   
   
       
-        <td>135</td>
+        <td>136</td>
       
   
   
@@ -237,83 +220,13 @@
   
   
       
-        <td>135</td>
+        <td>136</td>
       
   
   
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/123'>123</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Make use of ABS Priority Queuing</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
       
   
   
@@ -412,12 +325,154 @@
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/123'>123</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Make use of ABS Priority Queuing</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
+  
+  
+  
+      
+        <td>149</td>
+      
+  
+  
+  
+      
+        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Strip slashes from directories</td>
+      
+  
+  
+  
+      
+        <td>@dylanratcliffe looks like the tests are failing - would you mind addressing those?
+
+https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
   
   
   
       
-        <td>85</td>
+        <td>86</td>
       
   
   
@@ -483,7 +538,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
   
   
   
@@ -491,44 +546,61 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2021'>2021</a></td>
   
   
   
       
-        <td>149</td>
-      
-  
-  
-  
-      
-        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
+        <td>58</td>
       
   
   
   
       
-        <td>Strip slashes from directories</td>
+        <td>farebers</td>
       
   
   
   
       
-        <td>@dylanratcliffe looks like the tests are failing - would you mind addressing those?
+        <td>MODULES-10586 Centos 8: wrong package used to install mod_authnz_ldap</td>
+      
+  
+  
+  
+      
+        <td>Hi @farebers,
 
-https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
+Firstly, thank you for the fix and highlighting the gap in the test coverage to capture this. As you pointed out, the unit tests did not catch this failure. We can certainly extend `spec/classes/mod/authnz_ldap_spec.rb` to verify that we are using the correct package name on RHEL systems based on their major versions, but, unfortunately this will not catch the failure until the manifest is actually compiled on an OS. 
+
+I think the best thing is to to add an acceptance test for this particular scenario in a file called `spec/acceptance/mod_authnz_ldap_spec.rb`, something along the lines of this:
+
+```ruby
+require 'spec_helper_acceptance'
+apache_hash = apache_settings_hash
+
+describe 'apache::mod_authnz_ldap' do
+  context 'Default mod_authnz_ldap module installation' do
+    pp =  6
+          it { is_expected.to contain_package('mod_ldap')}
+        end
+```
+
+...but there's a few issues I'm running in to with this approach.
+
+I think the path of least resistance would be to add an acceptance test, similar to above. Let me know if I can be of any further help.</td>
       
   
   
   
       
-        <td>michaeltlombardi</td>
+        <td>sanfrancrisko</td>
       
   
   
   
       
-        <td>0</td>
+        <td>57</td>
       
   
   
@@ -546,7 +618,77 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   
   
       
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2036'>2036</a></td>
+  
+  
+  
+      
+        <td>22</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-824) Ability to exclude Apache MOD tests from unsupported platforms</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>21</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -625,165 +767,6 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2036'>2036</a></td>
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-824) Ability to exclude Apache MOD tests from unsupported platforms</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2021'>2021</a></td>
-  
-  
-  
-      
-        <td>58</td>
-      
-  
-  
-  
-      
-        <td>farebers</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10586 Centos 8: wrong package used to install mod_authnz_ldap</td>
-      
-  
-  
-  
-      
-        <td>Hi @farebers,
-
-Firstly, thank you for the fix and highlighting the gap in the test coverage to capture this. As you pointed out, the unit tests did not catch this failure. We can certainly extend `spec/classes/mod/authnz_ldap_spec.rb` to verify that we are using the correct package name on RHEL systems based on their major versions, but, unfortunately this will not catch the failure until the manifest is actually compiled on an OS. 
-
-I think the best thing is to to add an acceptance test for this particular scenario in a file called `spec/acceptance/mod_authnz_ldap_spec.rb`, something along the lines of this:
-
-```ruby
-require 'spec_helper_acceptance'
-apache_hash = apache_settings_hash
-
-describe 'apache::mod_authnz_ldap' do
-  context 'Default mod_authnz_ldap module installation' do
-    pp =  6
-          it { is_expected.to contain_package('mod_ldap')}
-        end
-```
-
-...but there's a few issues I'm running in to with this approach.
-
-I think the path of least resistance would be to add an acceptance test, similar to above. Let me know if I can be of any further help.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>56</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-chocolatey'>puppetlabs-chocolatey</a></td>
   
   
@@ -797,7 +780,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>115</td>
+        <td>116</td>
       
   
   
@@ -827,91 +810,13 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
   
       
         <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
-  
-  
-  
-      
-        <td>223</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
-      
-  
-  
-  
-      
-        <td>@mgrzybowski Apologies for the delay. timeout is facter 3 feature. we retested them and its all working for both scenarios.
-`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
-timeout!
-`
-`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
-did not timeout!
-`
-
-We will get the changes in. Thank you</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>5</td>
       
   
   
@@ -1045,7 +950,7 @@ We will get the changes in. Thank you</td>
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -1080,12 +985,90 @@ We will get the changes in. Thank you</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+  
+  
+  
+      
+        <td>224</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+      
+  
+  
+  
+      
+        <td>@mgrzybowski Apologies for the delay. timeout is facter 3 feature. we retested them and its all working for both scenarios.
+`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
+timeout!
+`
+`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
+did not timeout!
+`
+
+We will get the changes in. Thank you</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>16</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/307'>307</a></td>
   
   
   
       
-        <td>689</td>
+        <td>690</td>
       
   
   
@@ -1155,7 +1138,7 @@ We will get the changes in. Thank you</td>
   
   
       
-        <td>44</td>
+        <td>45</td>
       
   
   
@@ -1225,7 +1208,7 @@ We will get the changes in. Thank you</td>
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -1257,7 +1240,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -1297,7 +1280,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
@@ -1367,7 +1350,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>24</td>
+        <td>25</td>
       
   
   
@@ -1432,48 +1415,50 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
   
   
   
       
-        <td>147</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
+        <td>21</td>
       
   
   
   
       
-        <td>MODULES-10522: Add support for the --condition parameter</td>
+        <td>mnejedlo-tds</td>
       
   
   
   
       
-        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
+        <td>fix parsing of '! --hex-string' from iptables-save</td>
       
   
   
   
       
-        <td>mattock</td>
+        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please add unit tests to verify the change.
+(https://github.com/puppetlabs/puppetlabs-firewall/blob/master/spec/fixtures/iptables/conversion_hash.rb#L724)
+Thank you.</td>
       
   
   
   
       
-        <td>79</td>
+        <td>sheenaajay</td>
       
   
   
   
       
-        <td>4</td>
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -1485,7 +1470,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -1507,7 +1492,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>93</td>
+        <td>94</td>
       
   
   
@@ -1595,50 +1580,48 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
   
       
-        <td>20</td>
-      
-  
-  
-  
-      
-        <td>mnejedlo-tds</td>
+        <td>147</td>
       
   
   
   
       
-        <td>fix parsing of '! --hex-string' from iptables-save</td>
+        <td>mattock</td>
       
   
   
   
       
-        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please add unit tests to verify the change.
-(https://github.com/puppetlabs/puppetlabs-firewall/blob/master/spec/fixtures/iptables/conversion_hash.rb#L724)
-Thank you.</td>
+        <td>MODULES-10522: Add support for the --condition parameter</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
       
   
   
   
       
-        <td>1</td>
+        <td>mattock</td>
       
   
   
   
       
-        <td>1</td>
+        <td>80</td>
+      
+  
+  
+  
+      
+        <td>4</td>
       
   
   
@@ -1650,7 +1633,7 @@ Thank you.</td>
   
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -1672,7 +1655,7 @@ Thank you.</td>
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -1874,7 +1857,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>21</td>
+        <td>22</td>
       
   
   
@@ -1914,7 +1897,7 @@ I think for now we should keep the possibility to install either version, for no
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -2049,38 +2032,36 @@ I think for now we should keep the possibility to install either version, for no
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416'>416</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
   
   
   
       
-        <td>20</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>improve initial installation</td>
-      
-  
-  
-  
-      
-        <td>> I'll take a look at testing these changes on Ubuntu 18.04 on our internal infrastructure. I would be keen to see the error you got when running the `install_agent` task, from Litmus. If you still have it, or could re-run again to generate it, it would be great if you could share it with us. The IAC Team manages the Litmus project, so we're always keen to address any issues and improve it smiley
-
-i created a new issue for that, see #419 </td>
+        <td>13</td>
       
   
   
   
       
         <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>Component installation</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
       
   
   
@@ -2092,7 +2073,7 @@ i created a new issue for that, see #419 </td>
   
   
       
-        <td>2</td>
+        <td>1</td>
       
   
   
@@ -2192,12 +2173,12 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416'>416</a></td>
   
   
   
       
-        <td>13</td>
+        <td>20</td>
       
   
   
@@ -2209,19 +2190,21 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>Component installation</td>
+        <td>improve initial installation</td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>> I'll take a look at testing these changes on Ubuntu 18.04 on our internal infrastructure. I would be keen to see the error you got when running the `install_agent` task, from Litmus. If you still have it, or could re-run again to generate it, it would be great if you could share it with us. The IAC Team manages the Litmus project, so we're always keen to address any issues and improve it smiley
+
+i created a new issue for that, see #419 </td>
       
   
   
   
       
-        <td></td>
+        <td>scoopex</td>
       
   
   
@@ -2233,7 +2216,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -2262,12 +2245,12 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/306'>306</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/305'>305</a></td>
   
   
   
       
-        <td>44</td>
+        <td>45</td>
       
   
   
@@ -2279,7 +2262,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>Update json requirement from = 2.1.0 to 2.3.0</td>
+        <td>Bump github_changelog_generator from 20ee04ba1234e9e83eb2ffb5056e23d641c7a018 to 1.15.2</td>
       
   
   
@@ -2332,12 +2315,12 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/305'>305</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/306'>306</a></td>
   
   
   
       
-        <td>44</td>
+        <td>45</td>
       
   
   
@@ -2349,7 +2332,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>Bump github_changelog_generator from 20ee04ba1234e9e83eb2ffb5056e23d641c7a018 to 1.15.2</td>
+        <td>Update json requirement from = 2.1.0 to 2.3.0</td>
       
   
   
@@ -2407,7 +2390,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>246</td>
+        <td>247</td>
       
   
   
@@ -2542,76 +2525,6 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/200'>200</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>fhrbek <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-908) Add support for package status in Windows</td>
-      
-  
-  
-  
-      
-        <td>Thank you @fhrbek for submitting the PR. Reviewing the PR now. Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/192'>192</a></td>
   
   
@@ -2674,76 +2587,6 @@ So probably you can fix potential acceptance test problems to get these useful c
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/202'>202</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-696) Remove windows2008 from release checks.</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos'>puppetlabs-panos</a></td>
   
   
@@ -2757,7 +2600,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>98</td>
+        <td>99</td>
       
   
   
@@ -3038,7 +2881,7 @@ and unit tests:[ puppetlabs-postgresql/spec/unit/defines/server](https://github.
   
   
       
-        <td>64</td>
+        <td>65</td>
       
   
   
@@ -3290,12 +3133,88 @@ end
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
+  
+  
+  
+      
+        <td>476</td>
+      
+  
+  
+  
+      
+        <td>Rathios</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-8732) Cron types</td>
+      
+  
+  
+  
+      
+        <td>Hi @Rathios,
+
+Thank you for your contribution, this looks really great!
+
+This would be better suited to the core cron module: https://github.com/puppetlabs/puppetlabs-cron_core
+
+If you submit it there, please ping me on the PR so I can make sure it gets merged quickly. </td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel</td>
+      
+  
+  
+  
+      
+        <td>140</td>
+      
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
   
       
-        <td>135</td>
+        <td>136</td>
       
   
   
@@ -3440,88 +3359,12 @@ If not computed and set up front, then I think the result needs to be cached and
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1004'>1004</a></td>
-  
-  
-  
-      
-        <td>476</td>
-      
-  
-  
-  
-      
-        <td>Rathios</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-8732) Cron types</td>
-      
-  
-  
-  
-      
-        <td>Hi @Rathios,
-
-Thank you for your contribution, this looks really great!
-
-This would be better suited to the core cron module: https://github.com/puppetlabs/puppetlabs-cron_core
-
-If you submit it there, please ping me on the PR so I can make sure it gets merged quickly. </td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel</td>
-      
-  
-  
-  
-      
-        <td>140</td>
-      
-  
-  
-  
-      
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
   
       
-        <td>171</td>
+        <td>172</td>
       
   
   
@@ -3661,7 +3504,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
@@ -3731,7 +3574,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>35</td>
+        <td>36</td>
       
   
   
@@ -3801,7 +3644,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>153</td>
+        <td>154</td>
       
   
   
@@ -3831,7 +3674,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -3855,6 +3698,7 @@ If you submit it there, please ping me on the PR so I can make sure it gets merg
   
   </tr>
  
+</div>
 </table>
 </body>
 </html>

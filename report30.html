@@ -1,10 +1,13 @@
 <html>
-<title>PRs that require review</title>
+<title>Module PRs that require review</title>
 <head>
+<link rel="stylesheet" type="text/css" href="reviews.css">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src='./web_libraries/jquery.min.js' type='text/javascript'></script>
 <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
 <script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script type="text/javascript">
   $.fn.dataTable.ext.search.push(
@@ -31,13 +34,26 @@
         table.draw();
     } );
 } );
- 
     $(document).ready(function() {
     // Setup - add a text input to each footer cell
-    $('#reviews thead tr td').each( function () {
+    $('#reviews thead tr th').each( function () {
         var title = $(this).text();
-        $(this).append( '<input class="something" type="text" placeholder="Search '+title+'" />' );
-    } );
+        if(title == "age"  || title == "pr"){
+          $(this).append( '<input class="something" type="text" placeholder=" "style="width: 30px" />' );
+        }
+         else{
+          if(title == "age_comment"  || title == "num_comments"){
+          $(this).append( '<input class="something" type="text" placeholder=" "style="width: 60px" />' );
+        }
+
+        else{
+
+
+        $(this).append( '<input class="something" type="text" placeholder="Search " "style="width: 80px" />' );
+        }
+    }
+    
+  } );
  
     // DataTable
     var table = $('#reviews').DataTable();
@@ -61,135 +77,102 @@
       e.preventDefault();
     })
 } );
+
+$(document).on("click", '.show-more a', function(e) {
+      e.preventDefault();
+      var $this = $(this); 
+      var maxLength = 300;
+      
+      var $content = $this.parent().prev("div.content");
+      var linkText = $this.text().toUpperCase();    
+      if(linkText === "SHOW MORE"){
+         linkText = "Show less";
+         $content.removeClass('hideContent');
+         $content.addClass('showContent');
+      } else {
+         linkText = "Show more";
+         $content.removeClass('showContent');
+         $content.addClass('hideContent');
+      };
+
+      $this.text(linkText);
+   });
+
 </script>
-<style>
-   .button {
-         background-color: #ddd;
-         border: none;
-         color: white;
-         padding: 10px 20px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 20px;
-         margin: 4px 2px;
-         cursor: pointer;
-         }
-
-
-         .btn {
-  border: none;
-  background-color: inherit;
-  padding: 10px 10px;
-  font-size: 14px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.btn:hover {background: #eee;}
-
-.minim_button {color: grey;}
-
-.maxim_button {color: grey;}
-
-
-#reviews {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-   font-size: 18px;
-  border-collapse: collapse;
-  width: 50%;
-
-
-}
-.word_break {
-  word-break: break-all;
-  width: auto;
-}
-#reviews td, #reviews th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#reviews tr:nth-child(even){background-color: #f2f2f2;
-
- }
-
-#reviews tr:hover {background-color: #ddd;
- }
-
-#reviews th {
-  padding-top: 9px;
-  padding-bottom: 9px;
-  text-align: left;
-  background-color: #cfcfcf;
-  color: black;
- 
-}
-  </style>
 </head>
 <body>
 <h1>Modules PRs that require review</h1>
+<div style="overflow-x:auto;">
  <a href="https://puppetlabs.github.io/community_management/report30.html" class="button">30 Days</a>
  <a href="https://puppetlabs.github.io/community_management/report60.html" class="button">60 Days</a>
  <a href="https://puppetlabs.github.io/community_management/report90.html" class="button">90 Days</a>
  <table border="0" cellspacing="3" cellpadding="3">
         <tbody><tr>
-            <button class="btn minim_button">Minimum:</button>
-            <button><input type="text" id="min" name="min"></button>  
-            <button class="btn maxim_button">Maximum:</button>
-            <button><input type="text" id="max" name="max"></button>
+            <tbody><tr>
+            <td>Minimum age:</td>
+            <td><input type="text" id="min" name="min"></td>
+        </tr>
+        <tr>
+            <td>Maximum age:</td>
+            <td><input type="text" id="max" name="max"></td>
+        </tr>
+    </tbody>
+           
     </tbody></table><table id="example" class="display" style="width:100%">
-<table border='1' id='reviews' style='width:100%' class='sortable table table-hover'> 
+      <table data-role='table' data-mode='columntoggle' border='1' id='reviews' style='width:relative' class='sortable table table-hover ui-responsive table-stroke'> 
+<thead> 
 <tr>
-
   
-    <td> repo</td> 
+      
+        
+           <th>repo</th> 
+        
+      
+        
+      
+        
+           <th>pr</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">age</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">owner</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">title</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">last_comment</th> 
+        
+      
+         
+           <th data-priority="1" class="ui-table-cell-visible">by</th> 
+        
+      
+        
+           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">age_comment</th>
+        
+      
+        
+           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">num_comments</th>
+        
+      
+        
+           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">no_comment_from_puppet</th>
+        
+      
+        
+           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">last_comment_mentions_puppet</th>
+        
+      
    
-
-   
-
-  
-    <td> pr</td> 
-   
-
-  
-    <td> age</td> 
-   
-
-  
-    <td> owner</td> 
-   
-
-  
-    <td> title</td> 
-   
-
-  
-    <td> last_comment</td> 
-   
-
-  
-    <td> by</td> 
-   
-
-  
-    <td> age_comment</td> 
-   
-
-  
-    <td> num_comments</td> 
-   
-
-  
-    <td> no_comment_from_puppet</td> 
-   
-
-  
-    <td> last_comment_mentions_puppet</td> 
-   
-
 </tr>
-
+</thead>
 
   <tr>
   
@@ -256,7 +239,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>56</td>
+        <td>57</td>
       
   
   
@@ -296,7 +279,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>246</td>
+        <td>247</td>
       
   
   
@@ -366,7 +349,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>64</td>
+        <td>65</td>
       
   
   
@@ -483,7 +466,7 @@ end
   
   
       
-        <td>35</td>
+        <td>36</td>
       
   
   
@@ -537,6 +520,7 @@ end
   
   </tr>
  
+</div>
 </table>
 </body>
 </html>

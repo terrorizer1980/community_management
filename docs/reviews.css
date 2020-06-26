@@ -1,4 +1,14 @@
-#tools {
+
+.btn:hover {background: #eee;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#reviews {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
    font-size: 18px;
   border-collapse: collapse;
@@ -13,19 +23,19 @@
   width: auto;
 }
 
-#tools td, #tools th {
+#reviews td, #reviews th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#tools tr:nth-child(even){background-color: #f2f2f2;
+#reviews tr:nth-child(even){background-color: #f2f2f2;
 
  }
 
-#tools tr:hover {background-color: #ddd;
+#reviews tr:hover {background-color: #ddd;
  }
 
-#tools th {
+#reviews th {
   padding-top: 9px;
   padding-bottom: 9px;
   text-align: left;
@@ -87,16 +97,16 @@ iv.text-container {
     padding: 10px 0;
     text-align: center;
 }
+
 .button {
-  background-color: #D8D8D8;
   border: none;
-  color: grey;
+  background-color: #D8D8D8;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-}
+  font-size: 16px;}
+
 @media screen and (min-width: 20em) {
    .my-custom-class th.ui-table-priority-1,
    .my-custom-class td.ui-table-priority-1 {
