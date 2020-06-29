@@ -26,6 +26,13 @@ table.dataTable {
    * Body styles
    */
 }
+
+div.dataTables_wrapper  div.dataTables_filter {
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+
 table.dataTable thead th,
 table.dataTable tfoot th {
   font-weight: bold;
