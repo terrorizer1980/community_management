@@ -77,7 +77,7 @@ end
 
 # Creates the CSV files
 CSV.open('daily_open_prs.csv', 'wb') do |csv|
-  csv << %w[date community puppet total]
+  csv << %w[ community puppet total]
   days.each do |day|
     csv << [day['community'], day['puppet'], day['total']]
   end
