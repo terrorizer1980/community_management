@@ -546,101 +546,12 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2021'>2021</a></td>
-  
-  
-  
-      
-        <td>61</td>
-      
-  
-  
-  
-      
-        <td>farebers</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10586 Centos 8: wrong package used to install mod_authnz_ldap</td>
-      
-  
-  
-  
-      
-        <td>Hi @farebers,
-
-Firstly, thank you for the fix and highlighting the gap in the test coverage to capture this. As you pointed out, the unit tests did not catch this failure. We can certainly extend `spec/classes/mod/authnz_ldap_spec.rb` to verify that we are using the correct package name on RHEL systems based on their major versions, but, unfortunately this will not catch the failure until the manifest is actually compiled on an OS. 
-
-I think the best thing is to to add an acceptance test for this particular scenario in a file called `spec/acceptance/mod_authnz_ldap_spec.rb`, something along the lines of this:
-
-```ruby
-require 'spec_helper_acceptance'
-apache_hash = apache_settings_hash
-
-describe 'apache::mod_authnz_ldap' do
-  context 'Default mod_authnz_ldap module installation' do
-    pp =  6
-          it { is_expected.to contain_package('mod_ldap')}
-        end
-```
-
-...but there's a few issues I'm running in to with this approach.
-
-I think the path of least resistance would be to add an acceptance test, similar to above. Let me know if I can be of any further help.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>60</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2041'>2041</a></td>
   
   
   
       
-        <td>10</td>
+        <td>11</td>
       
   
   
@@ -658,13 +569,17 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>> @h-haaks If you rebase with `puppetlabs:master` now, I'm hoping that will resolve the test failures.
+
+Thanks @sanfrancrisko now all tests are green :)
+I have assigned https://tickets.puppetlabs.com/browse/MODULES-10712 to me and changed status to 'READY FOR REVIEW'
+</td>
       
   
   
   
       
-        <td></td>
+        <td>h-haaks</td>
       
   
   
@@ -676,7 +591,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>8</td>
+        <td>9</td>
       
   
   
@@ -688,7 +603,7 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -775,48 +690,56 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
   
   
   
       
-        <td>175</td>
-      
-  
-  
-  
-      
-        <td>matthanley</td>
+        <td>227</td>
       
   
   
   
       
-        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
+        <td>mgrzybowski</td>
       
   
   
   
       
-        <td>@matthanley Could you try rebasing your work onto the master to see if that fixes the travis failures?</td>
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
       
   
   
   
       
-        <td>david22swan</td>
+        <td>@mgrzybowski Apologies for the delay. timeout is facter 3 feature. we retested them and its all working for both scenarios.
+`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
+timeout!
+`
+`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
+did not timeout!
+`
+
+We will get the changes in. Thank you</td>
       
   
   
   
       
-        <td>84</td>
+        <td>sheenaajay</td>
       
   
   
   
       
-        <td>4</td>
+        <td>19</td>
+      
+  
+  
+  
+      
+        <td>5</td>
       
   
   
@@ -915,56 +838,48 @@ I think the path of least resistance would be to add an acceptance test, similar
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
   
   
   
       
-        <td>227</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
+        <td>175</td>
       
   
   
   
       
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+        <td>matthanley</td>
       
   
   
   
       
-        <td>@mgrzybowski Apologies for the delay. timeout is facter 3 feature. we retested them and its all working for both scenarios.
-`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
-timeout!
-`
-`[root@inert-alligator lib]# facter sleep --custom-dir=./facter 
-did not timeout!
-`
-
-We will get the changes in. Thank you</td>
+        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>@matthanley Could you try rebasing your work onto the master to see if that fixes the travis failures?</td>
       
   
   
   
       
-        <td>19</td>
+        <td>david22swan</td>
       
   
   
   
       
-        <td>5</td>
+        <td>84</td>
+      
+  
+  
+  
+      
+        <td>4</td>
       
   
   
@@ -1345,71 +1260,50 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
   
   
   
       
-        <td>97</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
+        <td>24</td>
       
   
   
   
       
-        <td>Add --notrack flag</td>
+        <td>mnejedlo-tds</td>
       
   
   
   
       
-        <td>So I've had a look a look, and I can easily enough add something like:
-
-    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
-    index bcf8197..96e1560 100644
-    --- a/spec/acceptance/standard_usage_spec.rb
-    +++ b/spec/acceptance/standard_usage_spec.rb
-    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
-               proto   => 'all',
-               ctstate => ['RELATED', 'ESTABLISHED'],
-               action  => 'accept',
-    +        }->
-    +        firewall { '004 do not track UDP connections to port 53':
-    +          chain => 'PREROUTING',
-    +          table => 'raw',
-    +          proto  => 'udp',
-    +          dport => 53,
-    +          jump => 'CT',
-    +          notrack => true,
-             }
-           }
-           class my_fw::post {
-
-But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
-</td>
+        <td>fix parsing of '! --hex-string' from iptables-save</td>
       
   
   
   
       
-        <td>jbro</td>
+        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please add unit tests to verify the change.
+(https://github.com/puppetlabs/puppetlabs-firewall/blob/master/spec/fixtures/iptables/conversion_hash.rb#L724)
+Thank you.</td>
       
   
   
   
       
-        <td>95</td>
+        <td>sheenaajay</td>
       
   
   
   
       
         <td>5</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -1508,50 +1402,71 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
   
   
   
       
-        <td>24</td>
-      
-  
-  
-  
-      
-        <td>mnejedlo-tds</td>
+        <td>97</td>
       
   
   
   
       
-        <td>fix parsing of '! --hex-string' from iptables-save</td>
+        <td>jbro</td>
       
   
   
   
       
-        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please add unit tests to verify the change.
-(https://github.com/puppetlabs/puppetlabs-firewall/blob/master/spec/fixtures/iptables/conversion_hash.rb#L724)
-Thank you.</td>
+        <td>Add --notrack flag</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>So I've had a look a look, and I can easily enough add something like:
+
+    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
+    index bcf8197..96e1560 100644
+    --- a/spec/acceptance/standard_usage_spec.rb
+    +++ b/spec/acceptance/standard_usage_spec.rb
+    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
+               proto   => 'all',
+               ctstate => ['RELATED', 'ESTABLISHED'],
+               action  => 'accept',
+    +        }->
+    +        firewall { '004 do not track UDP connections to port 53':
+    +          chain => 'PREROUTING',
+    +          table => 'raw',
+    +          proto  => 'udp',
+    +          dport => 53,
+    +          jump => 'CT',
+    +          notrack => true,
+             }
+           }
+           class my_fw::post {
+
+But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
+</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>95</td>
       
   
   
   
       
         <td>5</td>
-      
-  
-  
-  
-      
-        <td>1</td>
       
   
   
@@ -2280,7 +2195,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>97</td>
+        <td>98</td>
       
   
   
@@ -2468,7 +2383,7 @@ end
   
   
       
-        <td>41</td>
+        <td>42</td>
       
   
   
@@ -2573,6 +2488,82 @@ end
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
+  
+  
+  
+      
+        <td>139</td>
+      
+  
+  
+  
+      
+        <td>justinstoller <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
+      
+  
+  
+  
+      
+        <td>Hi @justinstoller,
+
+Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
+
+With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
+
+cc @binford2k </td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>129</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
@@ -2608,7 +2599,7 @@ end
   
   
       
-        <td>133</td>
+        <td>134</td>
       
   
   
@@ -2701,82 +2692,6 @@ If not computed and set up front, then I think the result needs to be cached and
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
-  
-  
-  
-      
-        <td>139</td>
-      
-  
-  
-  
-      
-        <td>justinstoller <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
-      
-  
-  
-  
-      
-        <td>Hi @justinstoller,
-
-Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
-
-With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
-
-cc @binford2k </td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>129</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
