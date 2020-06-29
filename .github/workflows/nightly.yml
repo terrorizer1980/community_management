@@ -28,7 +28,6 @@ jobs:
           bundle install 
           bundle exec ruby pr_work_done.rb -t $token
           bundle exec ruby daily_open_prs.rb -t $token
-          bundle exec ruby graph.rb --pr_work_done --created_prs_per_day --open_prs_per_day
           ### generate prs for triage report
           bundle exec ruby pr_review_list.rb -t $token
           ### generate prs for tools report
