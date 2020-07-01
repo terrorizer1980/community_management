@@ -44,6 +44,12 @@ Labels
 -------
 
 Puts a set of labels into each repository. Creates them in a non destructive way.
+By default, it will run against supported Puppet modules, but you can run it on
+a single module repository in a few ways:
+
+* `--repo <namespace/repo>`
+* `--repo` (uses the first found of the `upstream` or `origin` remotes of CWD)
+* `--remote <name>` (uses the url of the remote name passed in the CWD)
 
 Npc
 ----
