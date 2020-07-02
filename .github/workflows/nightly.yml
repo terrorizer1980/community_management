@@ -49,7 +49,7 @@ jobs:
         run: |
           data=$("date")
           echo "Adding timestamp $data"
-          sed -i -e "s|<p style="text-align:right;">.*<\/p>|<p>$data</p>|g" index.html
+          sed -i -e "s|<p>.*<\/p>|<p>$data</p>|g" index.html
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
