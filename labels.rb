@@ -40,7 +40,20 @@ end
 
 util = OctokitUtils.new(options[:oauth])
 
-wanted_labels = [{ name: 'needs-squash', color: 'bfe5bf' }, { name: 'needs-rebase', color: '3880ff' }, { name: 'needs-tests', color: 'ff8091' }, { name: 'needs-docs', color: '149380' }, { name: 'bugfix', color: '00d87b' }, { name: 'feature', color: '222222' }, { name: 'tests-fail', color: 'e11d21' }, { name: 'backwards-incompatible', color: 'd63700' }, { name: 'maintenance', color: 'ffd86e' }]
+wanted_labels = [
+  { name: 'backwards-incompatible', color: 'd63700' },
+  { name: 'bugfix', color: '00d87b' },
+  { name: 'dependencies', color: '0366d6' },
+  { name: 'feature', color: '222222' },
+  { name: 'maintenance', color: 'ffd86e' },
+  { name: 'needs-docs', color: '149380' },
+  { name: 'needs-rebase', color: '3880ff' },
+  { name: 'needs-squash', color: 'bfe5bf' },
+  { name: 'needs-tests', color: 'ff8091' },
+  { name: 'tests-fail', color: 'e11d21' },
+]
+
+parsed = util.load_module_list(options[:file])
 
 label_names = []
 wanted_labels.each do |wanted_label|
