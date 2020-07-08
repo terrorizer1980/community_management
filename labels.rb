@@ -11,7 +11,9 @@ def primary_remote
 end
 
 def get_remote(name)
-  parts = `git remote get-url #{name} 2>/dev/null`.match(/(\w+\/[\w-]+)(?:\.git)?$/)
+  require 'rugged'
+  remote = Rugged::Repository.new('.').remotes[name] rescue nil
+  parts  = remote.url.match(/(\w+\/[\w-]+)(?:\.git)?$/) if remote
   parts[1] if parts
 end
 
