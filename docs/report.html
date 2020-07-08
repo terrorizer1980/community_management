@@ -332,7 +332,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>160</td>
+        <td>161</td>
       
   
   
@@ -618,48 +618,48 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
   
   
   
       
-        <td>235</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
+        <td>25</td>
       
   
   
   
       
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+        <td>crazymind1337</td>
       
   
   
   
       
-        <td>@mgrzybowski Perfect. Thank you.</td>
+        <td>rewrite rspec tests</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>I am wondering why the `ubuntu1604 / LitmusAcceptance`-test is failing now. Any ideas?</td>
       
   
   
   
       
-        <td>5</td>
+        <td>crazymind1337</td>
       
   
   
   
       
-        <td>8</td>
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>7</td>
       
   
   
@@ -693,7 +693,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>183</td>
+        <td>184</td>
       
   
   
@@ -832,48 +832,48 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
   
   
   
       
-        <td>25</td>
-      
-  
-  
-  
-      
-        <td>crazymind1337</td>
+        <td>235</td>
       
   
   
   
       
-        <td>rewrite rspec tests</td>
+        <td>mgrzybowski</td>
       
   
   
   
       
-        <td>I am wondering why the `ubuntu1604 / LitmusAcceptance`-test is failing now. Any ideas?</td>
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
       
   
   
   
       
-        <td>crazymind1337</td>
+        <td>@mgrzybowski Perfect. Thank you.</td>
       
   
   
   
       
-        <td>13</td>
+        <td>sheenaajay</td>
       
   
   
   
       
-        <td>7</td>
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>8</td>
       
   
   
@@ -1114,6 +1114,169 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/923'>923</a></td>
+  
+  
+  
+      
+        <td>36</td>
+      
+  
+  
+  
+      
+        <td>mnejedlo-tds</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10684) add string_hex to ip6tables provider.</td>
+      
+  
+  
+  
+      
+        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please resolve the conflicts and rebase with the latest master. Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
+  
+  
+  
+      
+        <td>105</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>Add --notrack flag</td>
+      
+  
+  
+  
+      
+        <td>So I've had a look a look, and I can easily enough add something like:
+
+    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
+    index bcf8197..96e1560 100644
+    --- a/spec/acceptance/standard_usage_spec.rb
+    +++ b/spec/acceptance/standard_usage_spec.rb
+    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
+               proto   => 'all',
+               ctstate => ['RELATED', 'ESTABLISHED'],
+               action  => 'accept',
+    +        }->
+    +        firewall { '004 do not track UDP connections to port 53':
+    +          chain => 'PREROUTING',
+    +          table => 'raw',
+    +          proto  => 'udp',
+    +          dport => 53,
+    +          jump => 'CT',
+    +          notrack => true,
+             }
+           }
+           class my_fw::post {
+
+But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
+</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>104</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
   
   
@@ -1158,76 +1321,6 @@ Thank you.</td>
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/923'>923</a></td>
-  
-  
-  
-      
-        <td>36</td>
-      
-  
-  
-  
-      
-        <td>mnejedlo-tds</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10684) add string_hex to ip6tables provider.</td>
-      
-  
-  
-  
-      
-        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please resolve the conflicts and rebase with the latest master. Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>13</td>
-      
-  
-  
-  
-      
-        <td>2</td>
       
   
   
@@ -1310,99 +1403,6 @@ Thank you.</td>
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
-  
-  
-  
-      
-        <td>105</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>Add --notrack flag</td>
-      
-  
-  
-  
-      
-        <td>So I've had a look a look, and I can easily enough add something like:
-
-    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
-    index bcf8197..96e1560 100644
-    --- a/spec/acceptance/standard_usage_spec.rb
-    +++ b/spec/acceptance/standard_usage_spec.rb
-    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
-               proto   => 'all',
-               ctstate => ['RELATED', 'ESTABLISHED'],
-               action  => 'accept',
-    +        }->
-    +        firewall { '004 do not track UDP connections to port 53':
-    +          chain => 'PREROUTING',
-    +          table => 'raw',
-    +          proto  => 'udp',
-    +          dport => 53,
-    +          jump => 'CT',
-    +          notrack => true,
-             }
-           }
-           class my_fw::post {
-
-But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
-</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>103</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -1592,7 +1592,7 @@ Should be a quick fix</td>
   
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -1622,7 +1622,7 @@ Should be a quick fix</td>
   
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -1734,7 +1734,7 @@ i created a new issue for that, see #419 </td>
   
   
       
-        <td>24</td>
+        <td>25</td>
       
   
   
@@ -1764,7 +1764,7 @@ i created a new issue for that, see #419 </td>
   
   
       
-        <td>24</td>
+        <td>25</td>
       
   
   
@@ -1835,7 +1835,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>24</td>
+        <td>25</td>
       
   
   
@@ -1945,7 +1945,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>113</td>
+        <td>114</td>
       
   
   
@@ -2015,7 +2015,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>85</td>
+        <td>86</td>
       
   
   
@@ -2366,76 +2366,6 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>183</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
   
   
@@ -2574,6 +2504,76 @@ cc @binford2k </td>
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>183</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
   
   
@@ -2652,76 +2652,6 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/191'>191</a></td>
-  
-  
-  
-      
-        <td>165</td>
-      
-  
-  
-  
-      
-        <td>vkorehov</td>
-      
-  
-  
-  
-      
-        <td>relaxing validation for repository</td>
-      
-  
-  
-  
-      
-        <td>@vkorehov Check out my PR #201 . It looks like we both automated namespace_bindings, shared_libraries, and auth aliases.</td>
-      
-  
-  
-  
-      
-        <td>bFekete</td>
-      
-  
-  
-  
-      
-        <td>41</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server'>puppetlabs-websphere_application_server</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/201'>201</a></td>
   
   
@@ -2770,6 +2700,76 @@ cc @binford2k </td>
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server'>puppetlabs-websphere_application_server</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/191'>191</a></td>
+  
+  
+  
+      
+        <td>165</td>
+      
+  
+  
+  
+      
+        <td>vkorehov</td>
+      
+  
+  
+  
+      
+        <td>relaxing validation for repository</td>
+      
+  
+  
+  
+      
+        <td>@vkorehov Check out my PR #201 . It looks like we both automated namespace_bindings, shared_libraries, and auth aliases.</td>
+      
+  
+  
+  
+      
+        <td>bFekete</td>
+      
+  
+  
+  
+      
+        <td>41</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
