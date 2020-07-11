@@ -257,12 +257,91 @@ $(document).on("click", '.show-more a', function(e) {
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
+  
+  
+  
+      
+        <td>100</td>
+      
+  
+  
+  
+      
+        <td>reenberg</td>
+      
+  
+  
+  
+      
+        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
+      
+  
+  
+  
+      
+        <td>> Hi @reenberg! Let me know if you need some help! Cheers!
+
+Thanks for bumping this back up.
+
+I talked quite a bit with @DavidS on slack, but he didn't have the time back then to look at it.  
+Guess corona got me to totally forget about this one, as I initially was waiting for some pointers as to whether this PR would be even remotely accepted.  The `get_image_os_release_facts` is somewhat of a change, but as I talked to David about, then the other provisioners could benefit if implementing something like it.  Especially as higher level tasks could then use this information.
+
+He also pointed me towards `docker_exp`, but I totally forgot to have a look at that.
+
+Should I take it, that if I rebase it to master, and fix the failing tests, then this could be accepted?</td>
+      
+  
+  
+  
+      
+        <td>reenberg</td>
+      
+  
+  
+  
+      
+        <td>43</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/108'>108</a></td>
   
   
   
       
-        <td>128</td>
+        <td>129</td>
       
   
   
@@ -371,85 +450,6 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
-  
-  
-  
-      
-        <td>99</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
-      
-  
-  
-  
-      
-        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
-      
-  
-  
-  
-      
-        <td>> Hi @reenberg! Let me know if you need some help! Cheers!
-
-Thanks for bumping this back up.
-
-I talked quite a bit with @DavidS on slack, but he didn't have the time back then to look at it.  
-Guess corona got me to totally forget about this one, as I initially was waiting for some pointers as to whether this PR would be even remotely accepted.  The `get_image_os_release_facts` is somewhat of a change, but as I talked to David about, then the other provisioners could benefit if implementing something like it.  Especially as higher level tasks could then use this information.
-
-He also pointed me towards `docker_exp`, but I totally forgot to have a look at that.
-
-Should I take it, that if I rebase it to master, and fix the failing tests, then this could be accepted?</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
-      
-  
-  
-  
-      
-        <td>42</td>
-      
-  
-  
-  
-      
-        <td>3</td>
       
   
   
@@ -831,7 +831,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
@@ -861,83 +861,13 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/631'>631</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>awegmann</td>
-      
-  
-  
-  
-      
-        <td>Fixing the fix 'Fix the docker_compose options parameter position #378'</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
       
   
   
@@ -1036,30 +966,30 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/630'>630</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/631'>631</a></td>
   
   
   
       
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>3</td>
       
   
   
   
       
-        <td>(IAC-925) Prep for 3.10.2 release</td>
+        <td>awegmann</td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>Fixing the fix 'Fix the docker_compose options parameter position #378'</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
       
   
   
@@ -1071,89 +1001,19 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>9</td>
+        <td>0</td>
       
   
   
   
       
-        <td>1</td>
+        <td>0</td>
       
   
   
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
-  
-  
-  
-      
-        <td>27</td>
-      
-  
-  
-  
-      
-        <td>crazymind1337</td>
-      
-  
-  
-  
-      
-        <td>rewrite rspec tests</td>
-      
-  
-  
-  
-      
-        <td>I am wondering why the `ubuntu1604 / LitmusAcceptance`-test is failing now. Any ideas?</td>
-      
-  
-  
-  
-      
-        <td>crazymind1337</td>
-      
-  
-  
-  
-      
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -1246,6 +1106,146 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/630'>630</a></td>
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-925) Prep for 3.10.2 release</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>crazymind1337</td>
+      
+  
+  
+  
+      
+        <td>rewrite rspec tests</td>
+      
+  
+  
+  
+      
+        <td>I am wondering why the `ubuntu1604 / LitmusAcceptance`-test is failing now. Any ideas?</td>
+      
+  
+  
+  
+      
+        <td>crazymind1337</td>
+      
+  
+  
+  
+      
+        <td>16</td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
   
   
@@ -1285,7 +1285,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
@@ -1462,6 +1462,76 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+  
+  
+  
+      
+        <td>162</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10522: Add support for the --condition parameter</td>
+      
+  
+  
+  
+      
+        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>94</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
   
   
@@ -1569,7 +1639,7 @@ Thank you.</td>
   
   
       
-        <td>15</td>
+        <td>16</td>
       
   
   
@@ -1639,7 +1709,7 @@ Thank you.</td>
   
   
       
-        <td>15</td>
+        <td>16</td>
       
   
   
@@ -1658,76 +1728,6 @@ Thank you.</td>
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
-  
-  
-  
-      
-        <td>161</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10522: Add support for the --condition parameter</td>
-      
-  
-  
-  
-      
-        <td>@david22swan yes I'm going to wrap this up. I was hoping somebody could point me at the right direction with the rules reversal bug - I'm sure there's a simple fix to it.</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>94</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -1872,7 +1872,7 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -1885,6 +1885,76 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-inifile'>puppetlabs-inifile</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-inifile/pull/405'>405</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>mmarod</td>
+      
+  
+  
+  
+      
+        <td>Add delete_if_empty parameter to the ini_subsetting type/provider</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1977,6 +2047,149 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/418'>418</a></td>
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>Disable swap permanently</td>
+      
+  
+  
+  
+      
+        <td>Sorry, i was not successful in executing the litmus tests described in the "Development" section on my ubuntu 18.04 system. "litmus:install_module" dropped very cryptic messages which were not understandable for a litmus newbie.... (see #419)
+So probably you can fix potential acceptance test problems to get these useful changes to upstream?</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>27</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416'>416</a></td>
+  
+  
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>improve initial installation</td>
+      
+  
+  
+  
+      
+        <td>> I'll take a look at testing these changes on Ubuntu 18.04 on our internal infrastructure. I would be keen to see the error you got when running the `install_agent` task, from Litmus. If you still have it, or could re-run again to generate it, it would be great if you could share it with us. The IAC Team manages the Litmus project, so we're always keen to address any issues and improve it smiley
+
+i created a new issue for that, see #419 </td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
   
   
@@ -2019,149 +2232,6 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416'>416</a></td>
-  
-  
-  
-      
-        <td>34</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>improve initial installation</td>
-      
-  
-  
-  
-      
-        <td>> I'll take a look at testing these changes on Ubuntu 18.04 on our internal infrastructure. I would be keen to see the error you got when running the `install_agent` task, from Litmus. If you still have it, or could re-run again to generate it, it would be great if you could share it with us. The IAC Team manages the Litmus project, so we're always keen to address any issues and improve it smiley
-
-i created a new issue for that, see #419 </td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>27</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/418'>418</a></td>
-  
-  
-  
-      
-        <td>27</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>Disable swap permanently</td>
-      
-  
-  
-  
-      
-        <td>Sorry, i was not successful in executing the litmus tests described in the "Development" section on my ubuntu 18.04 system. "litmus:install_module" dropped very cryptic messages which were not understandable for a litmus newbie.... (see #419)
-So probably you can fix potential acceptance test problems to get these useful changes to upstream?</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>27</td>
-      
-  
-  
-  
-      
-        <td>2</td>
       
   
   
@@ -2435,7 +2505,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>108</td>
+        <td>109</td>
       
   
   
@@ -2475,7 +2545,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>178</td>
+        <td>179</td>
       
   
   
@@ -2511,7 +2581,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -2551,7 +2621,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>140</td>
+        <td>141</td>
       
   
   
@@ -2581,7 +2651,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>99</td>
+        <td>100</td>
       
   
   
@@ -2621,7 +2691,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>232</td>
+        <td>233</td>
       
   
   
@@ -2651,83 +2721,13 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
   
       
         <td>8</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>186</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>3</td>
       
   
   
@@ -2892,13 +2892,83 @@ cc @binford2k </td>
   
   
       
-        <td>140</td>
+        <td>141</td>
       
   
   
   
       
         <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>186</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>3</td>
       
   
   
@@ -2997,76 +3067,6 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/201'>201</a></td>
-  
-  
-  
-      
-        <td>49</td>
-      
-  
-  
-  
-      
-        <td>bFekete</td>
-      
-  
-  
-  
-      
-        <td>Adding resources, improving existing resources</td>
-      
-  
-  
-  
-      
-        <td>This PR is one of a few that will help me defork from the old websphere module (https://github.com/puppetlabs/puppetlabs-websphere) 0.x branch.</td>
-      
-  
-  
-  
-      
-        <td>bFekete</td>
-      
-  
-  
-  
-      
-        <td>49</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server'>puppetlabs-websphere_application_server</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/191'>191</a></td>
   
   
@@ -3115,6 +3115,76 @@ cc @binford2k </td>
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server'>puppetlabs-websphere_application_server</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/201'>201</a></td>
+  
+  
+  
+      
+        <td>50</td>
+      
+  
+  
+  
+      
+        <td>bFekete</td>
+      
+  
+  
+  
+      
+        <td>Adding resources, improving existing resources</td>
+      
+  
+  
+  
+      
+        <td>This PR is one of a few that will help me defork from the old websphere module (https://github.com/puppetlabs/puppetlabs-websphere) 0.x branch.</td>
+      
+  
+  
+  
+      
+        <td>bFekete</td>
+      
+  
+  
+  
+      
+        <td>50</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
