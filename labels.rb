@@ -4,17 +4,43 @@
 require_relative 'octokit_utils'
 require_relative 'options'
 
+def primary_remote
+  ['upstream', 'origin'].map do |name|
+    get_remote(name)
+  end.compact.first
+end
+
+def get_remote(name)
+  require 'rugged'
+  remote = Rugged::Repository.new('.').remotes[name] rescue nil
+  parts  = remote.url.match(/(\w+\/[\w-]+)(?:\.git)?$/) if remote
+  parts[1] if parts
+end
+
 options = parse_options do |opts, result|
   opts.on('-f', '--fix-labels', 'Add the missing labels to repo') { result[:fix_labels] = true }
   opts.on('-d', '--delete-labels', 'Delete unwanted labels from repo') { result[:delete_labels] = true }
+
+  opts.on('--repo [REPO]', 'Pass a repository name, defaults to the current upstream.') do |v|
+    result[:remote] = v || primary_remote
+    raise 'Could not guess primary remote. Try using --remote instead.' unless result[:remote]
+  end
+
+  opts.on('--remote REMOTE', 'Name of a remote to work on.') do |v|
+    result[:remote] = get_remote(v)
+    raise "No url set for remote #{v}" unless result[:remote]
+  end
 end
 
-parsed = load_url(options)
+if options[:remote]
+  parsed = { options[:remote] => { 'github' => options[:remote] } }
+else
+  parsed = load_url(options)
+end
 
 util = OctokitUtils.new(options[:oauth])
 
 wanted_labels = [{ name: 'needs-squash', color: 'bfe5bf' }, { name: 'needs-rebase', color: '3880ff' }, { name: 'needs-tests', color: 'ff8091' }, { name: 'needs-docs', color: '149380' }, { name: 'bugfix', color: '00d87b' }, { name: 'feature', color: '222222' }, { name: 'tests-fail', color: 'e11d21' }, { name: 'backwards-incompatible', color: 'd63700' }, { name: 'maintenance', color: 'ffd86e' }]
-parsed = util.load_module_list(options[:file])
 
 label_names = []
 wanted_labels.each do |wanted_label|
