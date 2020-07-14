@@ -361,6 +361,110 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/887'>887</a></td>
+  
+  
+  
+
+  
+      
+        <td>32</td>
+      
+  
+  
+  
+
+  
+      
+        <td>hestonhoffman <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Adding PDK docs</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     
+[![Coverage Status](https://coveralls.io/builds/31429409/badge)](https://coveralls.io/builds/31429409)
+
+Coverage remained the same at 92.653% when pulling **8e9c32403876bce82f3d303e23f6e2daaa2fd3a7 on hestonhoffman:pdk-docs** into **3d6a31093768d54a8dd86ed6a1a6f5f68c5f8c84 on puppetlabs:master**.
+
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+
+  
+      
+        <td>32</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
   
   
@@ -368,7 +472,7 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>273</td>
+        <td>274</td>
       
   
   
@@ -449,110 +553,6 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/887'>887</a></td>
-  
-  
-  
-
-  
-      
-        <td>31</td>
-      
-  
-  
-  
-
-  
-      
-        <td>hestonhoffman <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Adding PDK docs</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     
-[![Coverage Status](https://coveralls.io/builds/31429409/badge)](https://coveralls.io/builds/31429409)
-
-Coverage remained the same at 92.653% when pulling **8e9c32403876bce82f3d303e23f6e2daaa2fd3a7 on hestonhoffman:pdk-docs** into **3d6a31093768d54a8dd86ed6a1a6f5f68c5f8c84 on puppetlabs:master**.
-
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-
-  
-      
-        <td>31</td>
-      
-  
-  
-  
-
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
   
   
@@ -572,7 +572,7 @@ Coverage remained the same at 92.653% when pulling **8e9c32403876bce82f3d303e23f
 
   
       
-        <td>1195</td>
+        <td>1196</td>
       
   
   
@@ -686,7 +686,7 @@ wrote:
 
   
       
-        <td>857</td>
+        <td>858</td>
       
   
   
@@ -779,22 +779,14 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
   
   
   
 
   
       
-        <td>382</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cardil</td>
+        <td>127</td>
       
   
   
@@ -802,14 +794,34 @@ wrote:
 
   
       
-        <td>Feature: metadata dependencies are auto installed</td>
+        <td>findmyname666</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
+     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
+
+Modify `Gemfile` to use this repo:
+```
+group :development do
+  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
+end
+```
+```
+bundle install
+bundle exec rake 'litmus:provision_list[release_checks]'
+# etc...
+```
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -824,7 +836,7 @@ wrote:
 
   
       
-        <td>daianamezdrea</td>
+        <td>sanfrancrisko</td>
       
   
   
@@ -840,7 +852,7 @@ wrote:
 
   
       
-        <td>7</td>
+        <td>5</td>
       
   
   
@@ -856,7 +868,7 @@ wrote:
 
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -979,6 +991,106 @@ wrote:
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
+  
+  
+  
+
+  
+      
+        <td>383</td>
+      
+  
+  
+  
+
+  
+      
+        <td>cardil</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Feature: metadata dependencies are auto installed</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>daianamezdrea</td>
+      
+  
+  
+  
+
+  
+      
+        <td>34</td>
+      
+  
+  
+  
+
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/207'>207</a></td>
   
   
@@ -986,7 +1098,7 @@ wrote:
 
   
       
-        <td>1055</td>
+        <td>1056</td>
       
   
   
@@ -1041,118 +1153,6 @@ wrote:
   
       
         <td>12</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
-  
-  
-  
-
-  
-      
-        <td>127</td>
-      
-  
-  
-  
-
-  
-      
-        <td>findmyname666</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Remove all sub-folders from source repository / folder</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
-
-Modify `Gemfile` to use this repo:
-```
-group :development do
-  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
-end
-```
-```
-bundle install
-bundle exec rake 'litmus:provision_list[release_checks]'
-# etc...
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-
-  
-      
-        <td>34</td>
-      
-  
-  
-  
-
-  
-      
-        <td>5</td>
       
   
   
