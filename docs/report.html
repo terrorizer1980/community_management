@@ -1324,6 +1324,76 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/923'>923</a></td>
+  
+  
+  
+      
+        <td>43</td>
+      
+  
+  
+  
+      
+        <td>mnejedlo-tds</td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10684) add string_hex to ip6tables provider.</td>
+      
+  
+  
+  
+      
+        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please resolve the conflicts and rebase with the latest master. Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>20</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/924'>924</a></td>
   
   
@@ -1543,76 +1613,6 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/923'>923</a></td>
-  
-  
-  
-      
-        <td>43</td>
-      
-  
-  
-  
-      
-        <td>mnejedlo-tds</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10684) add string_hex to ip6tables provider.</td>
-      
-  
-  
-  
-      
-        <td>Thanks @mnejedlo-tds  for submitting the PR. Could you please resolve the conflicts and rebase with the latest master. Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>20</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -2197,7 +2197,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>117</td>
+        <td>118</td>
       
   
   
@@ -2478,82 +2478,6 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
-  
-  
-  
-      
-        <td>154</td>
-      
-  
-  
-  
-      
-        <td>justinstoller <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
-      
-  
-  
-  
-      
-        <td>Hi @justinstoller,
-
-Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
-
-With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
-
-cc @binford2k </td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>145</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1115'>1115</a></td>
   
   
@@ -2649,48 +2573,54 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
   
       
-        <td>237</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+        <td>154</td>
       
   
   
   
       
-        <td>(WIP) Add volatile_fact() function</td>
+        <td>justinstoller <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>@binford2k are you planning on continuing work on this PR? It's been a few months, nor sure if you're still interested in picking this up.</td>
+        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
       
   
   
   
       
-        <td>michaeltlombardi</td>
+        <td>Hi @justinstoller,
+
+Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
+
+With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
+
+cc @binford2k </td>
       
   
   
   
       
-        <td>14</td>
+        <td>DavidS</td>
       
   
   
   
       
-        <td>8</td>
+        <td>145</td>
+      
+  
+  
+  
+      
+        <td>2</td>
       
   
   
@@ -2761,6 +2691,76 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
+  
+  
+  
+      
+        <td>237</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>(WIP) Add volatile_fact() function</td>
+      
+  
+  
+  
+      
+        <td>@binford2k are you planning on continuing work on this PR? It's been a few months, nor sure if you're still interested in picking this up.</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>14</td>
+      
+  
+  
+  
+      
+        <td>8</td>
       
   
   
@@ -2934,7 +2934,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>172</td>
+        <td>173</td>
       
   
   
