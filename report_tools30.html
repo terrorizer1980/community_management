@@ -361,6 +361,106 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
+  
+  
+  
+
+  
+      
+        <td>274</td>
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(performance) - Sets up basic performance testing</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds</td>
+      
+  
+  
+  
+
+  
+      
+        <td>34</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/887'>887</a></td>
   
   
@@ -435,106 +535,6 @@ Coverage remained the same at 92.653% when pulling **8e9c32403876bce82f3d303e23f
   
       
         <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
-  
-  
-  
-
-  
-      
-        <td>274</td>
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>(performance) - Sets up basic performance testing</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds</td>
-      
-  
-  
-  
-
-  
-      
-        <td>34</td>
-      
-  
-  
-  
-
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
       
   
   
@@ -679,6 +679,118 @@ wrote:
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+  
+  
+  
+
+  
+      
+        <td>128</td>
+      
+  
+  
+  
+
+  
+      
+        <td>findmyname666</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
+
+Modify `Gemfile` to use this repo:
+```
+group :development do
+  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
+end
+```
+```
+bundle install
+bundle exec rake 'litmus:provision_list[release_checks]'
+# etc...
+```
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/233'>233</a></td>
   
   
@@ -757,6 +869,106 @@ wrote:
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
+  
+  
+  
+
+  
+      
+        <td>383</td>
+      
+  
+  
+  
+
+  
+      
+        <td>cardil</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Feature: metadata dependencies are auto installed</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>daianamezdrea</td>
+      
+  
+  
+  
+
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
       
   
   
@@ -957,218 +1169,6 @@ wrote:
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
-  
-  
-  
-
-  
-      
-        <td>128</td>
-      
-  
-  
-  
-
-  
-      
-        <td>findmyname666</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Remove all sub-folders from source repository / folder</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
-
-Modify `Gemfile` to use this repo:
-```
-group :development do
-  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
-end
-```
-```
-bundle install
-bundle exec rake 'litmus:provision_list[release_checks]'
-# etc...
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
-  
-  
-  
-
-  
-      
-        <td>383</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cardil</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Feature: metadata dependencies are auto installed</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>daianamezdrea</td>
-      
-  
-  
-  
-
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
       
   
   
