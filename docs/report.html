@@ -222,7 +222,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -327,60 +327,69 @@ $(document).on("click", '.show-more a', function(e) {
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/108'>108</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
   
   
   
       
-        <td>133</td>
-      
-  
-  
-  
-      
-        <td>jmangt</td>
+        <td>105</td>
       
   
   
   
       
-        <td>Provides support for Terraform</td>
+        <td>reenberg</td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
       
   
   
   
       
-        <td></td>
+        <td>> Hi @reenberg! Let me know if you need some help! Cheers!
+
+Thanks for bumping this back up.
+
+I talked quite a bit with @DavidS on slack, but he didn't have the time back then to look at it.  
+Guess corona got me to totally forget about this one, as I initially was waiting for some pointers as to whether this PR would be even remotely accepted.  The `get_image_os_release_facts` is somewhat of a change, but as I talked to David about, then the other provisioners could benefit if implementing something like it.  Especially as higher level tasks could then use this information.
+
+He also pointed me towards `docker_exp`, but I totally forgot to have a look at that.
+
+Should I take it, that if I rebase it to master, and fix the failing tests, then this could be accepted?</td>
       
   
   
   
       
-        <td>0</td>
+        <td>reenberg</td>
       
   
   
   
       
-        <td>0</td>
+        <td>48</td>
       
   
   
   
       
-        <td>true</td>
+        <td>3</td>
       
   
   
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -469,69 +478,60 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/108'>108</a></td>
   
   
   
       
-        <td>104</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
+        <td>134</td>
       
   
   
   
       
-        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
+        <td>jmangt</td>
       
   
   
   
       
-        <td>> Hi @reenberg! Let me know if you need some help! Cheers!
-
-Thanks for bumping this back up.
-
-I talked quite a bit with @DavidS on slack, but he didn't have the time back then to look at it.  
-Guess corona got me to totally forget about this one, as I initially was waiting for some pointers as to whether this PR would be even remotely accepted.  The `get_image_os_release_facts` is somewhat of a change, but as I talked to David about, then the other provisioners could benefit if implementing something like it.  Especially as higher level tasks could then use this information.
-
-He also pointed me towards `docker_exp`, but I totally forgot to have a look at that.
-
-Should I take it, that if I rebase it to master, and fix the failing tests, then this could be accepted?</td>
+        <td>Provides support for Terraform</td>
       
   
   
   
       
-        <td>reenberg</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>47</td>
+        <td></td>
       
   
   
   
       
-        <td>3</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>0</td>
       
   
   
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -623,7 +623,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>14</td>
+        <td>15</td>
       
   
   
@@ -653,7 +653,126 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>14</td>
+        <td>15</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/635'>635</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>koubas</td>
+      
+  
+  
+  
+      
+        <td>Add prepare_service_only param to ::run resource</td>
+      
+  
+  
+  
+      
+        <td>[docker::run](https://github.com/puppetlabs/puppetlabs-docker/blob/8d7561cde2281a6971331fff0311cea1439afa71/manifests/run.pp) is a _type_
+----------------------------------
+
+
+
+  Breaking changes to this file WILL impact these 6 modules (exact match):
+
+* [samuelson-dockeragent](https://github.com/samuelson/samuelson-dockeragent)
+* [gennadyvoronkov-dcos](https://github.com/gennady-voronkov/dcos.git)
+* [glorpen-g_docker](https://github.com/glorpen/puppet-g_docker.git)
+* [dodevops-hanaexpress](https://github.com/dodevops/puppet-hanaexpress)
+* [ffquintella-dockerapp](https://github.com/ffquintella/puppet-dockerApp.git)
+* [puppetlabs-cd4pe](https://forge.puppetlabs.com/puppetlabs/cd4pe)
+
+
+
+  Breaking changes to this file MAY impact these 21 modules (near match):
+
+* [c0deaddict-gogs](https://github.com/c0deaddict/puppet-gogs)
+* [cristifalcas-docker_auth](https://github.com/cristifalcas/puppet-docker_auth.git)
+* [cjtoolseram-drone](https://bitbucket.org/cjtoolseram/cjtoolseram-drone)
+* [justin8-ghost](https://github.com/justin8/justin8-ghost)
+* [autostructure-secure_docker](https://github.com/autostructure/secure_docker.git)
+* [jefferyb-kualicoeus](https://github.com/jefferyb/kualicoeus)
+* [pltraining-classroom_legacy](https://github.com/puppetlabs/pltraining-classroom_legacy)
+* [pltraining-classroom](https://github.com/puppetlabs/pltraining-classroom)
+* [bfraser-grafana](https://github.com/bfraser/puppet-grafana.git)
+* [factorit-grafana](https://github.com/bfraser/puppet-grafana.git)
+* [cristifalcas-docker_distribution](https://github.com/cristifalcas/puppet-docker_distribution.git)
+* [KyleAnderson-consul](https://github.com/solarkennedy/puppet-consul)
+* [puppet-grafana](https://github.com/voxpupuli/puppet-grafana.git)
+* [pltraining-dockeragent](https://github.com/puppetlabs/pltraining-dockeragent)
+* [pltraining-puppetfactory](https://github.com/puppetlabs/puppetfactory)
+* [puppetlabs-rancher](https://github.com/puppetlabs/puppetlabs-rancher.git)
+* [nick-rancher](https://github.com/nickschuch/puppet-rancher)
+* [flyer-docker_cluster](https://github.com/flyer8/docker_cluster)
+* [cristifalcas-prometheus](https://github.com/cristifalcas/puppet-prometheus)
+* [prozeta-portauthority](https://github.com/prozeta/port-authority)
+* [cristifalcas-kubernetes](https://github.com/cristifalcas/puppet-kubernetes.git)
+
+
+
+#### This module is declared in 8 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>0</td>
       
   
   
@@ -693,7 +812,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -763,7 +882,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>14</td>
+        <td>15</td>
       
   
   
@@ -793,7 +912,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>14</td>
+        <td>15</td>
       
   
   
@@ -806,6 +925,76 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
+  
+  
+  
+      
+        <td>33</td>
+      
+  
+  
+  
+      
+        <td>crazymind1337</td>
+      
+  
+  
+  
+      
+        <td>rewrite rspec tests</td>
+      
+  
+  
+  
+      
+        <td>I am wondering why the `ubuntu1604 / LitmusAcceptance`-test is failing now. Any ideas?</td>
+      
+  
+  
+  
+      
+        <td>crazymind1337</td>
+      
+  
+  
+  
+      
+        <td>21</td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -867,7 +1056,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>14</td>
+        <td>15</td>
       
   
   
@@ -944,76 +1133,6 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
       
         <td>8</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
-  
-  
-  
-      
-        <td>32</td>
-      
-  
-  
-  
-      
-        <td>crazymind1337</td>
-      
-  
-  
-  
-      
-        <td>rewrite rspec tests</td>
-      
-  
-  
-  
-      
-        <td>I am wondering why the `ubuntu1604 / LitmusAcceptance`-test is failing now. Any ideas?</td>
-      
-  
-  
-  
-      
-        <td>crazymind1337</td>
-      
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>7</td>
       
   
   
@@ -1184,76 +1303,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
-  
-  
-  
-      
-        <td>29</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/923'>923</a></td>
   
   
@@ -1289,7 +1338,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -1361,7 +1410,7 @@ Thank you.</td>
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -1396,12 +1445,82 @@ Thank you.</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+  
+  
+  
+      
+        <td>29</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
   
       
-        <td>166</td>
+        <td>167</td>
       
   
   
@@ -1594,7 +1713,7 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -1691,76 +1810,6 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java'>puppetlabs-java</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java/pull/433'>433</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>timdeluxe</td>
-      
-  
-  
-  
-      
-        <td>Support SAP Javas (sapjvm / sapmachine)</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
   
   
@@ -1774,7 +1823,7 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
       
-        <td>39</td>
+        <td>40</td>
       
   
   
@@ -1806,7 +1855,7 @@ i created a new issue for that, see #419 </td>
   
   
       
-        <td>32</td>
+        <td>33</td>
       
   
   
@@ -1916,7 +1965,7 @@ i created a new issue for that, see #419 </td>
   
   
       
-        <td>32</td>
+        <td>33</td>
       
   
   
@@ -1948,6 +1997,76 @@ So probably you can fix potential acceptance test problems to get these useful c
   
       
         <td>32</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1314'>1314</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>fe80</td>
+      
+  
+  
+  
+      
+        <td>add package provider and source</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
       
   
   
@@ -2157,7 +2276,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>113</td>
+        <td>114</td>
       
   
   
@@ -2192,12 +2311,82 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1180'>1180</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
   
   
   
       
-        <td>183</td>
+        <td>184</td>
       
   
   
@@ -2233,7 +2422,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
@@ -2273,7 +2462,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>145</td>
+        <td>146</td>
       
   
   
@@ -2303,7 +2492,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>104</td>
+        <td>105</td>
       
   
   
@@ -2343,7 +2532,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -2392,6 +2581,76 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
+  
+  
+  
+      
+        <td>238</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>(WIP) Add volatile_fact() function</td>
+      
+  
+  
+  
+      
+        <td>@binford2k are you planning on continuing work on this PR? It's been a few months, nor sure if you're still interested in picking this up.</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>15</td>
+      
+  
+  
+  
+      
+        <td>8</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2503,146 +2762,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>191</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
-  
-  
-  
-      
-        <td>237</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>(WIP) Add volatile_fact() function</td>
-      
-  
-  
-  
-      
-        <td>@binford2k are you planning on continuing work on this PR? It's been a few months, nor sure if you're still interested in picking this up.</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
@@ -2684,7 +2803,7 @@ cc @binford2k </td>
   
   
       
-        <td>145</td>
+        <td>146</td>
       
   
   
@@ -2703,6 +2822,146 @@ cc @binford2k </td>
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>191</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>15</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/465'>465</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>florindragos <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Test facter 4</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2794,7 +3053,7 @@ cc @binford2k </td>
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -2824,7 +3083,7 @@ cc @binford2k </td>
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
