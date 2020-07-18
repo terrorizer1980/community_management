@@ -793,77 +793,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
-  
-  
-  
-      
-        <td>245</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
-      
-  
-  
-  
-      
-        <td>@mgrzybowski Perfect. Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>15</td>
+        <td>2</td>
       
   
   
@@ -944,6 +874,76 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
       
         <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+  
+  
+  
+      
+        <td>245</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+      
+  
+  
+  
+      
+        <td>@mgrzybowski Perfect. Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>15</td>
+      
+  
+  
+  
+      
+        <td>8</td>
       
   
   
@@ -1086,169 +1086,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
-  
-  
-  
-      
-        <td>31</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
-  
-  
-  
-      
-        <td>115</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>Add --notrack flag</td>
-      
-  
-  
-  
-      
-        <td>So I've had a look a look, and I can easily enough add something like:
-
-    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
-    index bcf8197..96e1560 100644
-    --- a/spec/acceptance/standard_usage_spec.rb
-    +++ b/spec/acceptance/standard_usage_spec.rb
-    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
-               proto   => 'all',
-               ctstate => ['RELATED', 'ESTABLISHED'],
-               action  => 'accept',
-    +        }->
-    +        firewall { '004 do not track UDP connections to port 53':
-    +          chain => 'PREROUTING',
-    +          table => 'raw',
-    +          proto  => 'udp',
-    +          dport => 53,
-    +          jump => 'CT',
-    +          notrack => true,
-             }
-           }
-           class my_fw::post {
-
-But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
-</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>114</td>
-      
-  
-  
-  
-      
-        <td>5</td>
       
   
   
@@ -1699,6 +1536,169 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+  
+  
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
+  
+  
+  
+      
+        <td>115</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>Add --notrack flag</td>
+      
+  
+  
+  
+      
+        <td>So I've had a look a look, and I can easily enough add something like:
+
+    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
+    index bcf8197..96e1560 100644
+    --- a/spec/acceptance/standard_usage_spec.rb
+    +++ b/spec/acceptance/standard_usage_spec.rb
+    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
+               proto   => 'all',
+               ctstate => ['RELATED', 'ESTABLISHED'],
+               action  => 'accept',
+    +        }->
+    +        firewall { '004 do not track UDP connections to port 53':
+    +          chain => 'PREROUTING',
+    +          table => 'raw',
+    +          proto  => 'udp',
+    +          dport => 53,
+    +          jump => 'CT',
+    +          notrack => true,
+             }
+           }
+           class my_fw::post {
+
+But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
+</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>114</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
   
   
@@ -1919,76 +1919,6 @@ i created a new issue for that, see #419 </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
-  
-  
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>Component installation</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/418'>418</a></td>
   
   
@@ -2032,6 +1962,76 @@ So probably you can fix potential acceptance test problems to get these useful c
   
       
         <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
+  
+  
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>Component installation</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -2275,7 +2275,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>120</td>
+        <td>121</td>
       
   
   
@@ -2556,54 +2556,48 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
   
       
-        <td>157</td>
-      
-  
-  
-  
-      
-        <td>justinstoller <span class='label label-warning'>puppet</span></td>
+        <td>193</td>
       
   
   
   
       
-        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>Hi @justinstoller,
-
-Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
-
-With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
-
-cc @binford2k </td>
+        <td>Puppet 4 functions</td>
       
   
   
   
       
-        <td>DavidS</td>
+        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
       
   
   
   
       
-        <td>148</td>
+        <td>michaeltlombardi</td>
       
   
   
   
       
-        <td>2</td>
+        <td>17</td>
+      
+  
+  
+  
+      
+        <td>3</td>
       
   
   
@@ -2727,6 +2721,82 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
+  
+  
+  
+      
+        <td>157</td>
+      
+  
+  
+  
+      
+        <td>justinstoller <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
+      
+  
+  
+  
+      
+        <td>Hi @justinstoller,
+
+Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
+
+With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
+
+cc @binford2k </td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>148</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
   
   
@@ -2769,76 +2839,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>8</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>193</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>17</td>
-      
-  
-  
-  
-      
-        <td>3</td>
       
   
   
@@ -3082,7 +3082,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>175</td>
+        <td>176</td>
       
   
   
