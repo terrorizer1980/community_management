@@ -402,7 +402,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>172</td>
+        <td>173</td>
       
   
   
@@ -758,48 +758,52 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
   
   
   
       
-        <td>37</td>
-      
-  
-  
-  
-      
-        <td>crazymind1337</td>
+        <td>196</td>
       
   
   
   
       
-        <td>rewrite rspec tests</td>
+        <td>matthanley</td>
       
   
   
   
       
-        <td>Thanks for this PR @crazymind1337 - quite an effort, but very much appreciated. I've been reviewing a bit today, but given the size, it'll likely take another bit of time, but we'll try to get it over the line as soon as we can.</td>
+        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
       
   
   
   
       
-        <td>sanfrancrisko</td>
+        <td>It looks like this pull request hasn't seen any activity in a while, @matthanley. Is this something that you're still able to work on? We're happy to keep this pull request open if there's forward movement, and we'll leave it open for another two weeks from now. If there isn't any activity by then we may have to close this pull request due to lack of activity.
+
+  Closing the pull request wouldn't mean we don't consider this change valuable. However we try to keep all open pull requests moving towards completion, and closing stale pull requests help us focus on more active pull requests.
+
+  If you have any questions or concerns, please don't hesitate to ping us in the Slack channel on slack.puppet.com.</td>
       
   
   
   
       
-        <td>3</td>
+        <td>michaeltlombardi</td>
       
   
   
   
       
-        <td>8</td>
+        <td>19</td>
+      
+  
+  
+  
+      
+        <td>5</td>
       
   
   
@@ -898,52 +902,48 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
   
   
   
       
-        <td>195</td>
-      
-  
-  
-  
-      
-        <td>matthanley</td>
+        <td>37</td>
       
   
   
   
       
-        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
+        <td>crazymind1337</td>
       
   
   
   
       
-        <td>It looks like this pull request hasn't seen any activity in a while, @matthanley. Is this something that you're still able to work on? We're happy to keep this pull request open if there's forward movement, and we'll leave it open for another two weeks from now. If there isn't any activity by then we may have to close this pull request due to lack of activity.
-
-  Closing the pull request wouldn't mean we don't consider this change valuable. However we try to keep all open pull requests moving towards completion, and closing stale pull requests help us focus on more active pull requests.
-
-  If you have any questions or concerns, please don't hesitate to ping us in the Slack channel on slack.puppet.com.</td>
+        <td>rewrite rspec tests</td>
       
   
   
   
       
-        <td>michaeltlombardi</td>
+        <td>Thanks for this PR @crazymind1337 - quite an effort, but very much appreciated. I've been reviewing a bit today, but given the size, it'll likely take another bit of time, but we'll try to get it over the line as soon as we can.</td>
       
   
   
   
       
-        <td>19</td>
+        <td>sanfrancrisko</td>
       
   
   
   
       
-        <td>5</td>
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>8</td>
       
   
   
@@ -1162,99 +1162,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
-  
-  
-  
-      
-        <td>117</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>Add --notrack flag</td>
-      
-  
-  
-  
-      
-        <td>So I've had a look a look, and I can easily enough add something like:
-
-    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
-    index bcf8197..96e1560 100644
-    --- a/spec/acceptance/standard_usage_spec.rb
-    +++ b/spec/acceptance/standard_usage_spec.rb
-    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
-               proto   => 'all',
-               ctstate => ['RELATED', 'ESTABLISHED'],
-               action  => 'accept',
-    +        }->
-    +        firewall { '004 do not track UDP connections to port 53':
-    +          chain => 'PREROUTING',
-    +          table => 'raw',
-    +          proto  => 'udp',
-    +          dport => 53,
-    +          jump => 'CT',
-    +          notrack => true,
-             }
-           }
-           class my_fw::post {
-
-But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
-</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>115</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -1637,6 +1544,99 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
+  
+  
+  
+      
+        <td>117</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>Add --notrack flag</td>
+      
+  
+  
+  
+      
+        <td>So I've had a look a look, and I can easily enough add something like:
+
+    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
+    index bcf8197..96e1560 100644
+    --- a/spec/acceptance/standard_usage_spec.rb
+    +++ b/spec/acceptance/standard_usage_spec.rb
+    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
+               proto   => 'all',
+               ctstate => ['RELATED', 'ESTABLISHED'],
+               action  => 'accept',
+    +        }->
+    +        firewall { '004 do not track UDP connections to port 53':
+    +          chain => 'PREROUTING',
+    +          table => 'raw',
+    +          proto  => 'udp',
+    +          dport => 53,
+    +          jump => 'CT',
+    +          notrack => true,
+             }
+           }
+           class my_fw::post {
+
+But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
+</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>116</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
@@ -1782,7 +1782,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>31</td>
+        <td>32</td>
       
   
   
@@ -1812,7 +1812,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>31</td>
+        <td>32</td>
       
   
   
@@ -1852,7 +1852,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>36</td>
+        <td>37</td>
       
   
   
@@ -1882,7 +1882,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>36</td>
+        <td>37</td>
       
   
   
@@ -2025,7 +2025,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>36</td>
+        <td>37</td>
       
   
   
@@ -2135,7 +2135,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>125</td>
+        <td>126</td>
       
   
   
@@ -2205,7 +2205,7 @@ So probably you can fix potential acceptance test problems to get these useful c
   
   
       
-        <td>97</td>
+        <td>98</td>
       
   
   
@@ -2556,6 +2556,101 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1115'>1115</a></td>
+  
+  
+  
+      
+        <td>11</td>
+      
+  
+  
+  
+      
+        <td>trevor-vaughan <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>[MODULES-10729] defined_with_params - unnamed type</td>
+      
+  
+  
+  
+      
+        <td>[defined_with_params](https://github.com/puppetlabs/puppetlabs-stdlib/blob/733320ed3d67befa479f1654a1e9e29d07610dc5/lib/puppet/parser/functions/defined_with_params.rb) is a _function_
+----------------------------------
+
+
+
+
+  Breaking changes to this file MAY impact these 7 modules (near match):
+
+* [sfu-managedmac](https://github.com/dayglojesus/managedmac)
+* [panaman-pathmunge](https://github.com/panaman/puppet-pathmunge)
+* [panaman-bro](https://github.com/panaman/puppet-bro)
+* [example42-tp](https://github.com/example42/puppet-tp)
+* [puppet-rundeck](https://github.com/voxpupuli/puppet-rundeck.git)
+* [lcgdm-lcgdm](https://github.com/cern-it-sdc-id/puppet-lcgdm)
+* [lcgdm-dmlite](https://github.com/cern-it-sdc-id/puppet-dmlite)
+
+
+
+#### This module is declared in 318 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>11</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
@@ -2756,101 +2851,6 @@ cc @binford2k </td>
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1115'>1115</a></td>
-  
-  
-  
-      
-        <td>11</td>
-      
-  
-  
-  
-      
-        <td>trevor-vaughan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>[MODULES-10729] defined_with_params - unnamed type</td>
-      
-  
-  
-  
-      
-        <td>[defined_with_params](https://github.com/puppetlabs/puppetlabs-stdlib/blob/733320ed3d67befa479f1654a1e9e29d07610dc5/lib/puppet/parser/functions/defined_with_params.rb) is a _function_
-----------------------------------
-
-
-
-
-  Breaking changes to this file MAY impact these 7 modules (near match):
-
-* [sfu-managedmac](https://github.com/dayglojesus/managedmac)
-* [panaman-pathmunge](https://github.com/panaman/puppet-pathmunge)
-* [panaman-bro](https://github.com/panaman/puppet-bro)
-* [example42-tp](https://github.com/example42/puppet-tp)
-* [puppet-rundeck](https://github.com/voxpupuli/puppet-rundeck.git)
-* [lcgdm-lcgdm](https://github.com/cern-it-sdc-id/puppet-lcgdm)
-* [lcgdm-dmlite](https://github.com/cern-it-sdc-id/puppet-dmlite)
-
-
-
-#### This module is declared in 318 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
-      
-  
-  
-  
-      
-        <td>puppet-community-rangefinder[bot]</td>
-      
-  
-  
-  
-      
-        <td>11</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   

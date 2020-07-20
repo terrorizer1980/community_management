@@ -575,106 +575,6 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
-  
-  
-  
-
-  
-      
-        <td>569</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @daianamezdrea, I will try and rebase this shortly.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>47</td>
-      
-  
-  
-  
-
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/233'>233</a></td>
   
   
@@ -737,6 +637,118 @@ wrote:
   
       
         <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+  
+  
+  
+
+  
+      
+        <td>133</td>
+      
+  
+  
+  
+
+  
+      
+        <td>findmyname666</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
+
+Modify `Gemfile` to use this repo:
+```
+group :development do
+  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
+end
+```
+```
+bundle install
+bundle exec rake 'litmus:provision_list[release_checks]'
+# etc...
+```
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+
+  
+      
+        <td>40</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
       
   
   
@@ -875,22 +887,14 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
   
   
   
 
   
       
-        <td>133</td>
-      
-  
-  
-  
-
-  
-      
-        <td>findmyname666</td>
+        <td>569</td>
       
   
   
@@ -898,26 +902,22 @@ wrote:
 
   
       
-        <td>Remove all sub-folders from source repository / folder</td>
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
-
-Modify `Gemfile` to use this repo:
-```
-group :development do
-  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
-end
-```
-```
-bundle install
-bundle exec rake 'litmus:provision_list[release_checks]'
-# etc...
-```
+     Hi @daianamezdrea, I will try and rebase this shortly.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -932,7 +932,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>sanfrancrisko</td>
+        <td>nabertrand</td>
       
   
   
@@ -940,7 +940,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>40</td>
+        <td>47</td>
       
   
   
