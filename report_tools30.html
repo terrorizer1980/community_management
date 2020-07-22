@@ -159,6 +159,106 @@ $(document).on("click", '.show-more a', function(e) {
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/269'>269</a></td>
+  
+  
+  
+
+  
+      
+        <td>372</td>
+      
+  
+  
+  
+
+  
+      
+        <td>rtib</td>
+      
+  
+  
+  
+
+  
+      
+        <td>test against puppet versions of latest PE, latest PE LTS and latest gem</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     The IAC team tend to try to avoid pinning to specific puppet versions as it introduces too much maintenance, tracking and updating when newer versions are released. Currently I don't think that the benefits of this specific change outweigh the drawbacks. 
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>pmcmaw</td>
+      
+  
+  
+  
+
+  
+      
+        <td>42</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/281'>281</a></td>
   
   
@@ -239,106 +339,6 @@ Just having a large tool triage and wondering if this is something you are still
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/269'>269</a></td>
-  
-  
-  
-
-  
-      
-        <td>372</td>
-      
-  
-  
-  
-
-  
-      
-        <td>rtib</td>
-      
-  
-  
-  
-
-  
-      
-        <td>test against puppet versions of latest PE, latest PE LTS and latest gem</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     The IAC team tend to try to avoid pinning to specific puppet versions as it introduces too much maintenance, tracking and updating when newer versions are released. Currently I don't think that the benefits of this specific change outweigh the drawbacks. 
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>pmcmaw</td>
-      
-  
-  
-  
-
-  
-      
-        <td>42</td>
-      
-  
-  
-  
-
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
       
   
   
@@ -575,22 +575,14 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/233'>233</a></td>
   
   
   
 
   
       
-        <td>135</td>
-      
-  
-  
-  
-
-  
-      
-        <td>findmyname666</td>
+        <td>865</td>
       
   
   
@@ -598,26 +590,22 @@ wrote:
 
   
       
-        <td>Remove all sub-folders from source repository / folder</td>
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add all spec/lib directories from fixtures to LOAD_PATH</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
-
-Modify `Gemfile` to use this repo:
-```
-group :development do
-  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
-end
-```
-```
-bundle install
-bundle exec rake 'litmus:provision_list[release_checks]'
-# etc...
-```
+     Hi @daianamezdrea, sure, I should hopefully have some time to look at this soon.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -632,7 +620,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>sanfrancrisko</td>
+        <td>nabertrand</td>
       
   
   
@@ -640,7 +628,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>42</td>
+        <td>49</td>
       
   
   
@@ -648,7 +636,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>5</td>
+        <td>2</td>
       
   
   
@@ -787,106 +775,6 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/233'>233</a></td>
-  
-  
-  
-
-  
-      
-        <td>865</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add all spec/lib directories from fixtures to LOAD_PATH</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @daianamezdrea, sure, I should hopefully have some time to look at this soon.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>49</td>
-      
-  
-  
-  
-
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
   
   
@@ -965,6 +853,118 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+  
+  
+  
+
+  
+      
+        <td>135</td>
+      
+  
+  
+  
+
+  
+      
+        <td>findmyname666</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
+
+Modify `Gemfile` to use this repo:
+```
+group :development do
+  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
+end
+```
+```
+bundle install
+bundle exec rake 'litmus:provision_list[release_checks]'
+# etc...
+```
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+
+  
+      
+        <td>42</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
       
   
   
