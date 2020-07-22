@@ -192,7 +192,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -210,7 +210,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>Travis failing due to https://github.com/rodjek/rspec-puppet/issues/796</td>
+        <td>@tphoney @DavidS Who would be a good reviewer for this? The ticket reporter verified this solution works for them. </td>
       
   
   
@@ -222,25 +222,25 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>6</td>
+        <td>0</td>
       
   
   
   
       
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+        <td>2</td>
       
   
   
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -262,7 +262,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>160</td>
+        <td>161</td>
       
   
   
@@ -292,7 +292,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>160</td>
+        <td>161</td>
       
   
   
@@ -332,7 +332,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>139</td>
+        <td>140</td>
       
   
   
@@ -381,6 +381,85 @@ $(document).on("click", '.show-more a', function(e) {
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
+  
+  
+  
+      
+        <td>111</td>
+      
+  
+  
+  
+      
+        <td>reenberg</td>
+      
+  
+  
+  
+      
+        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
+      
+  
+  
+  
+      
+        <td>> Hi @reenberg! Let me know if you need some help! Cheers!
+
+Thanks for bumping this back up.
+
+I talked quite a bit with @DavidS on slack, but he didn't have the time back then to look at it.  
+Guess corona got me to totally forget about this one, as I initially was waiting for some pointers as to whether this PR would be even remotely accepted.  The `get_image_os_release_facts` is somewhat of a change, but as I talked to David about, then the other provisioners could benefit if implementing something like it.  Especially as higher level tasks could then use this information.
+
+He also pointed me towards `docker_exp`, but I totally forgot to have a look at that.
+
+Should I take it, that if I rebase it to master, and fix the failing tests, then this could be accepted?</td>
+      
+  
+  
+  
+      
+        <td>reenberg</td>
+      
+  
+  
+  
+      
+        <td>54</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -461,85 +540,6 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
-  
-  
-  
-      
-        <td>110</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
-      
-  
-  
-  
-      
-        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
-      
-  
-  
-  
-      
-        <td>> Hi @reenberg! Let me know if you need some help! Cheers!
-
-Thanks for bumping this back up.
-
-I talked quite a bit with @DavidS on slack, but he didn't have the time back then to look at it.  
-Guess corona got me to totally forget about this one, as I initially was waiting for some pointers as to whether this PR would be even remotely accepted.  The `get_image_os_release_facts` is somewhat of a change, but as I talked to David about, then the other provisioners could benefit if implementing something like it.  Especially as higher level tasks could then use this information.
-
-He also pointed me towards `docker_exp`, but I totally forgot to have a look at that.
-
-Should I take it, that if I rebase it to master, and fix the failing tests, then this could be accepted?</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
-      
-  
-  
-  
-      
-        <td>53</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-chocolatey'>puppetlabs-chocolatey</a></td>
   
   
@@ -553,7 +553,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>140</td>
+        <td>141</td>
       
   
   
@@ -623,7 +623,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -653,7 +653,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -693,7 +693,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -723,7 +723,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -758,42 +758,42 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
   
   
   
       
-        <td>248</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
+        <td>39</td>
       
   
   
   
       
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+        <td>crazymind1337</td>
       
   
   
   
       
-        <td>@mgrzybowski Perfect. Thank you.</td>
+        <td>rewrite rspec tests</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>Thanks for this PR @crazymind1337 - quite an effort, but very much appreciated. I've been reviewing a bit today, but given the size, it'll likely take another bit of time, but we'll try to get it over the line as soon as we can.</td>
       
   
   
   
       
-        <td>18</td>
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>5</td>
       
   
   
@@ -828,42 +828,42 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/624'>624</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
   
   
   
       
-        <td>38</td>
-      
-  
-  
-  
-      
-        <td>crazymind1337</td>
+        <td>249</td>
       
   
   
   
       
-        <td>rewrite rspec tests</td>
+        <td>mgrzybowski</td>
       
   
   
   
       
-        <td>Thanks for this PR @crazymind1337 - quite an effort, but very much appreciated. I've been reviewing a bit today, but given the size, it'll likely take another bit of time, but we'll try to get it over the line as soon as we can.</td>
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
       
   
   
   
       
-        <td>sanfrancrisko</td>
+        <td>@mgrzybowski Perfect. Thank you.</td>
       
   
   
   
       
-        <td>5</td>
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>19</td>
       
   
   
@@ -937,7 +937,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -1079,7 +1079,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -1189,7 +1189,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>172</td>
+        <td>173</td>
       
   
   
@@ -1219,7 +1219,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>104</td>
+        <td>105</td>
       
   
   
@@ -1259,7 +1259,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -1579,7 +1579,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -1742,7 +1742,7 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
       
-        <td>11</td>
+        <td>12</td>
       
   
   
@@ -1847,12 +1847,152 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/418'>418</a></td>
+  
+  
+  
+      
+        <td>39</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>Disable swap permanently</td>
+      
+  
+  
+  
+      
+        <td>Feedback or merge would be nice :-)</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
+  
+  
+  
+      
+        <td>38</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>Component installation</td>
+      
+  
+  
+  
+      
+        <td>Feedback or merge would be nice :-)</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416'>416</a></td>
   
   
   
       
-        <td>45</td>
+        <td>46</td>
       
   
   
@@ -1912,7 +2052,7 @@ Fast feedback for PR will help to improve this module dramatically ;-)</td>
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
   
   
   
@@ -1920,118 +2060,48 @@ Fast feedback for PR will help to improve this module dramatically ;-)</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1315'>1315</a></td>
   
   
   
       
-        <td>38</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
+        <td>0</td>
       
   
   
   
       
-        <td>Component installation</td>
+        <td>elmobp</td>
       
   
   
   
       
-        <td>Feedback or merge would be nice :-)</td>
+        <td>Remove non printable characters</td>
       
   
   
   
       
-        <td>scoopex</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>1</td>
+        <td></td>
       
   
   
   
       
-        <td>2</td>
+        <td>0</td>
       
   
   
   
       
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/418'>418</a></td>
-  
-  
-  
-      
-        <td>38</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>Disable swap permanently</td>
-      
-  
-  
-  
-      
-        <td>Feedback or merge would be nice :-)</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>3</td>
+        <td>0</td>
       
   
   
@@ -2065,7 +2135,7 @@ Fast feedback for PR will help to improve this module dramatically ;-)</td>
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -2305,7 +2375,7 @@ Fast feedback for PR will help to improve this module dramatically ;-)</td>
   
   
       
-        <td>119</td>
+        <td>120</td>
       
   
   
@@ -2345,7 +2415,7 @@ Fast feedback for PR will help to improve this module dramatically ;-)</td>
   
   
       
-        <td>189</td>
+        <td>190</td>
       
   
   
@@ -2381,7 +2451,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -2416,12 +2486,82 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/145'>145</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-918) - `disable_time_zone_synchronization ` function implemented</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/123'>123</a></td>
   
   
   
       
-        <td>151</td>
+        <td>152</td>
       
   
   
@@ -2451,83 +2591,13 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>110</td>
+        <td>111</td>
       
   
   
   
       
         <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-service'>puppetlabs-service</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-service/pull/151'>151</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>lucywyman <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(maint) Add enable and disable actions for *nix</td>
-      
-  
-  
-  
-      
-        <td>This looks good.  I gave it a quick test and it returns a useful error when the action isn't supported, and works when it is.  I think the number of people who will use the Linux task on EL 6 is small, so probably not much to worry about there.  :+1: </td>
-      
-  
-  
-  
-      
-        <td>m0dular</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>4</td>
       
   
   
@@ -2561,7 +2631,7 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
@@ -2616,7 +2686,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
@@ -2656,7 +2726,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>160</td>
+        <td>161</td>
       
   
   
@@ -2692,7 +2762,7 @@ cc @binford2k </td>
   
   
       
-        <td>151</td>
+        <td>152</td>
       
   
   
@@ -2727,82 +2797,12 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
-  
-  
-  
-      
-        <td>243</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>(WIP) Add volatile_fact() function</td>
-      
-  
-  
-  
-      
-        <td>@binford2k are you planning on continuing work on this PR? It's been a few months, nor sure if you're still interested in picking this up.</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>20</td>
-      
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
   
       
-        <td>196</td>
+        <td>197</td>
       
   
   
@@ -2832,13 +2832,83 @@ cc @binford2k </td>
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
   
       
         <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1067'>1067</a></td>
+  
+  
+  
+      
+        <td>244</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>(WIP) Add volatile_fact() function</td>
+      
+  
+  
+  
+      
+        <td>@binford2k are you planning on continuing work on this PR? It's been a few months, nor sure if you're still interested in picking this up.</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>21</td>
+      
+  
+  
+  
+      
+        <td>8</td>
       
   
   
@@ -2872,7 +2942,7 @@ cc @binford2k </td>
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -3012,7 +3082,7 @@ cc @binford2k </td>
   
   
       
-        <td>60</td>
+        <td>61</td>
       
   
   
@@ -3042,7 +3112,7 @@ cc @binford2k </td>
   
   
       
-        <td>60</td>
+        <td>61</td>
       
   
   
@@ -3112,7 +3182,7 @@ cc @binford2k </td>
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
