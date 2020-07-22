@@ -327,60 +327,62 @@ $(document).on("click", '.show-more a', function(e) {
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/108'>108</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
   
   
   
       
-        <td>140</td>
-      
-  
-  
-  
-      
-        <td>jmangt</td>
+        <td>175</td>
       
   
   
   
       
-        <td>Provides support for Terraform</td>
+        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>Strip slashes from directories</td>
       
   
   
   
       
-        <td></td>
+        <td>@dylanratcliffe looks like the tests are failing - would you mind addressing those?
+
+https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
       
   
   
   
       
-        <td>0</td>
+        <td>michaeltlombardi</td>
       
   
   
   
       
-        <td>0</td>
+        <td>26</td>
       
   
   
   
       
-        <td>true</td>
+        <td>1</td>
       
   
   
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -476,62 +478,60 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/108'>108</a></td>
   
   
   
       
-        <td>174</td>
-      
-  
-  
-  
-      
-        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
+        <td>140</td>
       
   
   
   
       
-        <td>Strip slashes from directories</td>
+        <td>jmangt</td>
       
   
   
   
       
-        <td>@dylanratcliffe looks like the tests are failing - would you mind addressing those?
-
-https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
+        <td>Provides support for Terraform</td>
       
   
   
   
       
-        <td>michaeltlombardi</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>26</td>
+        <td></td>
       
   
   
   
       
-        <td>1</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>0</td>
       
   
   
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -903,7 +903,7 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   
   
       
-        <td>197</td>
+        <td>198</td>
       
   
   
@@ -1238,6 +1238,99 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
+  
+  
+  
+      
+        <td>119</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>Add --notrack flag</td>
+      
+  
+  
+  
+      
+        <td>So I've had a look a look, and I can easily enough add something like:
+
+    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
+    index bcf8197..96e1560 100644
+    --- a/spec/acceptance/standard_usage_spec.rb
+    +++ b/spec/acceptance/standard_usage_spec.rb
+    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
+               proto   => 'all',
+               ctstate => ['RELATED', 'ESTABLISHED'],
+               action  => 'accept',
+    +        }->
+    +        firewall { '004 do not track UDP connections to port 53':
+    +          chain => 'PREROUTING',
+    +          table => 'raw',
+    +          proto  => 'udp',
+    +          dport => 53,
+    +          jump => 'CT',
+    +          notrack => true,
+             }
+           }
+           class my_fw::post {
+
+But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
+</td>
+      
+  
+  
+  
+      
+        <td>jbro</td>
+      
+  
+  
+  
+      
+        <td>118</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1606,99 +1699,6 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/908'>908</a></td>
-  
-  
-  
-      
-        <td>119</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>Add --notrack flag</td>
-      
-  
-  
-  
-      
-        <td>So I've had a look a look, and I can easily enough add something like:
-
-    diff --git a/spec/acceptance/standard_usage_spec.rb b/spec/acceptance/standard_usage_spec.rb
-    index bcf8197..96e1560 100644
-    --- a/spec/acceptance/standard_usage_spec.rb
-    +++ b/spec/acceptance/standard_usage_spec.rb
-    @@ -27,6 +27,14 @@ describe 'standard usage tests' do
-               proto   => 'all',
-               ctstate => ['RELATED', 'ESTABLISHED'],
-               action  => 'accept',
-    +        }->
-    +        firewall { '004 do not track UDP connections to port 53':
-    +          chain => 'PREROUTING',
-    +          table => 'raw',
-    +          proto  => 'udp',
-    +          dport => 53,
-    +          jump => 'CT',
-    +          notrack => true,
-             }
-           }
-           class my_fw::post {
-
-But to be frank I don't plan on spending time setting up the necessary test rig or trying to understand how to tie into the unit tests for such a small patch as this.
-</td>
-      
-  
-  
-  
-      
-        <td>jbro</td>
-      
-  
-  
-  
-      
-        <td>117</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
   
   
@@ -1782,7 +1782,7 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
       
-        <td>33</td>
+        <td>34</td>
       
   
   
@@ -1812,7 +1812,7 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
       
-        <td>33</td>
+        <td>34</td>
       
   
   
@@ -1917,76 +1917,6 @@ But to be frank I don't plan on spending time setting up the necessary test rig 
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
-  
-  
-  
-      
-        <td>38</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>Component installation</td>
-      
-  
-  
-  
-      
-        <td>Feedback or merge would be nice :-)</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416'>416</a></td>
   
   
@@ -2038,6 +1968,76 @@ Fast feedback for PR will help to improve this module dramatically ;-)</td>
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
+  
+  
+  
+      
+        <td>39</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>Component installation</td>
+      
+  
+  
+  
+      
+        <td>Feedback or merge would be nice :-)</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2205,7 +2205,7 @@ Fast feedback for PR will help to improve this module dramatically ;-)</td>
   
   
       
-        <td>127</td>
+        <td>128</td>
       
   
   
@@ -2275,7 +2275,7 @@ Fast feedback for PR will help to improve this module dramatically ;-)</td>
   
   
       
-        <td>99</td>
+        <td>100</td>
       
   
   
@@ -2626,6 +2626,82 @@ I'm sorry but if that's what you're asking of me, feel free to close this PR.</t
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
+  
+  
+  
+      
+        <td>161</td>
+      
+  
+  
+  
+      
+        <td>justinstoller <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
+      
+  
+  
+  
+      
+        <td>Hi @justinstoller,
+
+Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
+
+With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
+
+cc @binford2k </td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>152</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1115'>1115</a></td>
   
   
@@ -2705,82 +2781,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
-  
-  
-  
-      
-        <td>161</td>
-      
-  
-  
-  
-      
-        <td>justinstoller <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(wip) use json, not pson, steal Bens work to make pup4</td>
-      
-  
-  
-  
-      
-        <td>Hi @justinstoller,
-
-Depending on how much the behaviour changes, it might be a barrier to switching over. I'm not familiar enough with the pson/json differences to be able to make a judgement call on that. I would guess that most users of those functions are actually looking for JSON, not pson semantics, so it might be really not a big deal in this case.
-
-With the changes in #1079 we're moving all non-deprecated functions to `stdlib::` prefix. I haven't worked through all the issues there yet, but see the commit message on https://github.com/DavidS/puppetlabs-stdlib/commit/25a2af2e4fe437a769cdcf1f276489d7ebf36659 for a up-to-date snapshot of where the project is at.
-
-cc @binford2k </td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>152</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
