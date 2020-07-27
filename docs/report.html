@@ -262,7 +262,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>166</td>
+        <td>167</td>
       
   
   
@@ -292,7 +292,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>166</td>
+        <td>167</td>
       
   
   
@@ -397,6 +397,78 @@ $(document).on("click", '.show-more a', function(e) {
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
+  
+  
+  
+      
+        <td>180</td>
+      
+  
+  
+  
+      
+        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Strip slashes from directories</td>
+      
+  
+  
+  
+      
+        <td>@dylanratcliffe looks like the tests are failing - would you mind addressing those?
+
+https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>32</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
   
   
@@ -468,7 +540,7 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
   
   
   
@@ -476,44 +548,91 @@ Should I take it, that if I rebase it to master, and fix the failing tests, then
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2052'>2052</a></td>
   
   
   
       
-        <td>180</td>
-      
-  
-  
-  
-      
-        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
+        <td>0</td>
       
   
   
   
       
-        <td>Strip slashes from directories</td>
+        <td>kajinamit</td>
       
   
   
   
       
-        <td>@dylanratcliffe looks like the tests are failing - would you mind addressing those?
+        <td>Use python3-mod_wsgi instead of mod_wsgi on CentOS8</td>
+      
+  
+  
+  
+      
+        <td>[apache::params](https://github.com/puppetlabs/puppetlabs-apache/blob/41672e29ec2a02f261ca0cac0ce1b06a671bcea6/manifests/params.pp) is a _class_
+----------------------------------
 
-https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
+
+
+  Breaking changes to this file WILL impact these 11 modules (exact match):
+
+* [osc-openondemand](https://github.com/osc/puppet-module-openondemand)
+* [openstack-ironic](https://github.com/openstack/puppet-ironic.git)
+* [jlondon-phpmyadmin](http://github.com/justicel/puppet-phpmyadmin.git)
+* [openstack-zaqar](https://github.com/openstack/puppet-zaqar.git)
+* [desalvo-bacula](https://github.com/desalvo/puppet-bacula)
+* [openstack-mistral](https://github.com/openstack/puppet-mistral.git)
+* [openstack-keystone](https://github.com/openstack/puppet-keystone.git)
+* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
+* [xdrum-puppet](https://github.com/x-drum/puppet-puppet)
+* [openstack-manila](https://github.com/openstack/puppet-manila.git)
+* [openstack-cinder](https://github.com/openstack/puppet-cinder.git)
+
+
+
+  Breaking changes to this file MAY impact these 16 modules (near match):
+
+* [openstack-aodh](https://github.com/openstack/puppet-aodh.git)
+* [camptocamp-catalog_diff](https://github.com/camptocamp/puppet-catalog-diff)
+* [openstack-panko](https://github.com/openstack/puppet-panko.git)
+* [openstack-watcher](https://github.com/openstack/puppet-watcher.git)
+* [openstack-octavia](https://github.com/openstack/puppet-octavia.git)
+* [ULHPC-passenger](https://github.com/ULHPC/puppet-passenger)
+* [openstack-magnum](https://github.com/openstack/puppet-magnum.git)
+* [openstack-sahara](https://github.com/openstack/puppet-sahara.git)
+* [openstack-cloudkitty](https://github.com/openstack/puppet-cloudkitty.git)
+* [openstack-neutron](https://github.com/openstack/puppet-neutron.git)
+* [openstack-gnocchi](https://github.com/openstack/puppet-gnocchi.git)
+* [openstack-vitrage](https://github.com/openstack/puppet-vitrage.git)
+* [openstack-barbican](https://github.com/openstack/puppet-barbican.git)
+* [openstack-heat](https://github.com/openstack/puppet-heat.git)
+* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
+* [openstack-tripleo](https://github.com/openstack/puppet-tripleo.git)
+
+
+
+#### This module is declared in 174 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
       
   
   
   
       
-        <td>michaeltlombardi</td>
+        <td>puppet-community-rangefinder[bot]</td>
       
   
   
   
       
-        <td>32</td>
+        <td>0</td>
       
   
   
@@ -525,13 +644,13 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   
   
       
-        <td>false</td>
-      
-  
-  
-  
-      
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -688,12 +807,82 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+  
+  
+  
+      
+        <td>255</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+      
+  
+  
+  
+      
+        <td>@mgrzybowski Perfect. Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>25</td>
+      
+  
+  
+  
+      
+        <td>8</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/635'>635</a></td>
   
   
   
       
-        <td>11</td>
+        <td>12</td>
       
   
   
@@ -758,48 +947,52 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
   
   
   
       
-        <td>254</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
+        <td>203</td>
       
   
   
   
       
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+        <td>matthanley</td>
       
   
   
   
       
-        <td>@mgrzybowski Perfect. Thank you.</td>
+        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>It looks like this pull request hasn't seen any activity in a while, @matthanley. Is this something that you're still able to work on? We're happy to keep this pull request open if there's forward movement, and we'll leave it open for another two weeks from now. If there isn't any activity by then we may have to close this pull request due to lack of activity.
+
+  Closing the pull request wouldn't mean we don't consider this change valuable. However we try to keep all open pull requests moving towards completion, and closing stale pull requests help us focus on more active pull requests.
+
+  If you have any questions or concerns, please don't hesitate to ping us in the Slack channel on slack.puppet.com.</td>
       
   
   
   
       
-        <td>24</td>
+        <td>michaeltlombardi</td>
       
   
   
   
       
-        <td>8</td>
+        <td>26</td>
+      
+  
+  
+  
+      
+        <td>5</td>
       
   
   
@@ -870,80 +1063,6 @@ https://travis-ci.com/github/puppetlabs/provision/jobs/281493636</td>
   
       
         <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/565'>565</a></td>
-  
-  
-  
-      
-        <td>203</td>
-      
-  
-  
-  
-      
-        <td>matthanley</td>
-      
-  
-  
-  
-      
-        <td>Fix regex for installing docker-ce version 17.06 onwards</td>
-      
-  
-  
-  
-      
-        <td>It looks like this pull request hasn't seen any activity in a while, @matthanley. Is this something that you're still able to work on? We're happy to keep this pull request open if there's forward movement, and we'll leave it open for another two weeks from now. If there isn't any activity by then we may have to close this pull request due to lack of activity.
-
-  Closing the pull request wouldn't mean we don't consider this change valuable. However we try to keep all open pull requests moving towards completion, and closing stale pull requests help us focus on more active pull requests.
-
-  If you have any questions or concerns, please don't hesitate to ping us in the Slack channel on slack.puppet.com.</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>26</td>
-      
-  
-  
-  
-      
-        <td>5</td>
       
   
   
@@ -1149,7 +1268,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>110</td>
+        <td>111</td>
       
   
   
@@ -1324,6 +1443,76 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
+  
+  
+  
+      
+        <td>44</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>Component installation</td>
+      
+  
+  
+  
+      
+        <td>Feedback or merge would be nice :-)</td>
+      
+  
+  
+  
+      
+        <td>scoopex</td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/418'>418</a></td>
   
   
@@ -1445,76 +1634,6 @@ Fast feedback for PR will help to improve this module dramatically ;-)</td>
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/420'>420</a></td>
-  
-  
-  
-      
-        <td>44</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>Component installation</td>
-      
-  
-  
-  
-      
-        <td>Feedback or merge would be nice :-)</td>
-      
-  
-  
-  
-      
-        <td>scoopex</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -2273,7 +2392,7 @@ cc @binford2k </td>
   
   
       
-        <td>202</td>
+        <td>203</td>
       
   
   
