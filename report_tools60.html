@@ -249,6 +249,106 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
+  
+  
+  
+
+  
+      
+        <td>300</td>
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(performance) - Sets up basic performance testing</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds</td>
+      
+  
+  
+  
+
+  
+      
+        <td>61</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
   
   
@@ -475,22 +575,14 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
   
   
   
 
   
       
-        <td>154</td>
-      
-  
-  
-  
-
-  
-      
-        <td>findmyname666</td>
+        <td>590</td>
       
   
   
@@ -498,26 +590,22 @@ wrote:
 
   
       
-        <td>Remove all sub-folders from source repository / folder</td>
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
-
-Modify `Gemfile` to use this repo:
-```
-group :development do
-  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
-end
-```
-```
-bundle install
-bundle exec rake 'litmus:provision_list[release_checks]'
-# etc...
-```
+     Hi @daianamezdrea, I will try and rebase this shortly.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -532,7 +620,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>sanfrancrisko</td>
+        <td>nabertrand</td>
       
   
   
@@ -540,7 +628,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>61</td>
+        <td>68</td>
       
   
   
@@ -687,22 +775,14 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
   
   
   
 
   
       
-        <td>590</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
+        <td>154</td>
       
   
   
@@ -710,14 +790,34 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
+        <td>findmyname666</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Hi @daianamezdrea, I will try and rebase this shortly.
+     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
+
+Modify `Gemfile` to use this repo:
+```
+group :development do
+  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
+end
+```
+```
+bundle install
+bundle exec rake 'litmus:provision_list[release_checks]'
+# etc...
+```
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -732,7 +832,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>nabertrand</td>
+        <td>sanfrancrisko</td>
       
   
   
@@ -740,7 +840,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>68</td>
+        <td>61</td>
       
   
   
