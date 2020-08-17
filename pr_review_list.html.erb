@@ -43,7 +43,7 @@
         }
          else{
           if(title == "age_comment"  || title == "num_comments"){
-          $(this).append( ' <br> <input class="something" type="text" placeholder=" "style="width: 60px"  /> ' );
+          $(this).append( ' <br> <input class="something" type="text" placeholder=" "style="width: 60px"  />' );
         }
 
         else{
@@ -121,7 +121,7 @@ $(document).on("click", '.show-more a', function(e) {
     </tbody>
            
 
-        <table data-role="table" data-mode="columntoggle" border='1' data-rel="popup" id='reviews' style='width:relative' class='sortable table table-hover'> 
+        <table data-role='table' data-mode='columntoggle' border='1' id='reviews' style='width:relative' class='sortable table table-hover'> 
 <thead> 
 <tr>
   <% if open_prs.empty?  %>
