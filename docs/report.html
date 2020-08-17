@@ -329,6 +329,77 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
+  
+  
+  
+      
+        <td>201</td>
+      
+  
+  
+  
+      
+        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Strip slashes from directories</td>
+      
+  
+  
+  
+      
+        <td>@dylanratcliffe 
+Making a quick change to point this PR towards the newly defined default main branch as part of our work to remove inappropriate terminology. Apologies if this is inconvenient in any way.</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>11</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
   
   
@@ -406,77 +477,6 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/94'>94</a></td>
-  
-  
-  
-      
-        <td>201</td>
-      
-  
-  
-  
-      
-        <td>dylanratcliffe <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Strip slashes from directories</td>
-      
-  
-  
-  
-      
-        <td>@dylanratcliffe 
-Making a quick change to point this PR towards the newly defined default main branch as part of our work to remove inappropriate terminology. Apologies if this is inconvenient in any way.</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>11</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -1018,7 +1018,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>47</td>
+        <td>48</td>
       
   
   
@@ -1053,7 +1053,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/651'>651</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/652'>652</a></td>
   
   
   
@@ -1064,25 +1064,74 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>oschusler</td>
+        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>Add docker swarm join-tokens as facts</td>
+        <td>Add acceptance test for  prepare_service_only param</td>
       
   
   
   
       
-        <td>Travis seems to time out only on `PUPPET_GEM_VERSION="~> 6.0" CHECK=parallel_spec`. It claims not to have received any output in the last 10 minutes, while the output has finished ("Finished in 6 minutes 19 seconds (files took 5 minutes 4 seconds to load)")</td>
+        <td>[docker::run](https://github.com/puppetlabs/puppetlabs-docker/blob/4587441627afa11a41feb4bfdc8d38da8bcfa72c/manifests/run.pp) is a _type_
+----------------------------------
+
+
+
+  Breaking changes to this file WILL impact these 6 modules (exact match):
+
+* [samuelson-dockeragent](https://github.com/samuelson/samuelson-dockeragent)
+* [gennadyvoronkov-dcos](https://github.com/gennady-voronkov/dcos.git)
+* [glorpen-g_docker](https://github.com/glorpen/puppet-g_docker.git)
+* [dodevops-hanaexpress](https://github.com/dodevops/puppet-hanaexpress)
+* [ffquintella-dockerapp](https://github.com/ffquintella/puppet-dockerApp.git)
+* [puppetlabs-cd4pe](https://forge.puppetlabs.com/puppetlabs/cd4pe)
+
+
+
+  Breaking changes to this file MAY impact these 21 modules (near match):
+
+* [c0deaddict-gogs](https://github.com/c0deaddict/puppet-gogs)
+* [cristifalcas-docker_auth](https://github.com/cristifalcas/puppet-docker_auth.git)
+* [cjtoolseram-drone](https://bitbucket.org/cjtoolseram/cjtoolseram-drone)
+* [justin8-ghost](https://github.com/justin8/justin8-ghost)
+* [autostructure-secure_docker](https://github.com/autostructure/secure_docker.git)
+* [jefferyb-kualicoeus](https://github.com/jefferyb/kualicoeus)
+* [pltraining-classroom_legacy](https://github.com/puppetlabs/pltraining-classroom_legacy)
+* [pltraining-classroom](https://github.com/puppetlabs/pltraining-classroom)
+* [bfraser-grafana](https://github.com/bfraser/puppet-grafana.git)
+* [factorit-grafana](https://github.com/bfraser/puppet-grafana.git)
+* [cristifalcas-docker_distribution](https://github.com/cristifalcas/puppet-docker_distribution.git)
+* [KyleAnderson-consul](https://github.com/solarkennedy/puppet-consul)
+* [puppet-grafana](https://github.com/voxpupuli/puppet-grafana.git)
+* [pltraining-dockeragent](https://github.com/puppetlabs/pltraining-dockeragent)
+* [pltraining-puppetfactory](https://github.com/puppetlabs/puppetfactory)
+* [puppetlabs-rancher](https://github.com/puppetlabs/puppetlabs-rancher.git)
+* [nick-rancher](https://github.com/nickschuch/puppet-rancher)
+* [flyer-docker_cluster](https://github.com/flyer8/docker_cluster)
+* [cristifalcas-prometheus](https://github.com/cristifalcas/puppet-prometheus)
+* [prozeta-portauthority](https://github.com/prozeta/port-authority)
+* [cristifalcas-kubernetes](https://github.com/cristifalcas/puppet-kubernetes.git)
+
+
+
+#### This module is declared in 7 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
       
   
   
   
       
-        <td>oschusler</td>
+        <td>puppet-community-rangefinder[bot]</td>
       
   
   
@@ -1193,7 +1242,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/652'>652</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/651'>651</a></td>
   
   
   
@@ -1204,74 +1253,25 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>oschusler</td>
       
   
   
   
       
-        <td>Add acceptance test for  prepare_service_only param</td>
+        <td>Add docker swarm join-tokens as facts</td>
       
   
   
   
       
-        <td>[docker::run](https://github.com/puppetlabs/puppetlabs-docker/blob/4587441627afa11a41feb4bfdc8d38da8bcfa72c/manifests/run.pp) is a _type_
-----------------------------------
-
-
-
-  Breaking changes to this file WILL impact these 6 modules (exact match):
-
-* [samuelson-dockeragent](https://github.com/samuelson/samuelson-dockeragent)
-* [gennadyvoronkov-dcos](https://github.com/gennady-voronkov/dcos.git)
-* [glorpen-g_docker](https://github.com/glorpen/puppet-g_docker.git)
-* [dodevops-hanaexpress](https://github.com/dodevops/puppet-hanaexpress)
-* [ffquintella-dockerapp](https://github.com/ffquintella/puppet-dockerApp.git)
-* [puppetlabs-cd4pe](https://forge.puppetlabs.com/puppetlabs/cd4pe)
-
-
-
-  Breaking changes to this file MAY impact these 21 modules (near match):
-
-* [c0deaddict-gogs](https://github.com/c0deaddict/puppet-gogs)
-* [cristifalcas-docker_auth](https://github.com/cristifalcas/puppet-docker_auth.git)
-* [cjtoolseram-drone](https://bitbucket.org/cjtoolseram/cjtoolseram-drone)
-* [justin8-ghost](https://github.com/justin8/justin8-ghost)
-* [autostructure-secure_docker](https://github.com/autostructure/secure_docker.git)
-* [jefferyb-kualicoeus](https://github.com/jefferyb/kualicoeus)
-* [pltraining-classroom_legacy](https://github.com/puppetlabs/pltraining-classroom_legacy)
-* [pltraining-classroom](https://github.com/puppetlabs/pltraining-classroom)
-* [bfraser-grafana](https://github.com/bfraser/puppet-grafana.git)
-* [factorit-grafana](https://github.com/bfraser/puppet-grafana.git)
-* [cristifalcas-docker_distribution](https://github.com/cristifalcas/puppet-docker_distribution.git)
-* [KyleAnderson-consul](https://github.com/solarkennedy/puppet-consul)
-* [puppet-grafana](https://github.com/voxpupuli/puppet-grafana.git)
-* [pltraining-dockeragent](https://github.com/puppetlabs/pltraining-dockeragent)
-* [pltraining-puppetfactory](https://github.com/puppetlabs/puppetfactory)
-* [puppetlabs-rancher](https://github.com/puppetlabs/puppetlabs-rancher.git)
-* [nick-rancher](https://github.com/nickschuch/puppet-rancher)
-* [flyer-docker_cluster](https://github.com/flyer8/docker_cluster)
-* [cristifalcas-prometheus](https://github.com/cristifalcas/puppet-prometheus)
-* [prozeta-portauthority](https://github.com/prozeta/port-authority)
-* [cristifalcas-kubernetes](https://github.com/cristifalcas/puppet-kubernetes.git)
-
-
-
-#### This module is declared in 7 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
+        <td>Travis seems to time out only on `PUPPET_GEM_VERSION="~> 6.0" CHECK=parallel_spec`. It claims not to have received any output in the last 10 minutes, while the output has finished ("Finished in 6 minutes 19 seconds (files took 5 minutes 4 seconds to load)")</td>
       
   
   
   
       
-        <td>puppet-community-rangefinder[bot]</td>
+        <td>oschusler</td>
       
   
   
@@ -1523,6 +1523,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/131'>131</a></td>
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task'>puppetlabs-facter_task</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/125'>125</a></td>
   
   
@@ -1587,76 +1657,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task'>puppetlabs-facter_task</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/131'>131</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
   
   
@@ -1665,54 +1665,54 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/940'>940</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
   
   
   
       
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>62</td>
       
   
   
   
       
-        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
       
   
   
   
       
-        <td></td>
+        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
       
   
   
   
       
-        <td>0</td>
+        <td>david22swan</td>
       
   
   
   
       
-        <td>0</td>
+        <td>3</td>
       
   
   
   
       
-        <td>true</td>
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1805,54 +1805,54 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/940'>940</a></td>
   
   
   
       
-        <td>62</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>5</td>
       
   
   
   
       
-        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
+        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
       
   
   
   
       
-        <td>david22swan</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>3</td>
+        <td></td>
       
   
   
   
       
-        <td>1</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2579,24 +2579,24 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/325'>325</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
+        <td>7</td>
       
   
   
   
       
-        <td>Update json requirement from = 2.1.0 to 2.3.1</td>
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
       
   
   
@@ -2649,24 +2649,24 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/325'>325</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
   
   
   
       
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>0</td>
       
   
   
   
       
-        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update json requirement from = 2.1.0 to 2.3.1</td>
       
   
   
@@ -2859,76 +2859,6 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1319'>1319</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1322'>1322</a></td>
   
   
@@ -2991,7 +2921,7 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
   
   
   
@@ -2999,7 +2929,7 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/582'>582</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1319'>1319</a></td>
   
   
   
@@ -3131,7 +3061,7 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
   
   
   
@@ -3139,7 +3069,7 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/211'>211</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/582'>582</a></td>
   
   
   
@@ -3264,6 +3194,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/211'>211</a></td>
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -3420,78 +3420,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
-  
-  
-  
-      
-        <td>216</td>
-      
-  
-  
-  
-      
-        <td>Bouke</td>
-      
-  
-  
-  
-      
-        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
-      
-  
-  
-  
-      
-        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
-
-Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1187'>1187</a></td>
   
   
@@ -3544,6 +3472,78 @@ $value = 'off'
   
       
         <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
+  
+  
+  
+      
+        <td>216</td>
+      
+  
+  
+  
+      
+        <td>Bouke</td>
+      
+  
+  
+  
+      
+        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
+      
+  
+  
+  
+      
+        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
+
+Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>9</td>
       
   
   
