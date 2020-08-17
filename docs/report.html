@@ -1053,7 +1053,78 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/652'>652</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/635'>635</a></td>
+  
+  
+  
+      
+        <td>33</td>
+      
+  
+  
+  
+      
+        <td>koubas</td>
+      
+  
+  
+  
+      
+        <td>Add prepare_service_only param to ::run resource</td>
+      
+  
+  
+  
+      
+        <td>@koubas 
+Making a quick change to point this PR towards the newly defined default main branch as part of our work to remove inappropriate terminology. Apologies if this is inconvenient in any way.</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>14</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/651'>651</a></td>
   
   
   
@@ -1064,74 +1135,25 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
       
-        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>oschusler</td>
       
   
   
   
       
-        <td>Add acceptance test for  prepare_service_only param</td>
+        <td>Add docker swarm join-tokens as facts</td>
       
   
   
   
       
-        <td>[docker::run](https://github.com/puppetlabs/puppetlabs-docker/blob/4587441627afa11a41feb4bfdc8d38da8bcfa72c/manifests/run.pp) is a _type_
-----------------------------------
-
-
-
-  Breaking changes to this file WILL impact these 6 modules (exact match):
-
-* [samuelson-dockeragent](https://github.com/samuelson/samuelson-dockeragent)
-* [gennadyvoronkov-dcos](https://github.com/gennady-voronkov/dcos.git)
-* [glorpen-g_docker](https://github.com/glorpen/puppet-g_docker.git)
-* [dodevops-hanaexpress](https://github.com/dodevops/puppet-hanaexpress)
-* [ffquintella-dockerapp](https://github.com/ffquintella/puppet-dockerApp.git)
-* [puppetlabs-cd4pe](https://forge.puppetlabs.com/puppetlabs/cd4pe)
-
-
-
-  Breaking changes to this file MAY impact these 21 modules (near match):
-
-* [c0deaddict-gogs](https://github.com/c0deaddict/puppet-gogs)
-* [cristifalcas-docker_auth](https://github.com/cristifalcas/puppet-docker_auth.git)
-* [cjtoolseram-drone](https://bitbucket.org/cjtoolseram/cjtoolseram-drone)
-* [justin8-ghost](https://github.com/justin8/justin8-ghost)
-* [autostructure-secure_docker](https://github.com/autostructure/secure_docker.git)
-* [jefferyb-kualicoeus](https://github.com/jefferyb/kualicoeus)
-* [pltraining-classroom_legacy](https://github.com/puppetlabs/pltraining-classroom_legacy)
-* [pltraining-classroom](https://github.com/puppetlabs/pltraining-classroom)
-* [bfraser-grafana](https://github.com/bfraser/puppet-grafana.git)
-* [factorit-grafana](https://github.com/bfraser/puppet-grafana.git)
-* [cristifalcas-docker_distribution](https://github.com/cristifalcas/puppet-docker_distribution.git)
-* [KyleAnderson-consul](https://github.com/solarkennedy/puppet-consul)
-* [puppet-grafana](https://github.com/voxpupuli/puppet-grafana.git)
-* [pltraining-dockeragent](https://github.com/puppetlabs/pltraining-dockeragent)
-* [pltraining-puppetfactory](https://github.com/puppetlabs/puppetfactory)
-* [puppetlabs-rancher](https://github.com/puppetlabs/puppetlabs-rancher.git)
-* [nick-rancher](https://github.com/nickschuch/puppet-rancher)
-* [flyer-docker_cluster](https://github.com/flyer8/docker_cluster)
-* [cristifalcas-prometheus](https://github.com/cristifalcas/puppet-prometheus)
-* [prozeta-portauthority](https://github.com/prozeta/port-authority)
-* [cristifalcas-kubernetes](https://github.com/cristifalcas/puppet-kubernetes.git)
-
-
-
-#### This module is declared in 7 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
+        <td>Travis seems to time out only on `PUPPET_GEM_VERSION="~> 6.0" CHECK=parallel_spec`. It claims not to have received any output in the last 10 minutes, while the output has finished ("Finished in 6 minutes 19 seconds (files took 5 minutes 4 seconds to load)")</td>
       
   
   
   
       
-        <td>puppet-community-rangefinder[bot]</td>
+        <td>oschusler</td>
       
   
   
@@ -1242,7 +1264,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/651'>651</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/652'>652</a></td>
   
   
   
@@ -1253,25 +1275,74 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>oschusler</td>
+        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>Add docker swarm join-tokens as facts</td>
+        <td>Add acceptance test for  prepare_service_only param</td>
       
   
   
   
       
-        <td>Travis seems to time out only on `PUPPET_GEM_VERSION="~> 6.0" CHECK=parallel_spec`. It claims not to have received any output in the last 10 minutes, while the output has finished ("Finished in 6 minutes 19 seconds (files took 5 minutes 4 seconds to load)")</td>
+        <td>[docker::run](https://github.com/puppetlabs/puppetlabs-docker/blob/4587441627afa11a41feb4bfdc8d38da8bcfa72c/manifests/run.pp) is a _type_
+----------------------------------
+
+
+
+  Breaking changes to this file WILL impact these 6 modules (exact match):
+
+* [samuelson-dockeragent](https://github.com/samuelson/samuelson-dockeragent)
+* [gennadyvoronkov-dcos](https://github.com/gennady-voronkov/dcos.git)
+* [glorpen-g_docker](https://github.com/glorpen/puppet-g_docker.git)
+* [dodevops-hanaexpress](https://github.com/dodevops/puppet-hanaexpress)
+* [ffquintella-dockerapp](https://github.com/ffquintella/puppet-dockerApp.git)
+* [puppetlabs-cd4pe](https://forge.puppetlabs.com/puppetlabs/cd4pe)
+
+
+
+  Breaking changes to this file MAY impact these 21 modules (near match):
+
+* [c0deaddict-gogs](https://github.com/c0deaddict/puppet-gogs)
+* [cristifalcas-docker_auth](https://github.com/cristifalcas/puppet-docker_auth.git)
+* [cjtoolseram-drone](https://bitbucket.org/cjtoolseram/cjtoolseram-drone)
+* [justin8-ghost](https://github.com/justin8/justin8-ghost)
+* [autostructure-secure_docker](https://github.com/autostructure/secure_docker.git)
+* [jefferyb-kualicoeus](https://github.com/jefferyb/kualicoeus)
+* [pltraining-classroom_legacy](https://github.com/puppetlabs/pltraining-classroom_legacy)
+* [pltraining-classroom](https://github.com/puppetlabs/pltraining-classroom)
+* [bfraser-grafana](https://github.com/bfraser/puppet-grafana.git)
+* [factorit-grafana](https://github.com/bfraser/puppet-grafana.git)
+* [cristifalcas-docker_distribution](https://github.com/cristifalcas/puppet-docker_distribution.git)
+* [KyleAnderson-consul](https://github.com/solarkennedy/puppet-consul)
+* [puppet-grafana](https://github.com/voxpupuli/puppet-grafana.git)
+* [pltraining-dockeragent](https://github.com/puppetlabs/pltraining-dockeragent)
+* [pltraining-puppetfactory](https://github.com/puppetlabs/puppetfactory)
+* [puppetlabs-rancher](https://github.com/puppetlabs/puppetlabs-rancher.git)
+* [nick-rancher](https://github.com/nickschuch/puppet-rancher)
+* [flyer-docker_cluster](https://github.com/flyer8/docker_cluster)
+* [cristifalcas-prometheus](https://github.com/cristifalcas/puppet-prometheus)
+* [prozeta-portauthority](https://github.com/prozeta/port-authority)
+* [cristifalcas-kubernetes](https://github.com/cristifalcas/puppet-kubernetes.git)
+
+
+
+#### This module is declared in 7 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
       
   
   
   
       
-        <td>oschusler</td>
+        <td>puppet-community-rangefinder[bot]</td>
       
   
   
@@ -1290,77 +1361,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/635'>635</a></td>
-  
-  
-  
-      
-        <td>33</td>
-      
-  
-  
-  
-      
-        <td>koubas</td>
-      
-  
-  
-  
-      
-        <td>Add prepare_service_only param to ::run resource</td>
-      
-  
-  
-  
-      
-        <td>@koubas 
-Making a quick change to point this PR towards the newly defined default main branch as part of our work to remove inappropriate terminology. Apologies if this is inconvenient in any way.</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -1735,76 +1735,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
-  
-  
-  
-      
-        <td>199</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10522: Add support for the --condition parameter</td>
-      
-  
-  
-  
-      
-        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/940'>940</a></td>
   
   
@@ -1859,6 +1789,76 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+  
+  
+  
+      
+        <td>199</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10522: Add support for the --condition parameter</td>
+      
+  
+  
+  
+      
+        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2579,146 +2579,6 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/325'>325</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Update json requirement from = 2.1.0 to 2.3.1</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/329'>329</a></td>
   
   
@@ -2851,7 +2711,7 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
   
   
   
@@ -2859,24 +2719,94 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1322'>1322</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/325'>325</a></td>
   
   
   
       
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>7</td>
       
   
   
   
       
-        <td>[MODULES-10773] Fix for rh-mysql80</td>
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update json requirement from = 2.1.0 to 2.3.1</td>
       
   
   
@@ -2991,7 +2921,7 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
   
   
   
@@ -2999,24 +2929,24 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/564'>564</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1322'>1322</a></td>
   
   
   
       
-        <td>154</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>3</td>
       
   
   
   
       
-        <td>(WIP, IAC-615) test avoiding parallelism</td>
+        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>[MODULES-10773] Fix for rh-mysql80</td>
       
   
   
@@ -3087,6 +3017,76 @@ The change looks good. One thought: from what you highlighted, we may want enfor
   
       
         <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/564'>564</a></td>
+  
+  
+  
+      
+        <td>154</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(WIP, IAC-615) test avoiding parallelism</td>
       
   
   
