@@ -69,6 +69,7 @@ parsed.each do |_k, v|
   no_feature_prs = get_number_of_prs_by_label(util, prs_since_tag, 'feature', v)
   no_bugfix_prs = get_number_of_prs_by_label(util, prs_since_tag, 'bugfix', v)
   no_incompatible_prs = get_number_of_prs_by_label(util, prs_since_tag, 'backwards-incompatible', v)
+  puts no_maintenance_prs 
 
   repo_data << { 'repo' => (v['github']).to_s, 'date' => date_of_tag, 'commits' => commits_since_tag.size, 'downloads' => number_of_downloads(v['slug']), 'maintenance_prs' => no_maintenance_prs, 'feature_prs' => no_feature_prs, 'bugfix_prs' => no_bugfix_prs, 'incompatible_prs' => no_incompatible_prs }
   puppet_modules << PuppetModule.new(repo, (v['github']).to_s, date_of_tag, commits_since_tag)
