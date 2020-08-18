@@ -39,17 +39,17 @@
     $('#reviews thead tr th').each( function () {
         var title = $(this).text();
         if(title == "age"  || title == "pr"){
-          $(this).append( ' <br> <input class="something" type="text" placeholder=" "style="width: 40px" />' );
+          $(this).append( ' <br> <input class="something" type="text" placeholder=" "style="width: 110%" />' );
         }
          else{
           if(title == "age_comment"  || title == "num_comments"){
-          $(this).append( ' <br> <input class="something" type="text" placeholder=" "style="width: 60px"  />' );
+          $(this).append( ' <br> <input class="something" type="text" placeholder=" "style="width: 90%" />' );
         }
 
         else{
 
 
-        $(this).append( ' <br> <input class="something" type="text" placeholder="Search " "style="width: 80px" />' );
+        $(this).append( ' <br> <input class="something" type="text" placeholder="Search " "style="width: 60%" />' );
         }
     }
     
