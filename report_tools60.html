@@ -575,22 +575,14 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
   
   
   
 
   
       
-        <td>417</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cardil</td>
+        <td>162</td>
       
   
   
@@ -598,14 +590,34 @@ wrote:
 
   
       
-        <td>Feature: metadata dependencies are auto installed</td>
+        <td>findmyname666</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
+     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
+
+Modify `Gemfile` to use this repo:
+```
+group :development do
+  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
+end
+```
+```
+bundle install
+bundle exec rake 'litmus:provision_list[release_checks]'
+# etc...
+```
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -620,7 +632,7 @@ wrote:
 
   
       
-        <td>daianamezdrea</td>
+        <td>sanfrancrisko</td>
       
   
   
@@ -636,7 +648,7 @@ wrote:
 
   
       
-        <td>7</td>
+        <td>5</td>
       
   
   
@@ -652,7 +664,7 @@ wrote:
 
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -775,22 +787,14 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
   
   
   
 
   
       
-        <td>162</td>
-      
-  
-  
-  
-
-  
-      
-        <td>findmyname666</td>
+        <td>417</td>
       
   
   
@@ -798,26 +802,22 @@ wrote:
 
   
       
-        <td>Remove all sub-folders from source repository / folder</td>
+        <td>cardil</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Feature: metadata dependencies are auto installed</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
-
-Modify `Gemfile` to use this repo:
-```
-group :development do
-  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
-end
-```
-```
-bundle install
-bundle exec rake 'litmus:provision_list[release_checks]'
-# etc...
-```
+     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -832,7 +832,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>sanfrancrisko</td>
+        <td>daianamezdrea</td>
       
   
   
@@ -848,7 +848,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>5</td>
+        <td>7</td>
       
   
   
@@ -864,7 +864,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
