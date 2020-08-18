@@ -59,9 +59,9 @@ class OctokitUtils
       prs = unlimited_prs
     else
       unlimited_prs.each do |iter|
-        next unless limit.key?(:closed_at)
-
-        prs.push(iter) if iter.closed_at.utc > limit[:closed_at].to_time.utc
+         next unless limit[:attribute] == 'closed_at'
+        
+        prs.push(iter) if iter.closed_at.utc > limit[:date].to_time.utc
       end
     end
 
