@@ -261,6 +261,106 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
+  
+  
+  
+
+  
+      
+        <td>330</td>
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(performance) - Sets up basic performance testing</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds</td>
+      
+  
+  
+  
+
+  
+      
+        <td>91</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/838'>838</a></td>
   
   
@@ -879,22 +979,14 @@ The change might break existing setups that rely on the old log output format, s
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
   
   
   
 
   
       
-        <td>184</td>
-      
-  
-  
-  
-
-  
-      
-        <td>findmyname666</td>
+        <td>620</td>
       
   
   
@@ -902,26 +994,22 @@ The change might break existing setups that rely on the old log output format, s
 
   
       
-        <td>Remove all sub-folders from source repository / folder</td>
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
-
-Modify `Gemfile` to use this repo:
-```
-group :development do
-  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
-end
-```
-```
-bundle install
-bundle exec rake 'litmus:provision_list[release_checks]'
-# etc...
-```
+     Hi @daianamezdrea, I will try and rebase this shortly.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -936,7 +1024,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>sanfrancrisko</td>
+        <td>nabertrand</td>
       
   
   
@@ -944,7 +1032,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>91</td>
+        <td>98</td>
       
   
   
@@ -1099,106 +1187,6 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
-  
-  
-  
-
-  
-      
-        <td>620</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @daianamezdrea, I will try and rebase this shortly.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>98</td>
-      
-  
-  
-  
-
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
   
   
@@ -1287,7 +1275,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
   
   
   
@@ -1299,22 +1287,14 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
   
   
   
 
   
       
-        <td>125</td>
-      
-  
-  
-  
-
-  
-      
-        <td>thatnerdjosh</td>
+        <td>184</td>
       
   
   
@@ -1322,14 +1302,34 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>Allow users to setup control repo</td>
+        <td>findmyname666</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @rodjek I am having trouble finding the tests for the `rspec-puppet-init` utility, could you point me to where I should be looking for that?
+     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
+
+Modify `Gemfile` to use this repo:
+```
+group :development do
+  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
+end
+```
+```
+bundle install
+bundle exec rake 'litmus:provision_list[release_checks]'
+# etc...
+```
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -1344,7 +1344,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>thatnerdjosh</td>
+        <td>sanfrancrisko</td>
       
   
   
@@ -1352,7 +1352,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>125</td>
+        <td>91</td>
       
   
   
@@ -1360,115 +1360,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>3</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/747'>747</a></td>
-  
-  
-  
-
-  
-      
-        <td>559</td>
-      
-  
-  
-  
-
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add matcher for detecting duplicate attributes</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     This is exactly what I'm trying to do.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>mikkergimenez</td>
-      
-  
-  
-  
-
-  
-      
-        <td>559</td>
-      
-  
-  
-  
-
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
+        <td>5</td>
       
   
   
@@ -1480,207 +1372,11 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
       
   
   
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
-  
-  
-  
-
-  
-      
-        <td>916</td>
-      
-  
-  
-  
-
-  
-      
-        <td>asharpe</td>
-      
-  
-  
-  
-
-  
-      
-        <td>allow testing environment functions</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     
-[![Coverage Status](https://coveralls.io/builds/23064281/badge)](https://coveralls.io/builds/23064281)
-
-Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d46957397286aa91b on asharpe:environment-functions** into **5cc25d0083a4abc352ab13bd48f225f668311a3e on rodjek:master**.
-
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-
-  
-      
-        <td>500</td>
-      
-  
-  
-  
-
-  
-      
-        <td>1</td>
-      
-  
-  
   
 
   
       
         <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
-  
-  
-  
-
-  
-      
-        <td>578</td>
-      
-  
-  
-  
-
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>allow users to disable app_managment</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     bump
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>b4ldr</td>
-      
-  
-  
-  
-
-  
-      
-        <td>285</td>
-      
-  
-  
-  
-
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
       
   
   
@@ -1756,7 +1452,7 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
 
   
       
-        <td>348</td>
+        <td>349</td>
       
   
   
@@ -1907,6 +1603,306 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/747'>747</a></td>
+  
+  
+  
+
+  
+      
+        <td>559</td>
+      
+  
+  
+  
+
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add matcher for detecting duplicate attributes</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     This is exactly what I'm trying to do.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>mikkergimenez</td>
+      
+  
+  
+  
+
+  
+      
+        <td>559</td>
+      
+  
+  
+  
+
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
+  
+  
+  
+
+  
+      
+        <td>125</td>
+      
+  
+  
+  
+
+  
+      
+        <td>thatnerdjosh</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Allow users to setup control repo</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @rodjek I am having trouble finding the tests for the `rspec-puppet-init` utility, could you point me to where I should be looking for that?
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>thatnerdjosh</td>
+      
+  
+  
+  
+
+  
+      
+        <td>125</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
+  
+  
+  
+
+  
+      
+        <td>579</td>
+      
+  
+  
+  
+
+  
+      
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>allow users to disable app_managment</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     bump
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>b4ldr</td>
+      
+  
+  
+  
+
+  
+      
+        <td>285</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/732'>732</a></td>
   
   
@@ -1979,6 +1975,110 @@ As you mentioned though, the interaction of the different hiera layers with spec
   
       
         <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
+  
+  
+  
+
+  
+      
+        <td>916</td>
+      
+  
+  
+  
+
+  
+      
+        <td>asharpe</td>
+      
+  
+  
+  
+
+  
+      
+        <td>allow testing environment functions</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     
+[![Coverage Status](https://coveralls.io/builds/23064281/badge)](https://coveralls.io/builds/23064281)
+
+Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d46957397286aa91b on asharpe:environment-functions** into **5cc25d0083a4abc352ab13bd48f225f668311a3e on rodjek:master**.
+
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+
+  
+      
+        <td>500</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
       
   
   
@@ -2083,121 +2183,6 @@ Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a
   
       
         <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
-  
-  
-  
-
-  
-      
-        <td>1083</td>
-      
-  
-  
-  
-
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>[RFC] New syntax</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
-
-Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
-```
-def verify_concat_fragment_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
-end
-
-def verify_concat_fragment_exact_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
-end
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-
-  
-      
-        <td>730</td>
-      
-  
-  
-  
-
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
       
   
   
@@ -2436,6 +2421,110 @@ Changes Unknown when pulling **40cd1271b0c28a3b0cddaa0cbcf314a3f8a84728 on kjeti
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/618'>618</a></td>
+  
+  
+  
+
+  
+      
+        <td>1049</td>
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>WIP: Adds rspec configuration to set default facterdb search paths</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     
+[![Coverage Status](https://coveralls.io/builds/13891765/badge)](https://coveralls.io/builds/13891765)
+
+Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae563af61b946db0 on nwops:external_facts** into **11f93e70abaf35f774a3c7c87f9107fa62a0152c on rodjek:master**.
+
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1049</td>
+      
+  
+  
+  
+
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
   
   
@@ -2562,22 +2651,14 @@ end
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/618'>618</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
   
   
   
 
   
       
-        <td>1049</td>
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
+        <td>1083</td>
       
   
   
@@ -2585,18 +2666,37 @@ end
 
   
       
-        <td>WIP: Adds rspec configuration to set default facterdb search paths</td>
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>[RFC] New syntax</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     
-[![Coverage Status](https://coveralls.io/builds/13891765/badge)](https://coveralls.io/builds/13891765)
+     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
 
-Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae563af61b946db0 on nwops:external_facts** into **11f93e70abaf35f774a3c7c87f9107fa62a0152c on rodjek:master**.
+Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
+```
+def verify_concat_fragment_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
+end
 
+def verify_concat_fragment_exact_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
+end
+```
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -2611,7 +2711,7 @@ Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae
 
   
       
-        <td>coveralls</td>
+        <td>ekohl</td>
       
   
   
@@ -2619,7 +2719,7 @@ Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae
 
   
       
-        <td>1049</td>
+        <td>730</td>
       
   
   
@@ -2627,7 +2727,7 @@ Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae
 
   
       
-        <td>2</td>
+        <td>9</td>
       
   
   
@@ -2635,7 +2735,7 @@ Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae
 
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
