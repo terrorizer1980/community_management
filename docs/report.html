@@ -328,6 +328,77 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/108'>108</a></td>
+  
+  
+  
+      
+        <td>195</td>
+      
+  
+  
+  
+      
+        <td>jmangt</td>
+      
+  
+  
+  
+      
+        <td>Provides support for Terraform</td>
+      
+  
+  
+  
+      
+        <td>@jmangt 
+Making a quick change to point this PR towards the newly defined default main branch as part of our work to remove inappropriate terminology. Apologies if this is inconvenient in any way.</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>39</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
   
   
@@ -413,7 +484,7 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts'>puppetlabs-accounts</a></td>
   
   
   
@@ -421,43 +492,42 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/108'>108</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts/pull/329'>329</a></td>
   
   
   
       
-        <td>195</td>
-      
-  
-  
-  
-      
-        <td>jmangt</td>
+        <td>26</td>
       
   
   
   
       
-        <td>Provides support for Terraform</td>
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>@jmangt 
-Making a quick change to point this PR towards the newly defined default main branch as part of our work to remove inappropriate terminology. Apologies if this is inconvenient in any way.</td>
+        <td>(DO-NOT-MERGE) (IAC-1081) Test codecov and simplecov pins</td>
       
   
   
   
       
-        <td>david22swan</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>39</td>
+        <td></td>
+      
+  
+  
+  
+      
+        <td>26</td>
       
   
   
@@ -469,7 +539,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -534,76 +604,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts'>puppetlabs-accounts</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts/pull/329'>329</a></td>
-  
-  
-  
-      
-        <td>26</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(DO-NOT-MERGE) (IAC-1081) Test codecov and simplecov pins</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>26</td>
-      
-  
-  
-  
-      
-        <td>1</td>
       
   
   
@@ -814,388 +814,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apt'>puppetlabs-apt</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apt/pull/948'>948</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10804) option to force purge source.lists file</td>
-      
-  
-  
-  
-      
-        <td>[apt](https://github.com/puppetlabs/puppetlabs-apt/blob/f51cc8d2cb273cefa878339cef2a006abbc89921/manifests/init.pp) is a _class_
-----------------------------------
-
-
-
-  Breaking changes to this file WILL impact these 236 modules (exact match):
-
-* [rtyler-puppet](https://github.com/rtyler/puppet-puppet.git)
-* [rfletcher-ec2_consistent_snapshot](https://forge.puppet.com/rfletcher/ec2_consistent_snapshot)
-* [garethr-rustlang](https://github.com/garethr/garethr-rustlang.git)
-* [garethr-pypy](https://github.com/garethr/garethr-pypy.git)
-* [garethr-nginx](https://github.com/garethr/garethr-nginx.git)
-* [kritz-vagrantlamp](https://github.com/kritznl/vagrantlamp)
-* [dalaro-titan](https://forge.puppet.com/dalaro/titan)
-* [jeoffreybauvin-gitlab_ci_multi_runner](https://github.com/Jeoffreybauvin/gitlab-ci-multi-runner)
-* [neo4j-neo4j](https://github.com/simpsonjulian/puppet-neo4j)
-* [elithrar-golang](https://github.com/elithrar/puppet-golang-backports.git)
-* [ploperations-puppetlabs_apt](https://github.com/puppetlabs-operations/puppet-puppetlabs_apt)
-* [fnerdwq-omd](https://github.com/fnerdwq/puppet-omd.git)
-* [trulabs-kamailio](https://github.com/trulabs/puppet-kamailio)
-* [spantree-nginx](https://github.com/Spantree/puppet-nginx)
-* [Siteminds-gogs](https://github.com/Siteminds/puppet-gogs.git)
-* [robinvdvleuten-phpenv](https://github.com/RobinvdVleuten/puppet-phpenv)
-* [adcade-java7](https://forge.puppet.com/adcade/java7)
-* [flatline235-aptsimplesoftware](https://github.com/flat235/puppet-aptsimplesoftware.git)
-* [binarin-workstation](https://forge.puppet.com/binarin/workstation)
-* [Envek-erlang](https://github.com/Envek/puppet-erlang.git)
-* [tracywebtech-java](https://github.com/TracyWebTech/puppet-java)
-* [garethr-mirageos](https://github.com/garethr/garethr-mirageos.git)
-* [deric-r](https://github.com/deric/deric-r)
-* [pcfens-topbeat](https://github.com/pcfens/puppet-topbeat)
-* [tmont-rethinkdb](https://github.com/tmont/puppet-rethinkdb)
-* [deviseit-barman](https://github.com/deviseit/puppet-barman.git)
-* [hfm-h2o](https://github.com/hfm/puppet-h2o)
-* [fortin-tor](https://github.com/shaftoe/puppet-tor)
-* [4n0m4l0u5-configure_nginx](https://github.com/4n0m4l0u5/configure_nginx)
-* [cethy-gaudi](https://github.com/cethy/cethy-gaudi.git)
-* [juniorsysadmin-ubuntuzilla](https://github.com/juniorsysadmin/puppet-ubuntuzilla.git)
-* [trepasi-kibana5](https://github.com/rtib/puppet-kibana5)
-* [garethr-golang](https://github.com/garethr/garethr-golang.git)
-* [a2tar-redis](https://github.com/a2tar/redis.git)
-* [a2tar-nodejs](https://github.com/a2tar/puppet_nodejs.git)
-* [walkamongus-pdagent](https://github.com/walkamongus/puppet-pdagent.git)
-* [deric-java](https://github.com/deric/puppet-java/archive/master.zip)
-* [binarin-binarin](https://forge.puppet.com/binarin/binarin)
-* [meeh-java](https://github.com/meeh420/puppet-java.git)
-* [stevenrombauts-logdna](https://github.com/stevenrombauts/puppet-logdna.git)
-* [devsec-suricata](https://github.com/odinje/puppet-suricata)
-* [icinga-icinga](https://github.com/icinga/puppet-icinga)
-* [garethr-sysdig](https://github.com/garethr/garethr-sysdig.git)
-* [m3del-sabnzbd](https://github.com/nctiggy/m3del-sabnzbd)
-* [locp-odoo9](https://github.com/locp/puppet-odoo)
-* [justintw-develop_environment](https://github.com/JustinTW/justintw-develop_environment)
-* [qroac-isp3node](https://github.com/qroac/puppet-ispconfig)
-* [giavac-homer](https://github.com/giavac/giavac-homer)
-* [aageyev-redis](https://bitbucket.org/aageyev/redis)
-* [guimaluf-gvpe](https://github.com/guimaluf/puppet-gvpe)
-* [aageyev-nodejs](https://bitbucket.org/aageyev/nodejs)
-* [BradChesney79-arduino](https://github.com/bradchesney79/arduino)
-* [cpick-hub](https://github.com/cpick/puppet-hub.git)
-* [praekeltfoundation-webupd8_oracle_java](https://github.com/praekeltfoundation/puppet-webupd8_oracle_java)
-* [cyberkov-openhab](https://github.com/cyberkov/puppet-openhab)
-* [dowlingw-kodi](https://github.com/dowlingw/puppet-kodi)
-* [a2tar-openvpn](https://github.com/a2tar/openvpn.git)
-* [ngiger-x2go](https://forge.puppet.com/ngiger/x2go)
-* [dowlingw-nvidia](https://github.com/dowlingw/puppet-nvidia)
-* [igovua-nodejs](https://bitbucket.org/egovinfrastructure/puppet_module_nodejs.git)
-* [cristaldo-libreoffice](https://github.com/cristaldo/libreoffice.git)
-* [a2labs-nginx](https://aageyev@bitbucket.org/a2labs/nginx.git)
-* [a2tar-dnsmasq](https://github.com/a2tar/dnsmasq.git)
-* [ericsysmin-oraclejava](https://github.com/ericsysmin/ericsysmin-oraclejava)
-* [a2labs-php](https://bitbucket.org/a2labs/php.git)
-* [justintw-developer_environment](https://github.com/JustinTW/justintw-developer_environment)
-* [bluesman-crossbar](https://github.com/blues-man/crossbar-puppet.git)
-* [tsuru-tsuru](https://github.com/tsuru/puppet-tsuru)
-* [markb-docker_registry](https://forge.puppet.com/markb/docker_registry)
-* [alanpetersen-gitfusion](https://github.com/alanpetersen/gitfusion)
-* [zivtech-rethinkdb](https://github.com/zivtech/puppet-rethinkdb.git)
-* [driebit-zotonic](https://github.com/driebit/puppet-zotonic.git)
-* [gwaldvogel-liveconfig](https://github.com/gwaldvogel/puppet-liveconfig)
-* [monkygames-landscape](https://bitbucket.org/monkygames/puppet-landscape.git)
-* [loomsen-bloonix_agent](https://github.com/loomsen/puppet-bloonix_agent)
-* [petems-fish](https://github.com/petems/petems-fish)
-* [continuent-percona_repo](https://github.com/continuent/continuent-percona_repo)
-* [norisnetwork-heartbeat](https://github.com/noris-network/norisnetwork-heartbeat)
-* [alanpetersen-helix](https://github.com/alanpetersen/helix)
-* [praekeltfoundation-xylem](https://github.com/praekeltfoundation/puppet-xylem)
-* [praekeltfoundation-gluster](https://github.com/praekeltfoundation/puppet-gluster)
-* [fe80-java](https://github.com/fe80/puppet-java.git)
-* [basholabs-riak](https://github.com/basho-labs/puppet-riak)
-* [locp-odoo](https://github.com/locp/puppet-odoo)
-* [norisnetwork-packetbeat](https://github.com/noris-network/norisnetwork-packetbeat)
-* [praekeltfoundation-consular](https://github.com/praekeltfoundation/puppet-consular)
-* [alanpetersen-gitswarm](https://github.com/alanpetersen/gitswarm)
-* [deric-fhgfs](https://github.com/deric/puppet-fhgfs)
-* [brwyatt-flatpak](https://github.com/brwyatt/puppet-flatpak)
-* [norisnetwork-auditbeat](https://github.com/noris-network/norisnetwork-auditbeat)
-* [desertkun-nginx](https://github.com/desertkun/puppet-nginx.git)
-* [deric-torque](https://github.com/deric/puppet-torque.git)
-* [helio-fluentbit](https://github.com/helio/puppet-fluentbit)
-* [johnlawerance-xtrabackup](https://github.com/johnlawerance/xtrabackup)
-* [deric-java_binary](https://github.com/deric/puppet-java/archive/master.zip)
-* [garethr-erlang](https://github.com/garethr/garethr-erlang.git)
-* [juniorsysadmin-passenger_repo](https://github.com/juniorsysadmin/puppet-passenger_repo.git)
-* [coreyh-metricbeat](https://github.com/corey-hammerton/puppet-metricbeat)
-* [johnlawerance-crucible](https://github.com/johnlawerance/crucible.git)
-* [vll-synergy](https://github.com/indigo-dc/puppet-synergy)
-* [southernhill-phpldapadmin](https://github.com/southernhill/puppet-phpldapadmin.git)
-* [hfm-percona](https://github.com/hfm/puppet-percona)
-* [project0-bareos](https://github.com/project0/puppet-bareos)
-* [nono-zfs](https://forge-git.ircam.fr/puppet-module-base-zfs.git)
-* [vide-omsa](https://github.com/vide/puppet-omsa)
-* [krakatoa-haproxy](https://github.com/krakatoa1987/puppetlabs-haproxy)
-* [thbe-bareos](https://github.com/thbe/puppet-bareos.git)
-* [abaranov-wireguard](https://github.com/spacedog/puppet-wirguard)
-* [deric-beegfs](https://github.com/deric/puppet-beegfs)
-* [olivierHa-influxdb](https://github.com/olivierHa/puppet-influxdb)
-* [chartbeat-confluent_kafka](http://github.com/chartbeat-labs/puppet-confluent-kafka)
-* [shoekstra-owncloud](https://github.com/shoekstra/puppet-owncloud.git)
-* [potto-marathon](http://github.com/potto007/puppet-marathon)
-* [wavesoftware-xtreemfs](https://github.com/wavesoftware/puppet-xtreemfs.git)
-* [wywygmbh-fluentd](https://github.com/wywy/puppet-fluentd)
-* [kallies-x2go](https://github.com/kallies/puppet-x2go.git)
-* [rpignolet-mongodb](https://github.com/rpignolet/puppetlabs-mongodb.git)
-* [spantree-java7](https://github.com/Spantree/puppet-java7.git)
-* [spantree-java8](https://github.com/Spantree/puppet-java8.git)
-* [puppetlabs-mongodb](https://github.com/puppetlabs/puppetlabs-mongodb)
-* [artberri-yarn](https://github.com/artberri/puppet-yarn)
-* [puppet-tvheadend](https://github.com/voxpupuli/puppet-tvheadend.git)
-* [spjmurray-jenkins](https://github.com/spjmurray/puppet-jenkins)
-* [nrvale0-keepass2](https://github.com/nrvale0/puppet-keepass2)
-* [vholer-hp_sdr](https://github.com/vholer/puppet-hp_sdr.git)
-* [petems-cockpit](https://github.com/petems/petems-cockpit)
-* [cmantix-nginxphp](https://bitbucket.org/hfraser/puppet-nginx-php)
-* [tapajos-ruby_stable](https://github.com/tapajos/puppet-ruby-stable)
-* [dsestero-sonarqube](https://github.com/dsestero/sonarqube.git)
-* [TubeMogul-druid](https://github.com/tubemogul/puppet-druid.git)
-* [instana-agent](https://github.com/instana/instana-agent-puppet)
-* [darkmantle-java](https://github.com/darkmantle/puppet-java)
-* [chartbeat-varnish](https://github.com/chartbeat-labs/puppet-varnish)
-* [tanny1910-omd](https://github.com/GRIF-IRFU/puppet-omd.git)
-* [opstudio-duplicity](https://git.opstudio.pro/modules/duplicity.git)
-* [marcdeop-ratticdb](https://github.com/marcdeop/ratticdb)
-* [fschaer-omd](https://github.com/GRIF-IRFU/puppet-omd)
-* [puppetfinland-xtrabackup](https://github.com/Puppet-Finland/puppet-xtrabackup.git)
-* [librato-librato](https://github.com/librato/puppet-librato)
-* [cloudpassage-cloudpassage](https://github.com/cloudpassage/puppet-cloudpassage.git)
-* [vpgrp-omsa](https://git.vpgrp.io/puppet/puppet-omsa)
-* [ncorrare-yubikey](https://github.com/ncorrare/ncorrare-yubikey)
-* [mvisonneau-curator](https://github.com/mvisonneau/puppet-curator)
-* [deric-mesos](http://github.com/deric/puppet-mesos)
-* [vpgrp-docker](https://git.vpgrp.io/puppet/puppet-docker)
-* [initforthe-yarn](https://github.com/initforthe/puppet-yarn)
-* [midonet-cassandra](https://github.com/midonet/puppet-cassandra)
-* [whefter-syncthing](https://github.com/whefter/puppet-syncthing.git)
-* [dmcnicks-mcoconfig](http://github.com/dmcnicks/dmcnicks-mcoconfig)
-* [brwyatt-syncthing](https://github.com/brwyatt/puppet-syncthing.git)
-* [oxc-rspamd](https://github.com/oxc/puppet-rspamd)
-* [continuent-tungsten](https://github.com/continuent/continuent-tungsten)
-* [oris-nginx](https://bitbucket.org/oris/env-puppet-module-nginx)
-* [codingfuture-cfsystem](https://github.com/codingfuture/puppet-cfsystem)
-* [spjmurray-puppet](https://github.com/spjmurray/puppet-puppet)
-* [rehan-git](https://github.com/rehanone/puppet-git.git)
-* [vpgrp-influxdb](https://github.com/veepee-puppet/puppet-influxdb)
-* [s12v-blackfire](https://github.com/s12v/puppet-blackfire)
-* [rtyler-jenkins](https://github.com/jenkinsci/puppet-jenkins)
-* [sensson-powerdns](https://github.com/sensson/puppet-powerdns)
-* [joelkle-salt](https://github.com/JoelKle/puppet-salt)
-* [puppet-jenkins](https://github.com/voxpupuli/puppet-jenkins)
-* [edestecd-software](https://github.com/edestecd/puppet-software.git)
-* [MiamiOH-httpproxy](https://github.com/MiamiOH/puppet-httpproxy.git)
-* [otherskins-ansible](https://github.com/otherskins/puppet-ansible.git)
-* [dsestero-java](https://github.com/dsestero/java.git)
-* [puppetfinland-freight](https://github.com/Puppet-Finland/puppet-freight.git)
-* [nexcess-ksplice](https://github.com/nexcess/puppet-ksplice)
-* [camptocamp-puppetserver](https://github.com/camptocamp/puppet-puppetserver)
-* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
-* [cesnet-java_ng](https://github.com/MetaCenterCloudPuppet/cesnet-java_ng)
-* [mindhive-nvidia_docker_runtime](https://github.com/mindhivenz/nvidia_docker_runtime)
-* [jlambert121-curator](https://github.com/jlambert121/jlambert121-curator)
-* [abstractit-puppet](https://github.com/abstractitptyltd/abstractit-puppet)
-* [bfraser-grafana](https://github.com/bfraser/puppet-grafana.git)
-* [factorit-grafana](https://github.com/bfraser/puppet-grafana.git)
-* [gajdaw-symfony](https://github.com/puppet-by-examples/puppet-symfony)
-* [bashtoni-varnish](https://github.com/BashtonLtd/puppet-varnish)
-* [puppet-cassandra](https://github.com/voxpupuli/puppet-cassandra)
-* [puppet-puppetserver](https://github.com/voxpupuli/puppet-puppetserver)
-* [puppetfinland-mysql](https://github.com/Puppet-Finland/puppet-mysql.git)
-* [puppet-mongodb](https://github.com/voxpupuli/puppet-mongodb)
-* [cesnet-site_hadoop](https://github.com/MetaCenterCloudPuppet/cesnet-site_hadoop)
-* [razorsedge-cloudera](https://github.com/razorsedge/puppet-cloudera.git)
-* [openstack-ceph](https://github.com/openstack/puppet-ceph.git)
-* [TubeMogul-aptly](https://github.com/tubemogul/puppet-aptly.git)
-* [arioch-redis](https://github.com/arioch/puppet-redis)
-* [puppetfinland-openvpn](https://github.com/Puppet-Finland/puppet-openvpn.git)
-* [cristifalcas-curator](https://github.com/cristifalcas/puppet-curator)
-* [rehan-nginx](https://github.com/rehanone/puppet-nginx.git)
-* [spjmurray-ceph](https://github.com/spjmurray/puppet-ceph)
-* [puppet-virtualbox](https://github.com/voxpupuli/puppet-virtualbox)
-* [puppetlabs-puppet_agent](https://github.com/puppetlabs/puppetlabs-puppet_agent)
-* [simp-postgresql](https://github.com/simp/puppetlabs-postgresql.git)
-* [pcfens-filebeat](https://github.com/pcfens/puppet-filebeat)
-* [memoussati-postgresql](https://github.com/puppetlabs/puppetlabs-postgresql.git)
-* [puppet-gluster](https://github.com/voxpupuli/puppet-gluster)
-* [puppet-rsyslog](https://github.com/voxpupuli/puppet-rsyslog)
-* [puppet-unattended_upgrades](https://github.com/voxpupuli/puppet-unattended_upgrades.git)
-* [garethr-docker](https://github.com/garethr/garethr-docker.git)
-* [mvasilenko-docker](https://github.com/mvasilenko/garethr-docker.git)
-* [memoussati-docker](https://github.com/garethr/garethr-docker.git)
-* [ape-elasticsearch](https://github.com/pecharmin/puppet-elasticsearch)
-* [razorsedge-vmwaretools](https://github.com/razorsedge/puppet-vmwaretools.git)
-* [puppetlabs-postgresql](https://github.com/puppetlabs/puppetlabs-postgresql)
-* [elastic-elastic_stack](https://github.com/elastic/puppet-elastic-stack)
-* [puppet-php](https://github.com/voxpupuli/puppet-php)
-* [puppet-zabbix](https://github.com/voxpupuli/puppet-zabbix.git)
-* [factorit-jasperreports_server](https://github.com/jbbrunsveld/jasperreports_server)
-* [tsuru-base](https://github.com/tsuru/puppet-tsuru)
-* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
-* [spjmurray-kubernetes](https://github.com/spjmurray/puppet-kubernetes)
-* [horsefish-bmc](https://github.com/horsefish/bmc)
-* [bjorns-acmd](https://github.com/bjorns/aem-cmd)
-* [signalfx-collectd](https://github.com/signalfx/puppet_collectd)
-* [badquanta-badstation](https://github.com/BadQuanta/badquanta-badstation)
-* [elasticsearch-elasticsearch](https://github.com/elastic/puppet-elasticsearch)
-* [joshuaspence-phabricator](https://github.com/joshuaspence/puppet-phabricator)
-* [lesaux-kibana4](https://github.com/lesaux/puppet-kibana4.git)
-* [vshn-gitlab](https://github.com/vshn/puppet-gitlab)
-* [puppet-collectd](https://github.com/voxpupuli/puppet-collectd)
-* [theforeman-foreman](https://github.com/theforeman/puppet-foreman)
-* [threatstack-threatstack](https://github.com/threatstack/threatstack-puppet)
-* [locp-opscenter](https://github.com/locp/opscenter)
-* [puppetlabs-docker](https://github.com/puppetlabs/puppetlabs-docker)
-* [covata-safeshare](https://bitbucket.org/covata/puppet_covata_services)
-* [jcustenborder-confluent](https://github.com/jcustenborder/puppet-confluent)
-* [midonet-midonet](https://github.com/midonet/puppet-midonet)
-* [lookatitude-zserver](https://github.com/lookatitude/Zserver)
-* [abstractit-icinga](https://github.com/abstractitptyltd/abstractit-icinga)
-* [jcalles-php](https://github.com/mayflower/puppet-php)
-* [mayflower-php](https://github.com/mayflower/puppet-php)
-* [danzilio-virtualbox](https://github.com/danzilio/danzilio-virtualbox)
-* [jfryman-nginx](https://github.com/jfryman/puppet-nginx.git)
-* [locp-cassandra](https://github.com/locp/cassandra)
-* [hackerhappyhour-docker](https://github.com/HackerHappyHour/hackerhappyhour-docker.git)
-
-
-
-  Breaking changes to this file MAY impact these 47 modules (near match):
-
-* [edgester-buildbot](https://forge.puppet.com/edgester/buildbot)
-* [factorit-icingaweb2](https://github.com/Icinga/puppet-icingaweb2.git)
-* [rgevaert-mysql](https://github.com/rgevaert/puppet-mysql)
-* [luckyknight-hhvm](https://github.com/craigcarnell/puppet-hhvm.git)
-* [nrvale0-openmediavault](https://github.com/nrvale0/puppet-openmediavault.git)
-* [vinodverma7584-truesightmeter](https://github.com/VinodVerma7584/boundary_puppet)
-* [aniketmehta-elasticsearch](https://github.com/aniketmehta/elasticsearch)
-* [elasticsearch-logstashforwarder](https://github.com/elastic/puppet-logstashforwarder)
-* [hfm-octopass](https://github.com/hfm/puppet-octopass)
-* [juniorsysadmin-chromerepo](https://github.com/juniorsysadmin/puppet-chromerepo.git)
-* [hackerhorse-puppet_deluge](https://github.com/RainbowHackerHorse/puppet_deluge)
-* [Firebladee-newrelic](https://github.com/Firebladee/newrelic)
-* [puppetfinland-hwraid](https://github.com/Puppet-Finland/puppet-hwraid.git)
-* [meltwater-marathon](https://github.com/meltwater/puppet-marathon)
-* [eyp-postgresql](https://github.com/NTTCom-MS/eyp-postgresql)
-* [hfm-proxysql](https://github.com/hfm/puppet-proxysql)
-* [eyp-php](https://github.com/NTTCom-MS/eyp-php)
-* [elasticsearch-logstash](https://github.com/elastic/puppet-logstash)
-* [jethrocarr-soe](https://github.com/jethrocarr/puppet-soe)
-* [nrvale0-plexmediaserver](https://github.com/nrvale0/puppet-plexmediaserver)
-* [Lavaburn-flapjack](https://github.com/Lavaburn/puppet-flapjack.git)
-* [lwo-dataverse](https://github.com/IQSS/dataverse-puppet)
-* [sematext-spm_monitor](http://sematext.com)
-* [puppetfinland-postgresql](https://github.com/Puppet-Finland/puppet-postgresql.git)
-* [jay-nodejs](https://github.com/mootpt/puppet-nodejs)
-* [puppet-nginx](https://github.com/voxpupuli/puppet-nginx.git)
-* [camptocamp-dell](https://github.com/camptocamp/puppet-dell)
-* [nibalizer-zfs](https://github.com/nibalizer/puppet-module-zfs.git)
-* [hfm-tinyproxy](https://github.com/hfm/puppet-tinyproxy)
-* [puppet-borg](https://github.com/voxpupuli/puppet-borg.git)
-* [puppetfinland-nginx](https://github.com/Puppet-Finland/puppet-nginx.git)
-* [icinga-icingaweb2](https://github.com/Icinga/puppet-icingaweb2)
-* [hfm-stns](https://github.com/STNS/puppet-stns)
-* [boundary-boundary](https://github.com/boundary/boundary_puppet)
-* [sensu-sensuclassic](https://github.com/sensu/puppet-module-sensuclassic)
-* [puppet-rundeck](https://github.com/voxpupuli/puppet-rundeck.git)
-* [puppet-redis](https://github.com/voxpupuli/puppet-redis.git)
-* [opendaylight-opendaylight](https://git.opendaylight.org/gerrit/p/integration/packaging/puppet-opendaylight.git)
-* [elastic-kibana](https://github.com/elastic/puppet-kibana)
-* [puppet-grafana](https://github.com/voxpupuli/puppet-grafana.git)
-* [puppet-nodejs](https://github.com/voxpupuli/puppet-nodejs)
-* [eyp-nrpe](https://github.com/NTTCom-MS/eyp-nrpe)
-* [geoffwilliams-r_profile](https://github.com/GeoffWilliams/r_profile)
-* [theforeman-foreman_proxy](https://github.com/theforeman/puppet-foreman_proxy)
-* [mvasilenko-sensu](https://github.com/mvasilenko/sensu-puppet)
-* [camptocamp-varnish](https://github.com/camptocamp/puppet-varnish)
-* [puppetlabs-nodejs](https://github.com/puppetlabs/puppetlabs-nodejs)
-
-
-[apt::params](https://github.com/puppetlabs/puppetlabs-apt/blob/f51cc8d2cb273cefa878339cef2a006abbc89921/manifests/params.pp) is a _class_
-----------------------------------
-
-that may have no external impact to Forge modules.
-
-
-
-
-#### This module is declared in 233 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
-      
-  
-  
-  
-      
-        <td>puppet-community-rangefinder[bot]</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>1</td>
       
   
   
@@ -1504,6 +1122,76 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/656'>656</a></td>
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) - Pin Bolt to 2.23.0</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/657'>657</a></td>
   
   
@@ -1563,76 +1251,6 @@ kind regards,
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/656'>656</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(maint) - Pin Bolt to 2.23.0</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -1859,56 +1477,54 @@ kind regards,
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/125'>125</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/132'>132</a></td>
   
   
   
       
-        <td>82</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>0</td>
       
   
   
   
       
-        <td>(MODULES-10602) workaround for "765: unexpected token at ''" error</td>
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>Failures on travis due to the stderr suppression.
-
-Failures on appveyor probably because of the localhost execution and can't be reproduced with a local vagrant box and talking via WinRM.</td>
+        <td>(IAC-986) - Removal of inappropriate terminology</td>
       
   
   
   
       
-        <td>DavidS</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>82</td>
+        <td></td>
       
   
   
   
       
-        <td>1</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1993,6 +1609,78 @@ Failures on appveyor probably because of the localhost execution and can't be re
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task'>puppetlabs-facter_task</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/125'>125</a></td>
+  
+  
+  
+      
+        <td>82</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10602) workaround for "765: unexpected token at ''" error</td>
+      
+  
+  
+  
+      
+        <td>Failures on travis due to the stderr suppression.
+
+Failures on appveyor probably because of the localhost execution and can't be reproduced with a local vagrant box and talking via WinRM.</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>82</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
   
   
@@ -2049,6 +1737,76 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+  
+  
+  
+      
+        <td>90</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+      
+  
+  
+  
+      
+        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2485,76 +2243,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
-  
-  
-  
-      
-        <td>90</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
-      
-  
-  
-  
-      
-        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>31</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -3341,146 +3029,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/325'>325</a></td>
-  
-  
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/319'>319</a></td>
-  
-  
-  
-      
-        <td>54</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(DO-NOT-MERGE) Draft for .travis.yml w/ Ruby 2.7</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/330'>330</a></td>
   
   
@@ -3551,6 +3099,76 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/325'>325</a></td>
+  
+  
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
   
   
@@ -3569,6 +3187,76 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>Update json requirement from = 2.1.0 to 2.3.1</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/319'>319</a></td>
+  
+  
+  
+      
+        <td>54</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(DO-NOT-MERGE) Draft for .travis.yml w/ Ruby 2.7</td>
       
   
   
@@ -3856,24 +3544,24 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/582'>582</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/564'>564</a></td>
   
   
   
       
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>182</td>
       
   
   
   
       
-        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(WIP, IAC-615) test avoiding parallelism</td>
       
   
   
@@ -3926,24 +3614,24 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/564'>564</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/582'>582</a></td>
   
   
   
       
-        <td>182</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>35</td>
       
   
   
   
       
-        <td>(WIP, IAC-615) test avoiding parallelism</td>
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
       
   
   
@@ -4277,6 +3965,97 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1188'>1188</a></td>
+  
+  
+  
+      
+        <td>18</td>
+      
+  
+  
+  
+      
+        <td>neomilium</td>
+      
+  
+  
+  
+      
+        <td>Fix contrib package name under debian 10</td>
+      
+  
+  
+  
+      
+        <td>[postgresql::params](https://github.com/puppetlabs/puppetlabs-postgresql/blob/0a446ab4cd11c46272d91fc56cf76776550609ef/manifests/params.pp) is a _class_
+----------------------------------
+
+
+
+
+  Breaking changes to this file MAY impact these 3 modules (near match):
+
+* [puppetfinland-trac](https://github.com/Puppet-Finland/puppet-trac.git)
+* [maestrodev-continuum](http://github.com/maestrodev/puppet-continuum)
+* [puppetfinland-bacula](https://github.com/Puppet-Finland/puppet-bacula.git)
+
+
+
+#### This module is declared in 71 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>18</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
   
   
@@ -4403,75 +4182,54 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1188'>1188</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1187'>1187</a></td>
   
   
   
       
-        <td>18</td>
-      
-  
-  
-  
-      
-        <td>neomilium</td>
+        <td>35</td>
       
   
   
   
       
-        <td>Fix contrib package name under debian 10</td>
+        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>[postgresql::params](https://github.com/puppetlabs/puppetlabs-postgresql/blob/0a446ab4cd11c46272d91fc56cf76776550609ef/manifests/params.pp) is a _class_
-----------------------------------
-
-
-
-
-  Breaking changes to this file MAY impact these 3 modules (near match):
-
-* [puppetfinland-trac](https://github.com/Puppet-Finland/puppet-trac.git)
-* [maestrodev-continuum](http://github.com/maestrodev/puppet-continuum)
-* [puppetfinland-bacula](https://github.com/Puppet-Finland/puppet-bacula.git)
-
-
-
-#### This module is declared in 71 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
+        <td>Allow removal of config_entries via main class</td>
       
   
   
   
       
-        <td>puppet-community-rangefinder[bot]</td>
+        <td>Hi @ekohl, indeed, the failures from acceptance tests are not from this PR, thank you for submitting the PR! I'll have a look to see what is happening here. Cheers! </td>
       
   
   
   
       
-        <td>18</td>
+        <td>daianamezdrea</td>
       
   
   
   
       
-        <td>1</td>
+        <td>5</td>
       
   
   
   
       
-        <td>true</td>
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -4538,76 +4296,6 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
       
         <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1187'>1187</a></td>
-  
-  
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Allow removal of config_entries via main class</td>
-      
-  
-  
-  
-      
-        <td>Hi @ekohl, indeed, the failures from acceptance tests are not from this PR, thank you for submitting the PR! I'll have a look to see what is happening here. Cheers! </td>
-      
-  
-  
-  
-      
-        <td>daianamezdrea</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>6</td>
       
   
   
@@ -5056,6 +4744,76 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/157'>157</a></td>
+  
+  
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/123'>123</a></td>
   
   
@@ -5105,76 +4863,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/157'>157</a></td>
-  
-  
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -5337,6 +5025,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>252</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>76</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1120'>1120</a></td>
   
   
@@ -5461,76 +5219,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>252</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>75</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -5833,76 +5521,6 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/469'>469</a></td>
-  
-  
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/462'>462</a></td>
   
   
@@ -5951,6 +5569,76 @@ cc @binford2k </td>
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/469'>469</a></td>
+  
+  
+  
+      
+        <td>35</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (DO-NOT-MERGE) PDKSync: Puppet 7 test config</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
