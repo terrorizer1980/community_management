@@ -128,7 +128,7 @@ $(document).on("click", '.show-more a', function(e) {
     <% puts "nothing to do here, no prs found" %>
       <% else %>
       <% open_prs.first.keys.each do |header| %>
-       <% if header == :pr || header == :title || header == :repo || header == :age || header == :by || header == :last_comment %>
+       <% if header == :pr || header == :title || header == :owner || header == :repo || header == :age || header == :by || header == :last_comment %>
            <th><%= header %></th> 
         <% elsif header == :age_comment || header == :no_comment_from_puppet || header== :last_comment_mentions_puppet || header== :num_comments %>
            <th data-priority="3"><%= header %></th>
