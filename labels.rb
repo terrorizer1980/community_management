@@ -53,8 +53,6 @@ wanted_labels = [
   { name: 'tests-fail', color: 'e11d21' },
 ]
 
-parsed = util.load_module_list(options[:file])
-
 label_names = []
 wanted_labels.each do |wanted_label|
   label_names.push(wanted_label[:name])
