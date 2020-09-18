@@ -51,6 +51,7 @@ wanted_labels = [
   { name: 'needs-squash', color: 'bfe5bf' },
   { name: 'needs-tests', color: 'ff8091' },
   { name: 'tests-fail', color: 'e11d21' },
+  { name: 'hacktoberfest', color: 'ff9100' },
 ]
 
 parsed = util.load_module_list(options[:file])
