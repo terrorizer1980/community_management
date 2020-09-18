@@ -54,8 +54,6 @@ wanted_labels = [
   { name: 'hacktoberfest', color: 'ff9100' },
 ]
 
-parsed = util.load_module_list(options[:file])
-
 label_names = []
 wanted_labels.each do |wanted_label|
   label_names.push(wanted_label[:name])
