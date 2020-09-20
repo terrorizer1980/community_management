@@ -166,7 +166,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -266,7 +266,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -759,14 +759,14 @@ $(document).on("click", '.show-more a', function(e) {
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/337'>337</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/332'>332</a></td>
   
   
   
 
   
       
-        <td>78</td>
+        <td>123</td>
       
   
   
@@ -782,14 +782,18 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>Conditional can't be used with false. Since default is true it is not needed</td>
+        <td>Add global_variables key for GitLab CI to set defaults that can be overridden by jobs</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     0 comments
+     > I'm fine with not using YAML anchors as the rendering and reading is already complex enough.
+> 
+> Please do add the new key to the README, potentially nabbing the description from .gitlab-ci.yml (and verifying that it actually works similarly).
+
+There is no key. There is already a global_variables key the problem is any custom job setting a variables block will override all global_variables so this allows them to carry forward.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -804,7 +808,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td></td>
+        <td>cdenneen</td>
       
   
   
@@ -812,7 +816,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>0</td>
+        <td>78</td>
       
   
   
@@ -820,7 +824,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>0</td>
+        <td>2</td>
       
   
   
@@ -828,7 +832,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -929,110 +933,6 @@ $(document).on("click", '.show-more a', function(e) {
   
       
         <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/332'>332</a></td>
-  
-  
-  
-
-  
-      
-        <td>123</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cdenneen</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add global_variables key for GitLab CI to set defaults that can be overridden by jobs</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     > I'm fine with not using YAML anchors as the rendering and reading is already complex enough.
-> 
-> Please do add the new key to the README, potentially nabbing the description from .gitlab-ci.yml (and verifying that it actually works similarly).
-
-There is no key. There is already a global_variables key the problem is any custom job setting a variables block will override all global_variables so this allows them to carry forward.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>cdenneen</td>
-      
-  
-  
-  
-
-  
-      
-        <td>78</td>
-      
-  
-  
-  
-
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
       
   
   
@@ -1253,7 +1153,7 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
   
   
   
@@ -1265,22 +1165,14 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/337'>337</a></td>
   
   
   
 
   
       
-        <td>341</td>
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
+        <td>78</td>
       
   
   
@@ -1288,14 +1180,22 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>(performance) - Sets up basic performance testing</td>
+        <td>cdenneen</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Conditional can't be used with false. Since default is true it is not needed</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
+     0 comments
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -1310,7 +1210,7 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>logicminds</td>
+        <td></td>
       
   
   
@@ -1318,7 +1218,7 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>101</td>
+        <td>0</td>
       
   
   
@@ -1326,7 +1226,7 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>3</td>
+        <td>0</td>
       
   
   
@@ -1334,7 +1234,7 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -1439,6 +1339,106 @@ Coverage remained the same at 92.649% when pulling **dabbb1d0457bd5d83836a9e029e
   
       
         <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
+  
+  
+  
+
+  
+      
+        <td>341</td>
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(performance) - Sets up basic performance testing</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds</td>
+      
+  
+  
+  
+
+  
+      
+        <td>101</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
       
   
   
@@ -1669,106 +1669,6 @@ Coverage remained the same at 92.649% when pulling **dabbb1d0457bd5d83836a9e029e
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdksync/pull/137'>137</a></td>
-  
-  
-  
-
-  
-      
-        <td>46</td>
-      
-  
-  
-  
-
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>(IAC-975) Update 'create_pr_against' default branch</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     0 comments
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td></td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdksync'>PDKSync</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdksync/pull/136'>136</a></td>
   
   
@@ -1857,6 +1757,106 @@ Coverage remained the same at 92.649% when pulling **dabbb1d0457bd5d83836a9e029e
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdksync'>PDKSync</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdksync/pull/137'>137</a></td>
+  
+  
+  
+
+  
+      
+        <td>46</td>
+      
+  
+  
+  
+
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(IAC-975) Update 'create_pr_against' default branch</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     0 comments
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td></td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
   
   
@@ -1869,22 +1869,14 @@ Coverage remained the same at 92.649% when pulling **dabbb1d0457bd5d83836a9e029e
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/779'>779</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/923'>923</a></td>
   
   
   
 
   
       
-        <td>1049</td>
-      
-  
-  
-  
-
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+        <td>91</td>
       
   
   
@@ -1892,7 +1884,15 @@ Coverage remained the same at 92.649% when pulling **dabbb1d0457bd5d83836a9e029e
 
   
       
-        <td>[WIP] Revamp docs site</td>
+        <td>jovandeginste</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add manifest_whitespace plugin</td>
       
   
   
@@ -2069,106 +2069,6 @@ Coverage remained the same at 92.649% when pulling **dabbb1d0457bd5d83836a9e029e
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/923'>923</a></td>
-  
-  
-  
-
-  
-      
-        <td>90</td>
-      
-  
-  
-  
-
-  
-      
-        <td>jovandeginste</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add manifest_whitespace plugin</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     0 comments
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td></td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/834'>834</a></td>
   
   
@@ -2193,106 +2093,6 @@ Coverage remained the same at 92.649% when pulling **dabbb1d0457bd5d83836a9e029e
   
       
         <td>{WIP} (todo) Add better Windows support</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     0 comments
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td></td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/919'>919</a></td>
-  
-  
-  
-
-  
-      
-        <td>167</td>
-      
-  
-  
-  
-
-  
-      
-        <td>raphink <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Improve Rake task</td>
       
   
   
@@ -2483,22 +2283,14 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/883'>883</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/779'>779</a></td>
   
   
   
 
   
       
-        <td>348</td>
-      
-  
-  
-  
-
-  
-      
-        <td>usev6</td>
+        <td>1049</td>
       
   
   
@@ -2506,16 +2298,22 @@ wrote:
 
   
       
-        <td>Include check name in log output by default</td>
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>[WIP] Revamp docs site</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     This is meant as a suggestion or a basis for discussion.
-
-The change might break existing setups that rely on the old log output format, so it might be better to wait for version 3?
+     0 comments
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -2530,7 +2328,7 @@ The change might break existing setups that rely on the old log output format, s
 
   
       
-        <td>usev6</td>
+        <td></td>
       
   
   
@@ -2538,7 +2336,7 @@ The change might break existing setups that rely on the old log output format, s
 
   
       
-        <td>348</td>
+        <td>0</td>
       
   
   
@@ -2546,7 +2344,107 @@ The change might break existing setups that rely on the old log output format, s
 
   
       
-        <td>1</td>
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/919'>919</a></td>
+  
+  
+  
+
+  
+      
+        <td>167</td>
+      
+  
+  
+  
+
+  
+      
+        <td>raphink <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Improve Rake task</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     0 comments
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td></td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
       
   
   
@@ -2663,6 +2561,108 @@ The change might break existing setups that rely on the old log output format, s
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/883'>883</a></td>
+  
+  
+  
+
+  
+      
+        <td>348</td>
+      
+  
+  
+  
+
+  
+      
+        <td>usev6</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Include check name in log output by default</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     This is meant as a suggestion or a basis for discussion.
+
+The change might break existing setups that rely on the old log output format, so it might be better to wait for version 3?
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>usev6</td>
+      
+  
+  
+  
+
+  
+      
+        <td>348</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
       
   
   
@@ -2985,6 +2985,106 @@ The change might break existing setups that rely on the old log output format, s
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
+  
+  
+  
+
+  
+      
+        <td>631</td>
+      
+  
+  
+  
+
+  
+      
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Hi @daianamezdrea, I will try and rebase this shortly.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>109</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/233'>233</a></td>
   
   
@@ -3085,22 +3185,14 @@ The change might break existing setups that rely on the old log output format, s
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
   
   
   
 
   
       
-        <td>631</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
+        <td>195</td>
       
   
   
@@ -3108,14 +3200,34 @@ The change might break existing setups that rely on the old log output format, s
 
   
       
-        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
+        <td>findmyname666</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Hi @daianamezdrea, I will try and rebase this shortly.
+     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
+
+Modify `Gemfile` to use this repo:
+```
+group :development do
+  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
+end
+```
+```
+bundle install
+bundle exec rake 'litmus:provision_list[release_checks]'
+# etc...
+```
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -3130,7 +3242,7 @@ The change might break existing setups that rely on the old log output format, s
 
   
       
-        <td>nabertrand</td>
+        <td>sanfrancrisko</td>
       
   
   
@@ -3138,7 +3250,7 @@ The change might break existing setups that rely on the old log output format, s
 
   
       
-        <td>109</td>
+        <td>102</td>
       
   
   
@@ -3271,118 +3383,6 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
-  
-  
-  
-
-  
-      
-        <td>195</td>
-      
-  
-  
-  
-
-  
-      
-        <td>findmyname666</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Remove all sub-folders from source repository / folder</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
-
-Modify `Gemfile` to use this repo:
-```
-group :development do
-  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
-end
-```
-```
-bundle install
-bundle exec rake 'litmus:provision_list[release_checks]'
-# etc...
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-
-  
-      
-        <td>102</td>
-      
-  
-  
-  
-
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
       
   
   
@@ -3705,6 +3705,106 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/802'>802</a></td>
+  
+  
+  
+
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+
+  
+      
+        <td>raemer</td>
+      
+  
+  
+  
+
+  
+      
+        <td>coverage.rb: Fix handling of 0 total resources</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     fixes #803 
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>raemer</td>
+      
+  
+  
+  
+
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/720'>720</a></td>
   
   
@@ -3905,22 +4005,14 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
   
   
   
 
   
       
-        <td>136</td>
-      
-  
-  
-  
-
-  
-      
-        <td>thatnerdjosh</td>
+        <td>589</td>
       
   
   
@@ -3928,14 +4020,22 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>Allow users to setup control repo</td>
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>allow users to disable app_managment</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @rodjek I am having trouble finding the tests for the `rspec-puppet-init` utility, could you point me to where I should be looking for that?
+     bump
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -3950,7 +4050,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>thatnerdjosh</td>
+        <td>b4ldr</td>
       
   
   
@@ -3958,7 +4058,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>136</td>
+        <td>296</td>
       
   
   
@@ -3967,106 +4067,6 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
       
         <td>3</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/802'>802</a></td>
-  
-  
-  
-
-  
-      
-        <td>31</td>
-      
-  
-  
-  
-
-  
-      
-        <td>raemer</td>
-      
-  
-  
-  
-
-  
-      
-        <td>coverage.rb: Fix handling of 0 total resources</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     fixes #803 
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>raemer</td>
-      
-  
-  
-  
-
-  
-      
-        <td>31</td>
-      
-  
-  
-  
-
-  
-      
-        <td>2</td>
       
   
   
@@ -4209,6 +4209,106 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/793'>793</a></td>
+  
+  
+  
+
+  
+      
+        <td>145</td>
+      
+  
+  
+  
+
+  
+      
+        <td>ekinanp <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add support for trusted external data</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @scotje or @DavidS could this get a review? It's needed to properly unit test any manifest that uses `trusted['external']` like e.g. the [ServiceNow CMDB integration](https://github.com/puppetlabs/puppetlabs-servicenow_cmdb_integration)
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>ekinanp</td>
+      
+  
+  
+  
+
+  
+      
+        <td>67</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/799'>799</a></td>
   
   
@@ -4275,106 +4375,6 @@ Coverage remained the same at 85.452% when pulling **c30f179791600dbae171523394c
   
       
         <td>1</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
-  
-  
-  
-
-  
-      
-        <td>589</td>
-      
-  
-  
-  
-
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>allow users to disable app_managment</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     bump
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>b4ldr</td>
-      
-  
-  
-  
-
-  
-      
-        <td>296</td>
-      
-  
-  
-  
-
-  
-      
-        <td>3</td>
       
   
   
@@ -4515,6 +4515,106 @@ As you mentioned though, the interaction of the different hiera layers with spec
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
+  
+  
+  
+
+  
+      
+        <td>136</td>
+      
+  
+  
+  
+
+  
+      
+        <td>thatnerdjosh</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Allow users to setup control repo</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @rodjek I am having trouble finding the tests for the `rspec-puppet-init` utility, could you point me to where I should be looking for that?
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>thatnerdjosh</td>
+      
+  
+  
+  
+
+  
+      
+        <td>136</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
   
   
@@ -4581,106 +4681,6 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
   
       
         <td>1</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/793'>793</a></td>
-  
-  
-  
-
-  
-      
-        <td>145</td>
-      
-  
-  
-  
-
-  
-      
-        <td>ekinanp <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add support for trusted external data</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     @scotje or @DavidS could this get a review? It's needed to properly unit test any manifest that uses `trusted['external']` like e.g. the [ServiceNow CMDB integration](https://github.com/puppetlabs/puppetlabs-servicenow_cmdb_integration)
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>ekinanp</td>
-      
-  
-  
-  
-
-  
-      
-        <td>67</td>
-      
-  
-  
-  
-
-  
-      
-        <td>5</td>
       
   
   
@@ -4927,132 +4927,6 @@ Coverage remained the same at 92.011% when pulling **75b9be11767e4d7e2d8311bbe3e
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
-  
-  
-  
-
-  
-      
-        <td>1052</td>
-      
-  
-  
-  
-
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Adds the ability to spec test an arbitrary string</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hmm. I'm not opposed to that idea, but how would we be able to invoke a spec programmatically then? We're using this now like so:
-
-``` ruby
-  def run_rspec(spec_path, str)
-    require 'rspec/core'
-
-    # rspec needs an IO object to write to. We just want it as a string...
-    data = StringIO.new
-    RSpec::configure do |c|
-        c.output_stream = data
-        c.formatter     = 'json'
-    end
-
-    # require *after* setting the output stream or it screams at us
-    # String input depends on https://github.com/rodjek/rspec-puppet/pull/619
-    require 'rspec-puppet'
-    RSpec::configure do |c|
-        c.string        = str
-    end
-
-    begin
-        RSpec::Core::Runner.run([spec_path])
-        return data.string
-    rescue StandardError, LoadError => e
-        return "Error running spec test: #{e.message}",
-end
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>binford2k</td>
-      
-  
-  
-  
-
-  
-      
-        <td>1046</td>
-      
-  
-  
-  
-
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
   
   
@@ -5242,6 +5116,132 @@ Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae
   
       
         <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
+  
+  
+  
+
+  
+      
+        <td>1052</td>
+      
+  
+  
+  
+
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Adds the ability to spec test an arbitrary string</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Hmm. I'm not opposed to that idea, but how would we be able to invoke a spec programmatically then? We're using this now like so:
+
+``` ruby
+  def run_rspec(spec_path, str)
+    require 'rspec/core'
+
+    # rspec needs an IO object to write to. We just want it as a string...
+    data = StringIO.new
+    RSpec::configure do |c|
+        c.output_stream = data
+        c.formatter     = 'json'
+    end
+
+    # require *after* setting the output stream or it screams at us
+    # String input depends on https://github.com/rodjek/rspec-puppet/pull/619
+    require 'rspec-puppet'
+    RSpec::configure do |c|
+        c.string        = str
+    end
+
+    begin
+        RSpec::Core::Runner.run([spec_path])
+        return data.string
+    rescue StandardError, LoadError => e
+        return "Error running spec test: #{e.message}",
+end
+```
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>binford2k</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1046</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
       
   
   
