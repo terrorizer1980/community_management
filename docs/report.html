@@ -995,290 +995,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/944'>944</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>IBBoard</td>
-      
-  
-  
-  
-      
-        <td>Fix extra quotes in firewall string matching</td>
-      
-  
-  
-  
-      
-        <td>Thanks for the fix @IBBoard and references for explanation!
-
-It looks as though [some unit tests are now failing](https://travis-ci.org/github/puppetlabs/puppetlabs-firewall/jobs/729740740#L1579-L1645) as they were testing with the (incorrect!) assertion that the string match values should be wrapped in single quotes. Could you update those tests' data with the new unquoted string values?
-
-I also think [you've highlighted](https://github.com/puppetlabs/puppetlabs-firewall/commit/3655c6bd33d662a3813c2f66cd0bc5889c68c2c2#r42669741) the fact that we don't have an acceptance test that will actually test `iptables` with this flag on real systems. If it has been covered purely by unit tests, and those tests have been built off incorrect assumptions, then it's conceivable this issue was missed. At least with an acceptance test, `iptables` should either blow up or our test expectations would have shown the expected configuration looked incorrect.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
-  
-  
-  
-      
-        <td>100</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
-      
-  
-  
-  
-      
-        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>41</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
-  
-  
-  
-      
-        <td>237</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10522: Add support for the --condition parameter</td>
-      
-  
-  
-  
-      
-        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>47</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/943'>943</a></td>
-  
-  
-  
-      
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
-      
-  
-  
-  
-      
-        <td>Resolve puppet-lint notices</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/941'>941</a></td>
   
   
@@ -1631,7 +1347,7 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
   
   
   
@@ -1639,48 +1355,48 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy/pull/434'>434</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
   
       
-        <td>104</td>
-      
-  
-  
-  
-      
-        <td>daylicron</td>
+        <td>237</td>
       
   
   
   
       
-        <td>frontend options: order default_backend after specific backends to be able to use them</td>
+        <td>mattock</td>
       
   
   
   
       
-        <td>Hi @MajorFlamingo - let me know if you need any help with the steps @daianamezdrea outlined in https://github.com/puppetlabs/puppetlabs-haproxy/pull/434#issuecomment-668453915</td>
+        <td>MODULES-10522: Add support for the --condition parameter</td>
       
   
   
   
       
-        <td>sanfrancrisko</td>
+        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
       
   
   
   
       
-        <td>44</td>
+        <td>mattock</td>
       
   
   
   
       
-        <td>5</td>
+        <td>47</td>
+      
+  
+  
+  
+      
+        <td>6</td>
       
   
   
@@ -1693,6 +1409,220 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+  
+  
+  
+      
+        <td>100</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+      
+  
+  
+  
+      
+        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>41</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/943'>943</a></td>
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>jcpunk</td>
+      
+  
+  
+  
+      
+        <td>Resolve puppet-lint notices</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/944'>944</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>IBBoard</td>
+      
+  
+  
+  
+      
+        <td>Fix extra quotes in firewall string matching</td>
+      
+  
+  
+  
+      
+        <td>Thanks for the fix @IBBoard and references for explanation!
+
+It looks as though [some unit tests are now failing](https://travis-ci.org/github/puppetlabs/puppetlabs-firewall/jobs/729740740#L1579-L1645) as they were testing with the (incorrect!) assertion that the string match values should be wrapped in single quotes. Could you update those tests' data with the new unquoted string values?
+
+I also think [you've highlighted](https://github.com/puppetlabs/puppetlabs-firewall/commit/3655c6bd33d662a3813c2f66cd0bc5889c68c2c2#r42669741) the fact that we don't have an acceptance test that will actually test `iptables` with this flag on real systems. If it has been covered purely by unit tests, and those tests have been built off incorrect assumptions, then it's conceivable this issue was missed. At least with an acceptance test, `iptables` should either blow up or our test expectations would have shown the expected configuration looked incorrect.</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1763,6 +1693,76 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy/pull/434'>434</a></td>
+  
+  
+  
+      
+        <td>104</td>
+      
+  
+  
+  
+      
+        <td>daylicron</td>
+      
+  
+  
+  
+      
+        <td>frontend options: order default_backend after specific backends to be able to use them</td>
+      
+  
+  
+  
+      
+        <td>Hi @MajorFlamingo - let me know if you need any help with the steps @daianamezdrea outlined in https://github.com/puppetlabs/puppetlabs-haproxy/pull/434#issuecomment-668453915</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>44</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2201,6 +2201,101 @@ After that is resolved, happy to merge.</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1328'>1328</a></td>
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>greno2</td>
+      
+  
+  
+  
+      
+        <td>Support for Amazon Linux 2 (based on el7)</td>
+      
+  
+  
+  
+      
+        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/6b7f1ff760e62b36ccf28934ddb6ddbd37c6bc5e/manifests/params.pp) is a _class_
+----------------------------------
+
+
+
+  Breaking changes to this file WILL impact these 2 modules (exact match):
+
+* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
+* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
+
+
+
+  Breaking changes to this file MAY impact these 1 modules (near match):
+
+* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
+
+
+
+#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1327'>1327</a></td>
   
   
@@ -2249,101 +2344,6 @@ After that is resolved, happy to merge.</td>
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1323'>1323</a></td>
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>tobias-urdin</td>
-      
-  
-  
-  
-      
-        <td>Fix package for python bindings on Ubuntu 20.04</td>
-      
-  
-  
-  
-      
-        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/9df0757bc66d0508e9015790e189e3357ac294ef/manifests/params.pp) is a _class_
-----------------------------------
-
-
-
-  Breaking changes to this file WILL impact these 2 modules (exact match):
-
-* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
-* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
-
-
-
-  Breaking changes to this file MAY impact these 1 modules (near match):
-
-* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
-
-
-
-#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
-      
-  
-  
-  
-      
-        <td>puppet-community-rangefinder[bot]</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -2451,30 +2451,30 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1328'>1328</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1323'>1323</a></td>
   
   
   
       
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>greno2</td>
+        <td>21</td>
       
   
   
   
       
-        <td>Support for Amazon Linux 2 (based on el7)</td>
+        <td>tobias-urdin</td>
       
   
   
   
       
-        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/6b7f1ff760e62b36ccf28934ddb6ddbd37c6bc5e/manifests/params.pp) is a _class_
+        <td>Fix package for python bindings on Ubuntu 20.04</td>
+      
+  
+  
+  
+      
+        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/9df0757bc66d0508e9015790e189e3357ac294ef/manifests/params.pp) is a _class_
 ----------------------------------
 
 
@@ -2511,19 +2511,19 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
   
       
-        <td>1</td>
+        <td>3</td>
       
   
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -2757,6 +2757,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1188'>1188</a></td>
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>neomilium</td>
+      
+  
+  
+  
+      
+        <td>Fix contrib package name under debian 10</td>
+      
+  
+  
+  
+      
+        <td>@sanfrancrisko Branch rebased, have fun!</td>
+      
+  
+  
+  
+      
+        <td>neomilium</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1191'>1191</a></td>
   
   
@@ -2801,152 +2871,6 @@ Autocorrect resolved a few for me (`bundle exec rake rubocop:auto_correct`), how
   
       
         <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1188'>1188</a></td>
-  
-  
-  
-      
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>neomilium</td>
-      
-  
-  
-  
-      
-        <td>Fix contrib package name under debian 10</td>
-      
-  
-  
-  
-      
-        <td>Thanks for this fix @neomilium and for the detailed explanation of the issue. This change LGTM!
-
-Could I ask if you could rebase your branch with `puppetlabs:main` - I tried to do this to pull in a workaround for the current failing CI tests, but I do not have permission to push to your fork. 
-
-The tests will automatically kick off again and then I'll merge when we've got the green light 😃 </td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
-  
-  
-  
-      
-        <td>254</td>
-      
-  
-  
-  
-      
-        <td>Bouke</td>
-      
-  
-  
-  
-      
-        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
-      
-  
-  
-  
-      
-        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
-
-Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>41</td>
-      
-  
-  
-  
-      
-        <td>9</td>
       
   
   
@@ -3034,6 +2958,78 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
+  
+  
+  
+      
+        <td>254</td>
+      
+  
+  
+  
+      
+        <td>Bouke</td>
+      
+  
+  
+  
+      
+        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
+      
+  
+  
+  
+      
+        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
+
+Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>41</td>
+      
+  
+  
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -3139,6 +3135,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>Add new types for Stdlib::Ensure::File</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1128'>1128</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Add additional types Stdlib::Port::Dynamic,Ephemeral,Registered,User}</td>
       
   
   
@@ -3321,76 +3387,6 @@ cc @binford2k </td>
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1128'>1128</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Add additional types Stdlib::Port::Dynamic,Ephemeral,Registered,User}</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
