@@ -249,77 +249,6 @@ $(document).on("click", '.show-more a', function(e) {
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/device_manager'>device_manager</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/device_manager/pull/71'>71</a></td>
-  
-  
-  
-      
-        <td>226</td>
-      
-  
-  
-  
-      
-        <td>bFekete</td>
-      
-  
-  
-  
-      
-        <td>Adding apply as a parameter to run_puppet_device task</td>
-      
-  
-  
-  
-      
-        <td>@bFekete 
-Making a quick change to point this PR towards the newly defined default main branch as part of our work to remove inappropriate terminology. Apologies if this is inconvenient in any way.</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>49</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
   
   
@@ -364,7 +293,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>49</td>
+        <td>50</td>
       
   
   
@@ -457,7 +386,7 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
       
-        <td>48</td>
+        <td>49</td>
       
   
   
@@ -470,6 +399,76 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>pstray</td>
+      
+  
+  
+  
+      
+        <td>Make the logfiles use servername instead of name in their name.</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -713,7 +712,7 @@ Technically I'd agree this changes behavior and this could warrant a major versi
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -748,7 +747,7 @@ kind regards,
   
   
       
-        <td>10</td>
+        <td>11</td>
       
   
   
@@ -818,7 +817,7 @@ kind regards,
   
   
       
-        <td>48</td>
+        <td>49</td>
       
   
   
@@ -1000,7 +999,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1320,7 +1319,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1333,80 +1332,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/944'>944</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>IBBoard</td>
-      
-  
-  
-  
-      
-        <td>Fix extra quotes in firewall string matching</td>
-      
-  
-  
-  
-      
-        <td>Thanks for the fix @IBBoard and references for explanation!
-
-It looks as though [some unit tests are now failing](https://travis-ci.org/github/puppetlabs/puppetlabs-firewall/jobs/729740740#L1579-L1645) as they were testing with the (incorrect!) assertion that the string match values should be wrapped in single quotes. Could you update those tests' data with the new unquoted string values?
-
-I also think [you've highlighted](https://github.com/puppetlabs/puppetlabs-firewall/commit/3655c6bd33d662a3813c2f66cd0bc5889c68c2c2#r42669741) the fact that we don't have an acceptance test that will actually test `iptables` with this flag on real systems. If it has been covered purely by unit tests, and those tests have been built off incorrect assumptions, then it's conceivable this issue was missed. At least with an acceptance test, `iptables` should either blow up or our test expectations would have shown the expected configuration looked incorrect.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -1499,12 +1424,86 @@ I also think [you've highlighted](https://github.com/puppetlabs/puppetlabs-firew
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/944'>944</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>IBBoard</td>
+      
+  
+  
+  
+      
+        <td>Fix extra quotes in firewall string matching</td>
+      
+  
+  
+  
+      
+        <td>Thanks for the fix @IBBoard and references for explanation!
+
+It looks as though [some unit tests are now failing](https://travis-ci.org/github/puppetlabs/puppetlabs-firewall/jobs/729740740#L1579-L1645) as they were testing with the (incorrect!) assertion that the string match values should be wrapped in single quotes. Could you update those tests' data with the new unquoted string values?
+
+I also think [you've highlighted](https://github.com/puppetlabs/puppetlabs-firewall/commit/3655c6bd33d662a3813c2f66cd0bc5889c68c2c2#r42669741) the fact that we don't have an acceptance test that will actually test `iptables` with this flag on real systems. If it has been covered purely by unit tests, and those tests have been built off incorrect assumptions, then it's conceivable this issue was missed. At least with an acceptance test, `iptables` should either blow up or our test expectations would have shown the expected configuration looked incorrect.</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
   
       
-        <td>237</td>
+        <td>238</td>
       
   
   
@@ -1534,7 +1533,7 @@ I also think [you've highlighted](https://github.com/puppetlabs/puppetlabs-firew
   
   
       
-        <td>47</td>
+        <td>48</td>
       
   
   
@@ -1639,76 +1638,6 @@ I also think [you've highlighted](https://github.com/puppetlabs/puppetlabs-firew
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy/pull/442'>442</a></td>
-  
-  
-  
-      
-        <td>44</td>
-      
-  
-  
-  
-      
-        <td>pkaroluk</td>
-      
-  
-  
-  
-      
-        <td>Fix incorrect options order in HAproxy 2.2.x</td>
-      
-  
-  
-  
-      
-        <td>Well... from my perspective I can't find any good points to sort alphabetically backend's options by default, so it seems a good idea to set it false with HAProxy 2.2.</td>
-      
-  
-  
-  
-      
-        <td>pkaroluk</td>
-      
-  
-  
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy/pull/434'>434</a></td>
   
   
@@ -1763,6 +1692,76 @@ I also think [you've highlighted](https://github.com/puppetlabs/puppetlabs-firew
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy/pull/442'>442</a></td>
+  
+  
+  
+      
+        <td>44</td>
+      
+  
+  
+  
+      
+        <td>pkaroluk</td>
+      
+  
+  
+  
+      
+        <td>Fix incorrect options order in HAproxy 2.2.x</td>
+      
+  
+  
+  
+      
+        <td>Well... from my perspective I can't find any good points to sort alphabetically backend's options by default, so it seems a good idea to set it false with HAProxy 2.2.</td>
+      
+  
+  
+  
+      
+        <td>pkaroluk</td>
+      
+  
+  
+  
+      
+        <td>36</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1886,7 +1885,7 @@ After that is resolved, happy to merge.</td>
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -1996,7 +1995,7 @@ After that is resolved, happy to merge.</td>
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -2026,7 +2025,7 @@ After that is resolved, happy to merge.</td>
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -2096,7 +2095,7 @@ After that is resolved, happy to merge.</td>
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -2201,24 +2200,24 @@ After that is resolved, happy to merge.</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1327'>1327</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1329'>1329</a></td>
   
   
   
       
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
+        <td>0</td>
       
   
   
   
       
-        <td>Resolve puppet-lint notices</td>
+        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>dont run percona tests on Debian 8</td>
       
   
   
@@ -2366,91 +2365,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1325'>1325</a></td>
-  
-  
-  
-      
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10790) - Add test to highlight failure</td>
-      
-  
-  
-  
-      
-        <td>[mysql::server::managed_dirs](https://github.com/puppetlabs/puppetlabs-mysql/blob/5bfbd40f39a2edcebd8d6ee7babcd2eb8081e193/manifests/server/managed_dirs.pp) is a _class_
-----------------------------------
-
-that may have no external impact to Forge modules.
-
-
-
-
-#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
-      
-  
-  
-  
-      
-        <td>puppet-community-rangefinder[bot]</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1328'>1328</a></td>
   
   
@@ -2512,6 +2426,161 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>2</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1327'>1327</a></td>
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>jcpunk</td>
+      
+  
+  
+  
+      
+        <td>Resolve puppet-lint notices</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1325'>1325</a></td>
+  
+  
+  
+      
+        <td>16</td>
+      
+  
+  
+  
+      
+        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10790) - Add test to highlight failure</td>
+      
+  
+  
+  
+      
+        <td>[mysql::server::managed_dirs](https://github.com/puppetlabs/puppetlabs-mysql/blob/5bfbd40f39a2edcebd8d6ee7babcd2eb8081e193/manifests/server/managed_dirs.pp) is a _class_
+----------------------------------
+
+that may have no external impact to Forge modules.
+
+
+
+
+#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>3</td>
       
   
   
@@ -2652,7 +2721,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>49</td>
+        <td>50</td>
       
   
   
@@ -2722,13 +2791,83 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>184</td>
+        <td>185</td>
       
   
   
   
       
         <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1195'>1195</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>osijan</td>
+      
+  
+  
+  
+      
+        <td>add hostgssenc type to pg_hba rules</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>2</td>
       
   
   
@@ -2827,157 +2966,12 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1188'>1188</a></td>
-  
-  
-  
-      
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>neomilium</td>
-      
-  
-  
-  
-      
-        <td>Fix contrib package name under debian 10</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>jorhett</td>
-      
-  
-  
-  
-      
-        <td>Add new common repo which contains add-ons</td>
-      
-  
-  
-  
-      
-        <td>@jorhett , @igalic One possible suggestion might be to rename the `$repo_commonurl` parameter to `$yumrepo_commonurl` (or `$yum_repo_commonurl`) given this exclusively pertains to the PG YUM repos? We could also update the parameter description so it's a bit more obvious in the `REFERENCE.md`:
-> Sets the url for the PostgreSQL common repository. Useful if you host your own mirror of the repository. Applies to RHEL / Fedora systems only.
-
-...although hopefully the parameter name makes it obvious enough.
-
-Also, @jorhett - whenever you get a chance could you rebase this branch with `puppetlabs:main` - we excluded CentOS 8 test execution temporarily whilst we look in to the issue. We have alternative methods to test CentOS 8 internally, so we're not losing coverage. This seems quite a specific case to that particular Docker container.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
   
   
   
       
-        <td>254</td>
+        <td>255</td>
       
   
   
@@ -3036,6 +3030,81 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
+  
+  
+  
+      
+        <td>22</td>
+      
+  
+  
+  
+      
+        <td>jorhett</td>
+      
+  
+  
+  
+      
+        <td>Add new common repo which contains add-ons</td>
+      
+  
+  
+  
+      
+        <td>@jorhett , @igalic One possible suggestion might be to rename the `$repo_commonurl` parameter to `$yumrepo_commonurl` (or `$yum_repo_commonurl`) given this exclusively pertains to the PG YUM repos? We could also update the parameter description so it's a bit more obvious in the `REFERENCE.md`:
+> Sets the url for the PostgreSQL common repository. Useful if you host your own mirror of the repository. Applies to RHEL / Fedora systems only.
+
+...although hopefully the parameter name makes it obvious enough.
+
+Also, @jorhett - whenever you get a chance could you rebase this branch with `puppetlabs:main` - we excluded CentOS 8 test execution temporarily whilst we look in to the issue. We have alternative methods to test CentOS 8 internally, so we're not losing coverage. This seems quite a specific case to that particular Docker container.</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
   
   
@@ -3049,7 +3118,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>216</td>
+        <td>217</td>
       
   
   
@@ -3115,7 +3184,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1129'>1129</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1128'>1128</a></td>
   
   
   
@@ -3132,7 +3201,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>Add new types for Stdlib::Ensure::File</td>
+        <td>Add additional types Stdlib::Port::Dynamic,Ephemeral,Registered,User}</td>
       
   
   
@@ -3185,7 +3254,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1128'>1128</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1129'>1129</a></td>
   
   
   
@@ -3202,7 +3271,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>Add additional types Stdlib::Port::Dynamic,Ephemeral,Registered,User}</td>
+        <td>Add new types for Stdlib::Ensure::File</td>
       
   
   
@@ -3366,7 +3435,7 @@ cc @binford2k </td>
   
   
       
-        <td>216</td>
+        <td>217</td>
       
   
   
@@ -3385,6 +3454,101 @@ cc @binford2k </td>
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat'>puppetlabs-tomcat</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat/pull/410'>410</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>bFekete</td>
+      
+  
+  
+  
+      
+        <td>Added the ability to have multiple parent realms</td>
+      
+  
+  
+  
+      
+        <td>[tomcat::config::server::realm](https://github.com/puppetlabs/puppetlabs-tomcat/blob/0e2625fec887cd5058811ae28617558aed9584f8/manifests/config/server/realm.pp) is a _type_
+----------------------------------
+
+
+
+  Breaking changes to this file WILL impact these 2 modules (exact match):
+
+* [fervid-secure_tomcat_cis](https://github.com/fervidus/secure_tomcat.git)
+* [autostructure-secure_tomcat](https://github.com/autostructure/secure_tomcat.git)
+
+
+
+  Breaking changes to this file MAY impact these 1 modules (near match):
+
+* [autostructure-docker_tomcat_module](https://github.com/autostructure/docker_tomcat_module.git)
+
+
+
+#### This module is declared in 8 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
