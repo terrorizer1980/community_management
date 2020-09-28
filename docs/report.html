@@ -262,7 +262,7 @@ $(document).on("click", '.show-more a', function(e) {
   
   
       
-        <td>207</td>
+        <td>208</td>
       
   
   
@@ -293,7 +293,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>52</td>
+        <td>53</td>
       
   
   
@@ -333,7 +333,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>178</td>
+        <td>179</td>
       
   
   
@@ -386,7 +386,223 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
       
-        <td>51</td>
+        <td>52</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2069'>2069</a></td>
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>altmas5</td>
+      
+  
+  
+  
+      
+        <td>Fix typos including consecutive occurrences of 'the'</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2066'>2066</a></td>
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>jcpunk</td>
+      
+  
+  
+  
+      
+        <td>Resolve easy puppet-lint notices</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2064'>2064</a></td>
+  
+  
+  
+      
+        <td>17</td>
+      
+  
+  
+  
+      
+        <td>rsynnest</td>
+      
+  
+  
+  
+      
+        <td>removes spaces from default logfile</td>
+      
+  
+  
+  
+      
+        <td>> i firmly believe that "version numbers are cheap" and that's all there is to it
+
+I firmly believe that that is false. Dealing with major version bumps is painful on the consumer side. However, probably not as painful as a breaking change that was not labeled as such. They are both a pain and a blessing.
+
+In this case, the potential implications are that other tools process the logs and hardcode the paths. Spaces are less common so it doesn't affect all users.
+
+Technically I'd agree this changes behavior and this could warrant a major version bump. However, I wouldn't do a major version bump just for this single patch. There are too many consumers out there unaffected by this (widely used) module. That leaves keeping the PR open and releasing it as minor. Personally I'd release it as a minor version.</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>13</td>
       
   
   
@@ -456,7 +672,7 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -469,222 +685,6 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2069'>2069</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>altmas5</td>
-      
-  
-  
-  
-      
-        <td>Fix typos including consecutive occurrences of 'the'</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2066'>2066</a></td>
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
-      
-  
-  
-  
-      
-        <td>Resolve easy puppet-lint notices</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2064'>2064</a></td>
-  
-  
-  
-      
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>rsynnest</td>
-      
-  
-  
-  
-      
-        <td>removes spaces from default logfile</td>
-      
-  
-  
-  
-      
-        <td>> i firmly believe that "version numbers are cheap" and that's all there is to it
-
-I firmly believe that that is false. Dealing with major version bumps is painful on the consumer side. However, probably not as painful as a breaking change that was not labeled as such. They are both a pain and a blessing.
-
-In this case, the potential implications are that other tools process the logs and hardcode the paths. Spaces are less common so it doesn't affect all users.
-
-Technically I'd agree this changes behavior and this could warrant a major version bump. However, I wouldn't do a major version bump just for this single patch. There are too many consumers out there unaffected by this (widely used) module. That leaves keeping the PR open and releasing it as minor. Personally I'd release it as a minor version.</td>
-      
-  
-  
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -782,7 +782,7 @@ Technically I'd agree this changes behavior and this could warrant a major versi
   
   
       
-        <td>16</td>
+        <td>17</td>
       
   
   
@@ -817,7 +817,7 @@ kind regards,
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -887,7 +887,7 @@ kind regards,
   
   
       
-        <td>51</td>
+        <td>52</td>
       
   
   
@@ -1029,7 +1029,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>94</td>
+        <td>95</td>
       
   
   
@@ -1048,216 +1048,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
-  
-  
-  
-      
-        <td>103</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
-      
-  
-  
-  
-      
-        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>44</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/943'>943</a></td>
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
-      
-  
-  
-  
-      
-        <td>Resolve puppet-lint notices</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
-  
-  
-  
-      
-        <td>240</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10522: Add support for the --condition parameter</td>
-      
-  
-  
-  
-      
-        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>50</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -1279,7 +1069,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>25</td>
+        <td>26</td>
       
   
   
@@ -1599,7 +1389,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>25</td>
+        <td>26</td>
       
   
   
@@ -1634,12 +1424,222 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/944'>944</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+  
+  
+  
+      
+        <td>241</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10522: Add support for the --condition parameter</td>
+      
+  
+  
+  
+      
+        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>51</td>
+      
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/943'>943</a></td>
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>jcpunk</td>
+      
+  
+  
+  
+      
+        <td>Resolve puppet-lint notices</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
   
   
   
       
         <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+  
+  
+  
+      
+        <td>103</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+      
+  
+  
+  
+      
+        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>44</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/944'>944</a></td>
+  
+  
+  
+      
+        <td>4</td>
       
   
   
@@ -1669,7 +1669,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -1709,7 +1709,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>46</td>
+        <td>47</td>
       
   
   
@@ -1739,7 +1739,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>38</td>
+        <td>39</td>
       
   
   
@@ -1919,7 +1919,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
@@ -1951,7 +1951,7 @@ After that is resolved, happy to merge.</td>
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -2056,12 +2056,82 @@ After that is resolved, happy to merge.</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/442'>442</a></td>
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>odidev</td>
+      
+  
+  
+  
+      
+        <td>Added Arm64 jobs for Travis-CI</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/443'>443</a></td>
   
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -2098,76 +2168,6 @@ After that is resolved, happy to merge.</td>
   
       
         <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/442'>442</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>odidev</td>
-      
-  
-  
-  
-      
-        <td>Added Arm64 jobs for Travis-CI</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>1</td>
       
   
   
@@ -2271,7 +2271,7 @@ After that is resolved, happy to merge.</td>
   
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
@@ -2301,7 +2301,7 @@ After that is resolved, happy to merge.</td>
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -2320,6 +2320,76 @@ After that is resolved, happy to merge.</td>
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1327'>1327</a></td>
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>jcpunk</td>
+      
+  
+  
+  
+      
+        <td>Resolve puppet-lint notices</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2436,7 +2506,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -2481,7 +2551,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -2516,82 +2586,12 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1327'>1327</a></td>
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
-      
-  
-  
-  
-      
-        <td>Resolve puppet-lint notices</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1323'>1323</a></td>
   
   
   
       
-        <td>23</td>
+        <td>24</td>
       
   
   
@@ -2787,7 +2787,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>52</td>
+        <td>53</td>
       
   
   
@@ -2857,7 +2857,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>187</td>
+        <td>188</td>
       
   
   
@@ -2962,12 +2962,157 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
+  
+  
+  
+      
+        <td>25</td>
+      
+  
+  
+  
+      
+        <td>jorhett</td>
+      
+  
+  
+  
+      
+        <td>Add new common repo which contains add-ons</td>
+      
+  
+  
+  
+      
+        <td>@jorhett , @igalic One possible suggestion might be to rename the `$repo_commonurl` parameter to `$yumrepo_commonurl` (or `$yum_repo_commonurl`) given this exclusively pertains to the PG YUM repos? We could also update the parameter description so it's a bit more obvious in the `REFERENCE.md`:
+> Sets the url for the PostgreSQL common repository. Useful if you host your own mirror of the repository. Applies to RHEL / Fedora systems only.
+
+...although hopefully the parameter name makes it obvious enough.
+
+Also, @jorhett - whenever you get a chance could you rebase this branch with `puppetlabs:main` - we excluded CentOS 8 test execution temporarily whilst we look in to the issue. We have alternative methods to test CentOS 8 internally, so we're not losing coverage. This seems quite a specific case to that particular Docker container.</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1195'>1195</a></td>
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>osijan</td>
+      
+  
+  
+  
+      
+        <td>add hostgssenc type to pg_hba rules</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1191'>1191</a></td>
   
   
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
@@ -3032,157 +3177,12 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1195'>1195</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>osijan</td>
-      
-  
-  
-  
-      
-        <td>add hostgssenc type to pg_hba rules</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
-  
-  
-  
-      
-        <td>24</td>
-      
-  
-  
-  
-      
-        <td>jorhett</td>
-      
-  
-  
-  
-      
-        <td>Add new common repo which contains add-ons</td>
-      
-  
-  
-  
-      
-        <td>@jorhett , @igalic One possible suggestion might be to rename the `$repo_commonurl` parameter to `$yumrepo_commonurl` (or `$yum_repo_commonurl`) given this exclusively pertains to the PG YUM repos? We could also update the parameter description so it's a bit more obvious in the `REFERENCE.md`:
-> Sets the url for the PostgreSQL common repository. Useful if you host your own mirror of the repository. Applies to RHEL / Fedora systems only.
-
-...although hopefully the parameter name makes it obvious enough.
-
-Also, @jorhett - whenever you get a chance could you rebase this branch with `puppetlabs:main` - we excluded CentOS 8 test execution temporarily whilst we look in to the issue. We have alternative methods to test CentOS 8 internally, so we're not losing coverage. This seems quite a specific case to that particular Docker container.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
   
   
   
       
-        <td>257</td>
+        <td>258</td>
       
   
   
@@ -3254,7 +3254,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>219</td>
+        <td>220</td>
       
   
   
@@ -3298,146 +3298,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1130'>1130</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>reidmv <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Add parsehocon() function</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1128'>1128</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Add additional types Stdlib::Port::Dynamic,Ephemeral,Registered,User}</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -3535,7 +3395,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>228</td>
+        <td>229</td>
       
   
   
@@ -3571,7 +3431,7 @@ cc @binford2k </td>
   
   
       
-        <td>219</td>
+        <td>220</td>
       
   
   
@@ -3590,6 +3450,76 @@ cc @binford2k </td>
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1128'>1128</a></td>
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Add additional types Stdlib::Port::Dynamic,Ephemeral,Registered,User}</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -3641,7 +3571,7 @@ cc @binford2k </td>
   
   
       
-        <td>88</td>
+        <td>89</td>
       
   
   
@@ -3660,6 +3590,76 @@ cc @binford2k </td>
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1130'>1130</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>reidmv <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Add parsehocon() function</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
