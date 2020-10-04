@@ -491,6 +491,80 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>pstray</td>
+      
+  
+  
+  
+      
+        <td>Make the logfiles use servername instead of name in their name.</td>
+      
+  
+  
+  
+      
+        <td>Thanks for the suggested tweak @pstray .
+
+There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
+
+I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2066'>2066</a></td>
   
   
@@ -609,80 +683,6 @@ Technically I'd agree this changes behavior and this could warrant a major versi
   
       
         <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
-  
-  
-  
-      
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>pstray</td>
-      
-  
-  
-  
-      
-        <td>Make the logfiles use servername instead of name in their name.</td>
-      
-  
-  
-  
-      
-        <td>Thanks for the suggested tweak @pstray .
-
-There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
-
-I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>3</td>
       
   
   
@@ -963,7 +963,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>101</td>
+        <td>102</td>
       
   
   
@@ -1046,76 +1046,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/945'>945</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>pellisesol</td>
-      
-  
-  
-  
-      
-        <td>Update firewall.rb</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -1498,6 +1428,76 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/945'>945</a></td>
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>pellisesol</td>
+      
+  
+  
+  
+      
+        <td>Update firewall.rb</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
@@ -1850,76 +1850,6 @@ After that is resolved, happy to merge.</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/333'>333</a></td>
-  
-  
-  
-      
-        <td>19</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
-      
-  
-  
-  
-      
-        <td>Resolve puppet-lint</td>
-      
-  
-  
-  
-      
-        <td>@jcpunk This looks like it is a similar issue to what @adrianiurca mentioned [here](https://github.com/puppetlabs/puppetlabs-firewall/pull/943#issuecomment-693520842)</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>13</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
   
   
@@ -1974,6 +1904,76 @@ After that is resolved, happy to merge.</td>
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/333'>333</a></td>
+  
+  
+  
+      
+        <td>19</td>
+      
+  
+  
+  
+      
+        <td>jcpunk</td>
+      
+  
+  
+  
+      
+        <td>Resolve puppet-lint</td>
+      
+  
+  
+  
+      
+        <td>@jcpunk This looks like it is a similar issue to what @adrianiurca mentioned [here](https://github.com/puppetlabs/puppetlabs-firewall/pull/943#issuecomment-693520842)</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2155,34 +2155,44 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1325'>1325</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1328'>1328</a></td>
   
   
   
       
-        <td>26</td>
-      
-  
-  
-  
-      
-        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>12</td>
       
   
   
   
       
-        <td>(MODULES-10790) - Add test to highlight failure</td>
+        <td>greno2</td>
       
   
   
   
       
-        <td>[mysql::server::managed_dirs](https://github.com/puppetlabs/puppetlabs-mysql/blob/5bfbd40f39a2edcebd8d6ee7babcd2eb8081e193/manifests/server/managed_dirs.pp) is a _class_
+        <td>Add compatibility for Amazon Linux 2</td>
+      
+  
+  
+  
+      
+        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/6b7f1ff760e62b36ccf28934ddb6ddbd37c6bc5e/manifests/params.pp) is a _class_
 ----------------------------------
 
-that may have no external impact to Forge modules.
 
+
+  Breaking changes to this file WILL impact these 2 modules (exact match):
+
+* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
+* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
+
+
+
+  Breaking changes to this file MAY impact these 1 modules (near match):
+
+* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
 
 
 
@@ -2240,44 +2250,34 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1328'>1328</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1325'>1325</a></td>
   
   
   
       
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>greno2</td>
+        <td>26</td>
       
   
   
   
       
-        <td>Add compatibility for Amazon Linux 2</td>
+        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/6b7f1ff760e62b36ccf28934ddb6ddbd37c6bc5e/manifests/params.pp) is a _class_
+        <td>(MODULES-10790) - Add test to highlight failure</td>
+      
+  
+  
+  
+      
+        <td>[mysql::server::managed_dirs](https://github.com/puppetlabs/puppetlabs-mysql/blob/5bfbd40f39a2edcebd8d6ee7babcd2eb8081e193/manifests/server/managed_dirs.pp) is a _class_
 ----------------------------------
 
+that may have no external impact to Forge modules.
 
-
-  Breaking changes to this file WILL impact these 2 modules (exact match):
-
-* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
-* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
-
-
-
-  Breaking changes to this file MAY impact these 1 modules (near match):
-
-* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
 
 
 
