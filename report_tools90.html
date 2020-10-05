@@ -159,6 +159,110 @@ $(document).on("click", '.show-more a', function(e) {
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/332'>332</a></td>
+  
+  
+  
+
+  
+      
+        <td>138</td>
+      
+  
+  
+  
+
+  
+      
+        <td>cdenneen</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add global_variables key for GitLab CI to set defaults that can be overridden by jobs</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     > I'm fine with not using YAML anchors as the rendering and reading is already complex enough.
+> 
+> Please do add the new key to the README, potentially nabbing the description from .gitlab-ci.yml (and verifying that it actually works similarly).
+
+There is no key. There is already a global_variables key the problem is any custom job setting a variables block will override all global_variables so this allows them to carry forward.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>cdenneen</td>
+      
+  
+  
+  
+
+  
+      
+        <td>93</td>
+      
+  
+  
+  
+
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/281'>281</a></td>
   
   
@@ -249,7 +353,7 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
   
   
   
@@ -261,22 +365,14 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/332'>332</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
   
   
   
 
   
       
-        <td>138</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cdenneen</td>
+        <td>356</td>
       
   
   
@@ -284,18 +380,22 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>Add global_variables key for GitLab CI to set defaults that can be overridden by jobs</td>
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(performance) - Sets up basic performance testing</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     > I'm fine with not using YAML anchors as the rendering and reading is already complex enough.
-> 
-> Please do add the new key to the README, potentially nabbing the description from .gitlab-ci.yml (and verifying that it actually works similarly).
-
-There is no key. There is already a global_variables key the problem is any custom job setting a variables block will override all global_variables so this allows them to carry forward.
+     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -310,7 +410,7 @@ There is no key. There is already a global_variables key the problem is any cust
 
   
       
-        <td>cdenneen</td>
+        <td>logicminds</td>
       
   
   
@@ -318,7 +418,7 @@ There is no key. There is already a global_variables key the problem is any cust
 
   
       
-        <td>93</td>
+        <td>117</td>
       
   
   
@@ -326,7 +426,7 @@ There is no key. There is already a global_variables key the problem is any cust
 
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -453,7 +553,7 @@ There is no key. There is already a global_variables key the problem is any cust
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
   
   
   
@@ -465,22 +565,14 @@ There is no key. There is already a global_variables key the problem is any cust
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/883'>883</a></td>
   
   
   
 
   
       
-        <td>356</td>
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
+        <td>363</td>
       
   
   
@@ -488,14 +580,24 @@ There is no key. There is already a global_variables key the problem is any cust
 
   
       
-        <td>(performance) - Sets up basic performance testing</td>
+        <td>usev6</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Include check name in log output by default</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
+     This is meant as a suggestion or a basis for discussion.
+
+The change might break existing setups that rely on the old log output format, so it might be better to wait for version 3?
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -510,7 +612,7 @@ There is no key. There is already a global_variables key the problem is any cust
 
   
       
-        <td>logicminds</td>
+        <td>usev6</td>
       
   
   
@@ -518,7 +620,7 @@ There is no key. There is already a global_variables key the problem is any cust
 
   
       
-        <td>116</td>
+        <td>363</td>
       
   
   
@@ -526,7 +628,7 @@ There is no key. There is already a global_variables key the problem is any cust
 
   
       
-        <td>3</td>
+        <td>1</td>
       
   
   
@@ -534,7 +636,7 @@ There is no key. There is already a global_variables key the problem is any cust
 
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -679,108 +781,6 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/883'>883</a></td>
-  
-  
-  
-
-  
-      
-        <td>363</td>
-      
-  
-  
-  
-
-  
-      
-        <td>usev6</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Include check name in log output by default</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     This is meant as a suggestion or a basis for discussion.
-
-The change might break existing setups that rely on the old log output format, so it might be better to wait for version 3?
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>usev6</td>
-      
-  
-  
-  
-
-  
-      
-        <td>363</td>
-      
-  
-  
-  
-
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/586'>586</a></td>
   
   
@@ -843,6 +843,106 @@ The change might break existing setups that rely on the old log output format, s
   
       
         <td>11</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
+  
+  
+  
+
+  
+      
+        <td>646</td>
+      
+  
+  
+  
+
+  
+      
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Hi @daianamezdrea, I will try and rebase this shortly.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>124</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
       
   
   
@@ -1089,106 +1189,6 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
-  
-  
-  
-
-  
-      
-        <td>465</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cardil</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Feature: metadata dependencies are auto installed</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>daianamezdrea</td>
-      
-  
-  
-  
-
-  
-      
-        <td>117</td>
-      
-  
-  
-  
-
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
   
   
@@ -1301,22 +1301,14 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
   
   
   
 
   
       
-        <td>646</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
+        <td>465</td>
       
   
   
@@ -1324,14 +1316,22 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
+        <td>cardil</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Feature: metadata dependencies are auto installed</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Hi @daianamezdrea, I will try and rebase this shortly.
+     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -1346,7 +1346,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>nabertrand</td>
+        <td>daianamezdrea</td>
       
   
   
@@ -1354,7 +1354,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>124</td>
+        <td>117</td>
       
   
   
@@ -1362,7 +1362,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>5</td>
+        <td>7</td>
       
   
   
@@ -1378,7 +1378,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -1501,6 +1501,106 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
+  
+  
+  
+
+  
+      
+        <td>151</td>
+      
+  
+  
+  
+
+  
+      
+        <td>thatnerdjosh</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Allow users to setup control repo</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @rodjek I am having trouble finding the tests for the `rspec-puppet-init` utility, could you point me to where I should be looking for that?
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>thatnerdjosh</td>
+      
+  
+  
+  
+
+  
+      
+        <td>151</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/747'>747</a></td>
   
   
@@ -1563,106 +1663,6 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
       
         <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
-  
-  
-  
-
-  
-      
-        <td>604</td>
-      
-  
-  
-  
-
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>allow users to disable app_managment</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     bump
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>b4ldr</td>
-      
-  
-  
-  
-
-  
-      
-        <td>311</td>
-      
-  
-  
-  
-
-  
-      
-        <td>3</td>
       
   
   
@@ -1858,7 +1858,7 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
 
   
       
-        <td>374</td>
+        <td>375</td>
       
   
   
@@ -1905,22 +1905,14 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/742'>742</a></td>
   
   
   
 
   
       
-        <td>151</td>
-      
-  
-  
-  
-
-  
-      
-        <td>thatnerdjosh</td>
+        <td>605</td>
       
   
   
@@ -1928,14 +1920,22 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
 
   
       
-        <td>Allow users to setup control repo</td>
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>allow users to disable app_managment</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @rodjek I am having trouble finding the tests for the `rspec-puppet-init` utility, could you point me to where I should be looking for that?
+     bump
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -1950,7 +1950,7 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
 
   
       
-        <td>thatnerdjosh</td>
+        <td>b4ldr</td>
       
   
   
@@ -1958,7 +1958,7 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
 
   
       
-        <td>151</td>
+        <td>311</td>
       
   
   
@@ -1982,7 +1982,7 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
 
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -2315,110 +2315,6 @@ Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/685'>685</a></td>
-  
-  
-  
-
-  
-      
-        <td>880</td>
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Remove bulk of README and point to the docs site</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     
-[![Coverage Status](https://coveralls.io/builds/16901054/badge)](https://coveralls.io/builds/16901054)
-
-Coverage remained the same at 92.011% when pulling **75b9be11767e4d7e2d8311bbe3e4663910698261 on DavidS:clean-readme** into **3a49432ab2dedd998ee4a7b002022d969dd491a0 on rodjek:master**.
-
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>coveralls</td>
-      
-  
-  
-  
-
-  
-      
-        <td>880</td>
-      
-  
-  
-  
-
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
   
   
@@ -2630,6 +2526,110 @@ end
   
       
         <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/685'>685</a></td>
+  
+  
+  
+
+  
+      
+        <td>880</td>
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove bulk of README and point to the docs site</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     
+[![Coverage Status](https://coveralls.io/builds/16901054/badge)](https://coveralls.io/builds/16901054)
+
+Coverage remained the same at 92.011% when pulling **75b9be11767e4d7e2d8311bbe3e4663910698261 on DavidS:clean-readme** into **3a49432ab2dedd998ee4a7b002022d969dd491a0 on rodjek:master**.
+
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>coveralls</td>
+      
+  
+  
+  
+
+  
+      
+        <td>880</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
       
   
   
