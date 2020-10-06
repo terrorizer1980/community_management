@@ -421,6 +421,80 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
+  
+  
+  
+      
+        <td>12</td>
+      
+  
+  
+  
+      
+        <td>pstray</td>
+      
+  
+  
+  
+      
+        <td>Make the logfiles use servername instead of name in their name.</td>
+      
+  
+  
+  
+      
+        <td>Thanks for the suggested tweak @pstray .
+
+There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
+
+I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2072'>2072</a></td>
   
   
@@ -533,80 +607,6 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
       
         <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>pstray</td>
-      
-  
-  
-  
-      
-        <td>Make the logfiles use servername instead of name in their name.</td>
-      
-  
-  
-  
-      
-        <td>Thanks for the suggested tweak @pstray .
-
-There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
-
-I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>3</td>
       
   
   
@@ -963,7 +963,77 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>103</td>
+        <td>104</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+  
+  
+  
+      
+        <td>112</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+      
+  
+  
+  
+      
+        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>53</td>
       
   
   
@@ -1336,76 +1406,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
-  
-  
-  
-      
-        <td>112</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
-      
-  
-  
-  
-      
-        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>53</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -1850,91 +1850,6 @@ After that is resolved, happy to merge.</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1325'>1325</a></td>
-  
-  
-  
-      
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10790) - Add test to highlight failure</td>
-      
-  
-  
-  
-      
-        <td>[mysql::server::managed_dirs](https://github.com/puppetlabs/puppetlabs-mysql/blob/5bfbd40f39a2edcebd8d6ee7babcd2eb8081e193/manifests/server/managed_dirs.pp) is a _class_
-----------------------------------
-
-that may have no external impact to Forge modules.
-
-
-
-
-#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
-      
-  
-  
-  
-      
-        <td>puppet-community-rangefinder[bot]</td>
-      
-  
-  
-  
-      
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1323'>1323</a></td>
   
   
@@ -2078,6 +1993,91 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1325'>1325</a></td>
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10790) - Add test to highlight failure</td>
+      
+  
+  
+  
+      
+        <td>[mysql::server::managed_dirs](https://github.com/puppetlabs/puppetlabs-mysql/blob/5bfbd40f39a2edcebd8d6ee7babcd2eb8081e193/manifests/server/managed_dirs.pp) is a _class_
+----------------------------------
+
+that may have no external impact to Forge modules.
+
+
+
+
+#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>14</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2481,6 +2481,76 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1191'>1191</a></td>
+  
+  
+  
+      
+        <td>21</td>
+      
+  
+  
+  
+      
+        <td>jcpunk</td>
+      
+  
+  
+  
+      
+        <td>Resolve simple puppet-lint notices</td>
+      
+  
+  
+  
+      
+        <td>I've been looking at this a bit, and I fear I'll need some help to get it over the line....</td>
+      
+  
+  
+  
+      
+        <td>jcpunk</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
   
   
@@ -2525,76 +2595,6 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
       
         <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1191'>1191</a></td>
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
-      
-  
-  
-  
-      
-        <td>Resolve simple puppet-lint notices</td>
-      
-  
-  
-  
-      
-        <td>I've been looking at this a bit, and I fear I'll need some help to get it over the line....</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>4</td>
       
   
   
@@ -2926,7 +2926,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
