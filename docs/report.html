@@ -421,24 +421,24 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2072'>2072</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2066'>2066</a></td>
   
   
   
       
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>AbelNavarro</td>
+        <td>22</td>
       
   
   
   
       
-        <td>Extend vhost proxy options</td>
+        <td>jcpunk</td>
+      
+  
+  
+  
+      
+        <td>Resolve easy puppet-lint notices</td>
       
   
   
@@ -456,19 +456,19 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
       
-        <td>4</td>
+        <td>14</td>
       
   
   
   
       
-        <td>2</td>
+        <td>5</td>
       
   
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -565,24 +565,24 @@ I'll discuss with the IAC Team on how we want to proceed with both of these chan
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2066'>2066</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2072'>2072</a></td>
   
   
   
       
-        <td>22</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
+        <td>4</td>
       
   
   
   
       
-        <td>Resolve easy puppet-lint notices</td>
+        <td>AbelNavarro</td>
+      
+  
+  
+  
+      
+        <td>Extend vhost proxy options</td>
       
   
   
@@ -600,19 +600,19 @@ I'll discuss with the IAC Team on how we want to proceed with both of these chan
   
   
       
-        <td>14</td>
+        <td>4</td>
       
   
   
   
       
-        <td>5</td>
+        <td>2</td>
       
   
   
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -1850,36 +1850,57 @@ After that is resolved, happy to merge.</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1327'>1327</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1325'>1325</a></td>
   
   
   
       
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>jcpunk</td>
+        <td>28</td>
       
   
   
   
       
-        <td>Resolve puppet-lint notices</td>
+        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>(MODULES-10790) - Add test to highlight failure</td>
       
   
   
   
       
-        <td></td>
+        <td>[mysql::server::managed_dirs](https://github.com/puppetlabs/puppetlabs-mysql/blob/5bfbd40f39a2edcebd8d6ee7babcd2eb8081e193/manifests/server/managed_dirs.pp) is a _class_
+----------------------------------
+
+that may have no external impact to Forge modules.
+
+
+
+
+#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>14</td>
       
   
   
@@ -1891,13 +1912,7 @@ After that is resolved, happy to merge.</td>
   
   
       
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -2015,57 +2030,36 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1325'>1325</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1327'>1327</a></td>
   
   
   
       
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>22</td>
       
   
   
   
       
-        <td>(MODULES-10790) - Add test to highlight failure</td>
+        <td>jcpunk</td>
       
   
   
   
       
-        <td>[mysql::server::managed_dirs](https://github.com/puppetlabs/puppetlabs-mysql/blob/5bfbd40f39a2edcebd8d6ee7babcd2eb8081e193/manifests/server/managed_dirs.pp) is a _class_
-----------------------------------
-
-that may have no external impact to Forge modules.
-
-
-
-
-#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
+        <td>Resolve puppet-lint notices</td>
       
   
   
   
       
-        <td>puppet-community-rangefinder[bot]</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>14</td>
+        <td></td>
       
   
   
@@ -2077,7 +2071,13 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>true</td>
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2411,7 +2411,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>21</td>
+        <td>22</td>
       
   
   
@@ -2694,6 +2694,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>274</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>97</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
@@ -2742,76 +2812,6 @@ cc @binford2k </td>
   
       
         <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>274</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>97</td>
-      
-  
-  
-  
-      
-        <td>3</td>
       
   
   
