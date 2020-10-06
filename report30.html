@@ -179,239 +179,6 @@ $(document).on("click", '.show-more a', function(e) {
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
-  
-  
-  
-      
-        <td>187</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
-      
-  
-  
-  
-      
-        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
-      
-  
-  
-  
-      
-        <td>None at all.
-
-I hit a bug in podman last time I looked at this. But hopefully I will get
-time to come around and finish this soon.
-If not just to have the docker relevant changes approved, as I believe I
-made some relevant fixes to all the distribution specific logic (I haven't
-pushed it yet) including the rubocop fixes.
-
-On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
-
-> @reenberg 
-> Making a quick change to point this PR towards the newly defined default
-> main branch as part of our work to remove inappropriate terminology.
-> Apologies if this is inconvenient in any way.
->
-> —
-> You are receiving this because you were mentioned.
-> Reply to this email directly, view it on GitHub
-> ,
-> or unsubscribe
-> 
-> .
->
-</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
-      
-  
-  
-  
-      
-        <td>59</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
-  
-  
-  
-      
-        <td>325</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
-      
-  
-  
-  
-      
-        <td>Given the dependency on `facter >= 3`, this will not work on Puppet `5` - we'll need to hold off on this merge until we can bump the dependency of the module to `Puppet >= 6`</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>59</td>
-      
-  
-  
-  
-      
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
-  
-  
-  
-      
-        <td>111</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
-      
-  
-  
-  
-      
-        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>52</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
   
   
@@ -425,7 +192,7 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
       
-        <td>33</td>
+        <td>34</td>
       
   
   
@@ -745,7 +512,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>33</td>
+        <td>34</td>
       
   
   
@@ -780,12 +547,82 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/926'>926</a></td>
+  
+  
+  
+      
+        <td>111</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - (IAC-890) - Implement CentOS 8 travis tests</td>
+      
+  
+  
+  
+      
+        <td>On hold, connected to https://tickets.puppetlabs.com/browse/IAC-894</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>52</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
   
   
   
       
-        <td>248</td>
+        <td>249</td>
       
   
   
@@ -815,7 +652,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>58</td>
+        <td>59</td>
       
   
   
@@ -995,7 +832,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>265</td>
+        <td>266</td>
       
   
   
