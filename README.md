@@ -55,7 +55,7 @@ Topics
 -------
 
 Ensures a set of topics on repos. Works in a non destructive way unless you instruct
-it to delete topics. By default, if will run against IAC supported modules, but
+it to delete topics. By default, it will run against IAC supported modules, but
 you can use the same individual repository options as you can with Labels.
 
 Npc
