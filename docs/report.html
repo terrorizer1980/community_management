@@ -421,54 +421,58 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2074'>2074</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
   
   
   
       
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>17</td>
       
   
   
   
       
-        <td>Use Ruby 2.7 compatible string matching</td>
+        <td>pstray</td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>Make the logfiles use servername instead of name in their name.</td>
       
   
   
   
       
-        <td></td>
+        <td>Thanks for the suggested tweak @pstray .
+
+There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
+
+I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
       
   
   
   
       
-        <td>5</td>
+        <td>sanfrancrisko</td>
       
   
   
   
       
-        <td>2</td>
+        <td>13</td>
       
   
   
   
       
-        <td>true</td>
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -561,58 +565,54 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2074'>2074</a></td>
   
   
   
       
-        <td>17</td>
-      
-  
-  
-  
-      
-        <td>pstray</td>
+        <td>6</td>
       
   
   
   
       
-        <td>Make the logfiles use servername instead of name in their name.</td>
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>Thanks for the suggested tweak @pstray .
-
-There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
-
-I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
+        <td>Use Ruby 2.7 compatible string matching</td>
       
   
   
   
       
-        <td>sanfrancrisko</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>12</td>
+        <td></td>
       
   
   
   
       
-        <td>3</td>
+        <td>5</td>
       
   
   
   
       
-        <td>false</td>
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -781,76 +781,6 @@ Technically I'd agree this changes behavior and this could warrant a major versi
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
-  
-  
-  
-      
-        <td>331</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
-      
-  
-  
-  
-      
-        <td>Given the dependency on `facter >= 3`, this will not work on Puppet `5` - we'll need to hold off on this merge until we can bump the dependency of the module to `Puppet >= 6`</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>66</td>
-      
-  
-  
-  
-      
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/657'>657</a></td>
   
   
@@ -910,6 +840,76 @@ kind regards,
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+  
+  
+  
+      
+        <td>331</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+      
+  
+  
+  
+      
+        <td>Given the dependency on `facter >= 3`, this will not work on Puppet `5` - we'll need to hold off on this merge until we can bump the dependency of the module to `Puppet >= 6`</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>66</td>
+      
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1122,6 +1122,76 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+  
+  
+  
+      
+        <td>255</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10522: Add support for the --condition parameter</td>
+      
+  
+  
+  
+      
+        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>65</td>
+      
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1560,76 +1630,6 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
-  
-  
-  
-      
-        <td>255</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10522: Add support for the --condition parameter</td>
-      
-  
-  
-  
-      
-        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>65</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
   
   
@@ -1853,7 +1853,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>55</td>
+        <td>56</td>
       
   
   
@@ -2113,7 +2113,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>209</td>
+        <td>210</td>
       
   
   
@@ -2183,7 +2183,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>181</td>
+        <td>182</td>
       
   
   
@@ -2431,7 +2431,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>58</td>
+        <td>59</td>
       
   
   
