@@ -159,110 +159,6 @@ $(document).on("click", '.show-more a', function(e) {
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/332'>332</a></td>
-  
-  
-  
-
-  
-      
-        <td>147</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cdenneen</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add global_variables key for GitLab CI to set defaults that can be overridden by jobs</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     > I'm fine with not using YAML anchors as the rendering and reading is already complex enough.
-> 
-> Please do add the new key to the README, potentially nabbing the description from .gitlab-ci.yml (and verifying that it actually works similarly).
-
-There is no key. There is already a global_variables key the problem is any custom job setting a variables block will override all global_variables so this allows them to carry forward.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>cdenneen</td>
-      
-  
-  
-  
-
-  
-      
-        <td>103</td>
-      
-  
-  
-  
-
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/281'>281</a></td>
   
   
@@ -353,7 +249,7 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
   
   
   
@@ -365,22 +261,14 @@ Just having a large tool triage and wondering if this is something you are still
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/332'>332</a></td>
   
   
   
 
   
       
-        <td>365</td>
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
+        <td>148</td>
       
   
   
@@ -388,14 +276,26 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>(performance) - Sets up basic performance testing</td>
+        <td>cdenneen</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add global_variables key for GitLab CI to set defaults that can be overridden by jobs</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
+     > I'm fine with not using YAML anchors as the rendering and reading is already complex enough.
+> 
+> Please do add the new key to the README, potentially nabbing the description from .gitlab-ci.yml (and verifying that it actually works similarly).
+
+There is no key. There is already a global_variables key the problem is any custom job setting a variables block will override all global_variables so this allows them to carry forward.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -410,7 +310,7 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>logicminds</td>
+        <td>cdenneen</td>
       
   
   
@@ -418,7 +318,7 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>126</td>
+        <td>103</td>
       
   
   
@@ -426,7 +326,7 @@ Just having a large tool triage and wondering if this is something you are still
 
   
       
-        <td>3</td>
+        <td>2</td>
       
   
   
@@ -527,6 +427,106 @@ Just having a large tool triage and wondering if this is something you are still
   
       
         <td>4</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
+  
+  
+  
+
+  
+      
+        <td>365</td>
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(performance) - Sets up basic performance testing</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds</td>
+      
+  
+  
+  
+
+  
+      
+        <td>126</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
       
   
   
@@ -881,106 +881,6 @@ wrote:
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/233'>233</a></td>
-  
-  
-  
-
-  
-      
-        <td>949</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add all spec/lib directories from fixtures to LOAD_PATH</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @daianamezdrea, sure, I should hopefully have some time to look at this soon.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>133</td>
-      
-  
-  
-  
-
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/288'>288</a></td>
   
   
@@ -1043,6 +943,206 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
       
         <td>468</td>
+      
+  
+  
+  
+
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/233'>233</a></td>
+  
+  
+  
+
+  
+      
+        <td>949</td>
+      
+  
+  
+  
+
+  
+      
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add all spec/lib directories from fixtures to LOAD_PATH</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Hi @daianamezdrea, sure, I should hopefully have some time to look at this soon.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>134</td>
+      
+  
+  
+  
+
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
+  
+  
+  
+
+  
+      
+        <td>474</td>
+      
+  
+  
+  
+
+  
+      
+        <td>cardil</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Feature: metadata dependencies are auto installed</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>daianamezdrea</td>
+      
+  
+  
+  
+
+  
+      
+        <td>126</td>
       
   
   
@@ -1254,7 +1354,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>133</td>
+        <td>134</td>
       
   
   
@@ -1279,106 +1379,6 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
-  
-  
-  
-
-  
-      
-        <td>474</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cardil</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Feature: metadata dependencies are auto installed</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>daianamezdrea</td>
-      
-  
-  
-  
-
-  
-      
-        <td>126</td>
-      
-  
-  
-  
-
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
       
   
   
@@ -1905,22 +1905,14 @@ Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/792'>792</a></td>
   
   
   
 
   
       
-        <td>951</td>
-      
-  
-  
-  
-
-  
-      
-        <td>asharpe</td>
+        <td>183</td>
       
   
   
@@ -1928,7 +1920,15 @@ Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a
 
   
       
-        <td>allow testing environment functions</td>
+        <td>Felixoid</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Do not raise failure if nothing is tested</td>
       
   
   
@@ -1936,9 +1936,9 @@ Coverage increased (+0.2%) to 86.348% when pulling **67244b0d5acc878aea5b442f78a
   <td>
   <div class="content hideContent">
      
-[![Coverage Status](https://coveralls.io/builds/23064281/badge)](https://coveralls.io/builds/23064281)
+[![Coverage Status](https://coveralls.io/builds/30060111/badge)](https://coveralls.io/builds/30060111)
 
-Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d46957397286aa91b on asharpe:environment-functions** into **5cc25d0083a4abc352ab13bd48f225f668311a3e on rodjek:master**.
+Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1c165f5fcb3577 on Felixoid:master** into **6b29693ceddd1a71b2dae67fb8f266727d7f7608 on rodjek:master**.
 
 </div>
  <div class="show-more">
@@ -1962,7 +1962,7 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
 
   
       
-        <td>535</td>
+        <td>183</td>
       
   
   
@@ -2109,22 +2109,14 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/792'>792</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
   
   
   
 
   
       
-        <td>183</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Felixoid</td>
+        <td>951</td>
       
   
   
@@ -2132,7 +2124,15 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
 
   
       
-        <td>Do not raise failure if nothing is tested</td>
+        <td>asharpe</td>
+      
+  
+  
+  
+
+  
+      
+        <td>allow testing environment functions</td>
       
   
   
@@ -2140,9 +2140,9 @@ Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d469
   <td>
   <div class="content hideContent">
      
-[![Coverage Status](https://coveralls.io/builds/30060111/badge)](https://coveralls.io/builds/30060111)
+[![Coverage Status](https://coveralls.io/builds/23064281/badge)](https://coveralls.io/builds/23064281)
 
-Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1c165f5fcb3577 on Felixoid:master** into **6b29693ceddd1a71b2dae67fb8f266727d7f7608 on rodjek:master**.
+Coverage decreased (-1.5%) to 84.551% when pulling **6e15572ddc1fc04eeb14c28d46957397286aa91b on asharpe:environment-functions** into **5cc25d0083a4abc352ab13bd48f225f668311a3e on rodjek:master**.
 
 </div>
  <div class="show-more">
@@ -2166,7 +2166,7 @@ Coverage remained the same at 85.469% when pulling **cb91f2da187d66c00c731c3dda1
 
   
       
-        <td>183</td>
+        <td>535</td>
       
   
   
@@ -2268,7 +2268,7 @@ As you mentioned though, the interaction of the different hiera layers with spec
 
   
       
-        <td>537</td>
+        <td>538</td>
       
   
   
@@ -2277,6 +2277,121 @@ As you mentioned though, the interaction of the different hiera layers with spec
   
       
         <td>4</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
+  
+  
+  
+
+  
+      
+        <td>1118</td>
+      
+  
+  
+  
+
+  
+      
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>[RFC] New syntax</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
+
+Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
+```
+def verify_concat_fragment_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
+end
+
+def verify_concat_fragment_exact_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
+end
+```
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+
+  
+      
+        <td>765</td>
+      
+  
+  
+  
+
+  
+      
+        <td>9</td>
       
   
   
@@ -2523,121 +2638,6 @@ Coverage increased (+0.06%) to 91.449% when pulling **1f128bf2bf31d68b95eb87fbae
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
-  
-  
-  
-
-  
-      
-        <td>1118</td>
-      
-  
-  
-  
-
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>[RFC] New syntax</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
-
-Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
-```
-def verify_concat_fragment_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
-end
-
-def verify_concat_fragment_exact_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
-end
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-
-  
-      
-        <td>765</td>
-      
-  
-  
-  
-
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
   
   
@@ -2821,7 +2821,7 @@ end
 
   
       
-        <td>1070</td>
+        <td>1071</td>
       
   
   
