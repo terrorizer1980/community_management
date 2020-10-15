@@ -179,6 +179,82 @@ $(document).on("click", '.show-more a', function(e) {
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2064'>2064</a></td>
+  
+  
+  
+      
+        <td>34</td>
+      
+  
+  
+  
+      
+        <td>rsynnest</td>
+      
+  
+  
+  
+      
+        <td>removes spaces from default logfile</td>
+      
+  
+  
+  
+      
+        <td>> i firmly believe that "version numbers are cheap" and that's all there is to it
+
+I firmly believe that that is false. Dealing with major version bumps is painful on the consumer side. However, probably not as painful as a breaking change that was not labeled as such. They are both a pain and a blessing.
+
+In this case, the potential implications are that other tools process the logs and hardcode the paths. Spaces are less common so it doesn't affect all users.
+
+Technically I'd agree this changes behavior and this could warrant a major version bump. However, I wouldn't do a major version bump just for this single patch. There are too many consumers out there unaffected by this (widely used) module. That leaves keeping the PR open and releasing it as minor. Personally I'd release it as a minor version.</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
   
   
