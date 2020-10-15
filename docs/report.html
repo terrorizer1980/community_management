@@ -421,58 +421,54 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2072'>2072</a></td>
   
   
   
       
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>pstray</td>
+        <td>13</td>
       
   
   
   
       
-        <td>Make the logfiles use servername instead of name in their name.</td>
+        <td>AbelNavarro</td>
       
   
   
   
       
-        <td>Thanks for the suggested tweak @pstray .
-
-There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
-
-I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
+        <td>Extend vhost proxy options</td>
       
   
   
   
       
-        <td>sanfrancrisko</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>16</td>
+        <td></td>
       
   
   
   
       
-        <td>3</td>
+        <td>13</td>
       
   
   
   
       
-        <td>false</td>
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -571,54 +567,58 @@ Technically I'd agree this changes behavior and this could warrant a major versi
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2072'>2072</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
   
   
   
       
-        <td>13</td>
-      
-  
-  
-  
-      
-        <td>AbelNavarro</td>
+        <td>21</td>
       
   
   
   
       
-        <td>Extend vhost proxy options</td>
+        <td>pstray</td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>Make the logfiles use servername instead of name in their name.</td>
       
   
   
   
       
-        <td></td>
+        <td>Thanks for the suggested tweak @pstray .
+
+There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
+
+I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
       
   
   
   
       
-        <td>13</td>
+        <td>sanfrancrisko</td>
       
   
   
   
       
-        <td>2</td>
+        <td>16</td>
       
   
   
   
       
-        <td>true</td>
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -791,7 +791,7 @@ kind regards,
   
   
       
-        <td>334</td>
+        <td>335</td>
       
   
   
@@ -2545,78 +2545,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
-  
-  
-  
-      
-        <td>275</td>
-      
-  
-  
-  
-      
-        <td>Bouke</td>
-      
-  
-  
-  
-      
-        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
-      
-  
-  
-  
-      
-        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
-
-Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>62</td>
-      
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
   
   
@@ -2684,6 +2612,78 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
+  
+  
+  
+      
+        <td>275</td>
+      
+  
+  
+  
+      
+        <td>Bouke</td>
+      
+  
+  
+  
+      
+        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
+      
+  
+  
+  
+      
+        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
+
+Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>62</td>
+      
+  
+  
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
   
   
@@ -2741,6 +2741,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1132'>1132</a></td>
+  
+  
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+      
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Stdlib::HttpStatus: add type for HTTP status codes as per rfc2616</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>8</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2839,82 +2909,12 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1132'>1132</a></td>
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Stdlib::HttpStatus: add type for HTTP status codes as per rfc2616</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
   
       
-        <td>282</td>
+        <td>283</td>
       
   
   
