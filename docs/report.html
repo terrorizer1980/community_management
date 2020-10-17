@@ -333,7 +333,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -561,80 +561,6 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
-  
-  
-  
-      
-        <td>22</td>
-      
-  
-  
-  
-      
-        <td>pstray</td>
-      
-  
-  
-  
-      
-        <td>Make the logfiles use servername instead of name in their name.</td>
-      
-  
-  
-  
-      
-        <td>Thanks for the suggested tweak @pstray .
-
-There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
-
-I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>17</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2064'>2064</a></td>
   
   
@@ -683,6 +609,80 @@ Technically I'd agree this changes behavior and this could warrant a major versi
   
       
         <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
+  
+  
+  
+      
+        <td>22</td>
+      
+  
+  
+  
+      
+        <td>pstray</td>
+      
+  
+  
+  
+      
+        <td>Make the logfiles use servername instead of name in their name.</td>
+      
+  
+  
+  
+      
+        <td>Thanks for the suggested tweak @pstray .
+
+There's another PR currently open that is proposing changes in the same area: https://github.com/puppetlabs/puppetlabs-apache/pull/2064
+
+I'll discuss with the IAC Team on how we want to proceed with both of these changes. Both very useful, however, we need to take in to consideration how we publicise and version this, as there could be assumptions in place about log file name formats, for other tools, etc...</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>18</td>
+      
+  
+  
+  
+      
+        <td>3</td>
       
   
   
@@ -1993,7 +1993,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>60</td>
+        <td>61</td>
       
   
   
@@ -2095,7 +2095,102 @@ https://github.com/sheenaajay/puppetlabs-motd/runs/1264603371?check_suite_focus=
   
   
       
-        <td>0</td>
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1323'>1323</a></td>
+  
+  
+  
+      
+        <td>43</td>
+      
+  
+  
+  
+      
+        <td>tobias-urdin</td>
+      
+  
+  
+  
+      
+        <td>Fix package for python bindings on Ubuntu 20.04</td>
+      
+  
+  
+  
+      
+        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/9df0757bc66d0508e9015790e189e3357ac294ef/manifests/params.pp) is a _class_
+----------------------------------
+
+
+
+  Breaking changes to this file WILL impact these 2 modules (exact match):
+
+* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
+* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
+
+
+
+  Breaking changes to this file MAY impact these 1 modules (near match):
+
+* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
+
+
+
+#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>25</td>
       
   
   
@@ -2289,101 +2384,6 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1323'>1323</a></td>
-  
-  
-  
-      
-        <td>43</td>
-      
-  
-  
-  
-      
-        <td>tobias-urdin</td>
-      
-  
-  
-  
-      
-        <td>Fix package for python bindings on Ubuntu 20.04</td>
-      
-  
-  
-  
-      
-        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/9df0757bc66d0508e9015790e189e3357ac294ef/manifests/params.pp) is a _class_
-----------------------------------
-
-
-
-  Breaking changes to this file WILL impact these 2 modules (exact match):
-
-* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
-* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
-
-
-
-  Breaking changes to this file MAY impact these 1 modules (near match):
-
-* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
-
-
-
-#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
-      
-  
-  
-  
-      
-        <td>puppet-community-rangefinder[bot]</td>
-      
-  
-  
-  
-      
-        <td>25</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
   
   
@@ -2397,7 +2397,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>214</td>
+        <td>215</td>
       
   
   
@@ -2467,7 +2467,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>186</td>
+        <td>187</td>
       
   
   
@@ -2603,6 +2603,78 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
+  
+  
+  
+      
+        <td>277</td>
+      
+  
+  
+  
+      
+        <td>Bouke</td>
+      
+  
+  
+  
+      
+        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
+      
+  
+  
+  
+      
+        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
+
+Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>64</td>
+      
+  
+  
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
   
   
@@ -2662,78 +2734,6 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
-  
-  
-  
-      
-        <td>277</td>
-      
-  
-  
-  
-      
-        <td>Bouke</td>
-      
-  
-  
-  
-      
-        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
-      
-  
-  
-  
-      
-        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
-
-Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>63</td>
-      
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
