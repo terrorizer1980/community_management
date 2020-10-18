@@ -491,6 +491,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2072'>2072</a></td>
+  
+  
+  
+      
+        <td>16</td>
+      
+  
+  
+  
+      
+        <td>AbelNavarro</td>
+      
+  
+  
+  
+      
+        <td>Extend vhost proxy options</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>16</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
   
   
@@ -543,76 +613,6 @@ I'll discuss with the IAC Team on how we want to proceed with both of these chan
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2072'>2072</a></td>
-  
-  
-  
-      
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>AbelNavarro</td>
-      
-  
-  
-  
-      
-        <td>Extend vhost proxy options</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -791,7 +791,7 @@ kind regards,
   
   
       
-        <td>337</td>
+        <td>338</td>
       
   
   
@@ -2130,6 +2130,78 @@ https://github.com/sheenaajay/puppetlabs-motd/runs/1264603371?check_suite_focus=
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1335'>1335</a></td>
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>scornelissen85</td>
+      
+  
+  
+  
+      
+        <td>Do not set empty password as policy don't allow that</td>
+      
+  
+  
+  
+      
+        <td>It looks like there's some fairly extensive [test failures](https://travis-ci.org/github/puppetlabs/puppetlabs-mysql/jobs/735778067) related to the [unit tests for `mysql::server::root_password`]((https://github.com/puppetlabs/puppetlabs-mysql/blob/main/spec/classes/mysql_server_spec.rb#L155) - updating default behavior can have some knock-on effects, so ensuring that these unit tests (and the acceptance tests that won't run til they clear) pass will help enormously.
+
+Please update the tests to reflect your changes here - if you have any questions or hit any roadblocks, don't hesitate to reach out here or in slack!</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1323'>1323</a></td>
   
   
@@ -2298,78 +2370,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1335'>1335</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>scornelissen85</td>
-      
-  
-  
-  
-      
-        <td>Do not set empty password as policy don't allow that</td>
-      
-  
-  
-  
-      
-        <td>It looks like there's some fairly extensive [test failures](https://travis-ci.org/github/puppetlabs/puppetlabs-mysql/jobs/735778067) related to the [unit tests for `mysql::server::root_password`]((https://github.com/puppetlabs/puppetlabs-mysql/blob/main/spec/classes/mysql_server_spec.rb#L155) - updating default behavior can have some knock-on effects, so ensuring that these unit tests (and the acceptance tests that won't run til they clear) pass will help enormously.
-
-Please update the tests to reflect your changes here - if you have any questions or hit any roadblocks, don't hesitate to reach out here or in slack!</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
@@ -2821,76 +2821,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>285</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>109</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
@@ -2967,12 +2897,82 @@ cc @binford2k </td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>286</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>109</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1132'>1132</a></td>
   
   
   
       
-        <td>11</td>
+        <td>12</td>
       
   
   
