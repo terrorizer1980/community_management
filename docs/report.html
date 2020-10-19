@@ -257,12 +257,82 @@ $(document).on("click", '.show-more a', function(e) {
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/130'>130</a></td>
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(MAINT) Explore provision service</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
   
   
   
       
-        <td>200</td>
+        <td>201</td>
       
   
   
@@ -399,76 +469,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/130'>130</a></td>
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MAINT) Explore provision service</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -640,7 +640,7 @@ I'll discuss with the IAC Team on how we want to proceed with both of these chan
   
   
       
-        <td>38</td>
+        <td>39</td>
       
   
   
@@ -2200,12 +2200,84 @@ https://github.com/sheenaajay/puppetlabs-motd/runs/1264603371?check_suite_focus=
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1335'>1335</a></td>
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>scornelissen85</td>
+      
+  
+  
+  
+      
+        <td>Do not set empty password as policy don't allow that</td>
+      
+  
+  
+  
+      
+        <td>It looks like there's some fairly extensive [test failures](https://travis-ci.org/github/puppetlabs/puppetlabs-mysql/jobs/735778067) related to the [unit tests for `mysql::server::root_password`]((https://github.com/puppetlabs/puppetlabs-mysql/blob/main/spec/classes/mysql_server_spec.rb#L155) - updating default behavior can have some knock-on effects, so ensuring that these unit tests (and the acceptance tests that won't run til they clear) pass will help enormously.
+
+Please update the tests to reflect your changes here - if you have any questions or hit any roadblocks, don't hesitate to reach out here or in slack!</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1323'>1323</a></td>
   
   
   
       
-        <td>45</td>
+        <td>46</td>
       
   
   
@@ -2368,78 +2440,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1335'>1335</a></td>
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>scornelissen85</td>
-      
-  
-  
-  
-      
-        <td>Do not set empty password as policy don't allow that</td>
-      
-  
-  
-  
-      
-        <td>It looks like there's some fairly extensive [test failures](https://travis-ci.org/github/puppetlabs/puppetlabs-mysql/jobs/735778067) related to the [unit tests for `mysql::server::root_password`]((https://github.com/puppetlabs/puppetlabs-mysql/blob/main/spec/classes/mysql_server_spec.rb#L155) - updating default behavior can have some knock-on effects, so ensuring that these unit tests (and the acceptance tests that won't run til they clear) pass will help enormously.
-
-Please update the tests to reflect your changes here - if you have any questions or hit any roadblocks, don't hesitate to reach out here or in slack!</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
