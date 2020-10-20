@@ -257,99 +257,6 @@ $(document).on("click", '.show-more a', function(e) {
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
-  
-  
-  
-      
-        <td>201</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
-      
-  
-  
-  
-      
-        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
-      
-  
-  
-  
-      
-        <td>None at all.
-
-I hit a bug in podman last time I looked at this. But hopefully I will get
-time to come around and finish this soon.
-If not just to have the docker relevant changes approved, as I believe I
-made some relevant fixes to all the distribution specific logic (I haven't
-pushed it yet) including the rubocop fixes.
-
-On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
-
-> @reenberg 
-> Making a quick change to point this PR towards the newly defined default
-> main branch as part of our work to remove inappropriate terminology.
-> Apologies if this is inconvenient in any way.
->
-> —
-> You are receiving this because you were mentioned.
-> Reply to this email directly, view it on GitHub
-> ,
-> or unsubscribe
-> 
-> .
->
-</td>
-      
-  
-  
-  
-      
-        <td>reenberg</td>
-      
-  
-  
-  
-      
-        <td>74</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/130'>130</a></td>
   
   
@@ -483,7 +390,7 @@ Making a quick change to point this PR towards the newly defined default main br
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision'>provision</a></td>
   
   
   
@@ -491,54 +398,77 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2072'>2072</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/provision/pull/112'>112</a></td>
   
   
   
       
-        <td>18</td>
-      
-  
-  
-  
-      
-        <td>AbelNavarro</td>
+        <td>201</td>
       
   
   
   
       
-        <td>Extend vhost proxy options</td>
+        <td>reenberg</td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>[Docker provisioner] Improved handling of OS distribution/version and support of podman</td>
       
   
   
   
       
-        <td></td>
+        <td>None at all.
+
+I hit a bug in podman last time I looked at this. But hopefully I will get
+time to come around and finish this soon.
+If not just to have the docker relevant changes approved, as I believe I
+made some relevant fixes to all the distribution specific logic (I haven't
+pushed it yet) including the rubocop fixes.
+
+On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
+
+> @reenberg 
+> Making a quick change to point this PR towards the newly defined default
+> main branch as part of our work to remove inappropriate terminology.
+> Apologies if this is inconvenient in any way.
+>
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> ,
+> or unsubscribe
+> 
+> .
+>
+</td>
       
   
   
   
       
-        <td>18</td>
+        <td>reenberg</td>
       
   
   
   
       
-        <td>2</td>
+        <td>74</td>
       
   
   
   
       
-        <td>true</td>
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -613,6 +543,76 @@ I'll discuss with the IAC Team on how we want to proceed with both of these chan
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2072'>2072</a></td>
+  
+  
+  
+      
+        <td>18</td>
+      
+  
+  
+  
+      
+        <td>AbelNavarro</td>
+      
+  
+  
+  
+      
+        <td>Extend vhost proxy options</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>18</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -711,60 +711,65 @@ Technically I'd agree this changes behavior and this could warrant a major versi
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/672'>672</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/657'>657</a></td>
   
   
   
       
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>rbelnap</td>
+        <td>39</td>
       
   
   
   
       
-        <td>switch docker-compose provider to use docker-compose config instead of parsing files</td>
+        <td>kwek</td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>Added docker::stack refresh</td>
       
   
   
   
       
-        <td></td>
+        <td>Hi @kwek, thank you for your contribution. The code looks good, but can you also add an acceptance test?
+The acceptance test for stack refresh should be present in spec/acceptance/stack_spec.rb
+Please let us know if you need any help.
+
+kind regards,
+@adrianiurca </td>
       
   
   
   
       
-        <td>0</td>
+        <td>adrianiurca</td>
       
   
   
   
       
-        <td>1</td>
+        <td>36</td>
       
   
   
   
       
-        <td>true</td>
+        <td>3</td>
       
   
   
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -851,65 +856,60 @@ Technically I'd agree this changes behavior and this could warrant a major versi
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/657'>657</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/672'>672</a></td>
   
   
   
       
-        <td>39</td>
-      
-  
-  
-  
-      
-        <td>kwek</td>
+        <td>0</td>
       
   
   
   
       
-        <td>Added docker::stack refresh</td>
+        <td>rbelnap</td>
       
   
   
   
       
-        <td>Hi @kwek, thank you for your contribution. The code looks good, but can you also add an acceptance test?
-The acceptance test for stack refresh should be present in spec/acceptance/stack_spec.rb
-Please let us know if you need any help.
-
-kind regards,
-@adrianiurca </td>
+        <td>switch docker-compose provider to use docker-compose config instead of parsing files</td>
       
   
   
   
       
-        <td>adrianiurca</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>36</td>
+        <td></td>
       
   
   
   
       
-        <td>3</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>1</td>
       
   
   
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1001,7 +1001,7 @@ kind regards,
   
   
       
-        <td>53</td>
+        <td>54</td>
       
   
   
@@ -1014,6 +1014,76 @@ kind regards,
   
       
         <td>pdksync - (feat) - Removal of inappropriate terminology</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task'>puppetlabs-facter_task</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/134'>134</a></td>
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10833) Add support for puppet facts show</td>
       
   
   
@@ -1116,76 +1186,6 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task'>puppetlabs-facter_task</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/134'>134</a></td>
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>IrimieBogdan <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10833) Add support for puppet facts show</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -1673,7 +1673,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>66</td>
+        <td>67</td>
       
   
   
@@ -2128,76 +2128,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
-  
-  
-  
-      
-        <td>64</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Update json requirement from = 2.1.0 to 2.3.1</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/338'>338</a></td>
   
   
@@ -2248,6 +2178,76 @@ https://github.com/sheenaajay/puppetlabs-motd/runs/1276170054?check_suite_focus=
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
+  
+  
+  
+      
+        <td>64</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update json requirement from = 2.1.0 to 2.3.1</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -2748,7 +2748,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>214</td>
+        <td>215</td>
       
   
   
@@ -3171,6 +3171,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
+  
+  
+  
+      
+        <td>287</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Puppet 4 functions</td>
+      
+  
+  
+  
+      
+        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
+      
+  
+  
+  
+      
+        <td>michaeltlombardi</td>
+      
+  
+  
+  
+      
+        <td>111</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
@@ -3219,76 +3289,6 @@ cc @binford2k </td>
   
       
         <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
-  
-  
-  
-      
-        <td>287</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Puppet 4 functions</td>
-      
-  
-  
-  
-      
-        <td>@DavidS you're on vacation so don't answer this til you get back, but can this PR be closed in favor of forward movement in IAC-114?</td>
-      
-  
-  
-  
-      
-        <td>michaeltlombardi</td>
-      
-  
-  
-  
-      
-        <td>111</td>
-      
-  
-  
-  
-      
-        <td>3</td>
       
   
   
@@ -3473,7 +3473,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>66</td>
+        <td>67</td>
       
   
   
