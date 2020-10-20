@@ -561,6 +561,82 @@ On Thu, 6 Aug 2020, 13:12 david22swan,  wrote:
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2064'>2064</a></td>
+  
+  
+  
+      
+        <td>39</td>
+      
+  
+  
+  
+      
+        <td>rsynnest</td>
+      
+  
+  
+  
+      
+        <td>removes spaces from default logfile</td>
+      
+  
+  
+  
+      
+        <td>> i firmly believe that "version numbers are cheap" and that's all there is to it
+
+I firmly believe that that is false. Dealing with major version bumps is painful on the consumer side. However, probably not as painful as a breaking change that was not labeled as such. They are both a pain and a blessing.
+
+In this case, the potential implications are that other tools process the logs and hardcode the paths. Spaces are less common so it doesn't affect all users.
+
+Technically I'd agree this changes behavior and this could warrant a major version bump. However, I wouldn't do a major version bump just for this single patch. There are too many consumers out there unaffected by this (widely used) module. That leaves keeping the PR open and releasing it as minor. Personally I'd release it as a minor version.</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>36</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
   
   
@@ -613,152 +689,6 @@ I'll discuss with the IAC Team on how we want to proceed with both of these chan
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2064'>2064</a></td>
-  
-  
-  
-      
-        <td>39</td>
-      
-  
-  
-  
-      
-        <td>rsynnest</td>
-      
-  
-  
-  
-      
-        <td>removes spaces from default logfile</td>
-      
-  
-  
-  
-      
-        <td>> i firmly believe that "version numbers are cheap" and that's all there is to it
-
-I firmly believe that that is false. Dealing with major version bumps is painful on the consumer side. However, probably not as painful as a breaking change that was not labeled as such. They are both a pain and a blessing.
-
-In this case, the potential implications are that other tools process the logs and hardcode the paths. Spaces are less common so it doesn't affect all users.
-
-Technically I'd agree this changes behavior and this could warrant a major version bump. However, I wouldn't do a major version bump just for this single patch. There are too many consumers out there unaffected by this (widely used) module. That leaves keeping the PR open and releasing it as minor. Personally I'd release it as a minor version.</td>
-      
-  
-  
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-      
-        <td>35</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/672'>672</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>rbelnap</td>
-      
-  
-  
-  
-      
-        <td>switch docker-compose provider to use docker-compose config instead of parsing files</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -910,6 +840,76 @@ kind regards,
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/672'>672</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>rbelnap</td>
+      
+  
+  
+  
+      
+        <td>switch docker-compose provider to use docker-compose config instead of parsing files</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1262,6 +1262,76 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+  
+  
+  
+      
+        <td>263</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10522: Add support for the --condition parameter</td>
+      
+  
+  
+  
+      
+        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>73</td>
+      
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1700,76 +1770,6 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
-  
-  
-  
-      
-        <td>263</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>MODULES-10522: Add support for the --condition parameter</td>
-      
-  
-  
-  
-      
-        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
-      
-  
-  
-  
-      
-        <td>73</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
   
   
@@ -1918,24 +1918,24 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java/pull/441'>441</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java/pull/439'>439</a></td>
   
   
   
       
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>daianamezdrea <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>29</td>
       
   
   
   
       
-        <td>Solve unsupported OS issue</td>
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-993) - Removal of inappropriate terminology</td>
       
   
   
@@ -1988,24 +1988,24 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java/pull/439'>439</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java/pull/441'>441</a></td>
   
   
   
       
-        <td>29</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>6</td>
       
   
   
   
       
-        <td>(IAC-993) - Removal of inappropriate terminology</td>
+        <td>daianamezdrea <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Solve unsupported OS issue</td>
       
   
   
@@ -2128,76 +2128,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
-  
-  
-  
-      
-        <td>64</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
-      
-  
-  
-  
-      
-        <td>Update json requirement from = 2.1.0 to 2.3.1</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/338'>338</a></td>
   
   
@@ -2262,6 +2192,76 @@ https://github.com/sheenaajay/puppetlabs-motd/runs/1276170054?check_suite_focus=
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/328'>328</a></td>
+  
+  
+  
+      
+        <td>64</td>
+      
+  
+  
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+      
+        <td>Update json requirement from = 2.1.0 to 2.3.1</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
   
   
@@ -2270,56 +2270,79 @@ https://github.com/sheenaajay/puppetlabs-motd/runs/1276170054?check_suite_focus=
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1335'>1335</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1328'>1328</a></td>
   
   
   
       
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>scornelissen85</td>
+        <td>28</td>
       
   
   
   
       
-        <td>Do not set empty password as policy don't allow that</td>
+        <td>greno2</td>
       
   
   
   
       
-        <td>It looks like there's some fairly extensive [test failures](https://travis-ci.org/github/puppetlabs/puppetlabs-mysql/jobs/735778067) related to the [unit tests for `mysql::server::root_password`]((https://github.com/puppetlabs/puppetlabs-mysql/blob/main/spec/classes/mysql_server_spec.rb#L155) - updating default behavior can have some knock-on effects, so ensuring that these unit tests (and the acceptance tests that won't run til they clear) pass will help enormously.
+        <td>Add compatibility for Amazon Linux 2</td>
+      
+  
+  
+  
+      
+        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/6b7f1ff760e62b36ccf28934ddb6ddbd37c6bc5e/manifests/params.pp) is a _class_
+----------------------------------
 
-Please update the tests to reflect your changes here - if you have any questions or hit any roadblocks, don't hesitate to reach out here or in slack!</td>
+
+
+  Breaking changes to this file WILL impact these 2 modules (exact match):
+
+* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
+* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
+
+
+
+  Breaking changes to this file MAY impact these 1 modules (near match):
+
+* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
+
+
+
+#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
       
   
   
   
       
-        <td>michaeltlombardi</td>
+        <td>puppet-community-rangefinder[bot]</td>
       
   
   
   
       
-        <td>3</td>
+        <td>28</td>
       
   
   
   
       
-        <td>2</td>
+        <td>1</td>
       
   
   
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -2437,79 +2460,56 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1328'>1328</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1335'>1335</a></td>
   
   
   
       
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>greno2</td>
+        <td>6</td>
       
   
   
   
       
-        <td>Add compatibility for Amazon Linux 2</td>
+        <td>scornelissen85</td>
       
   
   
   
       
-        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/6b7f1ff760e62b36ccf28934ddb6ddbd37c6bc5e/manifests/params.pp) is a _class_
-----------------------------------
+        <td>Do not set empty password as policy don't allow that</td>
+      
+  
+  
+  
+      
+        <td>It looks like there's some fairly extensive [test failures](https://travis-ci.org/github/puppetlabs/puppetlabs-mysql/jobs/735778067) related to the [unit tests for `mysql::server::root_password`]((https://github.com/puppetlabs/puppetlabs-mysql/blob/main/spec/classes/mysql_server_spec.rb#L155) - updating default behavior can have some knock-on effects, so ensuring that these unit tests (and the acceptance tests that won't run til they clear) pass will help enormously.
 
-
-
-  Breaking changes to this file WILL impact these 2 modules (exact match):
-
-* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
-* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
-
-
-
-  Breaking changes to this file MAY impact these 1 modules (near match):
-
-* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
-
-
-
-#### This module is declared in 142 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
+Please update the tests to reflect your changes here - if you have any questions or hit any roadblocks, don't hesitate to reach out here or in slack!</td>
       
   
   
   
       
-        <td>puppet-community-rangefinder[bot]</td>
+        <td>michaeltlombardi</td>
       
   
   
   
       
-        <td>28</td>
+        <td>4</td>
       
   
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -2550,76 +2550,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>(WIP, IAC-615) test avoiding parallelism</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/216'>216</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>pgrant87 <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10844)</td>
       
   
   
@@ -2735,6 +2665,76 @@ Making a quick change to point this PR towards the newly defined default main br
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/216'>216</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>pgrant87 <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(MODULES-10844)</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos'>puppetlabs-panos</a></td>
   
   
@@ -2785,76 +2785,6 @@ Making a quick change to point this PR towards the newly defined default main br
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1199'>1199</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Manage postgresql_conf_path file permissions</td>
-      
-  
-  
-  
-      
-        <td>There are a ton of whitespace changes here, but the actual change itself is much smaller.</td>
-      
-  
-  
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>2</td>
       
   
   
@@ -2942,6 +2872,76 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1199'>1199</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Manage postgresql_conf_path file permissions</td>
+      
+  
+  
+  
+      
+        <td>There are a ton of whitespace changes here, but the actual change itself is much smaller.</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -3136,7 +3136,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -3176,7 +3176,7 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
       
-        <td>251</td>
+        <td>252</td>
       
   
   
@@ -3252,7 +3252,7 @@ cc @binford2k </td>
   
   
       
-        <td>287</td>
+        <td>288</td>
       
   
   
