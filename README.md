@@ -51,6 +51,13 @@ a single module repository in a few ways:
 * `--repo` (uses the first found of the `upstream` or `origin` remotes of CWD)
 * `--remote <name>` (uses the url of the remote name passed in the CWD)
 
+Topics
+-------
+
+Ensures a set of topics on repos. Works in a non destructive way unless you instruct
+it to delete topics. By default, it will run against IAC supported modules, but
+you can use the same individual repository options as you can with Labels.
+
 Npc
 ----
 
