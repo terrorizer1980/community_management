@@ -20,12 +20,12 @@ jobs:
       - name: Setup ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: '2.5' 
+          ruby-version: '2.5'
       - name: Generate reports
         run: |
           gem install bundler
           ### generate pr graphs
-          bundle install 
+          bundle install
           bundle exec ruby pr_work_done.rb -t $token
           bundle exec ruby daily_open_prs.rb -t $token
           ### generate prs for triage report
@@ -33,9 +33,11 @@ jobs:
           ### generate prs for tools report
           bundle exec ruby tools.rb -t $token
           ### generate release planning
-          bundle exec ruby release_planning.rb -t $token 
+          bundle exec ruby release_planning.rb -t $token
           ### generate github actions report
           bundle exec ruby github_actions_report.rb -t $token
+          ### generate adoptable modules page
+          bundle exec ruby adoptable_modules.rb -t $token
       - name: List files
         run: |
           ls -la
@@ -44,6 +46,7 @@ jobs:
           cp -r *.png docs/
           cp -r *.csv docs/
           cp -r *.css docs/
+          cp -r *.json docs/
           ls -la docs/
       - name: Add timestamp
         run: |
