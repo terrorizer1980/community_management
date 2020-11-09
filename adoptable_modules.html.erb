@@ -1,0 +1,50 @@
+<html>
+<title>Puppetlabs modules up for adoption</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="reviews.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
+  <script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
+</head>
+
+<body>
+<h1 style="text-align:center;">Puppetlabs modules up for adoption</h1>
+<div style="overflow-x:auto; padding: 1em;">
+<p>
+  The maintenance cycle of modules often comes to a close before the useful
+  lifespan of that module is finished. This might happen because business
+  priorities change, as when Puppet moved away from MCollective, or it might
+  just happen because the champion driving the module's development moved to a
+  different project. But it rarely means that the module has no life left in it.
+  Sometimes it just means that the module needs a new maintainer.
+</p>
+<p>
+  See the <a href="https://ospassist.puppet.com/hc/en-us/articles/360058837113-Adopting-a-puppetlabs-module" target="_new">tutorial</a> to learn how to adopt one of these modules.
+</p>
+<table data-role='table' data-mode='columntoggle' border='1' id='reviews' style='width:relative' class='sortable table table-hover'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Summary</th>
+      <th>Version</th>
+      <th>Last Release</th>
+      <th>Source URL</th>
+    </tr>
+  </thead>
+  <% adoption_list.each do |mod| %>
+  <tr>
+      <td><a href="https://forge.puppet.com/<%= mod[:owner] %>/<%= mod[:name] %>" target="_new"><%= mod[:name] %></a></td>
+      <td><%= mod[:summary] %></td>
+      <td><%= mod[:version] %></td>
+      <td><%= mod[:updated_at] %></td>
+      <td><a href="<%= mod[:source] %>" target="_new">Source URL</a></td>
+  </tr>
+  <% end %>
+</table>
+</div>
+
+</body>
+</html>
