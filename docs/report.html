@@ -368,7 +368,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -487,6 +487,222 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2085'>2085</a></td>
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>TigerKriika</td>
+      
+  
+  
+  
+      
+        <td>Fix apreq2 LoadModule</td>
+      
+  
+  
+  
+      
+        <td>Thanks for the new feature to add support for the `apreq2_module`. From what you're describing, you seem to be inferring that with the current behaviour, there is a `.load` file being created with the module name set to `apreq2_module`? I'm not sure I see that behaviour currently - could you provide a manifest that will trigger the load of the `apreq2_module` module?
+
+This change looks good, but it would need an acceptance test to verify that the module is indeed being loaded. Let me know if I can be of any help in that regard</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
+  
+  
+  
+      
+        <td>46</td>
+      
+  
+  
+  
+      
+        <td>pstray</td>
+      
+  
+  
+  
+      
+        <td>Make the logfiles use servername instead of name in their name.</td>
+      
+  
+  
+  
+      
+        <td>Hi @pstray 
+
+Would you be able to have a peek at #2086 and see if it would be a satisfactory combination of this PR and #2064 's work</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2064'>2064</a></td>
+  
+  
+  
+      
+        <td>60</td>
+      
+  
+  
+  
+      
+        <td>rsynnest</td>
+      
+  
+  
+  
+      
+        <td>removes spaces from default logfile</td>
+      
+  
+  
+  
+      
+        <td>Hi @rsynnest , @igalic , @ekohl
+
+Would you be able to have a peek at #2086 and see if it would be a satisfactory combination of this PR and #2068 's work?</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -745,292 +961,6 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2085'>2085</a></td>
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>TigerKriika</td>
-      
-  
-  
-  
-      
-        <td>Fix apreq2 LoadModule</td>
-      
-  
-  
-  
-      
-        <td>Thanks for the new feature to add support for the `apreq2_module`. From what you're describing, you seem to be inferring that with the current behaviour, there is a `.load` file being created with the module name set to `apreq2_module`? I'm not sure I see that behaviour currently - could you provide a manifest that will trigger the load of the `apreq2_module` module?
-
-This change looks good, but it would need an acceptance test to verify that the module is indeed being loaded. Let me know if I can be of any help in that regard</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
-  
-  
-  
-      
-        <td>46</td>
-      
-  
-  
-  
-      
-        <td>pstray</td>
-      
-  
-  
-  
-      
-        <td>Make the logfiles use servername instead of name in their name.</td>
-      
-  
-  
-  
-      
-        <td>Hi @pstray 
-
-Would you be able to have a peek at #2086 and see if it would be a satisfactory combination of this PR and #2064 's work</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2064'>2064</a></td>
-  
-  
-  
-      
-        <td>60</td>
-      
-  
-  
-  
-      
-        <td>rsynnest</td>
-      
-  
-  
-  
-      
-        <td>removes spaces from default logfile</td>
-      
-  
-  
-  
-      
-        <td>Hi @rsynnest , @igalic , @ekohl
-
-Would you be able to have a peek at #2086 and see if it would be a satisfactory combination of this PR and #2068 's work?</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/672'>672</a></td>
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>rbelnap</td>
-      
-  
-  
-  
-      
-        <td>switch docker-compose provider to use docker-compose config instead of parsing files</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
   
   
@@ -1044,7 +974,7 @@ Would you be able to have a peek at #2086 and see if it would be a satisfactory 
   
   
       
-        <td>11</td>
+        <td>12</td>
       
   
   
@@ -1167,6 +1097,76 @@ Thanks!</td>
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/672'>672</a></td>
+  
+  
+  
+      
+        <td>21</td>
+      
+  
+  
+  
+      
+        <td>rbelnap</td>
+      
+  
+  
+  
+      
+        <td>switch docker-compose provider to use docker-compose config instead of parsing files</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>21</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1393,78 +1393,6 @@ Thanks!</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/135'>135</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10602) workaround for "765: unexpected token at ''" error</td>
-      
-  
-  
-  
-      
-        <td>![image](https://user-images.githubusercontent.com/6704579/98534445-287dd380-228d-11eb-8cd8-337c8e57ff2d.png)
-
-Acceptance test results </td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task'>puppetlabs-facter_task</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/125'>125</a></td>
   
   
@@ -1529,7 +1457,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task'>puppetlabs-facter_task</a></td>
   
   
   
@@ -1537,48 +1465,50 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-facter_task/pull/135'>135</a></td>
   
   
   
       
-        <td>284</td>
-      
-  
-  
-  
-      
-        <td>mattock</td>
+        <td>1</td>
       
   
   
   
       
-        <td>MODULES-10522: Add support for the --condition parameter</td>
+        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
+        <td>(MODULES-10602) workaround for "765: unexpected token at ''" error</td>
       
   
   
   
       
-        <td>mattock</td>
+        <td>![image](https://user-images.githubusercontent.com/6704579/98534445-287dd380-228d-11eb-8cd8-337c8e57ff2d.png)
+
+Acceptance test results </td>
       
   
   
   
       
-        <td>94</td>
+        <td>carabasdaniel</td>
       
   
   
   
       
-        <td>6</td>
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>1</td>
       
   
   
@@ -1590,7 +1520,7 @@ Failures on appveyor probably because of the localhost execution and can't be re
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -1959,6 +1889,76 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall/pull/891'>891</a></td>
+  
+  
+  
+      
+        <td>284</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>MODULES-10522: Add support for the --condition parameter</td>
+      
+  
+  
+  
+      
+        <td>@david22swan no problem. I hope to find some time to finish this in the near future.</td>
+      
+  
+  
+  
+      
+        <td>mattock</td>
+      
+  
+  
+  
+      
+        <td>94</td>
+      
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java'>puppetlabs-java</a></td>
   
   
@@ -2314,76 +2314,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/347'>347</a></td>
-  
-  
-  
-      
-        <td>11</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(maint) remove platforms from release_checks that are checked on PR</td>
-      
-  
-  
-  
-      
-        <td>Rebased and marked as draft until we gain enough confidence in the new test infra to drop the old one.</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/348'>348</a></td>
   
   
@@ -2419,7 +2349,77 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>7</td>
+        <td>8</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/347'>347</a></td>
+  
+  
+  
+      
+        <td>11</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) remove platforms from release_checks that are checked on PR</td>
+      
+  
+  
+  
+      
+        <td>Rebased and marked as draft until we gain enough confidence in the new test infra to drop the old one.</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>8</td>
       
   
   
@@ -2459,7 +2459,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>210</td>
+        <td>211</td>
       
   
   
@@ -2595,6 +2595,76 @@ Making a quick change to point this PR towards the newly defined default main br
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1199'>1199</a></td>
+  
+  
+  
+      
+        <td>21</td>
+      
+  
+  
+  
+      
+        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Manage postgresql_conf_path file permissions</td>
+      
+  
+  
+  
+      
+        <td>Haven't been able to quite figure out why this failed. Rebased it to get the output cleanups in to make the output a bit easier to read.</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>8</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1201'>1201</a></td>
   
   
@@ -2645,7 +2715,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -2792,83 +2862,13 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>87</td>
+        <td>88</td>
       
   
   
   
       
         <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1199'>1199</a></td>
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Manage postgresql_conf_path file permissions</td>
-      
-  
-  
-  
-      
-        <td>Haven't been able to quite figure out why this failed. Rebased it to get the output cleanups in to make the output a bit easier to read.</td>
-      
-  
-  
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>8</td>
       
   
   
@@ -2936,7 +2936,7 @@ We close stale PRs after 90 days of inactivity. If you don’t have time to get 
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
