@@ -258,7 +258,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -543,259 +543,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2081'>2081</a></td>
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>bovy89</td>
-      
-  
-  
-  
-      
-        <td>Improve SSLVerify options</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2086'>2086</a></td>
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-1186) Add new $use_servername_for_filenames parameter</td>
-      
-  
-  
-  
-      
-        <td>@sanfrancrisko The changes looks good. Thank you.</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2085'>2085</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>TigerKriika</td>
-      
-  
-  
-  
-      
-        <td>Fix apreq2 LoadModule</td>
-      
-  
-  
-  
-      
-        <td>I used the following Manifest on a Debian 10 (buster) machine:
-
-```
-class profile::web {
-	class { 'apache' :
-		default_charset   => 'utf-8',
-		keepalive_timeout => 5,
-		timeout           => 300,
-		server_signature  => 'Off',
-		trace_enable      => 'Off',
-		mpm_module        => false,
-		log_formats       => {
-			combined       => '%a %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"',
-			vhost_combined => '%v:%p %a %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"',
-			common         => '%a %l %u %t \"%r\" %>s %O',
-			referer        => '%{Referer}i -> %U',
-			agent          => '%{User-agent}i'
-		},
-	}
-
-	class { 'apache::mod::apreq2': }
-	class { 'apache::mod::expires': }
-	class { 'apache::mod::headers': }
-	class { 'apache::mod::perl': }
-	class { 'apache::mod::prefork': }
-	class { 'apache::mod::rewrite': }
-
-}
-```
-
-This installs the Apache and a apreq2.load File is created with the following content
-> LoadModule apreq2_module modules/mod_apreq2.so
-
-The Apache can't start with this load File since the module name is wrong. You will get the following error-message:
-> apache2: Syntax error on line 41 of /etc/apache2/apache2.conf: Syntax error on line 1 of /etc/apache2/mods-enabled/apreq2.load: Can't locate API module structure `apreq2_module' in file /usr/lib/apache2/modules/mod_apreq2.so: /usr/lib/apache2/modules/mod_apreq2.so: undefined symbol: apreq2_module
-
-If I install the apache and the libapache2-mod-apreq2 package manually it creates a apreq2.load File with the following content and the apache starts
-> LoadModule apreq_module modules/mod_apreq2.so
-
-
-
->This change looks good, but it would need an acceptance test to verify that the module is indeed being loaded. Let me know if I can be of any help in that regard
-
- I just started to work with puppet so I would appreciate your help regarding a acceptance test.</td>
-      
-  
-  
-  
-      
-        <td>TigerKriika</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2084'>2084</a></td>
   
   
@@ -1046,6 +793,259 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2081'>2081</a></td>
+  
+  
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+      
+        <td>bovy89</td>
+      
+  
+  
+  
+      
+        <td>Improve SSLVerify options</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2085'>2085</a></td>
+  
+  
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+      
+        <td>TigerKriika</td>
+      
+  
+  
+  
+      
+        <td>Fix apreq2 LoadModule</td>
+      
+  
+  
+  
+      
+        <td>I used the following Manifest on a Debian 10 (buster) machine:
+
+```
+class profile::web {
+	class { 'apache' :
+		default_charset   => 'utf-8',
+		keepalive_timeout => 5,
+		timeout           => 300,
+		server_signature  => 'Off',
+		trace_enable      => 'Off',
+		mpm_module        => false,
+		log_formats       => {
+			combined       => '%a %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"',
+			vhost_combined => '%v:%p %a %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"',
+			common         => '%a %l %u %t \"%r\" %>s %O',
+			referer        => '%{Referer}i -> %U',
+			agent          => '%{User-agent}i'
+		},
+	}
+
+	class { 'apache::mod::apreq2': }
+	class { 'apache::mod::expires': }
+	class { 'apache::mod::headers': }
+	class { 'apache::mod::perl': }
+	class { 'apache::mod::prefork': }
+	class { 'apache::mod::rewrite': }
+
+}
+```
+
+This installs the Apache and a apreq2.load File is created with the following content
+> LoadModule apreq2_module modules/mod_apreq2.so
+
+The Apache can't start with this load File since the module name is wrong. You will get the following error-message:
+> apache2: Syntax error on line 41 of /etc/apache2/apache2.conf: Syntax error on line 1 of /etc/apache2/mods-enabled/apreq2.load: Can't locate API module structure `apreq2_module' in file /usr/lib/apache2/modules/mod_apreq2.so: /usr/lib/apache2/modules/mod_apreq2.so: undefined symbol: apreq2_module
+
+If I install the apache and the libapache2-mod-apreq2 package manually it creates a apreq2.load File with the following content and the apache starts
+> LoadModule apreq_module modules/mod_apreq2.so
+
+
+
+>This change looks good, but it would need an acceptance test to verify that the module is indeed being loaded. Let me know if I can be of any help in that regard
+
+ I just started to work with puppet so I would appreciate your help regarding a acceptance test.</td>
+      
+  
+  
+  
+      
+        <td>TigerKriika</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2086'>2086</a></td>
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-1186) Add new $use_servername_for_filenames parameter</td>
+      
+  
+  
+  
+      
+        <td>@sanfrancrisko The changes looks good. Thank you.</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2068'>2068</a></td>
   
   
@@ -1188,76 +1188,6 @@ Would you be able to have a peek at #2086 and see if it would be a satisfactory 
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/672'>672</a></td>
-  
-  
-  
-      
-        <td>23</td>
-      
-  
-  
-  
-      
-        <td>rbelnap</td>
-      
-  
-  
-  
-      
-        <td>switch docker-compose provider to use docker-compose config instead of parsing files</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>23</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/676'>676</a></td>
   
   
@@ -1328,54 +1258,54 @@ Would you be able to have a peek at #2086 and see if it would be a satisfactory 
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/672'>672</a></td>
   
   
   
       
-        <td>362</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
+        <td>24</td>
       
   
   
   
       
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+        <td>rbelnap</td>
       
   
   
   
       
-        <td>Given the dependency on `facter >= 3`, this will not work on Puppet `5` - we'll need to hold off on this merge until we can bump the dependency of the module to `Puppet >= 6`</td>
+        <td>switch docker-compose provider to use docker-compose config instead of parsing files</td>
       
   
   
   
       
-        <td>sanfrancrisko</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>97</td>
+        <td></td>
       
   
   
   
       
-        <td>10</td>
+        <td>24</td>
       
   
   
   
       
-        <td>false</td>
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1456,6 +1386,76 @@ Thanks!</td>
   
       
         <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+  
+  
+  
+      
+        <td>362</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+      
+  
+  
+  
+      
+        <td>Given the dependency on `facter >= 3`, this will not work on Puppet `5` - we'll need to hold off on this merge until we can bump the dependency of the module to `Puppet >= 6`</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>97</td>
+      
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2363,76 +2363,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/448'>448</a></td>
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>treydock</td>
-      
-  
-  
-  
-      
-        <td>Remove invalid kube-proxy config resourceContainer</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/447'>447</a></td>
   
   
@@ -2505,6 +2435,76 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/448'>448</a></td>
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>treydock</td>
+      
+  
+  
+  
+      
+        <td>Remove invalid kube-proxy config resourceContainer</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
       
   
   
@@ -2673,30 +2673,30 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/355'>355</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/347'>347</a></td>
   
   
   
       
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>dependabot-preview[bot]</td>
+        <td>14</td>
       
   
   
   
       
-        <td>Update bolt requirement from 2.33.2 to 2.34.0</td>
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>This is failing because of https://github.com/puppetlabs/provision_service/issues/169</td>
+        <td>(maint) remove platforms from release_checks that are checked on PR</td>
+      
+  
+  
+  
+      
+        <td>Rebased and marked as draft until we gain enough confidence in the new test infra to drop the old one.</td>
       
   
   
@@ -2708,7 +2708,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>1</td>
+        <td>10</td>
       
   
   
@@ -2813,30 +2813,30 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/347'>347</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/355'>355</a></td>
   
   
   
       
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>1</td>
       
   
   
   
       
-        <td>(maint) remove platforms from release_checks that are checked on PR</td>
+        <td>dependabot-preview[bot]</td>
       
   
   
   
       
-        <td>Rebased and marked as draft until we gain enough confidence in the new test infra to drop the old one.</td>
+        <td>Update bolt requirement from 2.33.2 to 2.34.0</td>
+      
+  
+  
+  
+      
+        <td>This is failing because of https://github.com/puppetlabs/provision_service/issues/169</td>
       
   
   
@@ -2848,7 +2848,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>10</td>
+        <td>1</td>
       
   
   
@@ -3249,6 +3249,76 @@ I guess any supported OS version should be supported with testing and no testing
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1199'>1199</a></td>
+  
+  
+  
+      
+        <td>24</td>
+      
+  
+  
+  
+      
+        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Manage postgresql_conf_path file permissions</td>
+      
+  
+  
+  
+      
+        <td>This is really hard to debug because litmus output is really not telling me a lot. I'd guess something can't read the config file, but I can't quite figure it out.</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>10</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
   
   
@@ -3293,76 +3363,6 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
       
         <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1199'>1199</a></td>
-  
-  
-  
-      
-        <td>23</td>
-      
-  
-  
-  
-      
-        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Manage postgresql_conf_path file permissions</td>
-      
-  
-  
-  
-      
-        <td>This is really hard to debug because litmus output is really not telling me a lot. I'd guess something can't read the config file, but I can't quite figure it out.</td>
-      
-  
-  
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>10</td>
       
   
   
@@ -3465,79 +3465,6 @@ We close stale PRs after 90 days of inactivity. If you don’t have time to get 
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1136'>1136</a></td>
-  
-  
-  
-      
-        <td>20</td>
-      
-  
-  
-  
-      
-        <td>npwalker <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(FEAT) Add load_csv function</td>
-      
-  
-  
-  
-      
-        <td>Hi @npwalker, I reviewed your PR. The idea is awesome, but you need to add test in spec/functions the same as loadjson_spec.rb but for load_csv function, and also to resolve some rubocop offenses. Also it will be good to rename the function to be 'loadcsv' to be like loadjson or loadyaml.
-
-kind regards,
-@adrianiurca </td>
-      
-  
-  
-  
-      
-        <td>adrianiurca</td>
-      
-  
-  
-  
-      
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
@@ -3580,6 +3507,79 @@ cc @binford2k </td>
   
       
         <td>265</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1136'>1136</a></td>
+  
+  
+  
+      
+        <td>20</td>
+      
+  
+  
+  
+      
+        <td>npwalker <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(FEAT) Add load_csv function</td>
+      
+  
+  
+  
+      
+        <td>Hi @npwalker, I reviewed your PR. The idea is awesome, but you need to add test in spec/functions the same as loadjson_spec.rb but for load_csv function, and also to resolve some rubocop offenses. Also it will be good to rename the function to be 'loadcsv' to be like loadjson or loadyaml.
+
+kind regards,
+@adrianiurca </td>
+      
+  
+  
+  
+      
+        <td>adrianiurca</td>
+      
+  
+  
+  
+      
+        <td>10</td>
       
   
   
@@ -3684,12 +3684,12 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing/pull/305'>305</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing/pull/310'>310</a></td>
   
   
   
       
-        <td>23</td>
+        <td>0</td>
       
   
   
@@ -3701,7 +3701,7 @@ cc @binford2k </td>
   
   
       
-        <td>Add windows for testing</td>
+        <td>Add Honeycomb's buildevents tracking</td>
       
   
   
@@ -3754,12 +3754,12 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing/pull/310'>310</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing/pull/305'>305</a></td>
   
   
   
       
-        <td>0</td>
+        <td>23</td>
       
   
   
@@ -3771,7 +3771,7 @@ cc @binford2k </td>
   
   
       
-        <td>Add Honeycomb's buildevents tracking</td>
+        <td>Add windows for testing</td>
       
   
   
