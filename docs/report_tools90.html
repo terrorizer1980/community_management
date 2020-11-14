@@ -159,106 +159,6 @@ $(document).on("click", '.show-more a', function(e) {
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
-  
-  
-  
-
-  
-      
-        <td>396</td>
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>(performance) - Sets up basic performance testing</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds</td>
-      
-  
-  
-  
-
-  
-      
-        <td>157</td>
-      
-  
-  
-  
-
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/838'>838</a></td>
   
   
@@ -347,6 +247,106 @@ $(document).on("click", '.show-more a', function(e) {
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
+  
+  
+  
+
+  
+      
+        <td>396</td>
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(performance) - Sets up basic performance testing</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds</td>
+      
+  
+  
+  
+
+  
+      
+        <td>157</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdksync'>PDKSync</a></td>
   
   
@@ -366,7 +366,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>106</td>
+        <td>107</td>
       
   
   
@@ -466,7 +466,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>99</td>
+        <td>100</td>
       
   
   
@@ -512,7 +512,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>99</td>
+        <td>100</td>
       
   
   
@@ -559,22 +559,14 @@ $(document).on("click", '.show-more a', function(e) {
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
   
   
   
 
   
       
-        <td>686</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
+        <td>250</td>
       
   
   
@@ -582,14 +574,34 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
+        <td>findmyname666</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Remove all sub-folders from source repository / folder</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Hi @daianamezdrea, I will try and rebase this shortly.
+     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
+
+Modify `Gemfile` to use this repo:
+```
+group :development do
+  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
+end
+```
+```
+bundle install
+bundle exec rake 'litmus:provision_list[release_checks]'
+# etc...
+```
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -604,7 +616,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>nabertrand</td>
+        <td>sanfrancrisko</td>
       
   
   
@@ -612,7 +624,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>164</td>
+        <td>157</td>
       
   
   
@@ -767,118 +779,6 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/300'>300</a></td>
-  
-  
-  
-
-  
-      
-        <td>250</td>
-      
-  
-  
-  
-
-  
-      
-        <td>findmyname666</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Remove all sub-folders from source repository / folder</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     @daianamezdrea is going to test the change out in a multi node test environment (e.g. [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)):
-
-Modify `Gemfile` to use this repo:
-```
-group :development do
-  gem "puppetlabs_spec_helper", require: true,  git: 'https://github.com/findmyname666/puppetlabs_spec_helper', ref: '87ec9e4d3b4dbac0ced2e1bb5b7bd22bc6799dac'
-end
-```
-```
-bundle install
-bundle exec rake 'litmus:provision_list[release_checks]'
-# etc...
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-
-  
-      
-        <td>157</td>
-      
-  
-  
-  
-
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/233'>233</a></td>
   
   
@@ -941,6 +841,106 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
       
         <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
+  
+  
+  
+
+  
+      
+        <td>686</td>
+      
+  
+  
+  
+
+  
+      
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Hi @daianamezdrea, I will try and rebase this shortly.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>nabertrand</td>
+      
+  
+  
+  
+
+  
+      
+        <td>164</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
       
   
   
