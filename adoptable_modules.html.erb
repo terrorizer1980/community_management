@@ -46,10 +46,10 @@
       <th>Source URL</th>
     </tr>
   </thead>
-  <% adoption_list.each do |mod| %>
+  <% adoption_list.each do |key, mod| %>
   <tr>
       <td><a href="https://forge.puppet.com/<%= mod[:owner] %>/<%= mod[:name] %>" target="_new"><%= mod[:name] %></a></td>
-      <td><%= mod[:summary] %></td>
+      <td><%= mod[:description] %></td>
       <td><%= mod[:version] %></td>
       <td><%= mod[:updated_at] %></td>
       <td><a href="<%= mod[:homepage_url] %>" target="_new">Source URL</a></td>

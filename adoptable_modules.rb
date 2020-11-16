@@ -8,30 +8,42 @@ require 'puppet_forge'
 
 PuppetForge.user_agent = "IAC Community Management/1.0.0"
 
-options = {}
-options[:oauth] = ENV['GITHUB_COMMUNITY_TOKEN'] || ENV['GITHUB_TOKEN']
+@oauth      = ENV['GITHUB_COMMUNITY_TOKEN'] || ENV['GITHUB_TOKEN']
+@ineligible = [
+  'puppetlabs-amazon_aws',
+]
+
 parser = OptionParser.new do |opts|
   opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
-  opts.on('-t', '--oauth-token TOKEN', 'GitHub OAuth token. Required.') { |v| options[:oauth] = v }
+  opts.on('-t', '--oauth-token TOKEN', 'GitHub OAuth token. Required.') { |v| @oauth = v }
+  opts.on('-i', '--ineligible LIST', 'Comma separated list of module slugs which cannot be put up for adoption.') { |v| @ineligible = v.split(',') }
 end
 
 parser.parse!
 
 missing = []
-missing << '-t' if options[:oauth].nil?
+missing << '-t' if @oauth.nil?
 unless missing.empty?
   puts "Missing options: #{missing.join(', ')}"
   puts parser
   exit
 end
 
-util = OctokitUtils.new(options[:oauth])
+util = OctokitUtils.new(@oauth)
 @client = util.client
 
-YEAR_OLD  = (Time.now - (60*60*24*365))
-MONTH_OLD = (Time.now - (60*60*24*30))
-WEEK_OLD  = (Time.now - (60*60*24*7))
-
+def year_ago(n = 1)
+  @year ||= (60*60*24*365)
+  Time.now - (n * @year)
+end
+def month_ago(n = 1)
+  @month ||= (60*60*24*30)
+  Time.now - (n * @month)
+end
+def week_ago(n = 1)
+  @week ||= (60*60*24*7)
+  Time.now - (n * @week)
+end
 
 def repo_name_from_url(url)
   return unless url.is_a? String
@@ -51,14 +63,16 @@ def repo_info(repo)
 
   info.issues, info.pulls = @client.list_issues(repo).partition { |issue| issue.has_key? :pull_request }
   info.all_commits   = @client.commits(repo)
-  info.fresh_commits = @client.commits_since(repo, Date.today - 30*6) # commits in the last 6 months
+  info.fresh_commits = @client.commits_since(repo, year_ago.to_date) # commits in the last year
 
   info
 end
 
 def eligible?(mod)
+  return if @ineligible.include? mod.slug
+
   # don't even bother checking the repo if the current release is newer than 6 months
-  return if DateTime.parse(mod.current_release.created_at) > (Date.today - 30*6)
+  return if DateTime.parse(mod.current_release.created_at) > (month_ago(6).to_date)
 
   repo = repo_info(repo_name_from_url(mod.current_release.metadata[:source]))
 
@@ -73,13 +87,13 @@ def eligible?(mod)
   end
 
   # conditions which make this module *ineligible* for adoption
-  return if repo.created_at > YEAR_OLD            # less than a year old
-  return if repo.updated_at > WEEK_OLD            # the repo config has been updated in the last week
-  return if repo.fresh_commits.size > 2           # has had more than two commits in the last 6 months
-  return if repo.all_commits.first.commit.committer.date > MONTH_OLD # has had any commits in the last month
+  return if repo.created_at > year_ago            # less than a year old
+  return if repo.updated_at > week_ago            # the repo config has been updated in the last week
+  return if repo.fresh_commits.size > 2           # has had more than two "fresh" commits
+  return if repo.all_commits.first.commit.committer.date > month_ago(3) # has had any commits in the last three month
 
   unless repo.pulls.empty?
-    return if repo.pulls.last.created_at > YEAR_OLD # oldest PR is less than a year old
+    return if repo.pulls.last.created_at > year_ago # oldest PR is less than a year old
   end
 
   # all eligibiliity checks complete
@@ -95,22 +109,26 @@ modules = PuppetForge::Module.where(
 raise "No modules found for #{namespace}." if modules.total.zero?
 
 
-adoption_list = []
+adoption_list = {}
 modules.unpaginated.each do |mod|
   next unless mod.endorsement.nil?
   next unless eligible?(mod)
 
-  adoption_list << {
+  adoption_list[mod.slug] = {
     :name           => mod.name,
     :owner          => mod.owner.username,
     :slug           => mod.slug,
-    :summary        => mod.current_release.metadata[:summary],
+    :description    => mod.current_release.metadata[:summary],
     :gravatar_id    => mod.owner.gravatar_id,
     :version        => mod.current_release.version,
     :updated_at     => mod.updated_at,
     :downloads      => mod.downloads,
     :feedback_score => mod.feedback_score,
     :homepage_url   => mod.homepage_url,
+    # Which of the modules.json fields are required?
+    :title          => mod.name,
+		:github         => repo_name_from_url(mod.homepage_url),
+		:puppet_module  => mod.slug.sub('-','/'),
   }
 end
 
