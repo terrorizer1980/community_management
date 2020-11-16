@@ -77,6 +77,18 @@ $(document).on("click", '.show-more a', function(e) {
    });
 
 </script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-157301458-1', 'auto');
+ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+ga('set', 'anonymizeIp', true);
+</script>
+<!-- End Google Analytics -->
 </head>
 <body> 
 <h1 style="text-align:center;">Tools PRs that require review</h1>
@@ -90,157 +102,11 @@ $(document).on("click", '.show-more a', function(e) {
 <thead>
   <tr>
     
-      
-        
-           <th>tool</th> 
-        
-      
-        
-      
-        
-           <th>pr</th> 
-        
-      
-         
-           <th data-priority="1" class="ui-table-cell-visible">age</th> 
-        
-      
-         
-           <th data-priority="1" class="ui-table-cell-visible">owner</th> 
-        
-      
-         
-           <th data-priority="1" class="ui-table-cell-visible">title</th> 
-        
-      
-         
-           <th data-priority="1" class="ui-table-cell-visible">last_comment</th> 
-        
-      
-         
-           <th data-priority="1" class="ui-table-cell-visible">by</th> 
-        
-      
-        
-           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">age_comment</th>
-        
-      
-        
-           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">num_comments</th>
-        
-      
-        
-           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">no_comment_from_puppet</th>
-        
-      
-        
-           <th data-priority="2" class="ui-table-priority-1 ui-table-cell-visible">last_comment_mentions_puppet</th>
-        
-      
-   
+    
+       
 
   </tr>
 </thead>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/voxpupuli/metadata-json-lint'>metadata-json-lint</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/voxpupuli/metadata-json-lint/pull/112'>112</a></td>
-  
-  
-  
-
-  
-      
-        <td>46</td>
-      
-  
-  
-  
-
-  
-      
-        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Require Ruby 2.1 and drop post_install_message</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     But the tests are passing now so why would we allow any regressions?
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-
-  
-      
-        <td>46</td>
-      
-  
-  
-  
-
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
  
 </table>
 </div>

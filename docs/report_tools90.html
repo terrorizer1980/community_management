@@ -77,6 +77,18 @@ $(document).on("click", '.show-more a', function(e) {
    });
 
 </script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-157301458-1', 'auto');
+ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+ga('set', 'anonymizeIp', true);
+</script>
+<!-- End Google Analytics -->
 </head>
 <body> 
 <h1 style="text-align:center;">Tools PRs that require review</h1>
@@ -147,206 +159,6 @@ $(document).on("click", '.show-more a', function(e) {
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/838'>838</a></td>
-  
-  
-  
-
-  
-      
-        <td>291</td>
-      
-  
-  
-  
-
-  
-      
-        <td>sebastian-miclea <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Replace facter with facter-ng to run tests</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Reopened PR to have builds available.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>sebastian-miclea</td>
-      
-  
-  
-  
-
-  
-      
-        <td>279</td>
-      
-  
-  
-  
-
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/774'>774</a></td>
-  
-  
-  
-
-  
-      
-        <td>398</td>
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>(performance) - Sets up basic performance testing</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Shell commands take a very long time on windows .  We wanted to make improvements so we need to measure timings first to see if we improved.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>logicminds</td>
-      
-  
-  
-  
-
-  
-      
-        <td>159</td>
-      
-  
-  
-  
-
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdksync'>PDKSync</a></td>
   
   
@@ -366,7 +178,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>108</td>
+        <td>109</td>
       
   
   
@@ -412,7 +224,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>108</td>
+        <td>109</td>
       
   
   
@@ -466,7 +278,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>101</td>
+        <td>102</td>
       
   
   
@@ -512,7 +324,7 @@ $(document).on("click", '.show-more a', function(e) {
 
   
       
-        <td>101</td>
+        <td>102</td>
       
   
   
@@ -537,106 +349,6 @@ $(document).on("click", '.show-more a', function(e) {
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/233'>233</a></td>
-  
-  
-  
-
-  
-      
-        <td>982</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add all spec/lib directories from fixtures to LOAD_PATH</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @daianamezdrea, sure, I should hopefully have some time to look at this soon.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>166</td>
-      
-  
-  
-  
-
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
       
   
   
@@ -720,7 +432,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>501</td>
+        <td>502</td>
       
   
   
@@ -745,106 +457,6 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/269'>269</a></td>
-  
-  
-  
-
-  
-      
-        <td>688</td>
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Update fixtures from forge when the module version doesn't match; fix git < 2.7 compatibility</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @daianamezdrea, I will try and rebase this shortly.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>nabertrand</td>
-      
-  
-  
-  
-
-  
-      
-        <td>166</td>
-      
-  
-  
-  
-
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
       
   
   
@@ -957,206 +569,6 @@ bundle exec rake 'litmus:provision_list[release_checks]'
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper'>Puppet Labs Spec Helper</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs_spec_helper/pull/291'>291</a></td>
-  
-  
-  
-
-  
-      
-        <td>507</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cardil</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Feature: metadata dependencies are auto installed</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hi @cardil, this looks nice! Can you rebase it, please ? Thank you! Cheers!
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>daianamezdrea</td>
-      
-  
-  
-  
-
-  
-      
-        <td>159</td>
-      
-  
-  
-  
-
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api'>Resource API</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppet-resource_api/pull/276'>276</a></td>
-  
-  
-  
-
-  
-      
-        <td>157</td>
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>(IAC-859) Add ruby 2.7 to test matrix</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Blocked on puppetlabs/puppet#master cleaning up the ruby 2.7 warnings - not gonna rework the tests for this.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-
-  
-      
-        <td>154</td>
-      
-  
-  
-  
-
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
       
   
   
