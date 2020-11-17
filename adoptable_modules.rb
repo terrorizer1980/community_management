@@ -127,8 +127,8 @@ modules.unpaginated.each do |mod|
     :homepage_url   => mod.homepage_url,
     # Which of the modules.json fields are required?
     :title          => mod.name,
-		:github         => repo_name_from_url(mod.homepage_url),
-		:puppet_module  => mod.slug.sub('-','/'),
+    :github         => repo_name_from_url(mod.homepage_url),
+    :puppet_module  => mod.slug.sub('-','/'),
   }
 end
 
