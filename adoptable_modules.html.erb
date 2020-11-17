@@ -20,6 +20,28 @@
   ga('set', 'anonymizeIp', true);
     </script>
     <!-- End Google Analytics -->
+
+  <!-- Jira issue collector -->
+  <script type="text/javascript" src="https://tickets.puppetlabs.com/s/d41d8cd98f00b204e9800998ecf8427e-CDN/hovut2/805002/a74e864ab2f18b741f8f370d28ebbded/2.2.4.7/_/download/batch/com.atlassian.plugins.jquery:jquery/com.atlassian.plugins.jquery:jquery.js?collectorId=dc4af77c"></script><script type="text/javascript" src="https://tickets.puppetlabs.com/s/09be6dd8ec08ccd7d034e876388d4258-T/hovut2/805002/a74e864ab2f18b741f8f370d28ebbded/3.1.0/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=dc4af77c"></script>
+
+  <script type="text/javascript">
+    window.ATL_JQ_PAGE_PROPS =  {
+      "triggerFunction": function(showCollectorDialog) {
+        //Requires that jQuery is available!
+        jQuery(".adoptButton").click(function(e) {
+          var modname = $(this).attr('id').slice(6);
+
+          window.ATL_JQ_PAGE_PROPS.fieldValues.summary = "Module adoption request: puppetlabs/"+modname;
+          e.preventDefault();
+          showCollectorDialog();
+        });
+      },
+      fieldValues: {
+        components: '28262'
+      } // This object is needed so we can write to the summary
+    };
+  </script>
+  <!-- End Jira issue collector -->
 </head>
 
 <body>
@@ -42,8 +64,8 @@
       <th>Name</th>
       <th>Summary</th>
       <th>Version</th>
-      <th>Last Release</th>
-      <th>Source URL</th>
+      <th>Last&nbsp;Release</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <% adoption_list.each do |key, mod| %>
@@ -52,7 +74,8 @@
       <td><%= mod[:description] %></td>
       <td><%= mod[:version] %></td>
       <td><%= mod[:updated_at] %></td>
-      <td><a href="<%= mod[:homepage_url] %>" target="_new">Source URL</a></td>
+      <td><a href="<%= mod[:homepage_url] %>" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-<%= mod[:name] %>" value="Adopt module"></td>
   </tr>
   <% end %>
 </table>

@@ -121,7 +121,7 @@ modules.unpaginated.each do |mod|
     :description    => mod.current_release.metadata[:summary],
     :gravatar_id    => mod.owner.gravatar_id,
     :version        => mod.current_release.version,
-    :updated_at     => mod.updated_at,
+    :updated_at     => DateTime.parse(mod.updated_at).strftime('%-d %b %Y'),
     :downloads      => mod.downloads,
     :feedback_score => mod.feedback_score,
     :homepage_url   => mod.homepage_url,
@@ -134,5 +134,3 @@ end
 
 File.write('adoptable_modules.html', ERB.new(File.read('adoptable_modules.html.erb')).result(binding))
 File.write('adoptable_modules.json', JSON.pretty_generate(adoption_list))
-
-
