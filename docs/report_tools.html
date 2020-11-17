@@ -426,7 +426,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -461,7 +461,7 @@ ga('set', 'anonymizeIp', true);
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-docker'>PDK Dockerfile</a></td>
   
   
   
@@ -473,22 +473,14 @@ ga('set', 'anonymizeIp', true);
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/359'>359</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-docker/pull/11'>11</a></td>
   
   
   
 
   
       
-        <td>6</td>
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>0</td>
       
   
   
@@ -496,14 +488,24 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>Default new modules to rspec-mocks</td>
+        <td>nkanderson <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(PF-2226) Add github workflow for building & pushing Docker images</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @scotje ouch, you're right - this'll need more work on the pdk side to have the defaults available before everything is rendered out :-(
+     Updated with the new machine user creds, so I think this is ready for review.
+
+Separately, I noticed that the `test` tag was built in the `puppet/pdk` Dockerhub repo, so I guess the regex isn't as strict as I thought, or there's some other trigger (doesn't seem like `/^[\w.]+$/` would match `test` unless the `.` in square brackets isn't literal, but 🤷‍♂️ ). So I'll probably go delete that tagged image (and the tag in gh) once this is reviewed and merged.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -518,7 +520,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>DavidS</td>
+        <td>nkanderson</td>
       
   
   
@@ -534,7 +536,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>3</td>
+        <td>2</td>
       
   
   
@@ -550,7 +552,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -580,7 +582,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -627,7 +629,7 @@ Puppet 7 seems to be already available at nightly builds.
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -652,6 +654,206 @@ Puppet 7 seems to be already available at nightly builds.
   
       
         <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/338'>338</a></td>
+  
+  
+  
+
+  
+      
+        <td>136</td>
+      
+  
+  
+  
+
+  
+      
+        <td>cdenneen</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Gitlab litmus</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     0 comments
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td></td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/359'>359</a></td>
+  
+  
+  
+
+  
+      
+        <td>7</td>
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Default new modules to rspec-mocks</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @scotje ouch, you're right - this'll need more work on the pdk side to have the defaults available before everything is rendered out :-(
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
       
   
   
@@ -756,106 +958,6 @@ I'm interested in helping this along. I think the only piece missing from my ver
   
       
         <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/338'>338</a></td>
-  
-  
-  
-
-  
-      
-        <td>136</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cdenneen</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Gitlab litmus</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     0 comments
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td></td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
       
   
   
@@ -985,7 +1087,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -1035,7 +1137,7 @@ Coverage decreased (-0.6%) to 92.085% when pulling **8936f17906844a8855c012323f5
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -1135,7 +1237,7 @@ Coverage decreased (-0.6%) to 92.085% when pulling **8936f17906844a8855c012323f5
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -1189,7 +1291,7 @@ Coverage decreased (-0.6%) to 92.085% when pulling **8936f17906844a8855c012323f5
 
   
       
-        <td>291</td>
+        <td>292</td>
       
   
   
@@ -1235,7 +1337,7 @@ Coverage decreased (-0.6%) to 92.085% when pulling **8936f17906844a8855c012323f5
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -1482,106 +1584,6 @@ Coverage decreased (-0.6%) to 92.085% when pulling **8936f17906844a8855c012323f5
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/883'>883</a></td>
-  
-  
-  
-
-  
-      
-        <td>406</td>
-      
-  
-  
-  
-
-  
-      
-        <td>usev6</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Include check name in log output by default</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     rebased to get checks from the new CI setup
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/779'>779</a></td>
   
   
@@ -1589,7 +1591,7 @@ Coverage decreased (-0.6%) to 92.085% when pulling **8936f17906844a8855c012323f5
 
   
       
-        <td>1106</td>
+        <td>1107</td>
       
   
   
@@ -1682,6 +1684,106 @@ Coverage decreased (-0.6%) to 92.085% when pulling **8936f17906844a8855c012323f5
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/883'>883</a></td>
+  
+  
+  
+
+  
+      
+        <td>406</td>
+      
+  
+  
+  
+
+  
+      
+        <td>usev6</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Include check name in log output by default</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     rebased to get checks from the new CI setup
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+
+  
+      
+        <td>8</td>
+      
+  
+  
+  
+
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint'>puppet-lint</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/puppet-lint/pull/586'>586</a></td>
   
   
@@ -1735,7 +1837,7 @@ Coverage decreased (-0.6%) to 92.085% when pulling **8936f17906844a8855c012323f5
 
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -2089,7 +2191,7 @@ Coverage decreased (-0.6%) to 92.085% when pulling **8936f17906844a8855c012323f5
 
   
       
-        <td>252</td>
+        <td>253</td>
       
   
   
@@ -2147,7 +2249,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>159</td>
+        <td>160</td>
       
   
   
@@ -2201,7 +2303,7 @@ bundle exec rake 'litmus:provision_list[release_checks]'
 
   
       
-        <td>581</td>
+        <td>582</td>
       
   
   
@@ -2402,106 +2504,6 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
-  
-  
-  
-
-  
-      
-        <td>1230</td>
-      
-  
-  
-  
-
-  
-      
-        <td>kjetilho</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add .tagged and .not_tagged methods for resource matcher</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     rebased again and updated compile matcher test to use correct line number.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
   
   
@@ -2555,7 +2557,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -2564,221 +2566,6 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
       
         <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
-  
-  
-  
-
-  
-      
-        <td>984</td>
-      
-  
-  
-  
-
-  
-      
-        <td>asharpe</td>
-      
-  
-  
-  
-
-  
-      
-        <td>allow testing environment functions</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Bumping this from the 2.8.x release since it sounds like it may just not get implemented.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>scotje</td>
-      
-  
-  
-  
-
-  
-      
-        <td>20</td>
-      
-  
-  
-  
-
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
-  
-  
-  
-
-  
-      
-        <td>1151</td>
-      
-  
-  
-  
-
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>[RFC] New syntax</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
-
-Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
-```
-def verify_concat_fragment_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
-end
-
-def verify_concat_fragment_exact_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
-end
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-
-  
-      
-        <td>798</td>
-      
-  
-  
-  
-
-  
-      
-        <td>9</td>
       
   
   
@@ -2891,6 +2678,321 @@ Thanks
   
       
         <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
+  
+  
+  
+
+  
+      
+        <td>1230</td>
+      
+  
+  
+  
+
+  
+      
+        <td>kjetilho</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add .tagged and .not_tagged methods for resource matcher</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     rebased again and updated compile matcher test to use correct line number.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
+  
+  
+  
+
+  
+      
+        <td>985</td>
+      
+  
+  
+  
+
+  
+      
+        <td>asharpe</td>
+      
+  
+  
+  
+
+  
+      
+        <td>allow testing environment functions</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Bumping this from the 2.8.x release since it sounds like it may just not get implemented.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>scotje</td>
+      
+  
+  
+  
+
+  
+      
+        <td>20</td>
+      
+  
+  
+  
+
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
+  
+  
+  
+
+  
+      
+        <td>1152</td>
+      
+  
+  
+  
+
+  
+      
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>[RFC] New syntax</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
+
+Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
+```
+def verify_concat_fragment_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
+end
+
+def verify_concat_fragment_exact_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
+end
+```
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+
+  
+      
+        <td>799</td>
+      
+  
+  
+  
+
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
       
   
   
@@ -3028,7 +3130,7 @@ Thanks
 
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -3051,7 +3153,7 @@ Thanks
   
   <td>
   <div class="content hideContent">
-     @tphoney ?
+     @highb ?
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -3074,7 +3176,7 @@ Thanks
 
   
       
-        <td>4</td>
+        <td>0</td>
       
   
   
@@ -3082,15 +3184,7 @@ Thanks
 
   
       
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
+        <td>3</td>
       
   
   
@@ -3099,6 +3193,14 @@ Thanks
   
       
         <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
       
   
   
