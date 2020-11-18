@@ -32,7 +32,7 @@ ga('set', 'anonymizeIp', true);
     <td>
              <% if m[:workflows].respond_to?('each') 
                   m[:workflows].each do |wf| %>
-                <% if wf['name']=="weekly" %>
+                <% if wf['name']=="nightly" %>
           <table border='1' style='width:100%'>
                   <tr><th>Workflow</th><th>Runs</th></tr>
                      <tr>
@@ -41,7 +41,7 @@ ga('set', 'anonymizeIp', true);
                      <table border='1' style='width:100%'>
                              <tr><th>Run Number</th><th>Branch</th><th>Updated At</th><th>Conclusion</th></tr>
                              <% m[:runs][wf['name']]['workflow_runs'][0..5].each do |run| %>
-                             <% if run['head_branch'] == "master" %>
+                             <% if run['head_branch'] == "main" %>
            <tr>
                                 <td><a href='<%= run['html_url'] %>' target='_blank'> <%= run['run_number'] %> </a> </td>
                                 <td>
