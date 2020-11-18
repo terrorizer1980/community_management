@@ -1,0 +1,85 @@
+<html>
+<title>Puppetlabs modules up for adoption</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="reviews.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
+  <script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+  ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+  ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+
+  <!-- Jira issue collector -->
+  <script type="text/javascript" src="https://tickets.puppetlabs.com/s/d41d8cd98f00b204e9800998ecf8427e-CDN/hovut2/805002/a74e864ab2f18b741f8f370d28ebbded/2.2.4.7/_/download/batch/com.atlassian.plugins.jquery:jquery/com.atlassian.plugins.jquery:jquery.js?collectorId=dc4af77c"></script><script type="text/javascript" src="https://tickets.puppetlabs.com/s/09be6dd8ec08ccd7d034e876388d4258-T/hovut2/805002/a74e864ab2f18b741f8f370d28ebbded/3.1.0/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=dc4af77c"></script>
+
+  <script type="text/javascript">
+    window.ATL_JQ_PAGE_PROPS =  {
+      "triggerFunction": function(showCollectorDialog) {
+        //Requires that jQuery is available!
+        jQuery(".adoptButton").click(function(e) {
+          var modname = $(this).attr('id').slice(6);
+
+          window.ATL_JQ_PAGE_PROPS.fieldValues.summary = "Module adoption request: puppetlabs/"+modname;
+          e.preventDefault();
+          showCollectorDialog();
+        });
+      },
+      fieldValues: {
+        components: '28262'
+      } // This object is needed so we can write to the summary
+    };
+  </script>
+  <!-- End Jira issue collector -->
+</head>
+
+<body>
+<h1 style="text-align:center;">Puppetlabs modules up for adoption</h1>
+<div style="overflow-x:auto; padding: 1em;">
+<p>
+  The maintenance cycle of modules often comes to a close before the useful
+  lifespan of that module is finished. This might happen because business
+  priorities change, as when Puppet moved away from MCollective, or it might
+  just happen because the champion driving the module's development moved to a
+  different project. But it rarely means that the module has no life left in it.
+  Sometimes it just means that the module needs a new maintainer.
+</p>
+<p>
+  See the <a href="https://ospassist.puppet.com/hc/en-us/articles/360058837113-Adopting-a-puppetlabs-module" target="_new">tutorial</a> to learn how to adopt one of these modules.
+</p>
+<table data-role='table' data-mode='columntoggle' border='1' id='reviews' style='width:relative' class='sortable table table-hover'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Summary</th>
+      <th>Version</th>
+      <th>Last&nbsp;Release</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <% adoption_list.each do |key, mod| %>
+  <tr>
+      <td><a href="https://forge.puppet.com/<%= mod[:owner] %>/<%= mod[:name] %>" target="_new"><%= mod[:name] %></a></td>
+      <td><%= mod[:description] %></td>
+      <td><%= mod[:version] %></td>
+      <td><%= mod[:updated_at] %></td>
+      <td><a href="<%= mod[:homepage_url] %>" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-<%= mod[:name] %>" value="Adopt module"></td>
+  </tr>
+  <% end %>
+</table>
+</div>
+
+</body>
+</html>
