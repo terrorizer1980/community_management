@@ -1,0 +1,589 @@
+<html>
+<title>Puppetlabs modules up for adoption</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="reviews.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src='./web_libraries/sorttable.js'></script><link rel='stylesheet' href='./web_libraries/bootstrap.min.css'>
+  <script src='./web_libraries/DataTables/datatables.js'></script><link rel='stylesheet' href='./web_libraries/DataTables/datatables.css'>
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+  ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+  ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+
+  <!-- Jira issue collector -->
+  <script type="text/javascript" src="https://tickets.puppetlabs.com/s/d41d8cd98f00b204e9800998ecf8427e-CDN/hovut2/805002/a74e864ab2f18b741f8f370d28ebbded/2.2.4.7/_/download/batch/com.atlassian.plugins.jquery:jquery/com.atlassian.plugins.jquery:jquery.js?collectorId=dc4af77c"></script><script type="text/javascript" src="https://tickets.puppetlabs.com/s/09be6dd8ec08ccd7d034e876388d4258-T/hovut2/805002/a74e864ab2f18b741f8f370d28ebbded/3.1.0/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=dc4af77c"></script>
+
+  <script type="text/javascript">
+    window.ATL_JQ_PAGE_PROPS =  {
+      "triggerFunction": function(showCollectorDialog) {
+        //Requires that jQuery is available!
+        jQuery(".adoptButton").click(function(e) {
+          var modname = $(this).attr('id').slice(6);
+
+          window.ATL_JQ_PAGE_PROPS.fieldValues.summary = "Module adoption request: puppetlabs/"+modname;
+          e.preventDefault();
+          showCollectorDialog();
+        });
+      },
+      fieldValues: {
+        components: '28262'
+      } // This object is needed so we can write to the summary
+    };
+  </script>
+  <!-- End Jira issue collector -->
+</head>
+
+<body>
+<h1 style="text-align:center;">Puppetlabs modules up for adoption</h1>
+<div style="overflow-x:auto; padding: 1em;">
+<p>
+  The maintenance cycle of modules often comes to a close before the useful
+  lifespan of that module is finished. This might happen because business
+  priorities change, as when Puppet moved away from MCollective, or it might
+  just happen because the champion driving the module's development moved to a
+  different project. But it rarely means that the module has no life left in it.
+  Sometimes it just means that the module needs a new maintainer.
+</p>
+<p>
+  See the <a href="https://ospassist.puppet.com/hc/en-us/articles/360058837113-Adopting-a-puppetlabs-module" target="_new">tutorial</a> to learn how to adopt one of these modules.
+</p>
+<table data-role='table' data-mode='columntoggle' border='1' id='reviews' style='width:relative' class='sortable table table-hover'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Summary</th>
+      <th>Version</th>
+      <th>Last&nbsp;Release</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/ruby" target="_new">ruby</a></td>
+      <td>Manages Ruby and Rubygems.</td>
+      <td>1.0.1</td>
+      <td>17 Jun 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-ruby" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-ruby" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/git" target="_new">git</a></td>
+      <td>Module for installing Git or Gitosis.</td>
+      <td>0.5.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-git" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-git" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/gcc" target="_new">gcc</a></td>
+      <td>Module for installing gcc build utils</td>
+      <td>0.3.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-gcc" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-gcc" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/tftp" target="_new">tftp</a></td>
+      <td>Installs and manages TFTP service and configuration.</td>
+      <td>1.0.0</td>
+      <td>10 Jan 2018</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-tftp" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-tftp" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/dism" target="_new">dism</a></td>
+      <td>Provides a DISM puppet resource type on Windows.</td>
+      <td>1.3.1</td>
+      <td>1 Nov 2018</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-dism" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-dism" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/nagios_core" target="_new">nagios_core</a></td>
+      <td>Manage Nagios resource configuration files.</td>
+      <td>1.0.3</td>
+      <td>11 Jan 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-nagios_core" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-nagios_core" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/mount_providers" target="_new">mount_providers</a></td>
+      <td>Provides the mounttab and mountpoint resource types.</td>
+      <td>2.0.1</td>
+      <td>27 Mar 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-mount_providers" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-mount_providers" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/activemq" target="_new">activemq</a></td>
+      <td>Installs and configures ActiveMQ.</td>
+      <td>0.4.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-activemq" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-activemq" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/aws" target="_new">aws</a></td>
+      <td>This module provides the ability to manage AWS resources</td>
+      <td>2.1.0</td>
+      <td>29 Aug 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-aws" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-aws" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/passenger" target="_new">passenger</a></td>
+      <td>Configures and manages Passenger.</td>
+      <td>0.4.1</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-passenger" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-passenger" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/mssql" target="_new">mssql</a></td>
+      <td>Puppet Labs Microsoft SQL Server Module</td>
+      <td>0.2.1</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-mssql" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-mssql" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/denyhosts" target="_new">denyhosts</a></td>
+      <td>Configure DenyHosts</td>
+      <td>0.1.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-denyhosts" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-denyhosts" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/razor" target="_new">razor</a></td>
+      <td>Razor puppet module</td>
+      <td>0.11.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-razor" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-razor" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/catalog_preview" target="_new">catalog_preview</a></td>
+      <td>Module providing catalog preview and migration features</td>
+      <td>2.2.0</td>
+      <td>19 Dec 2018</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-catalog_preview" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-catalog_preview" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/test_device" target="_new">test_device</a></td>
+      <td>A test device to cheaply test remote targets with bolt and puppet</td>
+      <td>1.0.0</td>
+      <td>8 May 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-test_device" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-test_device" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/sqlite" target="_new">sqlite</a></td>
+      <td>Installs, configures, and manages the SQLite service.</td>
+      <td>0.1.0</td>
+      <td>9 Nov 2017</td>
+      <td><a href="http://github.com/puppetlabs/puppetlabs-sqlite" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-sqlite" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/netdev_stdlib" target="_new">netdev_stdlib</a></td>
+      <td>Type definitions for Networking Device (NetDev) Standard Library</td>
+      <td>0.23.0</td>
+      <td>10 Oct 2019</td>
+      <td><a href="https://github.com/puppetlabs/netdev_stdlib" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-netdev_stdlib" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/openstack" target="_new">openstack</a></td>
+      <td>Install, configure, and manage a full installation of OpenStack Juno</td>
+      <td>5.0.2</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-openstack" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-openstack" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/inventory" target="_new">inventory</a></td>
+      <td>Provides a Puppet face for dumping an inventory of a node</td>
+      <td>0.4.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-inventory" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-inventory" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/dummy_service" target="_new">dummy_service</a></td>
+      <td>Provides a dummy service implementation for use in building containers</td>
+      <td>0.2.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/dummy_service" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-dummy_service" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/apk" target="_new">apk</a></td>
+      <td>Manage packages on Alpine Linux using the APK package manager</td>
+      <td>0.2.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-apk" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-apk" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/stunnel" target="_new">stunnel</a></td>
+      <td>A module for creating secure tunnels</td>
+      <td>0.3.0</td>
+      <td>5 May 2017</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-stunnel" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-stunnel" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/ruby_plugin_helper" target="_new">ruby_plugin_helper</a></td>
+      <td>A helper for writing Bolt plugins in Ruby</td>
+      <td>0.1.0</td>
+      <td>21 Nov 2019</td>
+      <td><a href="" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-ruby_plugin_helper" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/image_build" target="_new">image_build</a></td>
+      <td>Build Docker and ACI images using Puppet code</td>
+      <td>0.7.0</td>
+      <td>15 Sep 2017</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-image_build" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-image_build" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/netapp" target="_new">netapp</a></td>
+      <td>Manages resources on NetApp Cluster Data ONTAP devices.</td>
+      <td>1.3.0</td>
+      <td>20 Sep 2017</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-netapp" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-netapp" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/boundary" target="_new">boundary</a></td>
+      <td>Boundary meter module</td>
+      <td>1.3.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-boundary" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-boundary" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/bacula" target="_new">bacula</a></td>
+      <td>This module manages a bacula infrastructure</td>
+      <td>0.0.2</td>
+      <td>28 Dec 2016</td>
+      <td><a href="http://github.com/puppetlabs/puppetlabs-bacula" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-bacula" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/netscaler" target="_new">netscaler</a></td>
+      <td>Enables Puppet configuration of Citrix NetScaler devices through types and REST-based providers</td>
+      <td>1.2.0</td>
+      <td>3 Apr 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-netscaler" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-netscaler" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/apply" target="_new">apply</a></td>
+      <td>Apply Puppet resources using tasks</td>
+      <td>0.1.0</td>
+      <td>26 Apr 2018</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-apply" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-apply" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/logentries" target="_new">logentries</a></td>
+      <td>A module to install the logentries agent.</td>
+      <td>0.1.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-logentries" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-logentries" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/node_openstack" target="_new">node_openstack</a></td>
+      <td>Cloud Provisioner support for OpenStack</td>
+      <td>0.0.4</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-node_openstack" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-node_openstack" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/win_desktop_shortcut" target="_new">win_desktop_shortcut</a></td>
+      <td>Manages a shortcut on a Windows desktop for all users</td>
+      <td>0.0.4</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/nigelkersten/win_desktop_shortcut-module" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-win_desktop_shortcut" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/vcenter" target="_new">vcenter</a></td>
+      <td>vcenter puppet module</td>
+      <td>0.2.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-vcenter/" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-vcenter" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/rancher" target="_new">rancher</a></td>
+      <td>Installs Rancher Server and Agents</td>
+      <td>0.2.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-rancher" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-rancher" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/pe_upgrade" target="_new">pe_upgrade</a></td>
+      <td>Automated upgrades of PE</td>
+      <td>2.1.1</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-pe_upgrade" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-pe_upgrade" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/pipelines" target="_new">pipelines</a></td>
+      <td>Manages the Puppet Pipelines agent.</td>
+      <td>1.0.1</td>
+      <td>17 Jul 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-pipelines" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-pipelines" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/package_updates" target="_new">package_updates</a></td>
+      <td>A module for monitoring and applying package updates</td>
+      <td>1.0.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-package_updates" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-package_updates" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/lib_puppet" target="_new">lib_puppet</a></td>
+      <td>Puppet Labs lib_puppet module</td>
+      <td>0.0.1</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-lib_puppet" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-lib_puppet" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/opennebula" target="_new">opennebula</a></td>
+      <td>OpenNebula Module</td>
+      <td>0.0.1</td>
+      <td>28 Dec 2016</td>
+      <td><a href="http://projects.puppetlabs.com/projects/modules" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-opennebula" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/policy_engine" target="_new">policy_engine</a></td>
+      <td>A module for managing policy tests as structured facts</td>
+      <td>0.1.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-policy-engine" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-policy_engine" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/kwalify" target="_new">kwalify</a></td>
+      <td>A set of kwalify related functions for puppet.</td>
+      <td>0.0.1</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-kwalify" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-kwalify" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/docker_ucp" target="_new">docker_ucp</a></td>
+      <td>Installs, configures, and manages the Docker Universal Control Plane.</td>
+      <td>1.0.0</td>
+      <td>30 May 2017</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-docker_ucp" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-docker_ucp" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/awsdemo_profiles" target="_new">awsdemo_profiles</a></td>
+      <td>Puppet module to manage "profiles" and higher-level abstractions</td>
+      <td>0.1.1</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-awsdemo_profiles" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-awsdemo_profiles" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/rkt" target="_new">rkt</a></td>
+      <td>Installs, configures, and manages the rkt container runtime.</td>
+      <td>0.2.1</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-rkt" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-rkt" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/detect_wannacry" target="_new">detect_wannacry</a></td>
+      <td>This module is intended to detect WannaCry vulnerabilities on your machine.</td>
+      <td>0.6.2</td>
+      <td>13 Nov 2017</td>
+      <td><a href="https://github.com/puppetlabs/detect_wannacry" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-detect_wannacry" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/wordpress_app" target="_new">wordpress_app</a></td>
+      <td>Application module for managing wordpress.</td>
+      <td>0.2.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-wordpress_app" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-wordpress_app" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/pe_bulk_agent_install" target="_new">pe_bulk_agent_install</a></td>
+      <td>A tool for installing Puppet agents across multiple platforms en masse</td>
+      <td>1.1.0</td>
+      <td>13 Mar 2017</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-pe_bulk_agent_install" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-pe_bulk_agent_install" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/azure_agent" target="_new">azure_agent</a></td>
+      <td>The Azure module installs and configures the Windows Azure Linux agent.  Note that this module has now moved to https://forge.puppetlabs.com/puppetlabs/azure_agent</td>
+      <td>0.1.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://forge.puppetlabs.com/puppetlabs/azure_agent" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-azure_agent" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/docker_ddc" target="_new">docker_ddc</a></td>
+      <td>Installs, configures, and manages the Docker Universal Control Plane and Docker trusted registry.</td>
+      <td>1.0.3</td>
+      <td>8 Jan 2018</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-docker_ddc" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-docker_ddc" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/app_modeling" target="_new">app_modeling</a></td>
+      <td>Tools for application modeling</td>
+      <td>0.2.0</td>
+      <td>28 Dec 2016</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-app_modeling" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-app_modeling" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/grafanadash" target="_new">grafanadash</a></td>
+      <td>Grafana Dashboard module for testing purposes</td>
+      <td>1.0.1</td>
+      <td>15 Aug 2017</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-grafanadash" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-grafanadash" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/pdb_3323_workaround" target="_new">pdb_3323_workaround</a></td>
+      <td>A puppet module to create an index that provides a short-term workaround to PDB-3323</td>
+      <td>1.0.1</td>
+      <td>8 Mar 2017</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-pdb_3323_workaround" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-pdb_3323_workaround" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/k5login_core" target="_new">k5login_core</a></td>
+      <td>Manage the '.k5login' file for a user.</td>
+      <td>1.0.2</td>
+      <td>11 Jan 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-k5login_core" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-k5login_core" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/lumogon" target="_new">lumogon</a></td>
+      <td>Provides a Puppet Type/Provider for Lumogon :: inspecting running containers</td>
+      <td>0.4.0</td>
+      <td>8 Jun 2017</td>
+      <td><a href="https://github.com/puppetlabs/lumogon" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-lumogon" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/mco_rpc" target="_new">mco_rpc</a></td>
+      <td>Allow MCO RPC Agents to be run through a task</td>
+      <td>0.1.1</td>
+      <td>29 Jun 2018</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-mco_rpc" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-mco_rpc" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/maillist_core" target="_new">maillist_core</a></td>
+      <td>Manage email lists.</td>
+      <td>1.0.3</td>
+      <td>11 Jan 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-maillist_core" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-maillist_core" value="Adopt module"></td>
+  </tr>
+  
+  <tr>
+      <td><a href="https://forge.puppet.com/puppetlabs/macdslocal_core" target="_new">macdslocal_core</a></td>
+      <td>Manage OS X Directory Service objects</td>
+      <td>1.0.3</td>
+      <td>11 Jan 2019</td>
+      <td><a href="https://github.com/puppetlabs/puppetlabs-macdslocal_core/blob/master/README.md" target="_new">Visit source repo</a><br />
+        <input type="button" class="adoptButton" id="adopt-macdslocal_core" value="Adopt module"></td>
+  </tr>
+  
+</table>
+</div>
+
+</body>
+</html>
