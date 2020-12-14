@@ -6,6 +6,7 @@ jobs:
   generate:
     name: "Make reports"
     runs-on: ubuntu-18.04
+    if: "!contains(github.event.head_commit.message, 'generated data')"
     env:
       token: '${{ secrets.token }}'
     steps:
