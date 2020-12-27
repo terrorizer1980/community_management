@@ -204,7 +204,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>45</td>
+        <td>46</td>
       
   
   
@@ -234,7 +234,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>43</td>
+        <td>44</td>
       
   
   
@@ -274,7 +274,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>106</td>
+        <td>107</td>
       
   
   
@@ -308,7 +308,7 @@ Thanks!</td>
   
   
       
-        <td>53</td>
+        <td>54</td>
       
   
   
@@ -348,7 +348,7 @@ Thanks!</td>
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
@@ -378,7 +378,7 @@ Thanks!</td>
   
   
       
-        <td>53</td>
+        <td>54</td>
       
   
   
@@ -418,7 +418,7 @@ Thanks!</td>
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
@@ -448,7 +448,7 @@ Thanks!</td>
   
   
       
-        <td>53</td>
+        <td>54</td>
       
   
   
@@ -483,12 +483,104 @@ Thanks!</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1206'>1206</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1208'>1208</a></td>
   
   
   
       
         <td>38</td>
+      
+  
+  
+  
+      
+        <td>x1e</td>
+      
+  
+  
+  
+      
+        <td>remove apt repos component</td>
+      
+  
+  
+  
+      
+        <td>in debian 10 (puppetserver: 6.12.1-1buster/puppet-agent: 6.17.0-1buster), will generate
+/etc/apt/sources.list.d/apt.postgresql.org.list
+`deb https://apt.postgresql.org/pub/repos/apt/ buster-pgdg main 9.6`
+
+Then run apt update, will get error:
+
+```
+Traceback (most recent call last):
+  File "/usr/lib/cnf-update-db", line 26, in 
+    col.create(db)
+  File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 94, in create
+    self._fill_commands(con)
+  File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 132, in _fill_commands
+    self._parse_single_contents_file(con, f, fp.stdout)
+  File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 271, in _parse_single_contents_file
+    priority = component_priorities[component]
+KeyError: '9.6'
+```
+
+If delete 9.6:
+`deb https://apt.postgresql.org/pub/repos/apt/ buster-pgdg main`
+
+and run apt update will run successfully.</td>
+      
+  
+  
+  
+      
+        <td>x1e</td>
+      
+  
+  
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1206'>1206</a></td>
+  
+  
+  
+      
+        <td>39</td>
       
   
   
@@ -518,7 +610,7 @@ Thanks!</td>
   
   
       
-        <td>38</td>
+        <td>39</td>
       
   
   
@@ -558,7 +650,7 @@ Thanks!</td>
   
   
       
-        <td>38</td>
+        <td>39</td>
       
   
   
@@ -588,7 +680,7 @@ Thanks!</td>
   
   
       
-        <td>38</td>
+        <td>39</td>
       
   
   
@@ -628,7 +720,7 @@ Thanks!</td>
   
   
       
-        <td>64</td>
+        <td>65</td>
       
   
   
@@ -661,7 +753,7 @@ kind regards,
   
   
       
-        <td>54</td>
+        <td>55</td>
       
   
   
@@ -701,7 +793,7 @@ kind regards,
   
   
       
-        <td>38</td>
+        <td>39</td>
       
   
   
@@ -731,7 +823,7 @@ kind regards,
   
   
       
-        <td>37</td>
+        <td>39</td>
       
   
   
