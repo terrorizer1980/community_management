@@ -204,7 +204,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -234,7 +234,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -269,12 +269,95 @@ ga('set', 'anonymizeIp', true);
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts/pull/353'>353</a></td>
+  
+  
+  
+      
+        <td>30</td>
+      
+  
+  
+  
+      
+        <td>LooOOooM</td>
+      
+  
+  
+  
+      
+        <td>Update name.pp</td>
+      
+  
+  
+  
+      
+        <td>Thank you @LooOOooM for submitting the PR.  
+The unit test cases failing with the following changes.
+
+`  Invalid user name values
+    "1-bad-dude"
+      is expected not to match value "1-bad-dude" (FAILED - 1)
+    ".hidden"
+      is expected not to match value ".hidden" (FAILED - 2)`
+
+Could you please check the following, the updated regex are not satisfying the following username rules.
+
+- Fully numeric usernames and usernames . or .. are also disallowed
+- It is not recommended to use usernames beginning with . character as their home directories will be hidden in
+- the ls output</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts'>puppetlabs-accounts</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts/pull/344'>344</a></td>
   
   
   
       
-        <td>45</td>
+        <td>46</td>
       
   
   
@@ -331,89 +414,6 @@ ga('set', 'anonymizeIp', true);
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts'>puppetlabs-accounts</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts/pull/353'>353</a></td>
-  
-  
-  
-      
-        <td>29</td>
-      
-  
-  
-  
-      
-        <td>LooOOooM</td>
-      
-  
-  
-  
-      
-        <td>Update name.pp</td>
-      
-  
-  
-  
-      
-        <td>Thank you @LooOOooM for submitting the PR.  
-The unit test cases failing with the following changes.
-
-`  Invalid user name values
-    "1-bad-dude"
-      is expected not to match value "1-bad-dude" (FAILED - 1)
-    ".hidden"
-      is expected not to match value ".hidden" (FAILED - 2)`
-
-Could you please check the following, the updated regex are not satisfying the following username rules.
-
-- Fully numeric usernames and usernames . or .. are also disallowed
-- It is not recommended to use usernames beginning with . character as their home directories will be hidden in
-- the ls output</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-acl'>puppetlabs-acl</a></td>
   
   
@@ -427,7 +427,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -457,7 +457,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -497,7 +497,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -567,7 +567,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -632,42 +632,42 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2109'>2109</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2110'>2110</a></td>
   
   
   
       
-        <td>22</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>17</td>
       
   
   
   
       
-        <td>Update to puppet-module-gems 1.0, pdk-templates and new rubocop</td>
+        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>Compare with major release version</td>
       
   
   
   
       
-        <td></td>
+        <td>That's probably because the module doesn't use rspec-puppet-facts but rather specifies them manually. I had a look at the module, but its test infra is in serious need of an update.</td>
       
   
   
   
       
-        <td>4</td>
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>5</td>
       
   
   
@@ -702,24 +702,24 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2087'>2087</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2109'>2109</a></td>
   
   
   
       
-        <td>58</td>
-      
-  
-  
-  
-      
-        <td>promasu</td>
+        <td>23</td>
       
   
   
   
       
-        <td>Allow to disable a virtual host</td>
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Update to puppet-module-gems 1.0, pdk-templates and new rubocop</td>
       
   
   
@@ -737,7 +737,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>56</td>
+        <td>5</td>
       
   
   
@@ -777,7 +777,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>31</td>
+        <td>32</td>
       
   
   
@@ -807,7 +807,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>31</td>
+        <td>32</td>
       
   
   
@@ -842,42 +842,42 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2110'>2110</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2087'>2087</a></td>
   
   
   
       
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
+        <td>59</td>
       
   
   
   
       
-        <td>Compare with major release version</td>
+        <td>promasu</td>
       
   
   
   
       
-        <td>That's probably because the module doesn't use rspec-puppet-facts but rather specifies them manually. I had a look at the module, but its test infra is in serious need of an update.</td>
+        <td>Allow to disable a virtual host</td>
       
   
   
   
       
-        <td>ekohl</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>4</td>
+        <td></td>
+      
+  
+  
+  
+      
+        <td>57</td>
       
   
   
@@ -917,7 +917,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -947,7 +947,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -987,7 +987,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -1057,7 +1057,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>37</td>
+        <td>38</td>
       
   
   
@@ -1127,7 +1127,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1214,7 +1214,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1254,7 +1254,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>30</td>
+        <td>31</td>
       
   
   
@@ -1319,12 +1319,82 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/704'>704</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>benningm</td>
+      
+  
+  
+  
+      
+        <td>Fix systemd units for systemd versions < v230</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/657'>657</a></td>
   
   
   
       
-        <td>119</td>
+        <td>120</td>
       
   
   
@@ -1358,7 +1428,7 @@ Thanks!</td>
   
   
       
-        <td>66</td>
+        <td>67</td>
       
   
   
@@ -1398,7 +1468,7 @@ Thanks!</td>
   
   
       
-        <td>419</td>
+        <td>420</td>
       
   
   
@@ -1428,7 +1498,7 @@ Thanks!</td>
   
   
       
-        <td>154</td>
+        <td>155</td>
       
   
   
@@ -1468,7 +1538,7 @@ Thanks!</td>
   
   
       
-        <td>64</td>
+        <td>65</td>
       
   
   
@@ -1538,7 +1608,7 @@ Thanks!</td>
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -1608,7 +1678,7 @@ Thanks!</td>
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1638,7 +1708,7 @@ Thanks!</td>
   
   
       
-        <td>15</td>
+        <td>16</td>
       
   
   
@@ -1678,7 +1748,7 @@ Thanks!</td>
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1826,7 +1896,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1866,7 +1936,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>23</td>
+        <td>24</td>
       
   
   
@@ -1896,7 +1966,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -1936,7 +2006,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>47</td>
+        <td>48</td>
       
   
   
@@ -1968,7 +2038,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>31</td>
+        <td>32</td>
       
   
   
@@ -2008,7 +2078,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -2057,7 +2127,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -2092,82 +2162,12 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/305'>305</a></td>
-  
-  
-  
-      
-        <td>22</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Update to puppet-module-gems 1.0, pdk-templates and new rubocop</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/304'>304</a></td>
   
   
   
       
-        <td>24</td>
+        <td>25</td>
       
   
   
@@ -2224,6 +2224,76 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/305'>305</a></td>
+  
+  
+  
+      
+        <td>23</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Update to puppet-module-gems 1.0, pdk-templates and new rubocop</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-inifile'>puppetlabs-inifile</a></td>
   
   
@@ -2237,7 +2307,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -2307,7 +2377,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>49</td>
+        <td>50</td>
       
   
   
@@ -2337,7 +2407,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>36</td>
+        <td>37</td>
       
   
   
@@ -2372,12 +2442,245 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/471'>471</a></td>
+  
+  
+  
+      
+        <td>8</td>
+      
+  
+  
+  
+      
+        <td>treydock</td>
+      
+  
+  
+  
+      
+        <td>Ensure that changes to etcd systemd reload and restart etcd</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>8</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/456'>456</a></td>
+  
+  
+  
+      
+        <td>38</td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Set etcd_hostname to FQDN by default</td>
+      
+  
+  
+  
+      
+        <td>[kubernetes](https://github.com/puppetlabs/puppetlabs-kubernetes/blob/0930f3fead2065959ca336bbbfa193bc76de8749/manifests/init.pp) is a _class_
+----------------------------------
+
+
+
+
+  Breaking changes to this file MAY impact these 5 modules (near match):
+
+* [jetstack-kubernetes_addons](https://github.com/jetstack/tarmak/tree/master/puppet/modules/kubernetes_addons)
+* [jetstack-calico](https://github.com/jetstack/tarmak/tree/master/puppet/modules/calico)
+* [jetstack-tarmak](https://github.com/jetstack/tarmak/tree/master/puppet/modules/tarmak)
+* [jetstack-prometheus](https://github.com/jetstack/tarmak/tree/master/puppet/modules/prometheus)
+* [jetstack-fluent_bit](https://github.com/jetstack/tarmak/tree/master/puppet/modules/fluent_bit)
+
+
+
+#### This module is declared in 0 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>36</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/464'>464</a></td>
+  
+  
+  
+      
+        <td>25</td>
+      
+  
+  
+  
+      
+        <td>AblionGE</td>
+      
+  
+  
+  
+      
+        <td>add etc max-request-bytes option</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>25</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/465'>465</a></td>
   
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -2437,7 +2740,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -2472,152 +2775,12 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/470'>470</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>treydock</td>
-      
-  
-  
-  
-      
-        <td>Add etcd_listen_metric_urls parameter</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/471'>471</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>treydock</td>
-      
-  
-  
-  
-      
-        <td>Ensure that changes to etcd systemd reload and restart etcd</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/462'>462</a></td>
   
   
   
       
-        <td>31</td>
+        <td>32</td>
       
   
   
@@ -2647,100 +2810,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/456'>456</a></td>
-  
-  
-  
-      
-        <td>37</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>Set etcd_hostname to FQDN by default</td>
-      
-  
-  
-  
-      
-        <td>[kubernetes](https://github.com/puppetlabs/puppetlabs-kubernetes/blob/0930f3fead2065959ca336bbbfa193bc76de8749/manifests/init.pp) is a _class_
-----------------------------------
-
-
-
-
-  Breaking changes to this file MAY impact these 5 modules (near match):
-
-* [jetstack-kubernetes_addons](https://github.com/jetstack/tarmak/tree/master/puppet/modules/kubernetes_addons)
-* [jetstack-calico](https://github.com/jetstack/tarmak/tree/master/puppet/modules/calico)
-* [jetstack-tarmak](https://github.com/jetstack/tarmak/tree/master/puppet/modules/tarmak)
-* [jetstack-prometheus](https://github.com/jetstack/tarmak/tree/master/puppet/modules/prometheus)
-* [jetstack-fluent_bit](https://github.com/jetstack/tarmak/tree/master/puppet/modules/fluent_bit)
-
-
-
-#### This module is declared in 0 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
-      
-  
-  
-  
-      
-        <td>puppet-community-rangefinder[bot]</td>
-      
-  
-  
-  
-      
-        <td>35</td>
+        <td>8</td>
       
   
   
@@ -2780,7 +2850,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -2810,7 +2880,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>24</td>
+        <td>25</td>
       
   
   
@@ -2845,24 +2915,24 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/464'>464</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/470'>470</a></td>
   
   
   
       
-        <td>24</td>
-      
-  
-  
-  
-      
-        <td>AblionGE</td>
+        <td>8</td>
       
   
   
   
       
-        <td>add etc max-request-bytes option</td>
+        <td>treydock</td>
+      
+  
+  
+  
+      
+        <td>Add etcd_listen_metric_urls parameter</td>
       
   
   
@@ -2880,7 +2950,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>24</td>
+        <td>8</td>
       
   
   
@@ -2915,152 +2985,12 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/374'>374</a></td>
-  
-  
-  
-      
-        <td>27</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(DO-NOT-MERGE) Test changes for PMG 1.0 RC</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/348'>348</a></td>
-  
-  
-  
-      
-        <td>70</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(maint) Disable acceptance testing on appveyor</td>
-      
-  
-  
-  
-      
-        <td>Rebased and marked as draft until we gain enough confidence in the new test infra to drop the old one.</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>66</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/381'>381</a></td>
   
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -3130,7 +3060,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>70</td>
+        <td>71</td>
       
   
   
@@ -3160,7 +3090,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>66</td>
+        <td>67</td>
       
   
   
@@ -3173,6 +3103,146 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/348'>348</a></td>
+  
+  
+  
+      
+        <td>71</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) Disable acceptance testing on appveyor</td>
+      
+  
+  
+  
+      
+        <td>Rebased and marked as draft until we gain enough confidence in the new test infra to drop the old one.</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>67</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/374'>374</a></td>
+  
+  
+  
+      
+        <td>28</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(DO-NOT-MERGE) Test changes for PMG 1.0 RC</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -3200,7 +3270,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>14</td>
+        <td>15</td>
       
   
   
@@ -3265,97 +3335,12 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1345'>1345</a></td>
-  
-  
-  
-      
-        <td>38</td>
-      
-  
-  
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-1278) manage all local root passwords</td>
-      
-  
-  
-  
-      
-        <td>[mysql::server::root_password](https://github.com/puppetlabs/puppetlabs-mysql/blob/8a9af9a15e48adc65a9533a827f6fba105dc9276/manifests/server/root_password.pp) is a _class_
-----------------------------------
-
-that may have no external impact to Forge modules.
-
-
-
-
-#### This module is declared in 143 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
-      
-  
-  
-  
-      
-        <td>puppet-community-rangefinder[bot]</td>
-      
-  
-  
-  
-      
-        <td>38</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1352'>1352</a></td>
   
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -3623,7 +3608,92 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1345'>1345</a></td>
+  
+  
+  
+      
+        <td>39</td>
+      
+  
+  
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-1278) manage all local root passwords</td>
+      
+  
+  
+  
+      
+        <td>[mysql::server::root_password](https://github.com/puppetlabs/puppetlabs-mysql/blob/8a9af9a15e48adc65a9533a827f6fba105dc9276/manifests/server/root_password.pp) is a _class_
+----------------------------------
+
+that may have no external impact to Forge modules.
+
+
+
+
+#### This module is declared in 143 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>39</td>
       
   
   
@@ -3663,7 +3733,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>294</td>
+        <td>295</td>
       
   
   
@@ -3693,7 +3763,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>290</td>
+        <td>291</td>
       
   
   
@@ -3733,7 +3803,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -3803,7 +3873,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -3868,12 +3938,249 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1206'>1206</a></td>
+  
+  
+  
+      
+        <td>52</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - Update pdk-templates for gitpod and codespaces support</td>
+      
+  
+  
+  
+      
+        <td>restarted failing el8 jobs on travis</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>52</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
+  
+  
+  
+      
+        <td>128</td>
+      
+  
+  
+  
+      
+        <td>jorhett</td>
+      
+  
+  
+  
+      
+        <td>Add new common repo which contains add-ons</td>
+      
+  
+  
+  
+      
+        <td>@jorhett , @igalic One possible suggestion might be to rename the `$repo_commonurl` parameter to `$yumrepo_commonurl` (or `$yum_repo_commonurl`) given this exclusively pertains to the PG YUM repos? We could also update the parameter description so it's a bit more obvious in the `REFERENCE.md`:
+> Sets the url for the PostgreSQL common repository. Useful if you host your own mirror of the repository. Applies to RHEL / Fedora systems only.
+
+...although hopefully the parameter name makes it obvious enough.
+
+Also, @jorhett - whenever you get a chance could you rebase this branch with `puppetlabs:main` - we excluded CentOS 8 test execution temporarily whilst we look in to the issue. We have alternative methods to test CentOS 8 internally, so we're not losing coverage. This seems quite a specific case to that particular Docker container.</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>107</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1208'>1208</a></td>
+  
+  
+  
+      
+        <td>51</td>
+      
+  
+  
+  
+      
+        <td>x1e</td>
+      
+  
+  
+  
+      
+        <td>remove apt repos component</td>
+      
+  
+  
+  
+      
+        <td>in debian 10 (puppetserver: 6.12.1-1buster/puppet-agent: 6.17.0-1buster), will generate
+/etc/apt/sources.list.d/apt.postgresql.org.list
+`deb https://apt.postgresql.org/pub/repos/apt/ buster-pgdg main 9.6`
+
+Then run apt update, will get error:
+
+```
+Traceback (most recent call last):
+  File "/usr/lib/cnf-update-db", line 26, in 
+    col.create(db)
+  File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 94, in create
+    self._fill_commands(con)
+  File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 132, in _fill_commands
+    self._parse_single_contents_file(con, f, fp.stdout)
+  File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 271, in _parse_single_contents_file
+    priority = component_priorities[component]
+KeyError: '9.6'
+```
+
+If delete 9.6:
+`deb https://apt.postgresql.org/pub/repos/apt/ buster-pgdg main`
+
+and run apt update will run successfully.</td>
+      
+  
+  
+  
+      
+        <td>x1e</td>
+      
+  
+  
+  
+      
+        <td>44</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1222'>1222</a></td>
   
   
   
       
-        <td>16</td>
+        <td>17</td>
       
   
   
@@ -3938,249 +4245,12 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
-  
-  
-  
-      
-        <td>127</td>
-      
-  
-  
-  
-      
-        <td>jorhett</td>
-      
-  
-  
-  
-      
-        <td>Add new common repo which contains add-ons</td>
-      
-  
-  
-  
-      
-        <td>@jorhett , @igalic One possible suggestion might be to rename the `$repo_commonurl` parameter to `$yumrepo_commonurl` (or `$yum_repo_commonurl`) given this exclusively pertains to the PG YUM repos? We could also update the parameter description so it's a bit more obvious in the `REFERENCE.md`:
-> Sets the url for the PostgreSQL common repository. Useful if you host your own mirror of the repository. Applies to RHEL / Fedora systems only.
-
-...although hopefully the parameter name makes it obvious enough.
-
-Also, @jorhett - whenever you get a chance could you rebase this branch with `puppetlabs:main` - we excluded CentOS 8 test execution temporarily whilst we look in to the issue. We have alternative methods to test CentOS 8 internally, so we're not losing coverage. This seems quite a specific case to that particular Docker container.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>106</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1208'>1208</a></td>
-  
-  
-  
-      
-        <td>50</td>
-      
-  
-  
-  
-      
-        <td>x1e</td>
-      
-  
-  
-  
-      
-        <td>remove apt repos component</td>
-      
-  
-  
-  
-      
-        <td>in debian 10 (puppetserver: 6.12.1-1buster/puppet-agent: 6.17.0-1buster), will generate
-/etc/apt/sources.list.d/apt.postgresql.org.list
-`deb https://apt.postgresql.org/pub/repos/apt/ buster-pgdg main 9.6`
-
-Then run apt update, will get error:
-
-```
-Traceback (most recent call last):
-  File "/usr/lib/cnf-update-db", line 26, in 
-    col.create(db)
-  File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 94, in create
-    self._fill_commands(con)
-  File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 132, in _fill_commands
-    self._parse_single_contents_file(con, f, fp.stdout)
-  File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 271, in _parse_single_contents_file
-    priority = component_priorities[component]
-KeyError: '9.6'
-```
-
-If delete 9.6:
-`deb https://apt.postgresql.org/pub/repos/apt/ buster-pgdg main`
-
-and run apt update will run successfully.</td>
-      
-  
-  
-  
-      
-        <td>x1e</td>
-      
-  
-  
-  
-      
-        <td>43</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1206'>1206</a></td>
-  
-  
-  
-      
-        <td>51</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Update pdk-templates for gitpod and codespaces support</td>
-      
-  
-  
-  
-      
-        <td>restarted failing el8 jobs on travis</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>51</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
   
   
   
       
-        <td>360</td>
+        <td>361</td>
       
   
   
@@ -4212,7 +4282,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>146</td>
+        <td>147</td>
       
   
   
@@ -4252,7 +4322,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -4282,7 +4352,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -4322,7 +4392,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -4481,7 +4551,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -4521,7 +4591,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>51</td>
+        <td>52</td>
       
   
   
@@ -4551,7 +4621,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>51</td>
+        <td>52</td>
       
   
   
@@ -4591,7 +4661,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -4661,7 +4731,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -4731,7 +4801,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -4801,7 +4871,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -4831,7 +4901,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>21</td>
+        <td>22</td>
       
   
   
@@ -4871,7 +4941,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -4941,7 +5011,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>322</td>
+        <td>323</td>
       
   
   
@@ -4972,7 +5042,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>25</td>
+        <td>26</td>
       
   
   
@@ -5012,7 +5082,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -5042,7 +5112,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -5082,7 +5152,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -5155,7 +5225,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -5174,149 +5244,6 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1150'>1150</a></td>
-  
-  
-  
-      
-        <td>22</td>
-      
-  
-  
-  
-      
-        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>stdlib::ensure: new fuction to cast ensure values</td>
-      
-  
-  
-  
-      
-        <td>The travis-ci failures seem unrelated to this change</td>
-      
-  
-  
-  
-      
-        <td>b4ldr</td>
-      
-  
-  
-  
-      
-        <td>22</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1136'>1136</a></td>
-  
-  
-  
-      
-        <td>77</td>
-      
-  
-  
-  
-      
-        <td>npwalker <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(FEAT) Add load_csv function</td>
-      
-  
-  
-  
-      
-        <td>Hi @npwalker, I reviewed your PR. The idea is awesome, but you need to add test in spec/functions the same as loadjson_spec.rb but for load_csv function, and also to resolve some rubocop offenses. Also it will be good to rename the function to be 'loadcsv' to be like loadjson or loadyaml.
-
-kind regards,
-@adrianiurca </td>
-      
-  
-  
-  
-      
-        <td>adrianiurca</td>
-      
-  
-  
-  
-      
-        <td>67</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -5338,7 +5265,7 @@ kind regards,
   
   
       
-        <td>331</td>
+        <td>332</td>
       
   
   
@@ -5374,7 +5301,7 @@ cc @binford2k </td>
   
   
       
-        <td>322</td>
+        <td>323</td>
       
   
   
@@ -5409,12 +5336,155 @@ cc @binford2k </td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1136'>1136</a></td>
+  
+  
+  
+      
+        <td>78</td>
+      
+  
+  
+  
+      
+        <td>npwalker <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(FEAT) Add load_csv function</td>
+      
+  
+  
+  
+      
+        <td>Hi @npwalker, I reviewed your PR. The idea is awesome, but you need to add test in spec/functions the same as loadjson_spec.rb but for load_csv function, and also to resolve some rubocop offenses. Also it will be good to rename the function to be 'loadcsv' to be like loadjson or loadyaml.
+
+kind regards,
+@adrianiurca </td>
+      
+  
+  
+  
+      
+        <td>adrianiurca</td>
+      
+  
+  
+  
+      
+        <td>68</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1150'>1150</a></td>
+  
+  
+  
+      
+        <td>23</td>
+      
+  
+  
+  
+      
+        <td>b4ldr <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>stdlib::ensure: new fuction to cast ensure values</td>
+      
+  
+  
+  
+      
+        <td>The travis-ci failures seem unrelated to this change</td>
+      
+  
+  
+  
+      
+        <td>b4ldr</td>
+      
+  
+  
+  
+      
+        <td>23</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
   
       
-        <td>367</td>
+        <td>368</td>
       
   
   
@@ -5444,7 +5514,7 @@ cc @binford2k </td>
   
   
       
-        <td>191</td>
+        <td>192</td>
       
   
   
@@ -5484,7 +5554,7 @@ cc @binford2k </td>
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -5554,7 +5624,7 @@ cc @binford2k </td>
   
   
       
-        <td>94</td>
+        <td>95</td>
       
   
   
@@ -5584,7 +5654,7 @@ cc @binford2k </td>
   
   
       
-        <td>25</td>
+        <td>26</td>
       
   
   
@@ -5619,82 +5689,12 @@ cc @binford2k </td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/483'>483</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-1016) - Removal of Inappropriate Terminology</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/481'>481</a></td>
   
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -5724,7 +5724,7 @@ cc @binford2k </td>
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -5759,12 +5759,82 @@ cc @binford2k </td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/483'>483</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-1016) - Removal of Inappropriate Terminology</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo'>puppetlabs-vcsrepo</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/473'>473</a></td>
   
   
   
       
-        <td>50</td>
+        <td>51</td>
       
   
   
@@ -5794,7 +5864,7 @@ cc @binford2k </td>
   
   
       
-        <td>31</td>
+        <td>32</td>
       
   
   
@@ -5834,7 +5904,7 @@ cc @binford2k </td>
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -5864,7 +5934,7 @@ cc @binford2k </td>
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -5904,7 +5974,7 @@ cc @binford2k </td>
   
   
       
-        <td>51</td>
+        <td>52</td>
       
   
   
@@ -5934,7 +6004,7 @@ cc @binford2k </td>
   
   
       
-        <td>51</td>
+        <td>52</td>
       
   
   
