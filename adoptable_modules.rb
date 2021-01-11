@@ -55,10 +55,13 @@ def repo_name_from_url(url)
 end
 
 def repo_info(repo)
+  return nil if repo.nil?
   begin
     info = @client.repository(repo)
   rescue Octokit::NotFound
     return
+  rescue StandardError => e
+    puts "Encountered error for repository #{repo}: #{e}"
   end
 
   info.issues, info.pulls = @client.list_issues(repo).partition { |issue| issue.has_key? :pull_request }
