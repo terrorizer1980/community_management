@@ -50,7 +50,6 @@ parsed.each do |_k, v|
         row[:owner] += " <span class='label label-warning'>puppet</span>" if util.puppet_member?(pr[:pull].user.login)
         row[:owner] += " <span class='badge badge-secondary'>vox</span>" if util.voxpupuli_member?(pr[:pull].user.login)
         row[:title] = pr[:pull].title
-    end
 
     if !pr[:issue_comments].empty?
 
@@ -81,6 +80,7 @@ parsed.each do |_k, v|
     row[:last_comment_mentions_puppet] = does_array_have_pr(mentioned_pulls, pr[:pull].number)
 
     open_prs.push(row)
+    end
   end
 end
 
