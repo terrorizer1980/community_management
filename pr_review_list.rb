@@ -39,16 +39,17 @@ parsed.each do |_k, v|
   # loop through open pr's and create a row that has all the pertinant info
   pr_information_cache.each do |pr|
     sleep(2)
-    row = {}
-    row[:repo] = v['title']
-    row[:address] = "https://github.com/#{v['github']}"
-    row[:pr] = pr[:pull].number
-    row[:age] = ((Time.now - pr[:pull].created_at) / 60 / 60 / 24).round
-    row[:owner] = pr[:pull].user.login
-    row[:owner] += " <span class='label label-primary'>iac</span>" if util.iac_member?(pr[:pull].user.login)
-    row[:owner] += " <span class='label label-warning'>puppet</span>" if util.puppet_member?(pr[:pull].user.login)
-    row[:owner] += " <span class='badge badge-secondary'>vox</span>" if util.voxpupuli_member?(pr[:pull].user.login)
-    row[:title] = pr[:pull].title
+    if pr[:pull][:draft] == false
+      row = {}
+      row[:repo] = v['title']
+      row[:address] = "https://github.com/#{v['github']}"
+      row[:pr] = pr[:pull].number
+      row[:age] = ((Time.now - pr[:pull].created_at) / 60 / 60 / 24).round
+      row[:owner] = pr[:pull].user.login
+      row[:owner] += " <span class='label label-primary'>iac</span>" if util.iac_member?(pr[:pull].user.login)
+      row[:owner] += " <span class='label label-warning'>puppet</span>" if util.puppet_member?(pr[:pull].user.login)
+      row[:owner] += " <span class='badge badge-secondary'>vox</span>" if util.voxpupuli_member?(pr[:pull].user.login)
+      row[:title] = pr[:pull].title
 
     if !pr[:issue_comments].empty?
 
