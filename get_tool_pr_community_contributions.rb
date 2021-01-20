@@ -55,7 +55,7 @@ parsed.each do |_k, v|
   pr_information_cache = util.fetch_async((v['github']).to_s, 
                                           options = { state: 'closed', sort: 'updated'},
                                           filter = %i[statuses pull_request_commits issue_comments],
-                                          limit = { closed_at: Date.parse(date_limit) }
+                                          limit = { attribute: 'closed_at', date: Date.parse(date_limit) }
                                          )
   result[v['title']] = pr_information_cache.select { |row| allow_row(row, util) }.size
 end
