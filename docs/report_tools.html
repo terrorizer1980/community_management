@@ -171,6 +171,106 @@ ga('set', 'anonymizeIp', true);
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_parallel/pull/67'>67</a></td>
+  
+  
+  
+
+  
+      
+        <td>67</td>
+      
+  
+  
+  
+
+  
+      
+        <td>tphoney <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(bugfix) stop using core.exportVariable</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     tp and I played around with this yesterday for a bit and while this change indeed does fix the problem he's seeing, there is no understanding WHY it is failing, as all the correct dependencies and environment vars are there.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+
+  
+      
+        <td>67</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_parallel'>Github Action for Litmus</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_parallel/pull/79'>79</a></td>
   
   
@@ -178,7 +278,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>4</td>
+        <td>6</td>
       
   
   
@@ -259,106 +359,6 @@ ga('set', 'anonymizeIp', true);
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_parallel'>Github Action for Litmus</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_parallel/pull/67'>67</a></td>
-  
-  
-  
-
-  
-      
-        <td>65</td>
-      
-  
-  
-  
-
-  
-      
-        <td>tphoney <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>(bugfix) stop using core.exportVariable</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     tp and I played around with this yesterday for a bit and while this change indeed does fix the problem he's seeing, there is no understanding WHY it is failing, as all the correct dependencies and environment vars are there.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-
-  
-      
-        <td>65</td>
-      
-  
-  
-  
-
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_spec'>Github Action for Module unit testing</a></td>
   
   
@@ -378,7 +378,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>4</td>
+        <td>6</td>
       
   
   
@@ -478,7 +478,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>9</td>
+        <td>11</td>
       
   
   
@@ -526,7 +526,7 @@ Again if you actually look at the code changes it should be apparent what is wro
 
   
       
-        <td>0</td>
+        <td>2</td>
       
   
   
@@ -580,7 +580,7 @@ Again if you actually look at the code changes it should be apparent what is wro
 
   
       
-        <td>38</td>
+        <td>40</td>
       
   
   
@@ -680,7 +680,7 @@ Again if you actually look at the code changes it should be apparent what is wro
 
   
       
-        <td>45</td>
+        <td>47</td>
       
   
   
@@ -726,7 +726,7 @@ Again if you actually look at the code changes it should be apparent what is wro
 
   
       
-        <td>45</td>
+        <td>47</td>
       
   
   
@@ -773,7 +773,7 @@ Again if you actually look at the code changes it should be apparent what is wro
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/391'>391</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/392'>392</a></td>
   
   
   
@@ -781,6 +781,106 @@ Again if you actually look at the code changes it should be apparent what is wro
   
       
         <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Revert litmus protection</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     I think the reason I added these was that packaging breaks for the incompatible puppet versions. (During packaging, we run `bundle install` for every `--puppet-version` we ship with to ensure that all dependencies are available.)
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>scotje</td>
+      
+  
+  
+  
+
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/391'>391</a></td>
+  
+  
+  
+
+  
+      
+        <td>4</td>
       
   
   
@@ -828,107 +928,7 @@ We could also introduce a flag/env-var for PDK to opt-in to Litmus/system testin
 
   
       
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/392'>392</a></td>
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Revert litmus protection</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     I think the reason I added these was that packaging breaks for the incompatible puppet versions. (During packaging, we run `bundle install` for every `--puppet-version` we ship with to ensure that all dependencies are available.)
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>scotje</td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
+        <td>4</td>
       
   
   
@@ -982,7 +982,7 @@ We could also introduce a flag/env-var for PDK to opt-in to Litmus/system testin
 
   
       
-        <td>42</td>
+        <td>44</td>
       
   
   
@@ -1028,7 +1028,7 @@ We could also introduce a flag/env-var for PDK to opt-in to Litmus/system testin
 
   
       
-        <td>4</td>
+        <td>6</td>
       
   
   
@@ -1053,110 +1053,6 @@ We could also introduce a flag/env-var for PDK to opt-in to Litmus/system testin
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/341'>341</a></td>
-  
-  
-  
-
-  
-      
-        <td>195</td>
-      
-  
-  
-  
-
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add starter Forge publish GitHub action</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     @binford2k FYI i've been working on converting some of our Travis stuff over to GitHub actions example: https://github.com/EncoreTechnologies/puppet-powershellmodule/blob/master/.github/workflows/build.yaml
-
-I'm interested in helping this along. I think the only piece missing from my version is the following:
-- acceptance testing 
-- templatizing and turning hard coded things into variables and options
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>nmaludy</td>
-      
-  
-  
-  
-
-  
-      
-        <td>85</td>
-      
-  
-  
-  
-
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
       
   
   
@@ -1186,7 +1082,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>202</td>
+        <td>204</td>
       
   
   
@@ -1286,7 +1182,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>73</td>
+        <td>75</td>
       
   
   
@@ -1332,7 +1228,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>66</td>
+        <td>68</td>
       
   
   
@@ -1349,6 +1245,210 @@ I'm interested in helping this along. I think the only piece missing from my ver
   
       
         <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/341'>341</a></td>
+  
+  
+  
+
+  
+      
+        <td>197</td>
+      
+  
+  
+  
+
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add starter Forge publish GitHub action</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @binford2k FYI i've been working on converting some of our Travis stuff over to GitHub actions example: https://github.com/EncoreTechnologies/puppet-powershellmodule/blob/master/.github/workflows/build.yaml
+
+I'm interested in helping this along. I think the only piece missing from my version is the following:
+- acceptance testing 
+- templatizing and turning hard coded things into variables and options
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>nmaludy</td>
+      
+  
+  
+  
+
+  
+      
+        <td>87</td>
+      
+  
+  
+  
+
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk'>Puppet Development Kit</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk/pull/937'>937</a></td>
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>e-gris <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(RE-13453) Remove old gpg key from build_defaults.yaml</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     0 comments
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td></td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
       
   
   
@@ -1386,7 +1486,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>7</td>
+        <td>9</td>
       
   
   
@@ -1486,7 +1586,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>29</td>
+        <td>31</td>
       
   
   
@@ -1532,7 +1632,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>29</td>
+        <td>31</td>
       
   
   
@@ -1586,7 +1686,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>42</td>
+        <td>44</td>
       
   
   
@@ -1636,7 +1736,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>40</td>
+        <td>42</td>
       
   
   
@@ -1690,7 +1790,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>57</td>
+        <td>59</td>
       
   
   
@@ -1736,7 +1836,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>3</td>
+        <td>5</td>
       
   
   
@@ -1790,7 +1890,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>358</td>
+        <td>360</td>
       
   
   
@@ -1836,7 +1936,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>67</td>
+        <td>69</td>
       
   
   
@@ -1890,7 +1990,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>175</td>
+        <td>177</td>
       
   
   
@@ -1936,7 +2036,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>175</td>
+        <td>177</td>
       
   
   
@@ -1990,7 +2090,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>1173</td>
+        <td>1175</td>
       
   
   
@@ -2090,7 +2190,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>1500</td>
+        <td>1502</td>
       
   
   
@@ -2136,7 +2236,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>74</td>
+        <td>76</td>
       
   
   
@@ -2190,7 +2290,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>3</td>
+        <td>5</td>
       
   
   
@@ -2290,7 +2390,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>35</td>
+        <td>37</td>
       
   
   
@@ -2337,7 +2437,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>11</td>
+        <td>13</td>
       
   
   
@@ -2391,7 +2491,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>83</td>
+        <td>85</td>
       
   
   
@@ -2491,7 +2591,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>0</td>
+        <td>2</td>
       
   
   
@@ -2537,7 +2637,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>0</td>
+        <td>2</td>
       
   
   
@@ -2591,7 +2691,7 @@ Coverage remained the same at 92.654% when pulling **c068a6f49c7750b868fe3f20940
 
   
       
-        <td>648</td>
+        <td>650</td>
       
   
   
@@ -2645,7 +2745,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>568</td>
+        <td>570</td>
       
   
   
@@ -2699,7 +2799,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>73</td>
+        <td>75</td>
       
   
   
@@ -2745,7 +2845,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>53</td>
+        <td>55</td>
       
   
   
@@ -2792,22 +2892,14 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
   
   
   
 
   
       
-        <td>260</td>
-      
-  
-  
-  
-
-  
-      
-        <td>thatnerdjosh</td>
+        <td>1298</td>
       
   
   
@@ -2815,18 +2907,22 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>Allow users to setup control repo</td>
+        <td>kjetilho</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add .tagged and .not_tagged methods for resource matcher</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     Hello @DavidS,
-
-This was so long ago, somehow it slipped my plate... I forgot what a control repo was or what this code was achieving. I'll take a look and then update the docs accordingly.
-
-Thanks
+     rebased again and updated compile matcher test to use correct line number.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -2841,7 +2937,7 @@ Thanks
 
   
       
-        <td>thatnerdjosh</td>
+        <td>DavidS</td>
       
   
   
@@ -2849,7 +2945,7 @@ Thanks
 
   
       
-        <td>70</td>
+        <td>69</td>
       
   
   
@@ -2903,7 +2999,7 @@ Thanks
 
   
       
-        <td>1176</td>
+        <td>1178</td>
       
   
   
@@ -2949,7 +3045,7 @@ Thanks
 
   
       
-        <td>74</td>
+        <td>76</td>
       
   
   
@@ -3003,7 +3099,7 @@ Thanks
 
   
       
-        <td>7</td>
+        <td>9</td>
       
   
   
@@ -3049,7 +3145,7 @@ Thanks
 
   
       
-        <td>3</td>
+        <td>5</td>
       
   
   
@@ -3096,22 +3192,14 @@ Thanks
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
   
   
   
 
   
       
-        <td>1051</td>
-      
-  
-  
-  
-
-  
-      
-        <td>asharpe</td>
+        <td>262</td>
       
   
   
@@ -3119,14 +3207,26 @@ Thanks
 
   
       
-        <td>allow testing environment functions</td>
+        <td>thatnerdjosh</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Allow users to setup control repo</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     I was having a similar issue with a namespace function.  It appears that testing a function only works when the function is in a directory with the module name.  Which in this case is:  `/lib/puppet/functions/environment/upcase.rb`
+     Hello @DavidS,
+
+This was so long ago, somehow it slipped my plate... I forgot what a control repo was or what this code was achieving. I'll take a look and then update the docs accordingly.
+
+Thanks
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -3141,7 +3241,7 @@ Thanks
 
   
       
-        <td>logicminds</td>
+        <td>thatnerdjosh</td>
       
   
   
@@ -3149,7 +3249,7 @@ Thanks
 
   
       
-        <td>29</td>
+        <td>72</td>
       
   
   
@@ -3157,7 +3257,7 @@ Thanks
 
   
       
-        <td>5</td>
+        <td>4</td>
       
   
   
@@ -3203,7 +3303,7 @@ Thanks
 
   
       
-        <td>1218</td>
+        <td>1220</td>
       
   
   
@@ -3264,7 +3364,7 @@ end
 
   
       
-        <td>865</td>
+        <td>867</td>
       
   
   
@@ -3311,22 +3411,14 @@ end
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
   
   
   
 
   
       
-        <td>1296</td>
-      
-  
-  
-  
-
-  
-      
-        <td>kjetilho</td>
+        <td>1053</td>
       
   
   
@@ -3334,14 +3426,22 @@ end
 
   
       
-        <td>Add .tagged and .not_tagged methods for resource matcher</td>
+        <td>asharpe</td>
+      
+  
+  
+  
+
+  
+      
+        <td>allow testing environment functions</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     rebased again and updated compile matcher test to use correct line number.
+     I was having a similar issue with a namespace function.  It appears that testing a function only works when the function is in a directory with the module name.  Which in this case is:  `/lib/puppet/functions/environment/upcase.rb`
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -3356,7 +3456,7 @@ end
 
   
       
-        <td>DavidS</td>
+        <td>logicminds</td>
       
   
   
@@ -3364,7 +3464,7 @@ end
 
   
       
-        <td>67</td>
+        <td>31</td>
       
   
   
@@ -3372,7 +3472,7 @@ end
 
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
