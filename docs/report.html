@@ -204,7 +204,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>71</td>
+        <td>72</td>
       
   
   
@@ -274,7 +274,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>55</td>
+        <td>56</td>
       
   
   
@@ -317,7 +317,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -352,12 +352,84 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2110'>2110</a></td>
+  
+  
+  
+      
+        <td>43</td>
+      
+  
+  
+  
+      
+        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Compare with major release version</td>
+      
+  
+  
+  
+      
+        <td>I added another commit I wrote while looking into this. I think the main pain point comes from remaining compatible with Facter 1.6 for too long. https://github.com/puppetlabs/puppetlabs-stdlib/pull/1154 is another thing that should have died long ago with Facter 1.6.
+
+About the conversion to rspec-puppet-facts. I think you're right that this won't be a trivial conversion. Another thing to note is that the test runtime will go up a lot since it'll test a lot more combinations. Perhaps a decent compromise is to define a default test OS in some shared file and use that instead of defining the same facts over and over again.</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>17</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2108'>2108</a></td>
   
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
@@ -387,7 +459,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
@@ -427,7 +499,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>84</td>
+        <td>85</td>
       
   
   
@@ -457,7 +529,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>16</td>
+        <td>17</td>
       
   
   
@@ -470,148 +542,6 @@ Could you please check the following, the updated regex are not satisfying the f
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2110'>2110</a></td>
-  
-  
-  
-      
-        <td>42</td>
-      
-  
-  
-  
-      
-        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Compare with major release version</td>
-      
-  
-  
-  
-      
-        <td>I added another commit I wrote while looking into this. I think the main pain point comes from remaining compatible with Facter 1.6 for too long. https://github.com/puppetlabs/puppetlabs-stdlib/pull/1154 is another thing that should have died long ago with Facter 1.6.
-
-About the conversion to rspec-puppet-facts. I think you're right that this won't be a trivial conversion. Another thing to note is that the test runtime will go up a lot since it'll test a lot more combinations. Perhaps a decent compromise is to define a default test OS in some shared file and use that instead of defining the same facts over and over again.</td>
-      
-  
-  
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-      
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apt'>puppetlabs-apt</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apt/pull/967'>967</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Update gha templates</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -639,7 +569,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>63</td>
+        <td>64</td>
       
   
   
@@ -709,7 +639,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>16</td>
+        <td>17</td>
       
   
   
@@ -739,7 +669,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>16</td>
+        <td>17</td>
       
   
   
@@ -779,7 +709,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>445</td>
+        <td>446</td>
       
   
   
@@ -809,7 +739,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>180</td>
+        <td>181</td>
       
   
   
@@ -822,76 +752,6 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy'>puppetlabs-haproxy</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-haproxy/pull/463'>463</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Update gha templates</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -919,7 +779,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -964,7 +824,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -1004,7 +864,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>73</td>
+        <td>74</td>
       
   
   
@@ -1036,7 +896,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
@@ -1076,7 +936,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>49</td>
+        <td>50</td>
       
   
   
@@ -1106,7 +966,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -1146,7 +1006,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>8</td>
+        <td>9</td>
       
   
   
@@ -1203,77 +1063,6 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks'>puppetlabs-java_ks</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks/pull/350'>350</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Update gha templates</td>
-      
-  
-  
-  
-      
-        <td>* Rekicked GHA due to timeout failure
-* Fails on debian10 with pathing issues, maybe related to keytool pathing changes in https://github.com/puppetlabs/puppetlabs-java_ks/pull/349 ?</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
   
   
@@ -1287,7 +1076,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -1317,7 +1106,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>15</td>
+        <td>16</td>
       
   
   
@@ -1352,12 +1141,175 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/456'>456</a></td>
+  
+  
+  
+      
+        <td>64</td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>Set etcd_hostname to FQDN by default</td>
+      
+  
+  
+  
+      
+        <td>[kubernetes](https://github.com/puppetlabs/puppetlabs-kubernetes/blob/0930f3fead2065959ca336bbbfa193bc76de8749/manifests/init.pp) is a _class_
+----------------------------------
+
+
+
+
+  Breaking changes to this file MAY impact these 5 modules (near match):
+
+* [jetstack-kubernetes_addons](https://github.com/jetstack/tarmak/tree/master/puppet/modules/kubernetes_addons)
+* [jetstack-calico](https://github.com/jetstack/tarmak/tree/master/puppet/modules/calico)
+* [jetstack-tarmak](https://github.com/jetstack/tarmak/tree/master/puppet/modules/tarmak)
+* [jetstack-prometheus](https://github.com/jetstack/tarmak/tree/master/puppet/modules/prometheus)
+* [jetstack-fluent_bit](https://github.com/jetstack/tarmak/tree/master/puppet/modules/fluent_bit)
+
+
+
+#### This module is declared in 0 of 575 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>62</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/475'>475</a></td>
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>treydock</td>
+      
+  
+  
+  
+      
+        <td>Update criSocket to avoid deprecation warnings</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>13</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/473'>473</a></td>
   
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -1417,7 +1369,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -1444,7 +1396,7 @@ Exact matches are those that we can positively identify via namespace and the de
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
   
   
   
@@ -1452,12 +1404,12 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/456'>456</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/389'>389</a></td>
   
   
   
       
-        <td>63</td>
+        <td>1</td>
       
   
   
@@ -1469,240 +1421,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>Set etcd_hostname to FQDN by default</td>
-      
-  
-  
-  
-      
-        <td>[kubernetes](https://github.com/puppetlabs/puppetlabs-kubernetes/blob/0930f3fead2065959ca336bbbfa193bc76de8749/manifests/init.pp) is a _class_
-----------------------------------
-
-
-
-
-  Breaking changes to this file MAY impact these 5 modules (near match):
-
-* [jetstack-kubernetes_addons](https://github.com/jetstack/tarmak/tree/master/puppet/modules/kubernetes_addons)
-* [jetstack-calico](https://github.com/jetstack/tarmak/tree/master/puppet/modules/calico)
-* [jetstack-tarmak](https://github.com/jetstack/tarmak/tree/master/puppet/modules/tarmak)
-* [jetstack-prometheus](https://github.com/jetstack/tarmak/tree/master/puppet/modules/prometheus)
-* [jetstack-fluent_bit](https://github.com/jetstack/tarmak/tree/master/puppet/modules/fluent_bit)
-
-
-
-#### This module is declared in 0 of 575 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
-</td>
-      
-  
-  
-  
-      
-        <td>puppet-community-rangefinder[bot]</td>
-      
-  
-  
-  
-      
-        <td>61</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/475'>475</a></td>
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>treydock</td>
-      
-  
-  
-  
-      
-        <td>Update criSocket to avoid deprecation warnings</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/348'>348</a></td>
-  
-  
-  
-      
-        <td>96</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(maint) Disable acceptance testing on appveyor</td>
-      
-  
-  
-  
-      
-        <td>Rebased and marked as draft until we gain enough confidence in the new test infra to drop the old one.</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>92</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/374'>374</a></td>
-  
-  
-  
-      
-        <td>53</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(DO-NOT-MERGE) Test changes for PMG 1.0 RC</td>
+        <td>Fix missing PDK dependency for auto_release workflow</td>
       
   
   
@@ -1760,7 +1479,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>96</td>
+        <td>97</td>
       
   
   
@@ -1790,7 +1509,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>92</td>
+        <td>93</td>
       
   
   
@@ -1803,6 +1522,146 @@ Exact matches are those that we can positively identify via namespace and the de
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/348'>348</a></td>
+  
+  
+  
+      
+        <td>97</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) Disable acceptance testing on appveyor</td>
+      
+  
+  
+  
+      
+        <td>Rebased and marked as draft until we gain enough confidence in the new test infra to drop the old one.</td>
+      
+  
+  
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+      
+        <td>93</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/374'>374</a></td>
+  
+  
+  
+      
+        <td>54</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(DO-NOT-MERGE) Test changes for PMG 1.0 RC</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1830,7 +1689,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -1860,7 +1719,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -1900,7 +1759,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>40</td>
+        <td>41</td>
       
   
   
@@ -1934,13 +1793,83 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
   
       
         <td>4</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/603'>603</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) Integration test on gcp</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
       
   
   
@@ -1974,7 +1903,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>320</td>
+        <td>321</td>
       
   
   
@@ -2004,7 +1933,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>316</td>
+        <td>317</td>
       
   
   
@@ -2039,12 +1968,12 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1224'>1224</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1230'>1230</a></td>
   
   
   
       
-        <td>26</td>
+        <td>8</td>
       
   
   
@@ -2056,19 +1985,21 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>(maint) debug the failures</td>
+        <td>(bug) reload the service after the deletion of old unit file</td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>> Code wise I love how minimal the final version is. I just hope I didn't miss anything in the review and that this is somehow insufficient. I trust that you'll properly test it to confirm.
+
+very true @ekohl </td>
       
   
   
   
       
-        <td></td>
+        <td>sheenaajay</td>
       
   
   
@@ -2080,13 +2011,13 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>1</td>
+        <td>10</td>
       
   
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -2114,7 +2045,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>77</td>
+        <td>78</td>
       
   
   
@@ -2144,89 +2075,13 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>77</td>
+        <td>78</td>
       
   
   
   
       
         <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1230'>1230</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(bug) reload the service after the deletion of old unit file</td>
-      
-  
-  
-  
-      
-        <td>> Hmm, this doesn't look like a valid syntax to me, I am surprised it works
-
-Thank you @vchepkov you are right.
-it worked on centos 8 for puppet agent 6 which satisfy the else condition
-Was able to get the error while tested on redhat7 with puppet agent5 since it satisfies the if condition.
-
-Doing some test locally before pushing the new changes . </td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>6</td>
       
   
   
@@ -2260,7 +2115,7 @@ Doing some test locally before pushing the new changes . </td>
   
   
       
-        <td>76</td>
+        <td>77</td>
       
   
   
@@ -2334,7 +2189,7 @@ Warning: /Stage[main]/Postgresql::Server::Initdb/Exec[postgresql_initdb]: Skippi
   
   
       
-        <td>16</td>
+        <td>17</td>
       
   
   
@@ -2369,12 +2224,82 @@ Warning: /Stage[main]/Postgresql::Server::Initdb/Exec[postgresql_initdb]: Skippi
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1224'>1224</a></td>
+  
+  
+  
+      
+        <td>27</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) debug the failures</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
   
   
   
       
-        <td>153</td>
+        <td>154</td>
       
   
   
@@ -2409,7 +2334,7 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
   
       
-        <td>132</td>
+        <td>133</td>
       
   
   
@@ -2449,7 +2374,7 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
   
       
-        <td>386</td>
+        <td>387</td>
       
   
   
@@ -2481,7 +2406,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>172</td>
+        <td>173</td>
       
   
   
@@ -2494,146 +2419,6 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-puppet_conf'>puppetlabs-puppet_conf</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/133'>133</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Update gha templates</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot'>puppetlabs-reboot</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-reboot/pull/274'>274</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Update gha templates</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -2661,7 +2446,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>55</td>
+        <td>56</td>
       
   
   
@@ -2731,7 +2516,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>55</td>
+        <td>56</td>
       
   
   
@@ -2801,7 +2586,7 @@ Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
   
   
       
-        <td>348</td>
+        <td>349</td>
       
   
   
@@ -2832,7 +2617,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>51</td>
+        <td>52</td>
       
   
   
@@ -2845,76 +2630,6 @@ If you need any help don't hesitate to shout :)</td>
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-service'>puppetlabs-service</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-service/pull/171'>171</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Update gha templates</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -2942,7 +2657,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>48</td>
+        <td>49</td>
       
   
   
@@ -2972,7 +2687,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
@@ -3007,12 +2722,85 @@ If you need any help don't hesitate to shout :)</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1136'>1136</a></td>
+  
+  
+  
+      
+        <td>104</td>
+      
+  
+  
+  
+      
+        <td>npwalker <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(FEAT) Add load_csv function</td>
+      
+  
+  
+  
+      
+        <td>Hi @npwalker, I reviewed your PR. The idea is awesome, but you need to add test in spec/functions the same as loadjson_spec.rb but for load_csv function, and also to resolve some rubocop offenses. Also it will be good to rename the function to be 'loadcsv' to be like loadjson or loadyaml.
+
+kind regards,
+@adrianiurca </td>
+      
+  
+  
+  
+      
+        <td>adrianiurca</td>
+      
+  
+  
+  
+      
+        <td>94</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1087'>1087</a></td>
   
   
   
       
-        <td>357</td>
+        <td>358</td>
       
   
   
@@ -3048,80 +2836,7 @@ cc @binford2k </td>
   
   
       
-        <td>348</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1136'>1136</a></td>
-  
-  
-  
-      
-        <td>103</td>
-      
-  
-  
-  
-      
-        <td>npwalker <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(FEAT) Add load_csv function</td>
-      
-  
-  
-  
-      
-        <td>Hi @npwalker, I reviewed your PR. The idea is awesome, but you need to add test in spec/functions the same as loadjson_spec.rb but for load_csv function, and also to resolve some rubocop offenses. Also it will be good to rename the function to be 'loadcsv' to be like loadjson or loadyaml.
-
-kind regards,
-@adrianiurca </td>
-      
-  
-  
-  
-      
-        <td>adrianiurca</td>
-      
-  
-  
-  
-      
-        <td>93</td>
+        <td>349</td>
       
   
   
@@ -3161,7 +2876,7 @@ kind regards,
   
   
       
-        <td>393</td>
+        <td>394</td>
       
   
   
@@ -3196,7 +2911,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
@@ -3231,82 +2946,12 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat/pull/430'>430</a></td>
-  
-  
-  
-      
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - Update gha templates</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat'>puppetlabs-tomcat</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat/pull/411'>411</a></td>
   
   
   
       
-        <td>120</td>
+        <td>121</td>
       
   
   
@@ -3336,7 +2981,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>51</td>
+        <td>52</td>
       
   
   
@@ -3376,7 +3021,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>76</td>
+        <td>77</td>
       
   
   
@@ -3406,7 +3051,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
