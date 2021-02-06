@@ -204,7 +204,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -274,7 +274,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>73</td>
+        <td>74</td>
       
   
   
@@ -344,7 +344,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
@@ -387,7 +387,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>31</td>
+        <td>32</td>
       
   
   
@@ -422,54 +422,160 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2087'>2087</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2119'>2119</a></td>
   
   
   
       
-        <td>86</td>
-      
-  
-  
-  
-      
-        <td>promasu</td>
+        <td>0</td>
       
   
   
   
       
-        <td>Allow to disable a virtual host</td>
+        <td>cdamage</td>
       
   
   
   
       
-        <td>Thanks for the proposed change @promasu - there are still a few comments on the PR that look to be valid issues that need addressed. If you still want to get this merged but need some help getting it over the line, please let us know.</td>
+        <td>Fix issues when using php8</td>
       
   
   
   
       
-        <td>sanfrancrisko</td>
+        <td>[apache::mod::php](https://github.com/puppetlabs/puppetlabs-apache/blob/6304219e61215946937d89827b19f5333cd2c255/manifests/mod/php.pp) is a _class_
+----------------------------------
+
+
+
+  Breaking changes to this file WILL impact these 48 modules (exact match):
+
+* [Firebladee-moodle](https://github.com/Firebladee/moodle.git)
+* [lightoze-bacula](https://github.com/lightoze/puppet-bacula.git)
+* [binford2k-drupal](https://github.com/binford2k/binford2k-drupal)
+* [benjaminrobertson-observium](https://github.com/benjamin-robertson/observium)
+* [monkygames-beansbooks](https://bitbucket.org/monkygames/puppet-beansbooks.git)
+* [martialblog-limesurvey](https://github.com/martialblog/puppet-limesurvey)
+* [nubevps-wordpress](https://forge.puppetlabs.com/nubevps-wordpress/nubevps-wordpress)
+* [tejoyasha-myapp](http://git.soma.gitbhub.com/myproject.git)
+* [thexa4-secrets_server](https://github.com/thexa4/puppet-secret_server)
+* [vinish098-myapp](https://google.com)
+* [ganeshselva95-myapp](https://google.com)
+* [pkumarnath-myapp](https://forge.puppet.com/pkumarnath/myapp)
+* [snaragoni-myapp](https://google.com)
+* [kumarmks6-myapp](https://google.com)
+* [pwaghray-myapp](https://google.com)
+* [puppetlabs-wordpress_app](https://github.com/puppetlabs/puppetlabs-wordpress_app)
+* [premkumarp-myapp](https://google.com)
+* [ranjithsimple-myapp](https://forge.puppet.com/ranjithsimple/myapp)
+* [sasireddyfm-myapp](https://google.com)
+* [jgazeley-speedtest](https://github.com/djjudas21/puppet-speedtest)
+* [stesie-gluon](https://github.com/ffansbach/gluon-puppet)
+* [martasd-mediawiki](https://github.com/martasd/puppet-mediawiki.git)
+* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
+* [zyronix-dokuwiki](https://github.com/zyronix/puppet-dokuwiki)
+* [jgazeley-nagios](https://github.com/djjudas21/puppet-nagios)
+* [southernhill-phpldapadmin](https://github.com/southernhill/puppet-phpldapadmin.git)
+* [sgnl05-racktables](https://github.com/sgnl05/sgnl05-racktables.git)
+* [hexmode-mediawiki](https://github.com/hexmode/puppet-mediawiki.git)
+* [shoekstra-owncloud](https://github.com/shoekstra/puppet-owncloud.git)
+* [gajdaw-phpmyadmin](https://github.com/puppet-by-examples/puppet-phpmyadmin)
+* [wyrie-nagiosql](https://bitbucket.org/wyrie/puppet-nagiosql/src)
+* [alexggolovin-lamp](https://github.com/alexggolovin/alexggolovin-lamp)
+* [rendhalver-icinga](https://forge.puppet.com/rendhalver/icinga)
+* [datacentred-nfsen](https://github.com/datacentred/puppet-nfsen)
+* [jlondon-phpmyadmin](http://github.com/justicel/puppet-phpmyadmin.git)
+* [aimonb-nexusis_mediawiki](https://github.com/NexusIS/puppet-mediawiki.git)
+* [devika-myapp](https://google.com)
+* [gajdaw-symfony](https://github.com/puppet-by-examples/puppet-symfony)
+* [treydock-xdmod](https://github.com/treydock/puppet-module-xdmod)
+* [SchnWalter-happydev](https://github.com/devgateway/happy-deployer/tree/master/puppet/modules/happydev)
+* [geoffwilliams-r_profile](https://github.com/GeoffWilliams/r_profile)
+* [abstractit-icinga](https://github.com/abstractitptyltd/abstractit-icinga)
+* [cirrax-autoconfigmail](https://github.com/cirrax/puppet-autoconfigmail)
+* [cirrax-roundcube](https://github.com/cirrax/puppet-roundcube)
+* [cirrax-postfixadmin](https://github.com/cirrax/puppet-postfixadmin)
+* [glarizza-profiles](https://github.com/glarizza/puppet-profiles)
+* [puppetlabs-awsdemo_profiles](https://github.com/puppetlabs/puppetlabs-awsdemo_profiles)
+* [pieterdp-hx_apache](https://github.com/pieterdp/hx_apache)
+
+
+
+  Breaking changes to this file MAY impact these 36 modules (near match):
+
+* [dbsrinivasulu-mediawiki](https://forge.puppet.com/dbsrinivasulu/mediawiki)
+* [knowshan-phppgadmin](https://github.com/knowshan/puppet-phppgadmin.git)
+* [hemantgangwar-mediawiki](https://forge.puppet.com/hemantgangwar/mediawiki)
+* [niksv-mediawiki](https://forge.puppet.com/niksv/mediawiki)
+* [shantanumalik-mediawiki](https://forge.puppet.com/shantanumalik/mediawiki)
+* [214310-mediawiki](https://forge.puppet.com/214310/mediawiki)
+* [prakash007-mediawiki](https://forge.puppet.com/prakash007/mediawiki)
+* [pbhutani-mediawiki](https://forge.puppet.com/pbhutani/mediawiki)
+* [parthitraining-mediawiki](https://github.com)
+* [mithilas-mediawiki](http://forge.puppet.com)
+* [nitish741-mediawiki](https://www.google.com)
+* [gsachar1-mediawiki](https://forge.puppet.com/gsachar1/mediawiki)
+* [abhaysoni-mediawiki](https://forge.puppet.com/abhaysoni/mediawiki)
+* [pia-mediawiki](https://forge.puppet.com/pia/mediawiki)
+* [narenv-mediawiki](https://forge.puppet.com/narenv/mediawiki)
+* [raviforge-mediawiki](https://forge.puppet.com/raviforge/mediawiki)
+* [preethi-mediawiki](https://forge.puppet.com)
+* [kiranhosamani-mediawiki](https://forge.puppet.com/kiranhosamani/mediawiki)
+* [jaysingh-mediawiki](https://forge.puppet.com/jaysingh/mediawiki)
+* [anthomas-mediawiki](http://www.google.com)
+* [manish1984-mediawiki](https://forge.puppet.com/manish1984/mediawiki)
+* [webserve-mediawiki](https://forge.puppet.com/webserve/mediawiki)
+* [gururaj-mediawiki](https://forge.puppet.com/gururaj/mediawiki)
+* [suvarnagodri-mediawiki](https://forge.puppet.com/suvarnagodri/mediawiki)
+* [funaccount-mediawiki](http://fun.com/mediawiki)
+* [sunilh-mediawiki](https://forge.puppet.com/sunilh/mediawiki)
+* [vinaycharles-mediawiki](https://forge.puppet.com/vinaycharles/mediawiki)
+* [hegdec-mediawiki](https://forge.puppet.com/hegdec/mediawiki)
+* [byjupv-mediakwiki](https://forge.puppet.com/byjupv/mediakwiki)
+* [ravishankar1jan-mediawiki](https://forge.puppet.com/ravishankar1jan/mediawiki)
+* [eupathdb-ebrc_httpd_setup](https://github.com/EuPathDB/puppet-ebrc_httpd_setup)
+* [samuelson-dockeragent](https://github.com/samuelson/samuelson-dockeragent)
+* [puppetfinland-librenms](https://github.com/Puppet-Finland/puppet-librenms.git)
+* [pltraining-dockeragent](https://github.com/puppetlabs/pltraining-dockeragent)
+* [esakazmi-mediawiki](https://forge.puppet.com/esakazmi/mediawiki)
+* [rspiak-racktables](https://github.com/sgnl05/sgnl05-racktables)
+
+
+
+#### This module is declared in 175 of 576 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
       
   
   
   
       
-        <td>18</td>
+        <td>puppet-community-rangefinder[bot]</td>
       
   
   
   
       
-        <td>3</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -497,7 +603,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>44</td>
+        <td>45</td>
       
   
   
@@ -529,7 +635,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -564,12 +670,82 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2087'>2087</a></td>
+  
+  
+  
+      
+        <td>87</td>
+      
+  
+  
+  
+      
+        <td>promasu</td>
+      
+  
+  
+  
+      
+        <td>Allow to disable a virtual host</td>
+      
+  
+  
+  
+      
+        <td>Thanks for the proposed change @promasu - there are still a few comments on the PR that look to be valid issues that need addressed. If you still want to get this merged but need some help getting it over the line, please let us know.</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>19</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2108'>2108</a></td>
   
   
   
       
-        <td>59</td>
+        <td>60</td>
       
   
   
@@ -599,7 +775,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>59</td>
+        <td>60</td>
       
   
   
@@ -639,7 +815,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>65</td>
+        <td>66</td>
       
   
   
@@ -709,7 +885,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -739,7 +915,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -779,7 +955,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>447</td>
+        <td>448</td>
       
   
   
@@ -809,7 +985,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>182</td>
+        <td>183</td>
       
   
   
@@ -849,7 +1025,7 @@ About the conversion to rspec-puppet-facts. I think you're right that this won't
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -894,7 +1070,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -934,7 +1110,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>75</td>
+        <td>76</td>
       
   
   
@@ -966,7 +1142,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>59</td>
+        <td>60</td>
       
   
   
@@ -1006,7 +1182,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>51</td>
+        <td>52</td>
       
   
   
@@ -1036,7 +1212,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>21</td>
+        <td>22</td>
       
   
   
@@ -1076,7 +1252,7 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
       
-        <td>10</td>
+        <td>11</td>
       
   
   
@@ -1141,82 +1317,12 @@ I'm currently looking to see what is happening, thank  you for your patience !</
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/475'>475</a></td>
-  
-  
-  
-      
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>treydock</td>
-      
-  
-  
-  
-      
-        <td>Update criSocket to avoid deprecation warnings</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>14</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/456'>456</a></td>
   
   
   
       
-        <td>65</td>
+        <td>66</td>
       
   
   
@@ -1269,7 +1375,77 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>63</td>
+        <td>64</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/474'>474</a></td>
+  
+  
+  
+      
+        <td>21</td>
+      
+  
+  
+  
+      
+        <td>ysyldur</td>
+      
+  
+  
+  
+      
+        <td>gives the possibility to choose registry mirrors for containerd</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>18</td>
       
   
   
@@ -1309,7 +1485,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1369,7 +1545,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1404,24 +1580,24 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/474'>474</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/475'>475</a></td>
   
   
   
       
-        <td>20</td>
-      
-  
-  
-  
-      
-        <td>ysyldur</td>
+        <td>15</td>
       
   
   
   
       
-        <td>gives the possibility to choose registry mirrors for containerd</td>
+        <td>treydock</td>
+      
+  
+  
+  
+      
+        <td>Update criSocket to avoid deprecation warnings</td>
       
   
   
@@ -1439,13 +1615,13 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>17</td>
+        <td>15</td>
       
   
   
   
       
-        <td>2</td>
+        <td>1</td>
       
   
   
@@ -1479,7 +1655,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>98</td>
+        <td>99</td>
       
   
   
@@ -1509,7 +1685,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>94</td>
+        <td>95</td>
       
   
   
@@ -1549,7 +1725,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>98</td>
+        <td>99</td>
       
   
   
@@ -1579,7 +1755,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>94</td>
+        <td>95</td>
       
   
   
@@ -1619,7 +1795,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>55</td>
+        <td>56</td>
       
   
   
@@ -1689,7 +1865,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
@@ -1719,7 +1895,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
@@ -1759,7 +1935,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>42</td>
+        <td>43</td>
       
   
   
@@ -1793,7 +1969,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -1833,7 +2009,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -1903,7 +2079,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>322</td>
+        <td>323</td>
       
   
   
@@ -1933,7 +2109,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>318</td>
+        <td>319</td>
       
   
   
@@ -1973,7 +2149,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>28</td>
+        <td>29</td>
       
   
   
@@ -2003,7 +2179,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -2038,12 +2214,84 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1232'>1232</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-1408) Release Prep v6.10.0</td>
+      
+  
+  
+  
+      
+        <td>> I submitted #1233 and would like to see it included.
+
+Yeah sure. Thank you</td>
+      
+  
+  
+  
+      
+        <td>sheenaajay</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1206'>1206</a></td>
   
   
   
       
-        <td>79</td>
+        <td>80</td>
       
   
   
@@ -2073,7 +2321,7 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
       
-        <td>79</td>
+        <td>80</td>
       
   
   
@@ -2108,84 +2356,12 @@ Note that I would love to get back from using `Puppet::Util::Execution` to stand
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1230'>1230</a></td>
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(bug) reload the service after the deletion of old unit file</td>
-      
-  
-  
-  
-      
-        <td>> Code wise I love how minimal the final version is. I just hope I didn't miss anything in the review and that this is somehow insufficient. I trust that you'll properly test it to confirm.
-
-very true @ekohl </td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>10</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1208'>1208</a></td>
   
   
   
       
-        <td>78</td>
+        <td>79</td>
       
   
   
@@ -2259,7 +2435,7 @@ Warning: /Stage[main]/Postgresql::Server::Initdb/Exec[postgresql_initdb]: Skippi
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -2294,84 +2470,12 @@ Warning: /Stage[main]/Postgresql::Server::Initdb/Exec[postgresql_initdb]: Skippi
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
-  
-  
-  
-      
-        <td>388</td>
-      
-  
-  
-  
-      
-        <td>Bouke</td>
-      
-  
-  
-  
-      
-        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
-      
-  
-  
-  
-      
-        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
-
-Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>174</td>
-      
-  
-  
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1190'>1190</a></td>
   
   
   
       
-        <td>155</td>
+        <td>156</td>
       
   
   
@@ -2406,7 +2510,7 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
   
       
-        <td>134</td>
+        <td>135</td>
       
   
   
@@ -2433,6 +2537,78 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1132'>1132</a></td>
+  
+  
+  
+      
+        <td>389</td>
+      
+  
+  
+  
+      
+        <td>Bouke</td>
+      
+  
+  
+  
+      
+        <td>Don't update password encrypted with SCRAM-SHA-256 if not changed</td>
+      
+  
+  
+  
+      
+        <td>> Hi @Bouke, yes, I understand your concerns. After a short discussion with the team, we decided that we are going to update our tests and I'll open a ticket for the new changes. Also, when the things are ready, could you please rebase your PR and add your tests? Thank you, cheers !
+
+Raised [IAC-1063](https://tickets.puppetlabs.com/browse/IAC-1063)</td>
+      
+  
+  
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+      
+        <td>175</td>
+      
+  
+  
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-rook'>puppetlabs-rook</a></td>
   
   
@@ -2446,7 +2622,7 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
@@ -2511,82 +2687,12 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-satellite_pe_tools/pull/148'>148</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-1008) - Removal of Inappropriate Terminology</td>
-      
-  
-  
-  
-      
-        <td>@ekohl Thank you for the updated comments, have made the suggested changes.</td>
-      
-  
-  
-  
-      
-        <td>david22swan</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-satellite_pe_tools'>puppetlabs-satellite_pe_tools</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-satellite_pe_tools/pull/144'>144</a></td>
   
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
@@ -2643,6 +2749,76 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-satellite_pe_tools'>puppetlabs-satellite_pe_tools</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-satellite_pe_tools/pull/148'>148</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-1008) - Removal of Inappropriate Terminology</td>
+      
+  
+  
+  
+      
+        <td>@ekohl Thank you for the updated comments, have made the suggested changes.</td>
+      
+  
+  
+  
+      
+        <td>david22swan</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
   
   
@@ -2656,7 +2832,7 @@ Also, @jorhett - whenever you get a chance could you rebase this branch with `pu
   
   
       
-        <td>350</td>
+        <td>351</td>
       
   
   
@@ -2687,7 +2863,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>53</td>
+        <td>54</td>
       
   
   
@@ -2727,7 +2903,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -2757,7 +2933,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -2797,7 +2973,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>50</td>
+        <td>51</td>
       
   
   
@@ -2827,7 +3003,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>11</td>
+        <td>12</td>
       
   
   
@@ -2867,7 +3043,7 @@ If you need any help don't hesitate to shout :)</td>
   
   
       
-        <td>105</td>
+        <td>106</td>
       
   
   
@@ -2900,7 +3076,7 @@ kind regards,
   
   
       
-        <td>95</td>
+        <td>96</td>
       
   
   
@@ -2940,7 +3116,7 @@ kind regards,
   
   
       
-        <td>359</td>
+        <td>360</td>
       
   
   
@@ -2976,7 +3152,7 @@ cc @binford2k </td>
   
   
       
-        <td>350</td>
+        <td>351</td>
       
   
   
@@ -3016,7 +3192,7 @@ cc @binford2k </td>
   
   
       
-        <td>395</td>
+        <td>396</td>
       
   
   
@@ -3051,7 +3227,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>11</td>
+        <td>12</td>
       
   
   
@@ -3086,12 +3262,12 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing/pull/343'>343</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing/pull/344'>344</a></td>
   
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -3103,7 +3279,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>Release prep v"4.3.0"</td>
+        <td>Release prep v4.3.0</td>
       
   
   
@@ -3161,7 +3337,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>122</td>
+        <td>123</td>
       
   
   
@@ -3191,7 +3367,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>53</td>
+        <td>54</td>
       
   
   
@@ -3231,7 +3407,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>78</td>
+        <td>79</td>
       
   
   
@@ -3261,7 +3437,7 @@ Also this is the ticket in relation to this: https://tickets.puppetlabs.com/brow
   
   
       
-        <td>59</td>
+        <td>60</td>
       
   
   
