@@ -204,7 +204,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>65</td>
+        <td>66</td>
       
   
   
@@ -247,7 +247,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>39</td>
+        <td>40</td>
       
   
   
@@ -260,6 +260,106 @@ Could you please check the following, the updated regex are not satisfying the f
   
       
         <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/473'>473</a></td>
+  
+  
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+      
+        <td>djschaap</td>
+      
+  
+  
+  
+      
+        <td>Fix calico CNI support</td>
+      
+  
+  
+  
+      
+        <td>[kubernetes](https://github.com/puppetlabs/puppetlabs-kubernetes/blob/8ae56f3dd473a3f03cfc043c9846b5fda17554e6/manifests/init.pp) is a _class_
+----------------------------------
+
+
+
+
+  Breaking changes to this file MAY impact these 5 modules (near match):
+
+* [jetstack-kubernetes_addons](https://github.com/jetstack/tarmak/tree/master/puppet/modules/kubernetes_addons)
+* [jetstack-fluent_bit](https://github.com/jetstack/tarmak/tree/master/puppet/modules/fluent_bit)
+* [jetstack-tarmak](https://github.com/jetstack/tarmak/tree/master/puppet/modules/tarmak)
+* [jetstack-prometheus](https://github.com/jetstack/tarmak/tree/master/puppet/modules/prometheus)
+* [jetstack-calico](https://github.com/jetstack/tarmak/tree/master/puppet/modules/calico)
+
+
+[kubernetes::kube_addons](https://github.com/puppetlabs/puppetlabs-kubernetes/blob/8ae56f3dd473a3f03cfc043c9846b5fda17554e6/manifests/kube_addons.pp) is a _class_
+----------------------------------
+
+that may have no external impact to Forge modules.
+
+
+
+
+#### This module is declared in 0 of 576 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
