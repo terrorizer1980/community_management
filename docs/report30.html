@@ -191,159 +191,6 @@ ga('set', 'anonymizeIp', true);
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts'>puppetlabs-accounts</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-accounts/pull/353'>353</a></td>
-  
-  
-  
-      
-        <td>76</td>
-      
-  
-  
-  
-      
-        <td>LooOOooM</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-10892) Update name.pp</td>
-      
-  
-  
-  
-      
-        <td>Thank you @LooOOooM for submitting the PR.  
-The unit test cases failing with the following changes.
-
-`  Invalid user name values
-    "1-bad-dude"
-      is expected not to match value "1-bad-dude" (FAILED - 1)
-    ".hidden"
-      is expected not to match value ".hidden" (FAILED - 2)`
-
-Could you please check the following, the updated regex are not satisfying the following username rules.
-
-- Fully numeric usernames and usernames . or .. are also disallowed
-- It is not recommended to use usernames beginning with . character as their home directories will be hidden in
-- the ls output</td>
-      
-  
-  
-  
-      
-        <td>sheenaajay</td>
-      
-  
-  
-  
-      
-        <td>50</td>
-      
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2087'>2087</a></td>
-  
-  
-  
-      
-        <td>105</td>
-      
-  
-  
-  
-      
-        <td>promasu</td>
-      
-  
-  
-  
-      
-        <td>Allow to disable a virtual host</td>
-      
-  
-  
-  
-      
-        <td>Thanks for the proposed change @promasu - there are still a few comments on the PR that look to be valid issues that need addressed. If you still want to get this merged but need some help getting it over the line, please let us know.</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko</td>
-      
-  
-  
-  
-      
-        <td>37</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
   
   
@@ -357,7 +204,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>37</td>
+        <td>38</td>
       
   
   
@@ -387,7 +234,7 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>37</td>
+        <td>38</td>
       
   
   
@@ -414,7 +261,7 @@ Could you please check the following, the updated regex are not satisfying the f
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-helm'>puppetlabs-helm</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
   
   
   
@@ -422,42 +269,47 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-helm/pull/137'>137</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1079'>1079</a></td>
   
   
   
       
-        <td>70</td>
-      
-  
-  
-  
-      
-        <td>treydock</td>
+        <td>415</td>
       
   
   
   
       
-        <td>Add support for Helm v3 (continued)</td>
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
       
   
   
   
       
-        <td>Updated pull request to simplify logic on avoiding `init` and other things when doing Helm v3 because those things are not needed. For this most recent change the Puppet module was adding Kubernetes tiller resources like a ServiceAccount and that's not necessary with Helm v3 so this most recent change avoids unnecessary changes when install Helm v3, which should also reduce the diff size for entire pull request.</td>
+        <td>Puppet 4 functions</td>
       
   
   
   
       
-        <td>treydock</td>
+        <td>@binford2k There is more work to be done on this. 
+Due to backwards incompatibility, this is something that we will need to plan and schedule priorities. 
+
+This comment is in relation to both this PR and @DavidS WIP PR mentioned above:  https://github.com/DavidS/puppetlabs-stdlib/tree/modules-1882-move-function-api
+
+Also this is the ticket in relation to this: https://tickets.puppetlabs.com/browse/IAC-114</td>
       
   
   
   
       
-        <td>40</td>
+        <td>pmcmaw</td>
+      
+  
+  
+  
+      
+        <td>31</td>
       
   
   
@@ -469,271 +321,13 @@ Could you please check the following, the updated regex are not satisfying the f
   
   
       
-        <td>true</td>
-      
-  
-  
-  
-      
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/474'>474</a></td>
-  
-  
-  
-      
-        <td>39</td>
-      
-  
-  
-  
-      
-        <td>ysyldur</td>
-      
-  
-  
-  
-      
-        <td>gives the possibility to choose registry mirrors for containerd</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>36</td>
-      
-  
-  
-  
-      
-        <td>2</td>
       
   
   
   
       
         <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1355'>1355</a></td>
-  
-  
-  
-      
-        <td>61</td>
-      
-  
-  
-  
-      
-        <td>ebogdanov</td>
-      
-  
-  
-  
-      
-        <td>SQL Log bin support for User, Grant, Database.</td>
-      
-  
-  
-  
-      
-        <td>I created a PR with our changes: https://github.com/ebogdanov/puppetlabs-mysql/pull/1
-
-Sorry for the most probably lame code but Ruby is not my native language. :P 
-
-Note that I would love to get back from using `Puppet::Util::Execution` to standard command but I didn't know how...</td>
-      
-  
-  
-  
-      
-        <td>gdubicki</td>
-      
-  
-  
-  
-      
-        <td>39</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1208'>1208</a></td>
-  
-  
-  
-      
-        <td>97</td>
-      
-  
-  
-  
-      
-        <td>x1e</td>
-      
-  
-  
-  
-      
-        <td>remove apt repos component</td>
-      
-  
-  
-  
-      
-        <td>Distributor ID: Debian
-Description:    Debian GNU/Linux 10 (buster)
-Release:        10
-Codename:       buster
-
-node 'test' {
-  class { 'postgresql::globals': manage_package_repo => true, version => '9.6', }-> class { 'postgresql::server': }
-}
-
-/etc/apt/sources.list.d/apt.postgresql.org.list
-
-```
-# This file is managed by Puppet. DO NOT EDIT.
-# apt.postgresql.org
-deb https://apt.postgresql.org/pub/repos/apt/ buster-pgdg main 9.6
-```
-
-
-```
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:96 https://apt.postgresql.org/pub/repos/apt buster-pgdg/main amd64 Packages [217 kB]
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:97 https://apt.postgresql.org/pub/repos/apt buster-pgdg/main amd64 Contents (deb) [435 kB]
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:98 https://apt.postgresql.org/pub/repos/apt buster-pgdg/9.6 amd64 Packages [1840 B]
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:99 https://apt.postgresql.org/pub/repos/apt buster-pgdg/9.6 amd64 Contents (deb) [878 B]
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Traceback (most recent call last):
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:   File "/usr/lib/cnf-update-db", line 26, in 
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:     col.create(db)
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:   File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 94, in create
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:     self._fill_commands(con)
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:   File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 132, in _fill_commands
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:     self._parse_single_contents_file(con, f, fp.stdout)
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:   File "/usr/share/command-not-found/CommandNotFound/db/creator.py", line 271, in _parse_single_contents_file
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:     priority = component_priorities[component]
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: KeyError: '9.6'
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Fetched 2582 kB in 1min 13s (35.2 kB/s)
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Reading package lists...
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: E: Problem executing scripts APT::Update::Post-Invoke-Success 'if /usr/bin/test -w /var/lib/command-not-found/ -a -e /usr/lib/cnf-update-db; then /usr/lib/cnf-update-db > /dev/null; fi'
-Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: E: Sub-process returned an error code
-Error: /Stage[main]/Apt::Update/Exec[apt_update]: Failed to call refresh: '/usr/bin/apt-get update' returned 100 instead of one of [0]
-Error: /Stage[main]/Apt::Update/Exec[apt_update]: '/usr/bin/apt-get update' returned 100 instead of one of [0]
-Notice: /Stage[main]/Postgresql::Server::Install/Package[postgresql-server]: Dependency Exec[apt_update] has failures: true
-Warning: /Stage[main]/Postgresql::Server::Install/Package[postgresql-server]: Skipping because of failed dependencies
-Warning: /Stage[main]/Postgresql::Server::Initdb/File[/var/lib/postgresql/9.6/main]: Skipping because of failed dependencies
-Warning: /Stage[main]/Postgresql::Server::Initdb/Exec[postgresql_initdb]: Skipping because of failed dependencies
-
-```</td>
-      
-  
-  
-  
-      
-        <td>x1e</td>
-      
-  
-  
-  
-      
-        <td>37</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
       
   
   
