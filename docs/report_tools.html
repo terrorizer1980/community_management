@@ -178,7 +178,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -278,7 +278,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -378,7 +378,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>48</td>
+        <td>49</td>
       
   
   
@@ -401,7 +401,19 @@ ga('set', 'anonymizeIp', true);
   
   <td>
   <div class="content hideContent">
-     [![CLA assistant check](https://cla-assistant.io/pull/badge/not_signed)](https://cla-assistant.io/puppetlabs/community_management?pullRequest=54) Thank you for your submission! We really appreciate it. Like many open source projects, we ask that you sign our [Contributor License Agreement](https://cla-assistant.io/puppetlabs/community_management?pullRequest=54) before we can accept your contribution.You have signed the CLA already but the status is still pending? Let us [recheck](https://cla-assistant.io/check/puppetlabs/community_management?pullRequest=54) it.
+     @daianamezdrea @pmcmaw @sanfrancrisko I would like to verify if the if statement script is working as expected for testing purposes. I plan to run the following commands in the terminal and irb 
+
+1. Within the VS Code - require pry comment will be added after the information_cache.each do |pr| and binding pry will be mentioned after - sleep(2) 
+2. bundle install - **after cd into community management folder on the terminal**
+2. bundle exec ruby pr_review_list.rb -t (correct token will be given)
+3. pr_information_cache.each **once inside the binding pry environment** 
+4. open report.html (this will open the local version of the draft prs report and filter for the modules which were drafts) 
+5. check the file report.html in VS Code to see if the draft prs exist (Note:- If they don't exist that means that the script has worked as expected locally)
+6. Use the command exit or exit! to close the binding pry environment. 
+
+**I am not sure how I can verify this on the community management tool, to see if the drafts have been excluded**
+
+**Also, can someone please take few minutes and confirm if the first 6 steps are correct, so that I can test the script before asking for the team's review?**
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -416,7 +428,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>CLAassistant</td>
+        <td>Disha-maker</td>
       
   
   
@@ -424,7 +436,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>5</td>
+        <td>0</td>
       
   
   
@@ -432,15 +444,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>7</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
+        <td>8</td>
       
   
   
@@ -449,6 +453,14 @@ ga('set', 'anonymizeIp', true);
   
       
         <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
       
   
   
@@ -478,7 +490,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>26</td>
+        <td>27</td>
       
   
   
@@ -524,7 +536,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -578,7 +590,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>24</td>
+        <td>25</td>
       
   
   
@@ -624,7 +636,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -671,6 +683,106 @@ ga('set', 'anonymizeIp', true);
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-docker/pull/25'>25</a></td>
+  
+  
+  
+
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+
+  
+      
+        <td>cdenneen</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Added pdk dind image creation with docker-ce binaries</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     0 comments
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td></td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-docker'>PDK Dockerfile</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-docker/pull/24'>24</a></td>
   
   
@@ -678,7 +790,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -778,7 +890,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -795,106 +907,6 @@ ga('set', 'anonymizeIp', true);
   
       
         <td>Fix onceover install issue</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     0 comments
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td></td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-docker'>PDK Dockerfile</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-docker/pull/25'>25</a></td>
-  
-  
-  
-
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-
-  
-      
-        <td>cdenneen</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Added pdk dind image creation with docker-ce binaries</td>
       
   
   
@@ -978,7 +990,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -1024,7 +1036,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -1033,6 +1045,106 @@ ga('set', 'anonymizeIp', true);
   
       
         <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/413'>413</a></td>
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>silug <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(#412) Add .devcontainer to .pdkignore</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     0 comments
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td></td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
       
   
   
@@ -1078,7 +1190,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>10</td>
+        <td>11</td>
       
   
   
@@ -1124,7 +1236,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -1171,6 +1283,106 @@ ga('set', 'anonymizeIp', true);
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/372'>372</a></td>
+  
+  
+  
+
+  
+      
+        <td>82</td>
+      
+  
+  
+  
+
+  
+      
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(IAC-1307) Add Spec tests to nightly and pr_test GHActions configs</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     [![CLA assistant check](https://cla-assistant.io/pull/badge/signed)](https://cla-assistant.io/puppetlabs/pdk-templates?pullRequest=372) All committers have signed the CLA.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>CLAassistant</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/341'>341</a></td>
   
   
@@ -1178,7 +1390,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>234</td>
+        <td>235</td>
       
   
   
@@ -1228,7 +1440,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>124</td>
+        <td>125</td>
       
   
   
@@ -1263,7 +1475,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-vanagon'>PDK Packaging</a></td>
   
   
   
@@ -1275,22 +1487,14 @@ I'm interested in helping this along. I think the only piece missing from my ver
   
 
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/372'>372</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-vanagon/pull/276'>276</a></td>
   
   
   
 
   
       
-        <td>81</td>
-      
-  
-  
-  
-
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>0</td>
       
   
   
@@ -1298,14 +1502,22 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>(IAC-1307) Add Spec tests to nightly and pr_test GHActions configs</td>
+        <td>scotje <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>(MAINT) Refactor `puppet-forge-api` component into `puppet-versions`</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     [![CLA assistant check](https://cla-assistant.io/pull/badge/signed)](https://cla-assistant.io/puppetlabs/pdk-templates?pullRequest=372) All committers have signed the CLA.
+     0 comments
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -1320,7 +1532,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>CLAassistant</td>
+        <td></td>
       
   
   
@@ -1328,7 +1540,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>4</td>
+        <td>0</td>
       
   
   
@@ -1336,7 +1548,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>3</td>
+        <td>0</td>
       
   
   
@@ -1344,7 +1556,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -1382,7 +1594,7 @@ I'm interested in helping this along. I think the only piece missing from my ver
 
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -1432,7 +1644,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -1486,7 +1698,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -1532,7 +1744,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -1586,7 +1798,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -1632,7 +1844,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
@@ -1686,7 +1898,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>1212</td>
+        <td>1213</td>
       
   
   
@@ -1786,7 +1998,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>1539</td>
+        <td>1540</td>
       
   
   
@@ -1832,7 +2044,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>113</td>
+        <td>114</td>
       
   
   
@@ -1886,7 +2098,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -1932,7 +2144,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -1986,7 +2198,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>74</td>
+        <td>75</td>
       
   
   
@@ -2032,7 +2244,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>27</td>
+        <td>28</td>
       
   
   
@@ -2086,7 +2298,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>122</td>
+        <td>123</td>
       
   
   
@@ -2186,7 +2398,7 @@ Coverage remained the same at 91.237% when pulling **a617313cb467c248c9d2e2b763d
 
   
       
-        <td>687</td>
+        <td>688</td>
       
   
   
@@ -2240,7 +2452,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>607</td>
+        <td>608</td>
       
   
   
@@ -2294,7 +2506,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>112</td>
+        <td>113</td>
       
   
   
@@ -2340,7 +2552,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>92</td>
+        <td>93</td>
       
   
   
@@ -2394,7 +2606,7 @@ These generated tests are little more than `it { is_expected.to compile }`, whic
 
   
       
-        <td>299</td>
+        <td>300</td>
       
   
   
@@ -2444,107 +2656,7 @@ Thanks
 
   
       
-        <td>109</td>
-      
-  
-  
-  
-
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
-  
-  
-  
-
-  
-      
-        <td>1335</td>
-      
-  
-  
-  
-
-  
-      
-        <td>kjetilho</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Add .tagged and .not_tagged methods for resource matcher</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     rebased again and updated compile matcher test to use correct line number.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-
-  
-      
-        <td>106</td>
+        <td>110</td>
       
   
   
@@ -2598,7 +2710,7 @@ Thanks
 
   
       
-        <td>46</td>
+        <td>47</td>
       
   
   
@@ -2644,7 +2756,7 @@ Thanks
 
   
       
-        <td>14</td>
+        <td>15</td>
       
   
   
@@ -2691,6 +2803,206 @@ Thanks
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
+  
+  
+  
+
+  
+      
+        <td>1336</td>
+      
+  
+  
+  
+
+  
+      
+        <td>kjetilho</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add .tagged and .not_tagged methods for resource matcher</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     rebased again and updated compile matcher test to use correct line number.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+
+  
+      
+        <td>107</td>
+      
+  
+  
+  
+
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
+  
+  
+  
+
+  
+      
+        <td>1216</td>
+      
+  
+  
+  
+
+  
+      
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Adds the ability to spec test an arbitrary string</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @binford2k @scotje is this still relevant? If yes, please link to a internal ticket to capture that.
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS</td>
+      
+  
+  
+  
+
+  
+      
+        <td>114</td>
+      
+  
+  
+  
+
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
   
   
@@ -2698,7 +3010,7 @@ Thanks
 
   
       
-        <td>1257</td>
+        <td>1258</td>
       
   
   
@@ -2759,7 +3071,7 @@ end
 
   
       
-        <td>904</td>
+        <td>905</td>
       
   
   
@@ -2806,106 +3118,6 @@ end
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
-  
-  
-  
-
-  
-      
-        <td>1215</td>
-      
-  
-  
-  
-
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Adds the ability to spec test an arbitrary string</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     @binford2k @scotje is this still relevant? If yes, please link to a internal ticket to capture that.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-
-  
-      
-        <td>113</td>
-      
-  
-  
-  
-
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
   
   
@@ -2913,7 +3125,7 @@ end
 
   
       
-        <td>1090</td>
+        <td>1091</td>
       
   
   
@@ -2959,7 +3171,7 @@ end
 
   
       
-        <td>68</td>
+        <td>69</td>
       
   
   
@@ -3013,7 +3225,7 @@ end
 
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
