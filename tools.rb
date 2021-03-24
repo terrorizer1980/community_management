@@ -42,7 +42,14 @@ def does_array_have_pr(array, pr_number)
 end
 
 parsed.each do |_k, v|
-  sleep(2)
+  limit = util.client.rate_limit!
+  puts "Getting data from Github API for #{v['github']}"
+  if limit.remaining == 0
+    #  sleep 60 #Sleep between requests to prevent Github API - 403 response
+    sleep limit.resets_in
+    puts 'Waiting for rate limit reset in Github API'
+  end
+  sleep 2 # Keep Github API happy
   pr_information_cache = util.fetch_async((v['github']).to_s)
 
   # no comment from a puppet employee
