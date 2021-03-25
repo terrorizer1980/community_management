@@ -64,7 +64,7 @@ parsed.each do |_k, v|
     result_hash << {
       "url": "https://github.com/#{v['github']}",
       "name": v['title'],
-      "runs": runs_array,
+      "runs": runs_array.sort_by {|hash| hash[:run_number]},
       "workflows": data['workflows'],
       "total_failures": runs_array.map { |x| x[:job_failures]}.reduce(0) { |sum, num| sum + num },
       "total_successes": runs_array.map { |x| x[:job_successes]}.reduce(0) { |sum, num| sum + num }
