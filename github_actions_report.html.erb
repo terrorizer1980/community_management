@@ -1,5 +1,5 @@
 <html>
-<title>Github Action Report</title>
+<title>Github Action Nightly Report</title>
 <head>
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
@@ -13,7 +13,7 @@
   <script src="github_action_report.js"></script>   
 </head>
 <body>
-<h1 style="text-align:center;">Github Actions Report</h1>
+<h1 style="text-align:center;">Github Actions Nightly Report</h1>
 <center><div id="donutchart" style="width: 80%; height: 50%;"></div></center>
 <br>
 <input type="text" id="inputSearch" onkeyup="searchFunction()" placeholder="Search for names.." title="Type in a name">
@@ -33,7 +33,7 @@
             <% result_hash.each do |m| %>
                 <tbody class="labels">
                 <tr>
-                <td rowspan="2" style="background-color:#FFA500"><a href='<%= m[:url] %>'><%= m[:name] %></a></td>
+                <td rowspan="2" style="background-color:#FFA500"><a href='<%= m[:url] %>' target="_blank"><%= m[:name] %></a></td>
                     <% m[:runs][0..4].each do |run| %>
                     <td width="20%"> 
                     <% if run[:general_conclusion] %>
@@ -45,7 +45,7 @@
                         <label for="<%= run[:run_number] %>">
                             <button type="button" class="button1" data-toggle="tooltip" data-placement="top"
                                     title='<%= run[:updated_at] %>'>
-                                <a href='<%= run[:html_url] %>'><%= run[:run_number] %></a>
+                                <a href='<%= run[:html_url] %>'target="_blank"><%= run[:run_number] %></a>
                             </button>
                         </label>
                        
@@ -66,7 +66,7 @@
                               <% run[:os_agent].each do |acceptance| %>
                                 <tr>
                                   <td bgcolor="<%= acceptance[:result] == 'success' ? 'white' : 'red' %>">
-                                 <a href="<%= "#{acceptance[:url]}" %>"><%= "#{acceptance[:agent]} - #{acceptance[:os]}" %></a>
+                                 <a href="<%= "#{acceptance[:url]}" %>" target="_blank" ><%= "#{acceptance[:agent]} - #{acceptance[:os]}" %></a>
                                   </td>
                                 </tr>
                               <% end %>
