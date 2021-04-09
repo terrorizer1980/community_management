@@ -50,15 +50,9 @@ util = OctokitUtils.new(options[:oauth])
 repo_data = []
 
 parsed.each do |_k, v|
-  limit = util.client.rate_limit!
+  util.check_limit_api()
   puts "Getting data from Github API for #{v['github']}"
-  if limit.remaining == 0
-    #  sleep 60 #Sleep between requests to prevent Github API - 403 response
-    sleep limit.resets_in
-    puts 'Waiting for rate limit reset in Github API'
-  end
-  sleep 2 # Keep Github API happy
-
+  
   latest_tag = util.fetch_tags((v['github']).to_s, options).first
   tag_ref = util.ref_from_tag(latest_tag)
   date_of_tag = util.date_of_ref((v['github']).to_s, tag_ref)
