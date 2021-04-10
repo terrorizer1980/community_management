@@ -54,7 +54,7 @@ google.charts.load("current", { packages: ["corechart"] });
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
         ['Job Status', 'Total'],
-        ['Success', 3089],
+        ['Success', 2994],
         ['Failure', 70]
     ]);
     var options = {
@@ -70,7 +70,7 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart_last_run() {
     var data = google.visualization.arrayToDataTable([
         ['Job Status', 'Total'],
-        ['Success', 630],
+        ['Success', 525],
         ['Failure', 5]
     ]);
     var options = {
