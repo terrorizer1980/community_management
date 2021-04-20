@@ -99,10 +99,9 @@ class OctokitUtils
     end.each(&:join)
     pr_information_cache
   end
-require 'pry'
+
   def check_limit_api()
   limit = client.rate_limit!
-  binding.pry
   # puts "Getting data from Github API for #{v['github']}"
   if limit.remaining.zero?
     #  sleep 60 #Sleep between requests to prevent Github API - 403 response
