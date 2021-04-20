@@ -100,6 +100,17 @@ class OctokitUtils
     pr_information_cache
   end
 
+  def check_limit_api()
+  limit = client.rate_limit!
+  # puts "Getting data from Github API for #{v['github']}"
+  if limit.remaining.zero?
+    #  sleep 60 #Sleep between requests to prevent Github API - 403 response
+    sleep limit.resets_in
+    puts 'Waiting for rate limit reset in Github API'
+  end
+  sleep 2 # Keep Github API happy
+  end
+  
   def fetch_pr_information(repo, pull_request, filter = %i[statuses pull_request_commits issue_comments pull_request])
     return_val = {}
     return_val[:pull] = pull_request

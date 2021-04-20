@@ -24,14 +24,8 @@ def parse_job(job,module_name)
   }
 end
 parsed.each do |_k, v|
-  limit = util.client.rate_limit!
+  util.check_limit_api()
   puts "Getting data from Github API for #{v['github']}"
-  if limit.remaining.zero?
-    #  sleep 60 #Sleep between requests to prevent Github API - 403 response
-    sleep limit.resets_in
-    puts 'Waiting for rate limit reset in Github API'
-  end
-  sleep 2 # Keep Github API happy
   url = "https://api.github.com/repos/#{v['github']}/actions/workflows"
   result = RestClient.get(url, headers)
   data = JSON.parse(result.body)
@@ -48,6 +42,7 @@ parsed.each do |_k, v|
       os_agent = jobs_json['jobs'].select { |job| job['name'].include?('puppet') }.map { |job| parse_job(job, v['github']) }
       job_failures = os_agent.select { |x| x[:result] == 'failure' }.length
       job_successes = os_agent.select { |x| x[:result] == 'success' }.length
+      util.check_limit_api()
       runs_array << {
         "run_id": run['id'],
         "run_number": run['run_number'],

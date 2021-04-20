@@ -35,13 +35,7 @@ members_of_organisation = {}
 
 # gather all commments / merges / closed in our time range (since)
 parsed.each do |_k, v|
-  limit = util.client.rate_limit!
-  if limit.remaining == 0
-    #  sleep 60 #Sleep between requests to prevent Github API - 403 response
-    sleep limit.resets_in
-    puts 'Waiting for rate limit reset in Github API'
-  end
-  sleep 2 # Keep Github API happy
+  util.check_limit_api()
   closed_pr_information_cache = util.fetch_async((v['github']).to_s, { state: 'closed' }, [:issue_comments], attribute: 'closed_at', date: since)
   # closed prs
   all_closed_pulls.concat(util.fetch_unmerged_pull_requests(closed_pr_information_cache))
