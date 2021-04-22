@@ -38,7 +38,7 @@ parsed.each do |_k, v|
     runs = JSON.parse(runs_json)
     runs['workflow_runs'][0..4].each do |run|
       @general_conclusion = false
-      jobs_json = JSON.parse(RestClient.get(run['jobs_url'], headers))        
+      jobs_json = JSON.parse(RestClient.get("#{run['jobs_url']}?per_page=100", headers))        
       os_agent = jobs_json['jobs'].select { |job| job['name'].include?('puppet') }.map { |job| parse_job(job, v['github']) }
       job_failures = os_agent.select { |x| x[:result] == 'failure' }.length
       job_successes = os_agent.select { |x| x[:result] == 'success' }.length
