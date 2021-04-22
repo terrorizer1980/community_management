@@ -54,8 +54,8 @@ google.charts.load("current", { packages: ["corechart"] });
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
         ['Job Status', 'Total'],
-        ['Success', 3212],
-        ['Failure', 23]
+        ['Success', 3223],
+        ['Failure', 38]
     ]);
     var options = {
         title: 'Runs Overview for the last 5 runs',
@@ -70,8 +70,8 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart_last_run() {
     var data = google.visualization.arrayToDataTable([
         ['Job Status', 'Total'],
-        ['Success', 648],
-        ['Failure', 2]
+        ['Success', 650],
+        ['Failure', 22]
     ]);
     var options = {
         title: 'Runs Overview for last night run',

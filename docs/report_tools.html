@@ -178,7 +178,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>9</td>
+        <td>10</td>
       
   
   
@@ -278,7 +278,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>15</td>
+        <td>16</td>
       
   
   
@@ -378,7 +378,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>41</td>
+        <td>42</td>
       
   
   
@@ -428,7 +428,7 @@ Coverage remained the same at 100.0% when pulling **88167c87e3b4e341685442240edf
 
   
       
-        <td>41</td>
+        <td>42</td>
       
   
   
@@ -482,7 +482,7 @@ Coverage remained the same at 100.0% when pulling **88167c87e3b4e341685442240edf
 
   
       
-        <td>41</td>
+        <td>42</td>
       
   
   
@@ -532,7 +532,7 @@ Coverage remained the same at 100.0% when pulling **08a7468b103977841631293e1ae2
 
   
       
-        <td>41</td>
+        <td>42</td>
       
   
   
@@ -586,7 +586,7 @@ Coverage remained the same at 100.0% when pulling **08a7468b103977841631293e1ae2
 
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -686,7 +686,7 @@ Coverage remained the same at 100.0% when pulling **08a7468b103977841631293e1ae2
 
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -786,7 +786,7 @@ Coverage remained the same at 100.0% when pulling **08a7468b103977841631293e1ae2
 
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -846,7 +846,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -900,7 +900,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>1262</td>
+        <td>1263</td>
       
   
   
@@ -1000,7 +1000,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>1589</td>
+        <td>1590</td>
       
   
   
@@ -1046,7 +1046,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>163</td>
+        <td>164</td>
       
   
   
@@ -1146,7 +1146,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>23</td>
+        <td>24</td>
       
   
   
@@ -1200,7 +1200,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>172</td>
+        <td>173</td>
       
   
   
@@ -1300,7 +1300,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -1400,7 +1400,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>162</td>
+        <td>163</td>
       
   
   
@@ -1446,7 +1446,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>142</td>
+        <td>143</td>
       
   
   
@@ -1500,7 +1500,7 @@ I think using `unmanaged: true` as the default is totally fine! My biggest encou
 
   
       
-        <td>350</td>
+        <td>351</td>
       
   
   
@@ -1550,7 +1550,7 @@ Thanks
 
   
       
-        <td>159</td>
+        <td>160</td>
       
   
   
@@ -1597,221 +1597,6 @@ Thanks
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
-  
-  
-  
-
-  
-      
-        <td>1307</td>
-      
-  
-  
-  
-
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>[RFC] New syntax</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
-
-Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
-```
-def verify_concat_fragment_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
-end
-
-def verify_concat_fragment_exact_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
-end
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-
-  
-      
-        <td>954</td>
-      
-  
-  
-  
-
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
-  
-  
-  
-
-  
-      
-        <td>1265</td>
-      
-  
-  
-  
-
-  
-      
-        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>Adds the ability to spec test an arbitrary string</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     @binford2k @scotje is this still relevant? If yes, please link to a internal ticket to capture that.
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-
-  
-      
-        <td>163</td>
-      
-  
-  
-  
-
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/821'>821</a></td>
   
   
@@ -1819,7 +1604,7 @@ end
 
   
       
-        <td>36</td>
+        <td>37</td>
       
   
   
@@ -1912,6 +1697,106 @@ end
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
+  
+  
+  
+
+  
+      
+        <td>1141</td>
+      
+  
+  
+  
+
+  
+      
+        <td>asharpe</td>
+      
+  
+  
+  
+
+  
+      
+        <td>allow testing environment functions</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     I was having a similar issue with a namespace function.  It appears that testing a function only works when the function is in a directory with the module name.  Which in this case is:  `/lib/puppet/functions/environment/upcase.rb`
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>logicminds</td>
+      
+  
+  
+  
+
+  
+      
+        <td>119</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
   
   
@@ -1919,7 +1804,7 @@ end
 
   
       
-        <td>1386</td>
+        <td>1387</td>
       
   
   
@@ -1965,7 +1850,7 @@ end
 
   
       
-        <td>156</td>
+        <td>157</td>
       
   
   
@@ -2012,22 +1897,14 @@ end
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
   
   
   
 
   
       
-        <td>1140</td>
-      
-  
-  
-  
-
-  
-      
-        <td>asharpe</td>
+        <td>1266</td>
       
   
   
@@ -2035,14 +1912,22 @@ end
 
   
       
-        <td>allow testing environment functions</td>
+        <td>binford2k <span class='label label-warning'>puppet</span> <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Adds the ability to spec test an arbitrary string</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     I was having a similar issue with a namespace function.  It appears that testing a function only works when the function is in a directory with the module name.  Which in this case is:  `/lib/puppet/functions/environment/upcase.rb`
+     @binford2k @scotje is this still relevant? If yes, please link to a internal ticket to capture that.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -2057,7 +1942,7 @@ end
 
   
       
-        <td>logicminds</td>
+        <td>DavidS</td>
       
   
   
@@ -2065,7 +1950,7 @@ end
 
   
       
-        <td>118</td>
+        <td>164</td>
       
   
   
@@ -2073,7 +1958,7 @@ end
 
   
       
-        <td>5</td>
+        <td>4</td>
       
   
   
@@ -2081,7 +1966,122 @@ end
 
   
       
-        <td>true</td>
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
+  
+  
+  
+
+  
+      
+        <td>1308</td>
+      
+  
+  
+  
+
+  
+      
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>[RFC] New syntax</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
+
+Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
+```
+def verify_concat_fragment_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
+end
+
+def verify_concat_fragment_exact_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
+end
+```
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+
+  
+      
+        <td>955</td>
+      
+  
+  
+  
+
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
       
   
   
