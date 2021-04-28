@@ -159,6 +159,206 @@ ga('set', 'anonymizeIp', true);
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_parallel'>Github Action for Litmus</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_parallel/pull/92'>92</a></td>
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Bump eslint from 7.24.0 to 7.25.0</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     0 comments
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td></td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_spec'>Github Action for Module unit testing</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/action-litmus_spec/pull/83'>83</a></td>
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>dependabot-preview[bot]</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Bump eslint from 7.24.0 to 7.25.0</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     0 comments
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td></td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/camptocamp/facterdb'>facterdb</a></td>
   
   
@@ -178,7 +378,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>47</td>
+        <td>48</td>
       
   
   
@@ -228,7 +428,7 @@ Coverage remained the same at 100.0% when pulling **88167c87e3b4e341685442240edf
 
   
       
-        <td>47</td>
+        <td>48</td>
       
   
   
@@ -282,7 +482,7 @@ Coverage remained the same at 100.0% when pulling **88167c87e3b4e341685442240edf
 
   
       
-        <td>47</td>
+        <td>48</td>
       
   
   
@@ -332,7 +532,7 @@ Coverage remained the same at 100.0% when pulling **08a7468b103977841631293e1ae2
 
   
       
-        <td>47</td>
+        <td>48</td>
       
   
   
@@ -386,7 +586,7 @@ Coverage remained the same at 100.0% when pulling **08a7468b103977841631293e1ae2
 
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
@@ -433,7 +633,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -480,6 +680,133 @@ Currently leaving as is, if this is something your keen on getting merged and up
   
 
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/431'>431</a></td>
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Cleanup backtrace in spec tests</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     This works for me!  I'd love to see it accepted.
+
+I was able to put this in my spec/spec_helper_local.rb file as follows:
+
+default_fixtures_path = File.expand_path(File.join(File.dirname(__FILE__), 'fixtures'))
+
+RSpec.configure do |c|
+
+  backtrace_exclusion_patterns = [
+    /spec_helper/,
+    /gems/
+  ]
+
+  if c.respond_to?(:backtrace_exclusion_patterns)
+    c.backtrace_exclusion_patterns = backtrace_exclusion_patterns
+  elsif c.respond_to?(:backtrace_clean_patterns)
+    c.backtrace_clean_patterns = backtrace_exclusion_patterns
+  end
+
+  c.after(:suite) do
+    RSpec::Puppet::Coverage.report!
+  end
+  c.hiera_config = File.join(default_fixtures_path, 'hiera/hiera.yaml')
+end
+
+Now my new, inexperienced puppet worker (and the rest of us) can more easily find the  actual error messages when we run pdk unit test without having to search through hundreds of lines of backtrace info which doesn't usually provide any value.
+
+
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>rostetter</td>
+      
+  
+  
+  
+
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates'>PDK Templates</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/pdk-templates/pull/428'>428</a></td>
   
   
@@ -487,7 +814,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>10</td>
+        <td>11</td>
       
   
   
@@ -535,7 +862,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -589,7 +916,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>1268</td>
+        <td>1269</td>
       
   
   
@@ -689,7 +1016,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>1595</td>
+        <td>1596</td>
       
   
   
@@ -735,7 +1062,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>169</td>
+        <td>170</td>
       
   
   
@@ -789,7 +1116,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>131</td>
+        <td>132</td>
       
   
   
@@ -835,7 +1162,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -889,7 +1216,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>178</td>
+        <td>179</td>
       
   
   
@@ -912,7 +1239,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
   
   <td>
   <div class="content hideContent">
-     0 comments
+     I still think https://github.com/voxpupuli/puppet-syntax/pull/127#discussion_r517325284 is a comment that hasn't been answered.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -927,7 +1254,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td></td>
+        <td>ekohl</td>
       
   
   
@@ -935,7 +1262,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -943,7 +1270,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -951,7 +1278,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -989,7 +1316,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>28</td>
+        <td>29</td>
       
   
   
@@ -1089,7 +1416,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>168</td>
+        <td>169</td>
       
   
   
@@ -1135,7 +1462,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>148</td>
+        <td>149</td>
       
   
   
@@ -1152,6 +1479,225 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
   
       
         <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
+  
+  
+  
+
+  
+      
+        <td>357</td>
+      
+  
+  
+  
+
+  
+      
+        <td>thatnerdjosh</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Allow users to setup control repo</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     Hello @DavidS,
+
+This was so long ago, somehow it slipped my plate... I forgot what a control repo was or what this code was achieving. I'll take a look and then update the docs accordingly.
+
+Thanks
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>thatnerdjosh</td>
+      
+  
+  
+  
+
+  
+      
+        <td>166</td>
+      
+  
+  
+  
+
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
+  
+  
+  
+
+  
+      
+        <td>1314</td>
+      
+  
+  
+  
+
+  
+      
+        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>[RFC] New syntax</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
+
+Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
+```
+def verify_concat_fragment_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
+end
+
+def verify_concat_fragment_exact_contents(subject, title, expected_lines)
+  is_expected.to contain_concat__fragment(title)
+  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
+  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
+end
+```
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+
+  
+      
+        <td>961</td>
+      
+  
+  
+  
+
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
       
   
   
@@ -1289,7 +1835,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>1392</td>
+        <td>1393</td>
       
   
   
@@ -1335,7 +1881,7 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
 
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -1382,225 +1928,6 @@ While in the README, I also made some tweaks in eb1b372, if those are unwanted, 
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/794'>794</a></td>
-  
-  
-  
-
-  
-      
-        <td>356</td>
-      
-  
-  
-  
-
-  
-      
-        <td>thatnerdjosh</td>
-      
-  
-  
-  
-
-  
-      
-        <td>Allow users to setup control repo</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     Hello @DavidS,
-
-This was so long ago, somehow it slipped my plate... I forgot what a control repo was or what this code was achieving. I'll take a look and then update the docs accordingly.
-
-Thanks
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>thatnerdjosh</td>
-      
-  
-  
-  
-
-  
-      
-        <td>165</td>
-      
-  
-  
-  
-
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/611'>611</a></td>
-  
-  
-  
-
-  
-      
-        <td>1313</td>
-      
-  
-  
-  
-
-  
-      
-        <td>rodjek <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-
-  
-      
-        <td>[RFC] New syntax</td>
-      
-  
-  
-  
-  <td>
-  <div class="content hideContent">
-     How would this deal with resources within a module? given the current double underscore I'd expect `describe concat__fragment('x') do ... end`
-
-Another thing I'd like to see is easy verification of the full content. Currently we have helper functions:
-```
-def verify_concat_fragment_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split("\n") & expected_lines).to match_array(expected_lines)
-end
-
-def verify_concat_fragment_exact_contents(subject, title, expected_lines)
-  is_expected.to contain_concat__fragment(title)
-  content = subject.resource('concat::fragment', title).send(:parameters)[:content]
-  expect(content.split(/\n/).reject { |line| line =~ /(^#|^$|^\s+#)/ }).to match_array(expected_lines)
-end
-```
-</div>
- <div class="show-more">
-        <a href="#">Show more</a>
-    </div></td>
-
-
-  
-      
-  
-  
-  
-
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-
-  
-      
-        <td>960</td>
-      
-  
-  
-  
-
-  
-      
-        <td>9</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-
-  
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
-  
-  
-  
-
-  
-      
-  
-  
-  
-
-  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/661'>661</a></td>
   
   
@@ -1608,7 +1935,7 @@ end
 
   
       
-        <td>1146</td>
+        <td>1147</td>
       
   
   
@@ -1654,7 +1981,7 @@ end
 
   
       
-        <td>124</td>
+        <td>125</td>
       
   
   
@@ -1708,7 +2035,7 @@ end
 
   
       
-        <td>1271</td>
+        <td>1272</td>
       
   
   
@@ -1754,7 +2081,7 @@ end
 
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
