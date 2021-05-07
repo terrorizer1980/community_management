@@ -66,9 +66,9 @@ def repo_info(repo)
 
   info.issues, info.pulls = @client.list_issues(repo).partition { |issue| issue.has_key? :pull_request }
   info.all_commits   = @client.commits(repo)
-  util.check_limit_api()
+  info.check_limit_api()
   info.fresh_commits = @client.commits_since(repo, year_ago.to_date) # commits in the last year
-  util.check_limit_api()
+  info.check_limit_api()
 
   info
 end
