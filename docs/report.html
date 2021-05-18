@@ -199,232 +199,52 @@ ga('set', 'anonymizeIp', true);
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2150'>2150</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2152'>2152</a></td>
   
   
   
       
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>Zarne</td>
+        <td>0</td>
       
   
   
   
       
-        <td>support for uri for severname with use_servername_for_filenames</td>
+        <td>davidc</td>
       
   
   
   
       
-        <td>[apache::vhost](https://github.com/puppetlabs/puppetlabs-apache/blob/35f0fb03c3bfff17da680345d77d461803e63020/manifests/vhost.pp) is a _type_
-----------------------------------
+        <td>(MODULES-11068) Allow apache::vhost ssl_honorcipherorder to take boolean parameter</td>
+      
+  
+  
+  
+      
+        <td>It seems there was a further test in spec/acceptance/apache_ssl_spec.rb that is setting apache::vhost ssl_honorcipherorder to "test", I have changed it to check boolean true => On instead.
 
+I can't test this locally since it seems to want to actually apply a configuration to my machine, so I'll push the change and let CI run it again.
 
-
-  Breaking changes to this file WILL impact these 128 modules (exact match):
-
-* [garethr-wackopicko](https://github.com/garethr/garethr-wackopicko.git)
-* [kritz-vagrantlamp](https://github.com/kritznl/vagrantlamp)
-* [crayfishx-puppetdb_rundeck](http://github.com/crayfishx/puppetdb2-rundeck)
-* [nwolfe-loadtest](https://forge.puppet.com/nwolfe/loadtest)
-* [Firebladee-moodle](https://github.com/Firebladee/moodle.git)
-* [camlow325-grafanadash](https://github.com/camlow325/puppet-grafanadash)
-* [lightoze-bacula](https://github.com/lightoze/puppet-bacula.git)
-* [puppetlabs-dashboard](https://github.com/puppetlabs/puppetlabs-dashboard.git)
-* [thejandroman-kibana3](https://github.com/thejandroman/puppet-kibana3)
-* [binford2k-drupal](https://github.com/binford2k/binford2k-drupal)
-* [fsalum-dashboard](https://github.com/fsalum/puppetlabs-dashboard.git)
-* [thomasvandoren-pypi](https://forge.puppet.com/thomasvandoren/pypi)
-* [glarizza-profiles](https://github.com/glarizza/puppet-profiles)
-* [openstackci-dashboard](https://github.com/openstack-ci/puppet-dashboard.git)
-* [xdrum-puppet](https://github.com/x-drum/puppet-puppet)
-* [boyand-graphite](https://github.com/boyand/puppet-graphite)
-* [cnacorrea-puppet](https://forge.puppet.com/cnacorrea/puppet)
-* [thejandroman-grafana](https://github.com/thejandroman/puppet-grafana)
-* [eshamow-simpleid](https://github.com/eshamow/eshamow-simpleid)
-* [fheinle-webserver](https://github.com/fheinle/krb-webserver.git)
-* [mricon-bugzilla](https://github.com/mricon/puppet-bugzilla)
-* [danieldreier-puppet_installer](https://github.com/danieldreier/puppet_installer)
-* [natewalck-munki_appliance](https://forge.puppet.com/natewalck/munki_appliance)
-* [Aethylred-apaxy](https://github.com/Aethylred/puppet-apaxy)
-* [puppetlabs-awsdemo_profiles](https://github.com/puppetlabs/puppetlabs-awsdemo_profiles)
-* [monkygames-beansbooks](https://bitbucket.org/monkygames/puppet-beansbooks.git)
-* [martialblog-limesurvey](https://github.com/martialblog/puppet-limesurvey)
-* [benjaminrobertson-observium](https://github.com/benjamin-robertson/observium)
-* [abiquo-abiquo](https://github.com/chirauki/abiquo-abiquo.git)
-* [landcareresearch-pidservice](https://bitbucket.org/landcareresearch/puppet-pidservice.git)
-* [spotify-talos](https://github.com/spotify/puppet-talos)
-* [norisnetwork-ceph](https://github.com/noris-network/puppet-ceph)
-* [tejoyasha-myapp](http://git.soma.gitbhub.com/myproject.git)
-* [sasireddyfm-myapp](https://google.com)
-* [premkumarp-myapp](https://google.com)
-* [kumarmks6-myapp](https://google.com)
-* [ranjithsimple-myapp](https://forge.puppet.com/ranjithsimple/myapp)
-* [pwaghray-myapp](https://google.com)
-* [puppetlabs-wordpress_app](https://github.com/puppetlabs/puppetlabs-wordpress_app)
-* [gardouille-xymon](https://git.101010.fr/puppet/xymon)
-* [vinish098-myapp](https://google.com)
-* [pkumarnath-myapp](https://forge.puppet.com/pkumarnath/myapp)
-* [snaragoni-myapp](https://google.com)
-* [syellapu-myapp](https://google.com)
-* [ganeshselva95-myapp](https://google.com)
-* [eschiller-trac](https://www.github.com/eschiller/puppet-trac)
-* [bp85-mirror_repos](https://github.com/bp85/puppet-mirror_repos.git)
-* [thexa4-secrets_server](https://github.com/thexa4/puppet-secret_server)
-* [monkygames-landscape](https://bitbucket.org/monkygames/puppet-landscape.git)
-* [arden-local_rpm_repo](https://gitlab.com/arden-puppet/arden-local_rpm_repo)
-* [jgazeley-speedtest](https://github.com/djjudas21/puppet-speedtest)
-* [garystafford-apache_example_config](https://github.com/garystafford/garystafford-apache_example_config)
-* [glarizza-osx_management](http://forge.puppetlabs.com/glarizza/osx_management)
-* [mtsinc1-trac](https://www.github.com/mtsinc1/puppet-trac)
-* [nnutter-testdb](https://github.com/genome/nnutter-testdb)
-* [hgkamath-owncloud](https://github.com/hgkamath/puppet-owncloud)
-* [garethr-graphite](https://forge.puppet.com/garethr/graphite)
-* [gajdaw-django_app](https://github.com/puppet-by-examples/puppet-django_app)
-* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
-* [martasd-mediawiki](https://github.com/martasd/puppet-mediawiki.git)
-* [stesie-gluon](https://github.com/ffansbach/gluon-puppet)
-* [icann-webapp](https://github.com/icann-dns/puppet-webapp)
-* [thoherr-railsapp](https://github.com/42ways/puppet-railsapp.git)
-* [fancyolaya-dokuwiki](https://github.com/mattiasgiese/puppet-dokuwiki)
-* [zyronix-dokuwiki](https://github.com/zyronix/puppet-dokuwiki)
-* [rjbalest-praxis](https://github.com/rjbalest/praxis.git)
-* [southernhill-phpldapadmin](https://github.com/southernhill/puppet-phpldapadmin.git)
-* [jgazeley-nagios](https://github.com/djjudas21/puppet-nagios)
-* [hexmode-mediawiki](https://github.com/hexmode/puppet-mediawiki.git)
-* [sgnl05-racktables](https://github.com/sgnl05/sgnl05-racktables.git)
-* [gene1wood-ipquery](https://github.com/mozilla/security/tree/master/operations/ipquery)
-* [shoekstra-owncloud](https://github.com/shoekstra/puppet-owncloud.git)
-* [Aethylred-gitlab](https://github.com/Aethylred/puppet-gitlab)
-* [gajdaw-phpmyadmin](https://github.com/puppet-by-examples/puppet-phpmyadmin)
-* [42ways-railsapp](https://github.com/42ways/puppet-railsapp.git)
-* [leonardothibes-usvn](https://github.com/leonardothibes/puppet-usvn.git)
-* [ploperations-puppet](https://github.com/puppetlabs-operations/puppet-puppet)
-* [ploperations-github](https://github.com/ploperations/ploperations-github.git)
-* [wyrie-nagiosql](https://bitbucket.org/wyrie/puppet-nagiosql/src)
-* [saw-reviewboard](https://forge.puppet.com/saw/reviewboard)
-* [gerardkok-reposado](https://github.com/gerardkok/puppet-reposado.git)
-* [dmcnicks-sympa](https://github.com/dmcnicks/dmcnicks-sympa.git)
-* [cirrax-roundcube](https://github.com/cirrax/puppet-roundcube)
-* [marcdeop-ratticdb](https://github.com/marcdeop/ratticdb)
-* [leonardothibes-phpmyadmin](https://github.com/leonardothibes/puppet-phpmyadmin.git)
-* [Aethylred-puppetdashboard](https://github.com/Aethylred/puppet-puppetdashboard)
-* [cirrax-autoconfigmail](https://github.com/cirrax/puppet-autoconfigmail)
-* [pinguinag-reprepro](https://github.com/ag-pinguin/pinguinag-reprepro)
-* [urgi-galaxy_roles_profiles](https://github.com/puppet-galaxy/galaxy-roles-profiles)
-* [aimonb-nexusis_gerrit](https://forge.puppet.com/aimonb/nexusis_gerrit)
-* [hetzner-roundcube](https://github.com/hetznerZA/hetzner-roundcube.git)
-* [rendhalver-icinga](https://forge.puppet.com/rendhalver/icinga)
-* [seteam-role](https://github.com/puppetlabs-seteam/puppet-module-role.git)
-* [puppetlabs-mrepo](https://github.com/puppetlabs/puppetlabs-mrepo.git)
-* [cirrax-postfixadmin](https://github.com/cirrax/puppet-postfixadmin)
-* [jlondon-phpmyadmin](http://github.com/justicel/puppet-phpmyadmin.git)
-* [datacentred-nfsen](https://github.com/datacentred/puppet-nfsen)
-* [stephenrjohnson-puppet](https://github.com/stephenrjohnson/puppetlabs-puppet.git)
-* [pltraining-classroom_legacy](https://github.com/puppetlabs/pltraining-classroom_legacy)
-* [katello-crane](https://github.com/Katello/puppet-crane.git)
-* [covermymeds-sentry](https://github.com/covermymeds/puppet-sentry)
-* [aimonb-nexusis_mediawiki](https://github.com/NexusIS/puppet-mediawiki.git)
-* [devika-myapp](https://google.com)
-* [zordrak-puppet](https://github.com/zordrak/puppet-puppet)
-* [johanek-redmine](https://github.com/johanek/johanek-redmine)
-* [ghoneycutt-yum](https://github.com/ghoneycutt/puppet-module-yum.git)
-* [abstractit-puppet](https://github.com/abstractitptyltd/abstractit-puppet)
-* [gajdaw-symfony](https://github.com/puppet-by-examples/puppet-symfony)
-* [openstack-ceph](https://github.com/openstack/puppet-ceph.git)
-* [katello-capsule](https://github.com/Katello/puppet-capsule.git)
-* [theforeman-pulpcore](https://github.com/theforeman/puppet-pulpcore)
-* [puppet-mrepo](https://github.com/voxpupuli/puppet-mrepo)
-* [zivtech-drupal_php](https://github.com/zivtech/puppet-drupal-php.git)
-* [cristifalcas-kibana](https://github.com/cristifalcas/puppet-kibana.git)
-* [puppet-smokeping](https://github.com/voxpupuli/puppet-smokeping.git)
-* [stackforge-keystone](https://github.com/openstack/puppet-keystone.git)
-* [katello-pulp](https://github.com/theforeman/puppet-pulp.git)
-* [puppet-zabbix](https://github.com/voxpupuli/puppet-zabbix.git)
-* [objectiflibre-puppet](https://github.com/ObjectifLibre/puppet-puppet.git)
-* [SchnWalter-happydev](https://github.com/devgateway/happy-deployer/tree/master/puppet/modules/happydev)
-* [geoffwilliams-r_profile](https://github.com/GeoffWilliams/r_profile)
-* [theforeman-foreman](https://github.com/theforeman/puppet-foreman)
-* [katello-foreman_proxy_content](https://github.com/theforeman/puppet-foreman_proxy_content.git)
-* [openstack-ironic](https://opendev.org/openstack/puppet-ironic.git)
-* [openstack-openstacklib](https://opendev.org/openstack/puppet-openstacklib.git)
-* [landcareresearch-ckan](https://bitbucket.org/landcareresearch/puppet-ckan)
-* [abstractit-icinga](https://github.com/abstractitptyltd/abstractit-icinga)
-* [wdijkerman-zabbix](https://github.com/dj-wasabi/puppet-zabbix.git)
-
-
-
-  Breaking changes to this file MAY impact these 34 modules (near match):
-
-* [grahamgilbert-crypt](https://github.com/grahamgilbert/puppet-crypt)
-* [Azcender-balancer](https://github.com/azcender/balancer)
-* [jbussdieker-graphite_web](http://github.com/jbussdieker/puppet-graphite_web)
-* [nwaller-mailman](https://github.com/nicwaller/puppet-mailman)
-* [hunner-gitolite](https://github.com/hunner/puppet-gitolite)
-* [gajdaw-php5](https://github.com/puppet-by-examples/puppet-php5)
-* [tedivm-hieratic](https://github.com/tedivm/puppet-hieratic)
-* [samuelson-dockeragent](https://github.com/samuelson/samuelson-dockeragent)
-* [covermymeds-ruby](https://github.com/covermymeds/puppet-ruby)
-* [zyronix-ipsets](https://github.com/zyronix/puppet-ipsets)
-* [pieterdp-hx_website](https://github.com/pieterdp/hx_website)
-* [spotify-puppetexplorer](https://github.com/spotify/puppet-puppetexplorer.git)
-* [alexggolovin-opencart](https://github.com/alexggolovin/alexggolovin-opencart)
-* [opuscodium-taiga](https://github.com/opus-codium/puppet-taiga)
-* [Lavaburn-cabot](https://github.com/Lavaburn/puppet_cabot.git)
-* [example42-wordpress](https://github.com/example42/puppet-wordpress)
-* [camptocamp-catalog_diff](https://github.com/camptocamp/puppet-catalog-diff)
-* [nibalizer-puppetboard](https://github.com/nibalizer/puppet-module-puppetboard.git)
-* [evenup-graphite](https://forge.puppet.com/evenup/graphite)
-* [example42-kibana](https://github.com/example42/puppet-kibana)
-* [puppetfinland-librenms](https://github.com/Puppet-Finland/puppet-librenms.git)
-* [puppet-puppetboard](https://github.com/voxpupuli/puppet-puppetboard.git)
-* [puppet-php](https://github.com/voxpupuli/puppet-php)
-* [pltraining-dockeragent](https://github.com/puppetlabs/pltraining-dockeragent)
-* [echoes-wrappers](https://github.com/echoes-tech/puppet-wrappers)
-* [soli-wrappers](https://github.com/solution-libre/puppet-wrappers)
-* [openstack-tripleo](https://github.com/openstack/puppet-tripleo.git)
-* [example42-foreman](https://github.com/example42/puppet-foreman)
-* [example42-graylog2](https://github.com/example42/puppet-graylog2)
-* [example42-puppet](https://github.com/example42/puppet-puppet)
-* [example42-tomcat](https://github.com/example42/puppet-tomcat)
-* [rspiak-racktables](https://github.com/sgnl05/sgnl05-racktables)
-* [jcalles-php](https://github.com/mayflower/puppet-php)
-* [mayflower-php](https://github.com/mayflower/puppet-php)
-
-
-
-#### This module is declared in 175 of 576 indexed public `Puppetfiles`.
-
----------------------------------
-
-These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
-
-Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
 </td>
       
   
   
   
       
-        <td>puppet-community-rangefinder[bot]</td>
+        <td>davidc</td>
       
   
   
   
       
-        <td>6</td>
+        <td>0</td>
       
   
   
   
       
-        <td>2</td>
+        <td>4</td>
       
   
   
@@ -458,7 +278,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>38</td>
+        <td>39</td>
       
   
   
@@ -494,7 +314,7 @@ Hope this helps</td>
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -521,146 +341,6 @@ Hope this helps</td>
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2151'>2151</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v6.0.2</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2145'>2145</a></td>
-  
-  
-  
-      
-        <td>18</td>
-      
-  
-  
-  
-      
-        <td>k2patel</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-11061) mod_security custom rule functionality</td>
-      
-  
-  
-  
-      
-        <td>@david22swan is there any time frame when it would be merged?</td>
-      
-  
-  
-  
-      
-        <td>k2patel</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
   
   
@@ -674,7 +354,7 @@ Hope this helps</td>
   
   
       
-        <td>17</td>
+        <td>18</td>
       
   
   
@@ -744,7 +424,7 @@ Hope this helps</td>
   
   
       
-        <td>72</td>
+        <td>73</td>
       
   
   
@@ -774,7 +454,7 @@ Hope this helps</td>
   
   
       
-        <td>58</td>
+        <td>59</td>
       
   
   
@@ -814,7 +494,7 @@ Hope this helps</td>
   
   
       
-        <td>43</td>
+        <td>44</td>
       
   
   
@@ -844,7 +524,7 @@ Hope this helps</td>
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -917,7 +597,7 @@ kind regards,
   
   
       
-        <td>21</td>
+        <td>22</td>
       
   
   
@@ -944,76 +624,6 @@ kind regards,
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-dsc_lite'>puppetlabs-dsc_lite</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-dsc_lite/pull/183'>183</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v3.2.0</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
   
   
@@ -1027,7 +637,7 @@ kind regards,
   
   
       
-        <td>21</td>
+        <td>22</td>
       
   
   
@@ -1097,7 +707,7 @@ kind regards,
   
   
       
-        <td>61</td>
+        <td>62</td>
       
   
   
@@ -1167,7 +777,7 @@ kind regards,
   
   
       
-        <td>23</td>
+        <td>24</td>
       
   
   
@@ -1267,7 +877,7 @@ kind regards,
   
   
       
-        <td>49</td>
+        <td>50</td>
       
   
   
@@ -1307,7 +917,7 @@ kind regards,
   
   
       
-        <td>153</td>
+        <td>154</td>
       
   
   
@@ -1337,7 +947,7 @@ kind regards,
   
   
       
-        <td>49</td>
+        <td>50</td>
       
   
   
@@ -1364,146 +974,6 @@ kind regards,
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ibm_installation_manager'>puppetlabs-ibm_installation_manager</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ibm_installation_manager/pull/188'>188</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v3.0.2</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis'>puppetlabs-iis</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-iis/pull/323'>323</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v8.0.3</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-java_ks'>puppetlabs-java_ks</a></td>
   
   
@@ -1517,7 +987,7 @@ kind regards,
   
   
       
-        <td>16</td>
+        <td>17</td>
       
   
   
@@ -1617,7 +1087,7 @@ kind regards,
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -1657,7 +1127,7 @@ kind regards,
   
   
       
-        <td>27</td>
+        <td>28</td>
       
   
   
@@ -1687,7 +1157,7 @@ kind regards,
   
   
       
-        <td>7</td>
+        <td>8</td>
       
   
   
@@ -1700,76 +1170,6 @@ kind regards,
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd/pull/415'>415</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v7.0.0</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -1862,82 +1262,12 @@ kind regards,
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1379'>1379</a></td>
-  
-  
-  
-      
-        <td>45</td>
-      
-  
-  
-  
-      
-        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>pdksync - PDK Update for auto release prep workflow</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1384'>1384</a></td>
   
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -2002,12 +1332,82 @@ kind regards,
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1379'>1379</a></td>
+  
+  
+  
+      
+        <td>46</td>
+      
+  
+  
+  
+      
+        <td>carabasdaniel <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>pdksync - PDK Update for auto release prep workflow</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1376'>1376</a></td>
   
   
   
       
-        <td>60</td>
+        <td>61</td>
       
   
   
@@ -2044,7 +1444,7 @@ Puppet IAC Team.
   
   
       
-        <td>21</td>
+        <td>22</td>
       
   
   
@@ -2071,7 +1471,7 @@ Puppet IAC Team.
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp'>puppetlabs-ntp</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos'>puppetlabs-panos</a></td>
   
   
   
@@ -2079,100 +1479,30 @@ Puppet IAC Team.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-ntp/pull/625'>625</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/128'>128</a></td>
   
   
   
       
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
+        <td>29</td>
       
   
   
   
       
-        <td>Release prep v9.0.2</td>
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>(WIP) (MODULES-10385) - Allow vsys to be set</td>
       
   
   
   
       
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package'>puppetlabs-package</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-package/pull/254'>254</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v3.0.0</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
@@ -2184,13 +1514,13 @@ Puppet IAC Team.
   
   
       
-        <td>0</td>
+        <td>29</td>
       
   
   
   
       
-        <td>0</td>
+        <td>3</td>
       
   
   
@@ -2224,7 +1554,7 @@ Puppet IAC Team.
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -2254,7 +1584,7 @@ Puppet IAC Team.
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -2294,7 +1624,7 @@ Puppet IAC Team.
   
   
       
-        <td>81</td>
+        <td>82</td>
       
   
   
@@ -2324,7 +1654,7 @@ Puppet IAC Team.
   
   
       
-        <td>63</td>
+        <td>64</td>
       
   
   
@@ -2337,76 +1667,6 @@ Puppet IAC Team.
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos'>puppetlabs-panos</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/128'>128</a></td>
-  
-  
-  
-      
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(WIP) (MODULES-10385) - Allow vsys to be set</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>28</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -2434,7 +1694,7 @@ Puppet IAC Team.
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -2499,126 +1759,54 @@ Puppet IAC Team.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1266'>1266</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1273'>1273</a></td>
   
   
   
       
-        <td>33</td>
-      
-  
-  
-  
-      
-        <td>mtancoigne</td>
+        <td>8</td>
       
   
   
   
       
-        <td>MODULES-11047 - Allow managing rights for PUBLIC role</td>
+        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>I tried on Postgres 12.6. I made the changes as I thought it was not supported by the module until I see the specific test on [spec/unit/defines/server/grant_spec.rb](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1266/commits/7b295fbae0f5f4977390839b0062b8198e47b80c#diff-cd78d7884639486fb6d606e25c3222981c3a5faea31b44f00a25ad48c41ae1c1): it checks for a quoted "PUBLIC" string, which is invalid (at least with tested version).
-
-</td>
+        <td>(IAC-1136) - correct wrong usage of single quotes in db_spec.rb</td>
       
   
   
   
       
-        <td>mtancoigne</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>20</td>
+        <td></td>
       
   
   
   
       
-        <td>4</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1267'>1267</a></td>
-  
-  
-  
-      
-        <td>32</td>
-      
-  
-  
-  
-      
-        <td>mtancoigne</td>
-      
-  
-  
-  
-      
-        <td>MODULES-11049 - Implement default privileges changes</td>
-      
-  
-  
-  
-      
-        <td>I updated the tests and will squash the commits once it's all green.</td>
-      
-  
-  
-  
-      
-        <td>mtancoigne</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>5</td>
-      
-  
-  
-  
-      
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -2646,7 +1834,7 @@ Puppet IAC Team.
   
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -2750,7 +1938,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -2785,54 +1973,59 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1273'>1273</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1267'>1267</a></td>
   
   
   
       
-        <td>7</td>
-      
-  
-  
-  
-      
-        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>33</td>
       
   
   
   
       
-        <td>(IAC-1136) - correct wrong usage of single quotes in db_spec.rb</td>
+        <td>mtancoigne</td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>MODULES-11049 - Implement default privileges changes</td>
       
   
   
   
       
-        <td></td>
+        <td>Thanks @mtancoigne for the changes. Tested for different object types and its looking good.
+![Screenshot 2021-05-17 at 11 46 33](https://user-images.githubusercontent.com/20660680/118476640-abcd2580-b705-11eb-93f0-050252a2cf73.png)
+
+As you have mentioned, could you please update the document for this new feature. 
+
+Great work.Thank you.</td>
       
   
   
   
       
-        <td>0</td>
+        <td>sheenaajay</td>
       
   
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
   
       
-        <td>true</td>
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2860,7 +2053,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>179</td>
+        <td>180</td>
       
   
   
@@ -2895,7 +2088,7 @@ Paula</td>
   
   
       
-        <td>35</td>
+        <td>36</td>
       
   
   
@@ -2935,7 +2128,7 @@ Paula</td>
   
   
       
-        <td>489</td>
+        <td>490</td>
       
   
   
@@ -3005,7 +2198,7 @@ Paula</td>
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -3035,7 +2228,7 @@ Paula</td>
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -3048,216 +2241,6 @@ Paula</td>
   
       
         <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-puppet_conf'>puppetlabs-puppet_conf</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/150'>150</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v1.2.0</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-registry'>puppetlabs-registry</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-registry/pull/248'>248</a></td>
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v5.0.0</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-rook'>puppetlabs-rook</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-rook/pull/119'>119</a></td>
-  
-  
-  
-      
-        <td>16</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v1.0.1</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -3285,7 +2268,7 @@ Paula</td>
   
   
       
-        <td>30</td>
+        <td>31</td>
       
   
   
@@ -3385,7 +2368,7 @@ Paula</td>
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -3425,7 +2408,7 @@ Paula</td>
   
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -3438,76 +2421,6 @@ Paula</td>
   
       
         <td>(provision_service#296) - Port to Cloud CI</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1187'>1187</a></td>
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
-      
-  
-  
-  
-      
-        <td>Release prep v7.2.0</td>
       
   
   
@@ -3565,7 +2478,7 @@ Paula</td>
   
   
       
-        <td>41</td>
+        <td>42</td>
       
   
   
@@ -3635,7 +2548,7 @@ Paula</td>
   
   
       
-        <td>12</td>
+        <td>13</td>
       
   
   
@@ -3705,7 +2618,7 @@ Paula</td>
   
   
       
-        <td>41</td>
+        <td>42</td>
       
   
   
