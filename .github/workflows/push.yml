@@ -41,6 +41,11 @@ jobs:
           bundle exec ruby release_planning.rb -t $token 
           ### generate github actions report
           bundle exec ruby github_actions_report.rb -t $token
+      - name: Add timestamp
+        run: |
+          data=$("date")
+          echo "Adding timestamp $data"
+          sed -i -e "s|<p>.*<\/p>|<p>$data</p>|g" index.html     
       - name: List files
         run: |
           ls -la
@@ -51,11 +56,6 @@ jobs:
           cp -r *.css docs/
           cp -r *.js docs/
           ls -la docs/
-      - name: Add timestamp
-        run: |
-          data=$("date")
-          echo "Adding timestamp $data"
-          sed -i -e "s|<p>.*<\/p>|<p>$data</p>|g" index.html
       - name: Commit files
         if: ${{ github.event_name != 'pull_request' }}
         run: |
