@@ -204,7 +204,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -222,17 +222,13 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>It seems there was a further test in spec/acceptance/apache_ssl_spec.rb that is setting apache::vhost ssl_honorcipherorder to "test", I have changed it to check boolean true => On instead.
-
-I can't test this locally since it seems to want to actually apply a configuration to my machine, so I'll push the change and let CI run it again.
-
-</td>
+        <td>github actions is currently experiencing issues - see https://www.githubstatus.com/incidents/m16jzl31gnqt ; that might explain the delays and weird failures. I'll re-run the checks once the github incident has cleared up.</td>
       
   
   
   
       
-        <td>davidc</td>
+        <td>DavidS</td>
       
   
   
@@ -244,13 +240,13 @@ I can't test this locally since it seems to want to actually apply a configurati
   
   
       
-        <td>4</td>
+        <td>6</td>
       
   
   
   
       
-        <td>true</td>
+        <td>false</td>
       
   
   
@@ -366,7 +362,7 @@ Hope this helps</td>
   
   
       
-        <td>workflow using only gha-runners</td>
+        <td>(IAC-1613) - workflow using only gha-runners</td>
       
   
   
@@ -489,6 +485,79 @@ Hope this helps</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
+  
+  
+  
+      
+        <td>550</td>
+      
+  
+  
+  
+      
+        <td>mgrzybowski</td>
+      
+  
+  
+  
+      
+        <td>Workaround for hangs of the docker_client in the facts genereation</td>
+      
+  
+  
+  
+      
+        <td>Hey @mgrzybowski, can you rebase the PR in order to test using the latest workflow?
+
+kind regards,
+@adrianiurca </td>
+      
+  
+  
+  
+      
+        <td>adrianiurca</td>
+      
+  
+  
+  
+      
+        <td>22</td>
+      
+  
+  
+  
+      
+        <td>12</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/740'>740</a></td>
   
   
@@ -543,79 +612,6 @@ Hope this helps</td>
   
       
         <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
-  
-  
-  
-      
-        <td>549</td>
-      
-  
-  
-  
-      
-        <td>mgrzybowski</td>
-      
-  
-  
-  
-      
-        <td>Workaround for hangs of the docker_client in the facts genereation</td>
-      
-  
-  
-  
-      
-        <td>Hey @mgrzybowski, can you rebase the PR in order to test using the latest workflow?
-
-kind regards,
-@adrianiurca </td>
-      
-  
-  
-  
-      
-        <td>adrianiurca</td>
-      
-  
-  
-  
-      
-        <td>22</td>
-      
-  
-  
-  
-      
-        <td>12</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
       
   
   
@@ -737,7 +733,7 @@ kind regards,
   
   
       
-        <td>35</td>
+        <td>36</td>
       
   
   
@@ -847,7 +843,7 @@ kind regards,
   
   
       
-        <td>177</td>
+        <td>178</td>
       
   
   
@@ -1057,7 +1053,7 @@ kind regards,
   
   
       
-        <td>10</td>
+        <td>11</td>
       
   
   
@@ -1197,7 +1193,7 @@ kind regards,
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -1210,76 +1206,6 @@ kind regards,
   
       
         <td>Upgrade to GitHub-native Dependabot</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1384'>1384</a></td>
-  
-  
-  
-      
-        <td>19</td>
-      
-  
-  
-  
-      
-        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(maint) Putting Debian back into the metadata.json</td>
       
   
   
@@ -1350,6 +1276,76 @@ kind regards,
   
       
         <td>pdksync - PDK Update for auto release prep workflow</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1384'>1384</a></td>
+  
+  
+  
+      
+        <td>19</td>
+      
+  
+  
+  
+      
+        <td>pmcmaw <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(maint) Putting Debian back into the metadata.json</td>
       
   
   
@@ -1479,54 +1475,54 @@ Puppet IAC Team.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/128'>128</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/127'>127</a></td>
   
   
   
       
-        <td>29</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>82</td>
       
   
   
   
       
-        <td>(WIP) (MODULES-10385) - Allow vsys to be set</td>
+        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>No previous comment other than codecov-io</td>
+        <td>pdksync - (MAINT) PDK update for GHA workflows + Litmus updates</td>
       
   
   
   
       
-        <td></td>
+        <td>The failures in this PR currently exist in `main`. https://tickets.puppetlabs.com/browse/IAC-1550 has been raised to address this.</td>
       
   
   
   
       
-        <td>29</td>
+        <td>da-ar</td>
       
   
   
   
       
-        <td>3</td>
+        <td>64</td>
       
   
   
   
       
-        <td>true</td>
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -1619,54 +1615,54 @@ Puppet IAC Team.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/127'>127</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/128'>128</a></td>
   
   
   
       
-        <td>82</td>
-      
-  
-  
-  
-      
-        <td>sanfrancrisko <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>29</td>
       
   
   
   
       
-        <td>pdksync - (MAINT) PDK update for GHA workflows + Litmus updates</td>
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>The failures in this PR currently exist in `main`. https://tickets.puppetlabs.com/browse/IAC-1550 has been raised to address this.</td>
+        <td>(WIP) (MODULES-10385) - Allow vsys to be set</td>
       
   
   
   
       
-        <td>da-ar</td>
+        <td>No previous comment other than codecov-io</td>
       
   
   
   
       
-        <td>64</td>
+        <td></td>
       
   
   
   
       
-        <td>2</td>
+        <td>29</td>
       
   
   
   
       
-        <td>false</td>
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>true</td>
       
   
   
@@ -1689,24 +1685,24 @@ Puppet IAC Team.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1275'>1275</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1273'>1273</a></td>
   
   
   
       
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>github-actions[bot]</td>
+        <td>8</td>
       
   
   
   
       
-        <td>Release prep v7.2.0</td>
+        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-1136) - correct wrong usage of single quotes in db_spec.rb</td>
       
   
   
@@ -1759,24 +1755,24 @@ Puppet IAC Team.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1273'>1273</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1275'>1275</a></td>
   
   
   
       
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>3</td>
       
   
   
   
       
-        <td>(IAC-1136) - correct wrong usage of single quotes in db_spec.rb</td>
+        <td>github-actions[bot]</td>
+      
+  
+  
+  
+      
+        <td>Release prep v7.2.0</td>
       
   
   
@@ -1996,30 +1992,25 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>Thanks @mtancoigne for the changes. Tested for different object types and its looking good.
-![Screenshot 2021-05-17 at 11 46 33](https://user-images.githubusercontent.com/20660680/118476640-abcd2580-b705-11eb-93f0-050252a2cf73.png)
-
-As you have mentioned, could you please update the document for this new feature. 
-
-Great work.Thank you.</td>
+        <td>You're welcome, I'll try to update documentation as soon as possible this week.</td>
       
   
   
   
       
-        <td>sheenaajay</td>
+        <td>mtancoigne</td>
       
   
   
   
       
-        <td>1</td>
+        <td>0</td>
       
   
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -2158,7 +2149,7 @@ Paula</td>
   
   
       
-        <td>82</td>
+        <td>83</td>
       
   
   
@@ -2338,7 +2329,7 @@ Paula</td>
   
   
       
-        <td>49</td>
+        <td>50</td>
       
   
   
@@ -2473,76 +2464,6 @@ Paula</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing/pull/363'>363</a></td>
-  
-  
-  
-      
-        <td>42</td>
-      
-  
-  
-  
-      
-        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>test for zenhub</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing'>puppetlabs-testing</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing/pull/372'>372</a></td>
   
   
@@ -2605,6 +2526,76 @@ Paula</td>
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing'>puppetlabs-testing</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-testing/pull/363'>363</a></td>
+  
+  
+  
+      
+        <td>42</td>
+      
+  
+  
+  
+      
+        <td>DavidS <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>test for zenhub</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-tomcat'>puppetlabs-tomcat</a></td>
   
   
@@ -2618,7 +2609,7 @@ Paula</td>
   
   
       
-        <td>42</td>
+        <td>43</td>
       
   
   
