@@ -199,82 +199,12 @@ ga('set', 'anonymizeIp', true);
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2152'>2152</a></td>
-  
-  
-  
-      
-        <td>1</td>
-      
-  
-  
-  
-      
-        <td>davidc</td>
-      
-  
-  
-  
-      
-        <td>(MODULES-11068) Allow apache::vhost ssl_honorcipherorder to take boolean parameter</td>
-      
-  
-  
-  
-      
-        <td>github actions is currently experiencing issues - see https://www.githubstatus.com/incidents/m16jzl31gnqt ; that might explain the delays and weird failures. I'll re-run the checks once the github incident has cleared up.</td>
-      
-  
-  
-  
-      
-        <td>DavidS</td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache'>puppetlabs-apache</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-apache/pull/2142'>2142</a></td>
   
   
   
       
-        <td>39</td>
+        <td>40</td>
       
   
   
@@ -292,31 +222,28 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>Taking a look, for the missing error returns, you don't seem to have set `default_cache_enable` to be a specific type of variable so it accepts any value given.
-Also, since `default_cache_enable` is set to true by default you don't need test's where you set it specifically.
-As to why the other test's are failing it looks like it may be due to you overwriting the params set at the top, i.e.:
-`cache_ignore_headers: 'Set-Cookie', `
-You should add this value to your own param sets so that it is included.
+        <td>Hi @david22swan ,
 
-Hope this helps</td>
+I corrected the unit tests and also defined  default_cache_enable as a Boolean. 
+</td>
       
   
   
   
       
-        <td>david22swan</td>
+        <td>Pawa2NR</td>
       
   
   
   
       
-        <td>8</td>
+        <td>1</td>
       
   
   
   
       
-        <td>8</td>
+        <td>9</td>
       
   
   
@@ -328,7 +255,7 @@ Hope this helps</td>
   
   
       
-        <td>false</td>
+        <td>true</td>
       
   
   
@@ -350,7 +277,7 @@ Hope this helps</td>
   
   
       
-        <td>18</td>
+        <td>19</td>
       
   
   
@@ -420,7 +347,7 @@ Hope this helps</td>
   
   
       
-        <td>73</td>
+        <td>74</td>
       
   
   
@@ -450,7 +377,7 @@ Hope this helps</td>
   
   
       
-        <td>59</td>
+        <td>60</td>
       
   
   
@@ -463,6 +390,76 @@ Hope this helps</td>
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/740'>740</a></td>
+  
+  
+  
+      
+        <td>45</td>
+      
+  
+  
+  
+      
+        <td>kenyon <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>manage the docker-ce-cli package</td>
+      
+  
+  
+  
+      
+        <td>Let's go with trivial patch exemption.</td>
+      
+  
+  
+  
+      
+        <td>kenyon</td>
+      
+  
+  
+  
+      
+        <td>22</td>
+      
+  
+  
+  
+      
+        <td>6</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -523,7 +520,7 @@ kind regards,
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -550,76 +547,6 @@ kind regards,
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/740'>740</a></td>
-  
-  
-  
-      
-        <td>44</td>
-      
-  
-  
-  
-      
-        <td>kenyon <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>manage the docker-ce-cli package</td>
-      
-  
-  
-  
-      
-        <td>Let's go with trivial patch exemption.</td>
-      
-  
-  
-  
-      
-        <td>kenyon</td>
-      
-  
-  
-  
-      
-        <td>21</td>
-      
-  
-  
-  
-      
-        <td>6</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-firewall'>puppetlabs-firewall</a></td>
   
   
@@ -633,7 +560,7 @@ kind regards,
   
   
       
-        <td>22</td>
+        <td>23</td>
       
   
   
@@ -703,7 +630,7 @@ kind regards,
   
   
       
-        <td>62</td>
+        <td>63</td>
       
   
   
@@ -773,7 +700,7 @@ kind regards,
   
   
       
-        <td>24</td>
+        <td>25</td>
       
   
   
@@ -873,7 +800,7 @@ kind regards,
   
   
       
-        <td>50</td>
+        <td>51</td>
       
   
   
@@ -913,7 +840,7 @@ kind regards,
   
   
       
-        <td>154</td>
+        <td>155</td>
       
   
   
@@ -943,7 +870,7 @@ kind regards,
   
   
       
-        <td>50</td>
+        <td>51</td>
       
   
   
@@ -983,7 +910,7 @@ kind regards,
   
   
       
-        <td>17</td>
+        <td>18</td>
       
   
   
@@ -1083,7 +1010,7 @@ kind regards,
   
   
       
-        <td>8</td>
+        <td>9</td>
       
   
   
@@ -1123,7 +1050,7 @@ kind regards,
   
   
       
-        <td>28</td>
+        <td>29</td>
       
   
   
@@ -1153,7 +1080,7 @@ kind regards,
   
   
       
-        <td>8</td>
+        <td>9</td>
       
   
   
@@ -1258,12 +1185,107 @@ kind regards,
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1387'>1387</a></td>
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>rsynnest</td>
+      
+  
+  
+  
+      
+        <td>Update xtrabackup package name for Ubuntu 20.04</td>
+      
+  
+  
+  
+      
+        <td>[mysql::params](https://github.com/puppetlabs/puppetlabs-mysql/blob/7c5e35600d0f23cafaf593c857e2857ac3921c13/manifests/params.pp) is a _class_
+----------------------------------
+
+
+
+  Breaking changes to this file WILL impact these 2 modules (exact match):
+
+* [brucem-ezpublish](https://github.com/brucem/puppet-ezpublish.git)
+* [edestecd-mariadb](https://github.com/edestecd/puppet-mariadb.git)
+
+
+
+  Breaking changes to this file MAY impact these 1 modules (near match):
+
+* [willdurand-bazinga](https://forge.puppet.com/willdurand/bazinga)
+
+
+
+#### This module is declared in 143 of 576 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1379'>1379</a></td>
   
   
   
       
-        <td>46</td>
+        <td>47</td>
       
   
   
@@ -1328,12 +1350,89 @@ kind regards,
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1376'>1376</a></td>
+  
+  
+  
+      
+        <td>62</td>
+      
+  
+  
+  
+      
+        <td>fionera</td>
+      
+  
+  
+  
+      
+        <td>feat: Combine multiple grants into one while checking state</td>
+      
+  
+  
+  
+      
+        <td>Hey @fionera 
+
+I would like to thank you for taking the time submitting this PR. Would you mind adding in a test for this functionality, so we can easily confirm in the future when merging other code and regressions can be highlighted quickly. 
+
+Many thanks
+Puppet IAC Team. 
+
+</td>
+      
+  
+  
+  
+      
+        <td>pmcmaw</td>
+      
+  
+  
+  
+      
+        <td>23</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1384'>1384</a></td>
   
   
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -1390,83 +1489,6 @@ kind regards,
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql'>puppetlabs-mysql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-mysql/pull/1376'>1376</a></td>
-  
-  
-  
-      
-        <td>61</td>
-      
-  
-  
-  
-      
-        <td>fionera</td>
-      
-  
-  
-  
-      
-        <td>feat: Combine multiple grants into one while checking state</td>
-      
-  
-  
-  
-      
-        <td>Hey @fionera 
-
-I would like to thank you for taking the time submitting this PR. Would you mind adding in a test for this functionality, so we can easily confirm in the future when merging other code and regressions can be highlighted quickly. 
-
-Many thanks
-Puppet IAC Team. 
-
-</td>
-      
-  
-  
-  
-      
-        <td>pmcmaw</td>
-      
-  
-  
-  
-      
-        <td>22</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos'>puppetlabs-panos</a></td>
   
   
@@ -1480,7 +1502,7 @@ Puppet IAC Team.
   
   
       
-        <td>82</td>
+        <td>83</td>
       
   
   
@@ -1510,7 +1532,7 @@ Puppet IAC Team.
   
   
       
-        <td>64</td>
+        <td>65</td>
       
   
   
@@ -1550,7 +1572,7 @@ Puppet IAC Team.
   
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -1580,7 +1602,7 @@ Puppet IAC Team.
   
   
       
-        <td>5</td>
+        <td>6</td>
       
   
   
@@ -1620,7 +1642,7 @@ Puppet IAC Team.
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -1650,83 +1672,13 @@ Puppet IAC Team.
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
   
       
         <td>3</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1273'>1273</a></td>
-  
-  
-  
-      
-        <td>8</td>
-      
-  
-  
-  
-      
-        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(IAC-1136) - correct wrong usage of single quotes in db_spec.rb</td>
-      
-  
-  
-  
-      
-        <td>0 comments</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>0</td>
-      
-  
-  
-  
-      
-        <td>0</td>
       
   
   
@@ -1760,7 +1712,7 @@ Puppet IAC Team.
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -1825,12 +1777,82 @@ Puppet IAC Team.
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1273'>1273</a></td>
+  
+  
+  
+      
+        <td>9</td>
+      
+  
+  
+  
+      
+        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-1136) - correct wrong usage of single quotes in db_spec.rb</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1274'>1274</a></td>
   
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -1934,7 +1956,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -1974,7 +1996,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>33</td>
+        <td>34</td>
       
   
   
@@ -2004,7 +2026,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>0</td>
+        <td>1</td>
       
   
   
@@ -2044,7 +2066,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>180</td>
+        <td>181</td>
       
   
   
@@ -2079,7 +2101,7 @@ Paula</td>
   
   
       
-        <td>36</td>
+        <td>37</td>
       
   
   
@@ -2119,7 +2141,7 @@ Paula</td>
   
   
       
-        <td>490</td>
+        <td>491</td>
       
   
   
@@ -2189,7 +2211,7 @@ Paula</td>
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -2219,7 +2241,7 @@ Paula</td>
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -2259,7 +2281,7 @@ Paula</td>
   
   
       
-        <td>31</td>
+        <td>32</td>
       
   
   
@@ -2359,7 +2381,7 @@ Paula</td>
   
   
       
-        <td>19</td>
+        <td>20</td>
       
   
   
@@ -2399,7 +2421,7 @@ Paula</td>
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -2469,7 +2491,7 @@ Paula</td>
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -2539,7 +2561,7 @@ Paula</td>
   
   
       
-        <td>42</td>
+        <td>43</td>
       
   
   
