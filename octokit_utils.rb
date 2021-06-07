@@ -12,10 +12,10 @@ class OctokitUtils
     @client = Octokit::Client.new(access_token: access_token.to_s)
     client.user.login
 
-    @pr_cache = {}
-    @puppet_members = client.organization_members('puppetlabs')
-    @vox_members = client.organization_members('voxpupuli')
-    @iac_members = client.organization_members('puppetlabs/teams/modules')
+    # @pr_cache = {}
+    # @puppet_members = client.organization_members('puppetlabs')
+    # @vox_members = client.organization_members('voxpupuli')
+    # @iac_members = client.organization_members('puppetlabs/teams/modules')
   end
 
   def puppet_member?(username)
@@ -81,7 +81,7 @@ class OctokitUtils
     else
       unlimited_prs.each do |iter|
          next unless limit[:attribute] == 'closed_at'
-        
+
         prs.push(iter) if iter.closed_at.utc > limit[:date].to_time.utc
       end
     end
@@ -110,7 +110,7 @@ class OctokitUtils
   end
   sleep 2 # Keep Github API happy
   end
-  
+
   def fetch_pr_information(repo, pull_request, filter = %i[statuses pull_request_commits issue_comments pull_request])
     return_val = {}
     return_val[:pull] = pull_request
