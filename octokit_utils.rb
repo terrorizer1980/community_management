@@ -40,7 +40,7 @@ class OctokitUtils
   end
 
   # Octokit uses a different method for getting the repositories of an
-  # orginazation than it does for getting the repositories of a user. This
+  # organization than it does for getting the repositories of a user. This
   # method checks the "type" of a given namespace and uses the value to
   # determine the method to call.
   def ns_repos(namespace)
@@ -101,14 +101,14 @@ class OctokitUtils
   end
 
   def check_limit_api()
-  limit = client.rate_limit!
-  # puts "Getting data from Github API for #{v['github']}"
-  if limit.remaining.zero?
-    #  sleep 60 #Sleep between requests to prevent Github API - 403 response
-    sleep limit.resets_in
-    puts 'Waiting for rate limit reset in Github API'
-  end
-  sleep 2 # Keep Github API happy
+    limit = client.rate_limit!
+    # puts "Getting data from Github API for #{v['github']}"
+    if limit.remaining.zero?
+      #  sleep 60 #Sleep between requests to prevent Github API - 403 response
+      sleep limit.resets_in
+      puts 'Waiting for rate limit reset in Github API'
+    end
+    sleep 2 # Keep Github API happy
   end
 
   def fetch_pr_information(repo, pull_request, filter = %i[statuses pull_request_commits issue_comments pull_request])
