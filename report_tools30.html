@@ -178,7 +178,7 @@ ga('set', 'anonymizeIp', true);
 
   
       
-        <td>55</td>
+        <td>57</td>
       
   
   
@@ -225,7 +225,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>44</td>
+        <td>46</td>
       
   
   
@@ -279,7 +279,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>221</td>
+        <td>223</td>
       
   
   
@@ -325,7 +325,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>43</td>
+        <td>45</td>
       
   
   
@@ -372,6 +372,106 @@ Currently leaving as is, if this is something your keen on getting merged and up
   
 
   
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
+  
+  
+  
+
+  
+      
+        <td>1437</td>
+      
+  
+  
+  
+
+  
+      
+        <td>kjetilho</td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add .tagged and .not_tagged methods for resource matcher</td>
+      
+  
+  
+  
+  <td>
+  <div class="content hideContent">
+     @DavidS Do you still want to get this over the line? Another rebase will pull in https://github.com/rodjek/rspec-puppet/pull/824 and should get the CI tests running successfully again 🤞 
+</div>
+ <div class="show-more">
+        <a href="#">Show more</a>
+    </div></td>
+
+
+  
+      
+  
+  
+  
+
+  
+      
+        <td>sanfrancrisko</td>
+      
+  
+  
+  
+
+  
+      
+        <td>46</td>
+      
+  
+  
+  
+
+  
+      
+        <td>5</td>
+      
+  
+  
+  
+
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+
+  
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet'>rspec-puppet</a></td>
+  
+  
+  
+
+  
+      
+  
+  
+  
+
+  
       <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/619'>619</a></td>
   
   
@@ -379,7 +479,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>1314</td>
+        <td>1316</td>
       
   
   
@@ -425,7 +525,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>34</td>
+        <td>36</td>
       
   
   
@@ -472,22 +572,14 @@ Currently leaving as is, if this is something your keen on getting merged and up
   
 
   
-      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/555'>555</a></td>
+      <td><a target ="_blank" href='https://github.com/rodjek/rspec-puppet/pull/821'>821</a></td>
   
   
   
 
   
       
-        <td>1435</td>
-      
-  
-  
-  
-
-  
-      
-        <td>kjetilho</td>
+        <td>87</td>
       
   
   
@@ -495,14 +587,27 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>Add .tagged and .not_tagged methods for resource matcher</td>
+        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+
+  
+      
+        <td>Add a transitive test property</td>
       
   
   
   
   <td>
   <div class="content hideContent">
-     @DavidS Do you still want to get this over the line? Another rebase will pull in https://github.com/rodjek/rspec-puppet/pull/824 and should get the CI tests running successfully again 🤞 
+     It is my impression that it relies on some resource triggering the notify. So if you have:
+```puppet
+Class['A'] ~> Class['B'] ~> Class['C']
+```
+
+Then it works if there's a resource inside `Class['B']` that triggers a refresh. However, we've seen the edge case where it wasn't. Perhaps classes also behave different than resources.
 </div>
  <div class="show-more">
         <a href="#">Show more</a>
@@ -517,7 +622,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>sanfrancrisko</td>
+        <td>ekohl</td>
       
   
   
@@ -525,7 +630,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>44</td>
+        <td>31</td>
       
   
   
@@ -533,7 +638,7 @@ Currently leaving as is, if this is something your keen on getting merged and up
 
   
       
-        <td>5</td>
+        <td>4</td>
       
   
   
