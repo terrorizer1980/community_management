@@ -204,7 +204,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>3</td>
+        <td>4</td>
       
   
   
@@ -274,7 +274,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -344,7 +344,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>16</td>
+        <td>17</td>
       
   
   
@@ -414,7 +414,7 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>1</td>
+        <td>2</td>
       
   
   
@@ -432,10 +432,9 @@ ga('set', 'anonymizeIp', true);
   
   
       
-        <td>Ah well, so many hours with tests and i oversaw the basics... 🙈 Please apologize!
-Will fix and squash/rebase. No need to comment about this.
+        <td>A private class is indeed a good idea, will try that, thanks!
 
-However if you have feedback to the feature itself, let me know.</td>
+However mod_ssl does need at least the file resources for the ssl files, because one could work with apache without using vhosts at all (extremly rare, but the module is widely spread, so we should not forget those people).</td>
       
   
   
@@ -453,7 +452,7 @@ However if you have feedback to the feature itself, let me know.</td>
   
   
       
-        <td>3</td>
+        <td>6</td>
       
   
   
@@ -487,7 +486,7 @@ However if you have feedback to the feature itself, let me know.</td>
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -517,7 +516,7 @@ However if you have feedback to the feature itself, let me know.</td>
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -557,7 +556,7 @@ However if you have feedback to the feature itself, let me know.</td>
   
   
       
-        <td>42</td>
+        <td>43</td>
       
   
   
@@ -622,12 +621,132 @@ However if you have feedback to the feature itself, let me know.</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/755'>755</a></td>
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>waipeng</td>
+      
+  
+  
+  
+      
+        <td>Add syslog_facility parameter to docker::run</td>
+      
+  
+  
+  
+      
+        <td>[docker::run](https://github.com/puppetlabs/puppetlabs-docker/blob/1286a8f781acd9ec692e0687bd896f1accbc79e8/manifests/run.pp) is a _type_
+----------------------------------
+
+
+
+  Breaking changes to this file WILL impact these 7 modules (exact match):
+
+* [michaelvdnet-rancher](https://github.com/michaelvdnet/puppet-rancher)
+* [samuelson-dockeragent](https://github.com/samuelson/samuelson-dockeragent)
+* [gennadyvoronkov-dcos](https://github.com/gennady-voronkov/dcos.git)
+* [ffquintella-dockerapp](https://github.com/ffquintella/puppet-dockerApp.git)
+* [glorpen-g_docker](https://github.com/glorpen/puppet-g_docker.git)
+* [dodevops-hanaexpress](https://github.com/dodevops/puppet-hanaexpress)
+* [puppetlabs-cd4pe](https://forge.puppetlabs.com/puppetlabs/cd4pe)
+
+
+
+  Breaking changes to this file MAY impact these 21 modules (near match):
+
+* [c0deaddict-gogs](https://github.com/c0deaddict/puppet-gogs)
+* [flyer-docker_cluster](https://github.com/flyer8/docker_cluster)
+* [puppetlabs-rancher](https://github.com/puppetlabs/puppetlabs-rancher.git)
+* [cristifalcas-docker_auth](https://github.com/cristifalcas/puppet-docker_auth.git)
+* [cjtoolseram-drone](https://bitbucket.org/cjtoolseram/cjtoolseram-drone)
+* [nick-rancher](https://github.com/nickschuch/puppet-rancher)
+* [justin8-ghost](https://github.com/justin8/justin8-ghost)
+* [autostructure-secure_docker](https://github.com/autostructure/secure_docker.git)
+* [jefferyb-kualicoeus](https://github.com/jefferyb/kualicoeus)
+* [pltraining-classroom_legacy](https://github.com/puppetlabs/pltraining-classroom_legacy)
+* [cristifalcas-prometheus](https://github.com/cristifalcas/puppet-prometheus)
+* [pltraining-classroom](https://github.com/puppetlabs/pltraining-classroom)
+* [bfraser-grafana](https://github.com/bfraser/puppet-grafana.git)
+* [factorit-grafana](https://github.com/bfraser/puppet-grafana.git)
+* [cristifalcas-docker_distribution](https://github.com/cristifalcas/puppet-docker_distribution.git)
+* [cristifalcas-kubernetes](https://github.com/cristifalcas/puppet-kubernetes.git)
+* [KyleAnderson-consul](https://github.com/solarkennedy/puppet-consul)
+* [puppet-grafana](https://github.com/voxpupuli/puppet-grafana.git)
+* [pltraining-dockeragent](https://github.com/puppetlabs/pltraining-dockeragent)
+* [pltraining-puppetfactory](https://github.com/puppetlabs/puppetfactory)
+* [prozeta-portauthority](https://github.com/prozeta/port-authority)
+
+
+
+#### This module is declared in 6 of 576 indexed public `Puppetfiles`.
+
+---------------------------------
+
+These results were generated with [Rangefinder](https://github.com/puppetlabs/puppet-community-rangefinder), a tool that helps predict the downstream impact of breaking changes to elements used in Puppet modules. You can run this on the command line to get a full report.
+
+Exact matches are those that we can positively identify via namespace and the declaring modules' metadata. Non-namespaced items, such as Puppet 3.x functions, will always be reported as near matches only.
+</td>
+      
+  
+  
+  
+      
+        <td>puppet-community-rangefinder[bot]</td>
+      
+  
+  
+  
+      
+        <td>1</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker'>puppetlabs-docker</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-docker/pull/551'>551</a></td>
   
   
   
       
-        <td>573</td>
+        <td>574</td>
       
   
   
@@ -660,7 +779,7 @@ kind regards,
   
   
       
-        <td>46</td>
+        <td>47</td>
       
   
   
@@ -700,7 +819,7 @@ kind regards,
   
   
       
-        <td>68</td>
+        <td>69</td>
       
   
   
@@ -730,7 +849,7 @@ kind regards,
   
   
       
-        <td>45</td>
+        <td>46</td>
       
   
   
@@ -770,7 +889,7 @@ kind regards,
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -840,7 +959,7 @@ kind regards,
   
   
       
-        <td>86</td>
+        <td>87</td>
       
   
   
@@ -870,7 +989,7 @@ kind regards,
   
   
       
-        <td>59</td>
+        <td>60</td>
       
   
   
@@ -910,7 +1029,7 @@ kind regards,
   
   
       
-        <td>48</td>
+        <td>49</td>
       
   
   
@@ -980,7 +1099,7 @@ kind regards,
   
   
       
-        <td>201</td>
+        <td>202</td>
       
   
   
@@ -1010,7 +1129,7 @@ kind regards,
   
   
       
-        <td>74</td>
+        <td>75</td>
       
   
   
@@ -1050,7 +1169,7 @@ kind regards,
   
   
       
-        <td>178</td>
+        <td>179</td>
       
   
   
@@ -1080,7 +1199,7 @@ kind regards,
   
   
       
-        <td>74</td>
+        <td>75</td>
       
   
   
@@ -1120,7 +1239,7 @@ kind regards,
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -1190,7 +1309,7 @@ kind regards,
   
   
       
-        <td>17</td>
+        <td>18</td>
       
   
   
@@ -1220,7 +1339,7 @@ kind regards,
   
   
       
-        <td>17</td>
+        <td>18</td>
       
   
   
@@ -1260,7 +1379,7 @@ kind regards,
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -1330,7 +1449,7 @@ kind regards,
   
   
       
-        <td>41</td>
+        <td>42</td>
       
   
   
@@ -1400,7 +1519,7 @@ kind regards,
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -1430,7 +1549,7 @@ kind regards,
   
   
       
-        <td>2</td>
+        <td>3</td>
       
   
   
@@ -1465,82 +1584,12 @@ kind regards,
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/511'>511</a></td>
-  
-  
-  
-      
-        <td>52</td>
-      
-  
-  
-  
-      
-        <td>treydock</td>
-      
-  
-  
-  
-      
-        <td>Support both standard Calico and Calico Tigera</td>
-      
-  
-  
-  
-      
-        <td>Hi @treydock, sorry, we were on PTO last week on Community Day, let me have a look at your comments and find the best way here </td>
-      
-  
-  
-  
-      
-        <td>daianamezdrea</td>
-      
-  
-  
-  
-      
-        <td>32</td>
-      
-  
-  
-  
-      
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/520'>520</a></td>
   
   
   
       
-        <td>20</td>
+        <td>21</td>
       
   
   
@@ -1597,6 +1646,76 @@ kind regards,
   <tr>
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes'>puppetlabs-kubernetes</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-kubernetes/pull/511'>511</a></td>
+  
+  
+  
+      
+        <td>53</td>
+      
+  
+  
+  
+      
+        <td>treydock</td>
+      
+  
+  
+  
+      
+        <td>Support both standard Calico and Calico Tigera</td>
+      
+  
+  
+  
+      
+        <td>Hi @treydock, sorry, we were on PTO last week on Community Day, let me have a look at your comments and find the best way here </td>
+      
+  
+  
+  
+      
+        <td>daianamezdrea</td>
+      
+  
+  
+  
+      
+        <td>33</td>
+      
+  
+  
+  
+      
+        <td>4</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-motd'>puppetlabs-motd</a></td>
   
   
@@ -1610,7 +1729,7 @@ kind regards,
   
   
       
-        <td>42</td>
+        <td>43</td>
       
   
   
@@ -1680,7 +1799,7 @@ kind regards,
   
   
       
-        <td>70</td>
+        <td>71</td>
       
   
   
@@ -1750,7 +1869,7 @@ kind regards,
   
   
       
-        <td>85</td>
+        <td>86</td>
       
   
   
@@ -1787,7 +1906,7 @@ Puppet IAC Team.
   
   
       
-        <td>46</td>
+        <td>47</td>
       
   
   
@@ -1827,7 +1946,7 @@ Puppet IAC Team.
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -1892,82 +2011,12 @@ Puppet IAC Team.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/128'>128</a></td>
-  
-  
-  
-      
-        <td>53</td>
-      
-  
-  
-  
-      
-        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
-      
-  
-  
-  
-      
-        <td>(WIP) (MODULES-10385) - Allow vsys to be set</td>
-      
-  
-  
-  
-      
-        <td>No previous comment other than codecov-io</td>
-      
-  
-  
-  
-      
-        <td></td>
-      
-  
-  
-  
-      
-        <td>53</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos'>puppetlabs-panos</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/130'>130</a></td>
   
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -1997,7 +2046,7 @@ Puppet IAC Team.
   
   
       
-        <td>29</td>
+        <td>30</td>
       
   
   
@@ -2037,7 +2086,7 @@ Puppet IAC Team.
   
   
       
-        <td>106</td>
+        <td>107</td>
       
   
   
@@ -2067,7 +2116,7 @@ Puppet IAC Team.
   
   
       
-        <td>88</td>
+        <td>89</td>
       
   
   
@@ -2094,7 +2143,7 @@ Puppet IAC Team.
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos'>puppetlabs-panos</a></td>
   
   
   
@@ -2102,30 +2151,30 @@ Puppet IAC Team.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1273'>1273</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-panos/pull/128'>128</a></td>
   
   
   
       
-        <td>32</td>
-      
-  
-  
-  
-      
-        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+        <td>54</td>
       
   
   
   
       
-        <td>(IAC-1136) - correct wrong usage of single quotes in db_spec.rb</td>
+        <td>david22swan <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
       
   
   
   
       
-        <td>0 comments</td>
+        <td>(WIP) (MODULES-10385) - Allow vsys to be set</td>
+      
+  
+  
+  
+      
+        <td>No previous comment other than codecov-io</td>
       
   
   
@@ -2137,13 +2186,13 @@ Puppet IAC Team.
   
   
       
-        <td>0</td>
+        <td>54</td>
       
   
   
   
       
-        <td>0</td>
+        <td>3</td>
       
   
   
@@ -2177,7 +2226,7 @@ Puppet IAC Team.
   
   
       
-        <td>13</td>
+        <td>14</td>
       
   
   
@@ -2242,155 +2291,12 @@ Puppet IAC Team.
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1274'>1274</a></td>
-  
-  
-  
-      
-        <td>30</td>
-      
-  
-  
-  
-      
-        <td>molivier-fcms</td>
-      
-  
-  
-  
-      
-        <td>Handle db, database_grant and table_grant from class postgresql::server</td>
-      
-  
-  
-  
-      
-        <td>HI @molivier-fcms, thank you for your contribution. Please sign the CLA in order to get this PR merged.
-
-kind regards,
-@adrianiurca </td>
-      
-  
-  
-  
-      
-        <td>adrianiurca</td>
-      
-  
-  
-  
-      
-        <td>18</td>
-      
-  
-  
-  
-      
-        <td>3</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1276'>1276</a></td>
-  
-  
-  
-      
-        <td>15</td>
-      
-  
-  
-  
-      
-        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>Autorequire the service in postgresql_psql</td>
-      
-  
-  
-  
-      
-        <td>I wonder if this is related to https://github.com/rodjek/rspec-puppet/pull/821.</td>
-      
-  
-  
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-      
-        <td>15</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
-  
-  
-  
-      
-  
-  
-  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1267'>1267</a></td>
   
   
   
       
-        <td>57</td>
+        <td>58</td>
       
   
   
@@ -2420,7 +2326,7 @@ kind regards,
   
   
       
-        <td>14</td>
+        <td>15</td>
       
   
   
@@ -2455,12 +2361,225 @@ kind regards,
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1273'>1273</a></td>
+  
+  
+  
+      
+        <td>33</td>
+      
+  
+  
+  
+      
+        <td>adrianiurca <span class='label label-primary'>iac</span> <span class='label label-warning'>puppet</span></td>
+      
+  
+  
+  
+      
+        <td>(IAC-1136) - correct wrong usage of single quotes in db_spec.rb</td>
+      
+  
+  
+  
+      
+        <td>0 comments</td>
+      
+  
+  
+  
+      
+        <td></td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>0</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1276'>1276</a></td>
+  
+  
+  
+      
+        <td>16</td>
+      
+  
+  
+  
+      
+        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>Autorequire the service in postgresql_psql</td>
+      
+  
+  
+  
+      
+        <td>I wonder if this is related to https://github.com/rodjek/rspec-puppet/pull/821.</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>16</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1274'>1274</a></td>
+  
+  
+  
+      
+        <td>31</td>
+      
+  
+  
+  
+      
+        <td>molivier-fcms</td>
+      
+  
+  
+  
+      
+        <td>Handle db, database_grant and table_grant from class postgresql::server</td>
+      
+  
+  
+  
+      
+        <td>HI @molivier-fcms, thank you for your contribution. Please sign the CLA in order to get this PR merged.
+
+kind regards,
+@adrianiurca </td>
+      
+  
+  
+  
+      
+        <td>adrianiurca</td>
+      
+  
+  
+  
+      
+        <td>19</td>
+      
+  
+  
+  
+      
+        <td>3</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql'>puppetlabs-postgresql</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-postgresql/pull/1208'>1208</a></td>
   
   
   
       
-        <td>204</td>
+        <td>205</td>
       
   
   
@@ -2495,7 +2614,7 @@ Paula</td>
   
   
       
-        <td>60</td>
+        <td>61</td>
       
   
   
@@ -2535,7 +2654,7 @@ Paula</td>
   
   
       
-        <td>514</td>
+        <td>515</td>
       
   
   
@@ -2565,7 +2684,7 @@ Paula</td>
   
   
       
-        <td>106</td>
+        <td>107</td>
       
   
   
@@ -2592,7 +2711,7 @@ Paula</td>
   <tr>
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task'>puppetlabs-scheduled_task</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell'>puppetlabs-powershell</a></td>
   
   
   
@@ -2600,60 +2719,60 @@ Paula</td>
   
   
   
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/188'>188</a></td>
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-powershell/pull/347'>347</a></td>
   
   
   
       
-        <td>73</td>
-      
-  
-  
-  
-      
-        <td>sigv</td>
+        <td>0</td>
       
   
   
   
       
-        <td>(MODULES-10986) Fix gMSA username support</td>
+        <td>github-actions[bot]</td>
       
   
   
   
       
-        <td>@daianamezdrea, any luck? 🤞🏻 </td>
+        <td>Release prep v6.0.0</td>
       
   
   
   
       
-        <td>sigv</td>
+        <td>0 comments</td>
       
   
   
   
       
-        <td>43</td>
+        <td></td>
       
   
   
   
       
-        <td>5</td>
+        <td>0</td>
       
   
   
   
       
-        <td>false</td>
+        <td>0</td>
       
   
   
   
       
         <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
       
   
   
@@ -2675,7 +2794,7 @@ Paula</td>
   
   
       
-        <td>6</td>
+        <td>7</td>
       
   
   
@@ -2745,7 +2864,7 @@ Paula</td>
   
   
       
-        <td>44</td>
+        <td>45</td>
       
   
   
@@ -2810,12 +2929,82 @@ Paula</td>
   
   
   
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1189'>1189</a></td>
+  
+  
+  
+      
+        <td>12</td>
+      
+  
+  
+  
+      
+        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
+      
+  
+  
+  
+      
+        <td>(MODULES-11018) Rewrite pick_default in native Puppet</td>
+      
+  
+  
+  
+      
+        <td>Perhaps pure Puppet functions can't be not-namespaced?</td>
+      
+  
+  
+  
+      
+        <td>ekohl</td>
+      
+  
+  
+  
+      
+        <td>12</td>
+      
+  
+  
+  
+      
+        <td>2</td>
+      
+  
+  
+  
+      
+        <td>true</td>
+      
+  
+  
+  
+      
+        <td>false</td>
+      
+  
+  
+  </tr>
+
+  <tr>
+  
+  
+      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
+  
+  
+  
+      
+  
+  
+  
       <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1191'>1191</a></td>
   
   
   
       
-        <td>4</td>
+        <td>5</td>
       
   
   
@@ -3164,77 +3353,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>4</td>
-      
-  
-  
-  
-      
-        <td>2</td>
-      
-  
-  
-  
-      
-        <td>true</td>
-      
-  
-  
-  
-      
-        <td>false</td>
-      
-  
-  
-  </tr>
-
-  <tr>
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib'>puppetlabs-stdlib</a></td>
-  
-  
-  
-      
-  
-  
-  
-      <td><a target ="_blank" href='https://github.com/puppetlabs/puppetlabs-stdlib/pull/1189'>1189</a></td>
-  
-  
-  
-      
-        <td>11</td>
-      
-  
-  
-  
-      
-        <td>ekohl <span class='badge badge-secondary'>vox</span></td>
-      
-  
-  
-  
-      
-        <td>(MODULES-11018) Rewrite pick_default in native Puppet</td>
-      
-  
-  
-  
-      
-        <td>Perhaps pure Puppet functions can't be not-namespaced?</td>
-      
-  
-  
-  
-      
-        <td>ekohl</td>
-      
-  
-  
-  
-      
-        <td>11</td>
+        <td>5</td>
       
   
   
@@ -3274,7 +3393,7 @@ Exact matches are those that we can positively identify via namespace and the de
   
   
       
-        <td>66</td>
+        <td>67</td>
       
   
   
